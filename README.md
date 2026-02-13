@@ -4,6 +4,20 @@ HomeLab CheatSheet &amp; AwesomeList
 <br>
 <br> This page will be updated randomly with new information, contributions welcome!, so stay tuned. 
 <br>
+markdown
+## Table of Contents
+- [Hardware](#hardware)
+  - [Recommended Devices](#recommended-devices)
+    - [Minimal Setups](#minimal-setups)
+    - [SFF Suggestions](#sff-suggestions)
+  - [NIC](#nic)
+  - [GPU](#gpu)
+- [Suggested OS](#suggested-os)
+- [Software](#software)
+  - [RDP](#rdp)
+  - [Gaming](#gaming)
+  - [File Management](#file-management)
+<br>
 <br><b>Hardware:</b>
 <details>
 <summary>Recommended Devices</summary>
@@ -19,7 +33,7 @@ Optimal minimal setup device:
   <ul><li>Nvidia Quadro P600/620 included with some models</li>
   <li>A Quad Port Nic (popular for router setups, such as Opnsense/Pfsense)</li>
   <li>Nvme Expansion Card for 2x additional Nvme drives making for 4xnvme on some models</li></ul>
-  <br> Tiny PC's average as little as 5w power consuption depending on configuration and have Medium to Medium-high performance 35w TDP CPUs. 32GB to 128GB Ram support with 2 Slots (max ram depends on model), Mini Pci-e card slots for Wifi+bluetooth cards if desired and typically include 4-6 USB 3+ ports in newer models. these are basically the perfect AIO mini server for most any use cases. the intel versions iGPU can also be used with proxmox to share the iGPU to multiple virtual machines. They are small, powerful and perfect to plug a bunch of external hard drives into.
+  <br> Tiny PC's average as little as 5w power consumption depending on configuration and have Medium to Medium-high performance 35w TDP CPUs. 32GB to 128GB Ram support with 2 Slots (max ram depends on model), Mini Pci-e card slots for Wifi+bluetooth cards if desired and typically include 4-6 USB 3+ ports in newer models. these are basically the perfect AIO mini server for most any use cases. the intel versions iGPU can also be used with proxmox to share the iGPU to multiple virtual machines. They are small, powerful and perfect to plug a bunch of external hard drives into.
   <br> Other mini pc's and SFF Pcs can be worthwhile, but personally, i feel these are the most optimal cost effective options. 
   
   <details>
@@ -30,7 +44,7 @@ Optimal minimal setup device:
   <img width="300" src="https://i.pcmag.com/imagery/reviews/02pEw0PoQLzntoO4LnGl1jE-1.fit_lim.size_740x416.v_1569469958.jpg">
   <br> typically features an i7-6700 with 4x DDR4 ram slots and 64GB support. Plus it has 2x3.5 1x2.5 Hard drive slots and 2xPci-e slots, as far as expansion options go for a SFF PC this one has a lot of options.
   <br>
-  <br> issues i have experinced: 
+  <br> issues i have experienced: 
   <ul><li> takes some work to get 64GB ram to boot properly doesn't seem to like ram in the wrong order </li>
   <li> built in iGPU doesn't always work / default back to itself after having a dGPU, so if you buy it used how a low profile dGPU handy. upside the bios allows for iGPU+dGPU and will boot with a dGPU such as a tesla that includes zero display ports </li>
   <li> be careful with the 2.5in sata. if the cables aren't sitting quite right they can snap the data port off the drive, found that one out the hard way. there is a lot packed into very little space in this model so you have to be a bit mindful.</li></ul>  
@@ -49,7 +63,7 @@ Optimal minimal setup device:
 <summary>GPU:</summary>
 <details>
 <summary>Nvidia:</summary>
-<br> GTX 10 series to RTX 20 Series for vGPU. quadro and tesla also work, but teslas need licensing. 30-50 series  cunsomer cards will <b>NOT</b> work with vGPU Unlock. 
+<br> GTX 10 series to RTX 20 Series for vGPU. quadro and tesla also work, but teslas need licensing. 30-50 series consumer cards will <b>NOT</b> work with vGPU Unlock. 
 <br> 20 series would be best, pascal is not great for AI, etc but if that isn't a worry pascal is also great. 
 <br> i personally use a Tesla P4 8GB, the licensing server and all is kind of annoying but it works quite well aside from the added hassle around configuration.
 <br> in my opinion the tesla P4, T4, L4 models are the most optimal devices at 60-75w power usage with speeds comparable to higher end cards, example the P4 is an underclocked GTX 1080, which has a TDP 105w higher (180w) <a href="https://askgeek.io/en/gpus/vs/NVIDIA_Tesla-P4-vs-NVIDIA_GeForce-GTX-1080-Desktop" target="_blank">Tesla P4 Vs GTX 1080 benchmarks</a>
