@@ -87,7 +87,7 @@ HomeLab CheatSheet &amp; AwesomeList
       <td>NAS, Network appliance, media server, Proxmox host</td>
     </tr>
     <tr>
-      <td><a href="https://thinkstation-specs.com/wp-content/uploads/2019/09/P330-Tiny-Lenovo-ThinkStation.pdf" target="_blank">ThinkCentre P330</td>
+      <td><a href="https://thinkstation-specs.com/wp-content/uploads/2019/09/P330-Tiny-Lenovo-ThinkStation.pdf" target="_blank">ThinkCentre P330</a></td>
       <td>up to I5-9400T/i7-9700T</td>
       <td>64GB</td>
       <td>2xM.2</td>
@@ -97,7 +97,7 @@ HomeLab CheatSheet &amp; AwesomeList
       <td>NAS, Network appliance, media server, Proxmox host</td>
     </tr>
       <tr>
-      <td><a href="https://www.lenovo.com/content/dam/lenovo/pcsd/north-america/en/solutions/workstations/datasheets/na-datasheet-thinkstation-p340-tiny.pdf" target="_blank">ThinkCentre P340</td>
+      <td><a href="https://www.lenovo.com/content/dam/lenovo/pcsd/north-america/en/solutions/workstations/datasheets/na-datasheet-thinkstation-p340-tiny.pdf" target="_blank">ThinkCentre P340</a></td>
       <td>up to I5-9400T/i7-9700T</td>
       <td>64GB</td>
       <td>2xM.2</td>
@@ -107,7 +107,7 @@ HomeLab CheatSheet &amp; AwesomeList
       <td>NAS, Network appliance, media server, Proxmox host</td>
     </tr>
     <tr>
-      <td><a href="https://news.lenovo.com/wp-content/uploads/2021/07/ThinkStationP350TinyDatasheet-Final.pdf" target="_blank">ThinkCentre P350</td>
+      <td><a href="https://news.lenovo.com/wp-content/uploads/2021/07/ThinkStationP350TinyDatasheet-Final.pdf" target="_blank">ThinkCentre P350</a></td>
       <td>i7-11700T</td>
       <td>64GB</td>
       <td>2xM.2</td>
@@ -259,3 +259,6 @@ You can utilise all of these on proxmox if you are interested in a homelab virtu
 <summary><b>File management:</b></summary>
 <a href="https://github.com/evsar3/sshfs-win-manager" target="_blank">SSHFS-Win Manager is a GUI for SSHFS on Windows</a>
 </details>
+<Br><b>SelfHosted:</b>
+<br><a href="https://github.com/awesome-selfhosted/awesome-selfhosted" target="_blank">Awesome-Selfhosted</a>
+
