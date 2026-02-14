@@ -130,7 +130,7 @@ HomeLab CheatSheet &amp; AwesomeList
   <br>
   <br> issues i have experienced: 
   <ul><li> takes some work to get 64GB ram to boot properly doesn't seem to like ram in the wrong order </li>
-  <li> built in iGPU doesn't always work / default back to itself after having a dGPU, so if you buy it used how a low profile dGPU handy. upside the bios allows for iGPU+dGPU and will boot with a dGPU such as a tesla that includes zero display ports </li>
+  <li> built in iGPU doesn't always work / default back to itself after having a dGPU, so if you buy it used have a low profile dGPU handy. upside the bios allows for iGPU+dGPU and will boot with a dGPU such as a tesla that includes zero display ports </li>
   <li> be careful with the 2.5in sata. if the cables aren't sitting quite right they can snap the data port off the drive, found that one out the hard way. there is a lot packed into very little space in this model so you have to be a bit mindful.</li></ul>
 <table border="1" class="dataframe">
   <thead>
