@@ -204,7 +204,7 @@ this card is from 2008, it is very cheap, i purchased mine for $10 with 2x sata 
 this is one of the lowest priced GPUs with 16gb vram with virtual GPU profile support. each profile also appears as a new GPU you can passthrough to the Virtual machine. 
 <br>Protential issues:
 <ul><li>SR-IOV can require a bios update that must be done on windows, some users report success from linux but others report bricking their card when using linux.</li>
-<li>QSV Encoding can be buggy. some users report that it does not function on the gpu profiles</li>
+<li>QSV Encoding can be buggy. some users report that it does not function on the gpu profiles <a href="https://forum.level1techs.com/t/intel-arc-sr-iov-hack/200804/112" target="_blank">"While the new Xe driver will have sr-iov it will be useless as it seems to lack HUC firmware so no HW encoding"</a></li>
 <li>Support for specifically intel IPEX/XPU is very limited compared to Nvidia or even AMD and vulkan/OpenCL performance is not great on ARC devices in my experience. (although i am only using a Arc A310 4GB currently) </li></ul>
 <br>Thread on level1techs discussing Proxmox 9+ the intel Arc Pro B50 with SR-IOV <a href="https://forum.level1techs.com/t/proxmox-9-0-intel-b50-sr-iov-finally-its-almost-here-early-adopters-guide/238107?page=5" target="_blank">Proxmox 9.0 + Intel B50 SR-IOV – finally its almost here! Early Adopter’s Guide</a>
 <br>
