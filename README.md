@@ -3,6 +3,7 @@ HomeLab CheatSheet &amp; AwesomeList
 <br> Created for the [HomeLab Group](https://smp6.simplex.im/g#P45YjyWy-__e3p3OqoRvU_4sjcSorUz0v8hCtWEPRtk) on Simplex Chat [![Simplex Chat](https://avatars.githubusercontent.com/u/59927747?s=48&v=4)](https://simplex.chat/)
 <br>
 <br> This page will be updated randomly with new information, contributions welcome!, so stay tuned. 
+<br> Note: many of the hardware suggestions here are mostly the best items in their class for the lowest prices.
 <br>
 ## Table of Contents
 - [Hardware](#hardware)
@@ -10,6 +11,7 @@ HomeLab CheatSheet &amp; AwesomeList
     - [Minimal Setups](#minimal-setups)
     - [SFF Suggestions](#sff-suggestions)
   - [NIC](#nic)
+  - [SAS/HBA](#SAS/HBA)
   - [GPU](#gpu)
 - [Suggested OS](#suggested-os)
   - [Proxmox](#proxmox)
@@ -165,6 +167,15 @@ HomeLab CheatSheet &amp; AwesomeList
     </p>
   <br> this device has support for SR-IOV and other worthwhile features for Virtual machines. if you do not need this, any other NIC should be fine. 
   <br> Be aware of knock offs, google “clone i350 intel” to learn how to spot them. Dell branded they are most likely genuine. <a href="https://forum.level1techs.com/t/compatible-quad-nic-for-dell-optiplex-7020-sff/170581/2" target="_blank">Discussion mentioning this</a>
+</details>
+<details>
+<summary>SAS/HBA cards:</summary>
+LSI/Inspur 9211-8i IT mode (IT mode firmware is required for ZFS usage with proxmox/unraid/etc otherwise you must format the drives you connect to it into a raid with the cards firmware.)
+<p align="left">
+<img width="300" src="https://m.media-amazon.com/images/I/81Xb3aRiUuL._AC_.jpg">
+</p>
+this card is from 2008, it is very cheap, i purchased mine for $10 with 2x sata type cables and works great. it is a 6GB/s sas card, it supports 8x SATA or SAS drives via 2x ports. it <b>DOES NOT SUPPORT TRIM</b> so that is worth noting, newer SAS cards do support trim, but this card does not. so <b>DO NOT</b> plug SSDs into it. but i can verify, it does work with 10-12TB sata drives, i am using it with several. so no worries about 8TB+ support with this specific card. it is perfect if all you need is up to 8x extra Sata/Sas HDDs.
+<br><b>Warning:</b>These cards run hot, so have fan in the side of your case or be prepared to add one. 
 </details>
 <details>
 <summary>GPU:</summary>
