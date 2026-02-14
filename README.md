@@ -185,7 +185,7 @@ HomeLab CheatSheet &amp; AwesomeList
 <br><a href="https://github.com/GreenDamTan/fastapi-dls_mirror" target="_blank">fastapi-dls_mirror by GreenDamTan</a>
 </details>
 <br><b>Intel:</b>
-<br>only the Arc Pro and iGPUs support SR-IOV standard Arc GPUsdo <b>NOT</b> support SR-IOV
+<br>only the Arc Pro and iGPUs support SR-IOV standard Arc GPUs do <b>NOT</b> support SR-IOV
 <br>Intel Arc Pro B50: 
 <p align="left">
 <img width="300" src="https://www.servethehome.com/wp-content/uploads/2025/05/Intel-Arc-Pro-B50-SFF-at-Computex-2025-2.jpg">
