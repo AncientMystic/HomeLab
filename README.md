@@ -170,7 +170,7 @@ HomeLab CheatSheet &amp; AwesomeList
 </details>
 <details>
 <summary>SAS/HBA cards:</summary>
-LSI/Inspur 9211-8i IT mode (IT mode firmware is required for ZFS usage with proxmox/unraid/etc otherwise you must format the drives you connect to it into a raid with the cards firmware.)
+<a href="https://docs.broadcom.com/doc/12353333" target="_blank">LSI/Inspur 9211-8i</a> IT mode (IT mode firmware is required for ZFS usage with proxmox/unraid/etc otherwise you must format the drives you connect to it into a raid with the cards firmware.)
 <p align="left">
 <img width="300" src="https://m.media-amazon.com/images/I/81Xb3aRiUuL._AC_.jpg">
 </p>
