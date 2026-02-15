@@ -1083,10 +1083,50 @@ All these filesystems (XFS, ZFS, and BTRFS) can be utilized on **Proxmox**, a ho
 
 - [Recoll](https://www.recoll.org/index.html) - A powerful, open-source desktop search tool that can index and search the contents of various document formats. It supports a wide range of file types and is great for organizing and retrieving personal documents locally.
 
+### Windows Tweaks & Privacy:
+
+- [Windows 10/11 Optimization & Customization Guide](https://github.com/just-maik/win-opti-resources) - A comprehensive guide that helps optimize and customize Windows 10/11 for improved performance, privacy, and overall system experience.
+- [Microsoft Edge Removal](https://github.com/ShadowWhisperer/Remove-MS-Edge) - A tool to fully remove Microsoft Edge from Windows, ensuring it is completely deleted and no longer part of your system.
+- [OneDrive-Uninstaller](https://github.com/ionuttbara/one-drive-uninstaller) - A tool for completely uninstalling OneDrive from your system, preventing it from syncing and taking up system resources.
+- [Dism++](https://github.com/Chuyu-Team/Dism-Multi-language) - A powerful system tool for managing Windows image files, providing options for system cleanup, privacy tweaks, and optimizations.
+- [Blackbird](https://www.getblackbird.net/) - A privacy-focused tool that disables tracking, telemetry, and other unwanted data collection by Windows, offering enhanced privacy on your system.
+- [10AntiSpy](https://www.majorgeeks.com/files/details/10antispy.html) - A privacy-focused tool for disabling unwanted Windows 10 features such as telemetry, Cortana, and other data collection mechanisms.
+- [UWT4](https://www.thewindowsclub.com/ultimate-windows-tweaker-4-windows-10) - A comprehensive tweak tool for Windows 10 that allows you to customize various system settings and privacy options, improving performance and security.
+- [Win10BloatRemover](https://github.com/Fs00/Win10BloatRemover) - A tool that helps you remove bloatware and unwanted apps from Windows 10, freeing up space and improving system performance.
+- [Intelligent Standby List Cleaner](https://www.majorgeeks.com/files/details/intelligent_standby_list_cleaner.html) - A tool to reduce system stuttering and improve performance by clearing the standby memory list, optimizing RAM usage.
+
+### Windows 7:
+
+- [Windows 7 ESU Patching](https://hackandpwn.com/windows-7-esu-patching/) - A guide for patching Windows 7 Extended Security Updates (ESU) to keep receiving updates and security patches after official support ends.
+- [Windows 7 Service Pack 2](https://github.com/marie-systems/win7-sp2/tree/main) - A community-driven project to create an unofficial Windows 7 Service Pack 2, adding new features, bug fixes, and improvements to Windows 7.
+- [Windows 7 SP4 Unofficial](https://github.com/LemonSqueezers/W7SP4) - An unofficial Service Pack 4 for Windows 7, designed to enhance the system with additional updates and fixes after the official support ended.
+- [Windows-7 on Modern Hardware](https://github.com/wortkraecker/Windows-7-on-modern-hardware) - A guide for installing and running Windows 7 on modern hardware, with advice on drivers, patches, and compatibility tweaks.
+- [Windows 7 Fan-Made Survival Guide](https://github.com/kuba2k2/i-use-win7-btw) - A fan-made survival guide for using Windows 7 in the modern era, offering tips, tweaks, and tools to keep Windows 7 functional and secure.
+
+### Linux Filesystems on Windows:
+
+- [WinBtrfs](https://github.com/maharmstone/btrfs) - A Windows driver for the Btrfs filesystem, allowing access to Btrfs partitions and data from a Windows environment.
+- [OpenZFS on Windows](https://github.com/openzfsonwindows/openzfs) - A project to bring OpenZFS support to Windows, enabling ZFS filesystems to be used on Windows systems.
+- [EXT4 for Win](https://www.paragon-software.com/home/linuxfs-windows/) - A driver for accessing EXT4 partitions on Windows, offering full read/write support for EXT4-formatted drives.
+
+**Warning:**
+These drivers are experimental and may not be stable. There is a risk of data corruption, crashes, or other issues when using Linux filesystems on Windows. It is highly recommended to use these tools only with backup copies of your important data, and avoid using them for critical or production environments.
+
 <hr>
 
 ### SelfHosted:
 - [Awesome-Selfhosted](https://github.com/awesome-selfhosted/awesome-selfhosted).
+
+### Audiobooks & Podcasts:
+
+- [Audiobookshelf](https://github.com/advplyr/audiobookshelf) - An open-source self-hosted solution for managing and listening to audiobooks. It offers a clean interface and supports syncing across devices.
+
+#### Audiobookshelf Apps:
+
+- **Android App**: [Audiobookshelf Android App](https://github.com/advplyr/audiobookshelf-app) - An official Android app for accessing your Audiobookshelf library, providing seamless audiobook management and playback.
+- **iOS Apps**:
+    - [Audiobooth](https://github.com/AudioBooth/AudioBooth) - An iOS app for listening to audiobooks from Audiobookshelf. **Note**: Currently does not support podcasts.
+    - [Plappa](https://plappa.me/) - A podcast app that integrates with Audiobookshelf, providing support for podcasts as well. **Note**: Can be glitchy and has heavy battery drain issues when managing large libraries, but podcasts work at least.
 
 ### AI:
 
