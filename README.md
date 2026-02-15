@@ -1041,6 +1041,8 @@ In testing, I ran a Ubuntu VM with BTRFS and compressed roughly 5.5GB of OS file
 
 All these filesystems (XFS, ZFS, and BTRFS) can be utilized on **Proxmox**, a homelab virtualization server platform.
 
+</details> 
+
 ## Useful Software:
 
 ### RDP:
