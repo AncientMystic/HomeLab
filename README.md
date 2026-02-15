@@ -4,7 +4,8 @@ HomeLab CheatSheet &amp; AwesomeList
 <br>
 <br> This page will be updated randomly with new information, contributions welcome!, so stay tuned. 
 <br> Note: many of the hardware suggestions here are mostly the best items in their class for the lowest prices.
-<br>ToDO: Update table of contents...
+<br>
+<br>ToDo: Update table of contents...
 # Table of Contents
 1. [Hardware](#hardware)
    - [Recommended Devices](#recommended-devices)
@@ -533,21 +534,17 @@ All LSI cards run warm.
 
 # Enterprise NVMe / M.2 Drives with Endurance
 
-| **Drive Model**                                  | **Form Factor** | **Interface**   | **Endurance (TBW)**        |
-|-------------------------------------------------|-----------------|-----------------|----------------------------|
-| **Intel Optane SSD 905P (480GB, 960GB, 1.5TB)** | M.2 2280        | PCIe 3.0 x4     | 365 TBW (480GB)            | 
-| **Micron 9300 PRO (400GB, 800GB, 1.6TB, 3.2TB)**| M.2 2280        | PCIe 3.0 x4     | 3.2 PBW (3.2TB)            |
-| **Samsung PM1733 (1.6TB, 3.2TB)**               | M.2 2280        | PCIe 4.0 x4     | 1.3 PBW (1.6TB)            | 
-| **Samsung 980 Pro (1TB)**                       | M.2 2280        | PCIe 4.0 x4     | 600 TBW                    | 
-| **Seagate Nytro 5000 (1.6TB, 3.2TB, 6.4TB)**    | M.2 2280        | PCIe 3.0 x4     | 3.2 PBW (3.2TB)            | 
-| **Intel DC P5800X (400GB, 800GB, 1.6TB)**       | M.2 2280        | PCIe 4.0 x4     | 30 PBW (1.6TB)             | 
-| **Micron 9400 PRO (1.6TB, 3.2TB, 6.4TB)**       | M.2 2280        | PCIe 4.0 x4     | 3.5 PBW (3.2TB)            |
-| **ADATA XPG SX8200 Pro (1TB, 2TB, 4TB)**        | M.2 2280        | PCIe 3.0 x4     | 1600 TBW (2TB)             |
-| **Phison E12DC Enterprise SSDs (1.6TB, 3.2TB)** | M.2 2280        | PCIe 3.0 x4     | 2 PBW (3.2TB)              |
-| **Micron 7450 PRO 960GB**                       | M.2 2280        | PCIe 3.0 x4     | 1000 TBW                   |
-| **Micron 7450 MAX 800GB**                       | M.2 2280        | PCIe 3.0 x4     | 3.5 PBW                    |
-| **Intel P3700 800GB**                           | M.2 2280        | PCIe 3.0 x4     | 3 PBW                      |
-| **Intel Optane P4801X 375GB**                   | M.2 2280        | PCIe 3.0 x4     | 13 PBW                     |
+| **Drive Model**                                  | **Form Factor** | **Interface**   | **Endurance (TBW/PBW)**   | **Watts (Idle/Active)** |
+|-------------------------------------------------|-----------------|-----------------|----------------------------|-------------------------|
+| **Intel Optane M10 (16GB)**                     | M.2 2280        | PCIe 3.0 x2     | 365 TBW                    | .08W/2W                 |
+| **Intel Optane M10 (32GB)**                     | M.2 2280        | PCIe 3.0 x2     | 182.5 TBW                  | 1W/3.5W                 |
+| **Intel Optane SSD 905P (480GB, 960GB, 1.5TB)** | M.2 2280        | PCIe 3.0 x4     | 17.52 PB                   | 6W/16.4W                |
+| **Samsung PM9A3 (960GB, 1920GB, 3840GB)**       | M.2 22110       | PCIe 4.0 x4     | 1.7 PBW / 3.5PBW / 7.0 PBW | 3.5W/8W(Avg)9.8W(Max)   |
+| **Seagate Nytro 5000 (1.6TB, 3.2TB, 6.4TB)**    | M.2 22110       | PCIe 3.0 x4     | 3.2 PBW (3.2TB)            | 9W(Avg)/12.5W(Max)      |
+| **Intel DC P5800X (400GB, 800GB, 1.6TB)**       | U.2             | PCIe 4.0 x4     | 73PBW / 146 PBW / 292 PBW  | 4.2W/18W                |
+| **ADATA XPG SX8200 Pro (256gb,512GB,1TB,2TB)**  | M.2 2280        | PCIe 3.0 x4     | 160/320/640/NA TBW         | .05W/1.9W(Avg)/4.1W(Max)|
+| **Intel DC P3700 400GB**                        | PCIE            | PCIe 3.0 x4     | 7.3 PBW                    | 4W/9W(Avg)/12W(Max)     |
+| **Intel Optane P4801X 100GB**                   | M.2 2280        | PCIe 3.0 x4     | 10.9PBW                    | 3W/7W                   |
 
 # Consumer NVMe / M.2 Drives
 
