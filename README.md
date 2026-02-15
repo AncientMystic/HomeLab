@@ -55,6 +55,7 @@ HomeLab CheatSheet &amp; AwesomeList
    - [RDP](#rdp)
    - [Gaming](#gaming)
    - [File Management](#file-management)
+   - [File Sharing](#file-sharing)
    - [Caching](#caching)
    - [Firewall / Networking](#firewallnetworking)
    - [Host Power Management](#host-power-management)
@@ -284,12 +285,12 @@ Other mini PCs and SFF PCs can be worthwhile, but personally, I find the Lenovo 
 
 </tbody>
 </table>
-  <details>
-    <summary><b>SFF Suggestion:</b></summary>
-    <br> One of the most cost effective SFF PCs for price vs hardware potential
-    <br> HP z240 SFF
-    <p align="left">
-  <img width="300" src="https://i.pcmag.com/imagery/reviews/02pEw0PoQLzntoO4LnGl1jE-1.fit_lim.size_740x416.v_1569469958.jpg">
+
+### SFF Suggestion
+
+One of the most cost effective SFF PCs for price vs hardware potential
+<br><b>HP z240 SFF</b>
+<p align="left"><img width="300" src="https://i.pcmag.com/imagery/reviews/02pEw0PoQLzntoO4LnGl1jE-1.fit_lim.size_740x416.v_1569469958.jpg"></p>
   <br> typically features an i7-6700 with 4x DDR4 ram slots and 64GB support. Plus it has 2x3.5 1x2.5 Hard drive slots, 1xNVME m.2 slot and 2xPci-e slots, as far as expansion options go for a SFF PC this one has a lot of options.
   <br>
   <br> issues i have experienced: 
@@ -341,8 +342,8 @@ Other mini PCs and SFF PCs can be worthwhile, but personally, I find the Lenovo 
 <br><a href="https://tachytelic.net/2021/12/dell-optiplex-7020-nvme-ssd/" target="_blank">Bios Mod - Install and boot from an NVMe SSD on a Dell OptiPlex 9020, 7020 or 3020</a>
 <br> i have tested this on a Dell Optiplex 3020 and can verify it works if done properly. 
 </details>
-<details>
-<summary><b>NIC:</b></summary>
+
+### NIC:
 
 <br>
 <a href="https://www.digikey.com/htmldatasheets/production/2068431/0/0/1/intel-ethernet-server-adapter-i350-brief.html" target="_blank">Intel I350</a> (Quad-Port 1GbE)
@@ -407,9 +408,10 @@ Clones may:
 • Have unstable drivers  
 • Fail under load  
 • Not support SR-IOV properly 
-</details>
-<details>
-<summary><b>SAS / HBA cards:</b></summary>
+
+<hr>
+
+### SAS / HBA cards:
 
 <a href="https://docs.broadcom.com/doc/12353333" target="_blank">LSI / Inspur 9211-8i</a> (Flashed to IT Mode)
 
@@ -523,9 +525,9 @@ All LSI cards run warm.
 • SSD-heavy / modern build → 9300-8i or SAS3008-based card  
 • Double check you buy a model with IT mode firmware for homelab use. 
 
-</details>
-<details>
-<summary><b>SSD/Nvme Drives:</b></summary>
+<hr>
+
+### SSD/Nvme Drives:
 
 # Enterprise NVMe / M.2 Drives with Endurance
 
@@ -561,10 +563,8 @@ All LSI cards run warm.
 
 Enterprise drives are designed to handle much higher workloads and offer greater durability compared to consumer-grade drives. While consumer drives may seem more affordable, they often burn out quickly in high-write environments such as servers or when used with ZFS, which requires frequent read/write operations. Enterprise SSDs are built for sustained performance, higher endurance (TBW/PBW), and reliability, making them the preferable choice for demanding applications where data integrity and long-term use are crucial.
 
-</details>
-<details>
-<summary><b>GPU:</b></summary>
-<br><b>NVIDIA (vGPU / AI / Virtualization):</b>
+### GPU:
+<b>NVIDIA (vGPU / AI / Virtualization):</b>
 
 <hr>
 
@@ -799,8 +799,9 @@ AMD does have a hardware virtualization / SR-IOV capable ecosystem, but:
 
 For anyone experimenting with AMD GPUs + vGPU workflows, community experience is a very valuable resource!
 
-<br>## GPU Models to compare them side by side
-<br> NOTE: Idle est. may not be accurate, different configurations vary widely. 
+### GPU Models to compare them side by side:
+i often found myself looking up these details when comparing GPUs to try to find the best option for the price, so i added a table here of most GPUs for quick reference comparisons. 
+<br>NOTE: Idle est. may not be accurate, different configurations vary widely. 
 
 ## Intel GPU Master Table
 
@@ -968,21 +969,20 @@ For anyone experimenting with AMD GPUs + vGPU workflows, community experience is
 |-----|------|-------------|--------------|------|----------------------|------------|----------------|
 | [Radeon Instinct MI25](https://www.techpowerup.com/gpu-specs/radeon-instinct-mi25.c2983) | 16GB HBM2 | 24.58 TFLOPS | 12.29 TFLOPS | 300W | ~30–40W | 436.2 GB/s | 🟡 |
 
-</details>
-</details>
-<br>
-<br><b>Suggested OS:</b>
-<br><a href="https://www.proxmox.com/en/" target="_blank">Proxmox</a>
-<details>
-<summary><b>Proxmox related content:</b></summary>
+<hr>
+
+### Suggested OS:
+
+<a href="https://www.proxmox.com/en/" target="_blank">Proxmox</a>
+
+### Proxmox related content:
 Additional Resources:
 <br><a href="https://community-scripts.github.io/ProxmoxVE/" target="_blank">Proxmox VE Helper scripts</a> - Hundreds of scripts to quickly setup a wide range of projects on proxmox.
 <br><a href="https://github.com/MacRimi/ProxMenux" target="_blank">ProxMenux</a> - Seperate Dashboard / CLI menu with more information & management options handy for proxmox management.
 <br>VMs:
 <br><a href="https://github.com/kholia/OSX-KVM" target="_blank">OSX-KVM</a> - Mac OSX (multiple versions to choose from) On Proxmox. 
-</details>
-<details>
-<summary><b>Filesystems:</b></summary>
+
+### Filesystems:
 
 ### [XFS vs EXT4: Which Linux File System Is Better?](https://blog.purestorage.com/purely-educational/xfs-vs-ext4-which-linux-file-system-is-better/)  
 Beyond what is covered in the article:
@@ -1041,7 +1041,7 @@ In testing, I ran a Ubuntu VM with BTRFS and compressed roughly 5.5GB of OS file
 
 All these filesystems (XFS, ZFS, and BTRFS) can be utilized on **Proxmox**, a homelab virtualization server platform.
 
-</details> 
+<hr>
 
 ## Useful Software:
 
