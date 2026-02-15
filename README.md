@@ -871,8 +871,11 @@ For anyone experimenting with AMD GPUs + vGPU workflows, community experience is
 
 | GPU | CUDA | VRAM | FP32 | FP16 | TDP | Idle | Virtualization |
 |-----|------|------|------|------|-----|------|----------------|
-| [RTX 5080](https://www.techpowerup.com/gpu-specs/geforce-rtx-5080.c4190) | 10752 | 16GB GDDR7 256-bit | ~60 TF | ~60 TF | 400W | ~15W | ❌ |
-| [RTX 5090](https://www.techpowerup.com/gpu-specs/geforce-rtx-5090.c4189) | 21760 | 32GB GDDR7 512-bit | ~110 TF | ~110 TF | 600W | ~20W | ❌ |
+| [RTX 5050](https://www.techpowerup.com/gpu-specs/geforce-rtx-5050.c4220) | 2560   | 8GB GDDR6 128-bit  | 13.17 TFLOPS | 13.17 TFLOPS | 130W  | ~12W | ❌             |
+| [RTX 5060](https://www.techpowerup.com/gpu-specs/geforce-rtx-5060.c4219) | 3840  | 8GB GDDR7 128-bit  | 19.18 TFLOPS  | 19.18 TFLOPS | 145W  | ~13W | ❌             |
+| [RTX 5070](https://www.techpowerup.com/gpu-specs/geforce-rtx-5070.c4218) | 6144  | 12GB GDDR7 256-bit  | 30.87 TFLOPS | 30.87 TFLOPS | 250W  | ~14W | ❌             |
+| [RTX 5080](https://www.techpowerup.com/gpu-specs/geforce-rtx-5080.c4190) | 10752 | 16GB GDDR7 256-bit | 56.28 TFLOPS | 56.28 TFLOPS | 360W | ~15W | ❌ |
+| [RTX 5090](https://www.techpowerup.com/gpu-specs/geforce-rtx-5090.c4189) | 21760 | 32GB GDDR7 512-bit | 104.8 TFLOPS | 104.8 TFLOPS | 575W | ~20W | ❌ |
 
 ## NVIDIA Quadro / Professional GPUs
 
