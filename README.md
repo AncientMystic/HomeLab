@@ -506,6 +506,8 @@ Always confirm chipset before buying.
 | SSD Friendly | ⚠️ | ✅ | ✅ |
 | Idle Power | ~8–10W | ~6–8W | ~6–8W |
 
+Note: full trim requires IT firmware and driver support. Someversions of the mpt3sas driver break trim. otherwise it is required that the SSD to support RZAT (deterministic read zeros after trim)
+
 <hr>
 
 <b>Thermals:</b>
