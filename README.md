@@ -5,42 +5,58 @@ HomeLab CheatSheet &amp; AwesomeList
 <br> This page will be updated randomly with new information, contributions welcome!, so stay tuned. 
 <br> Note: many of the hardware suggestions here are mostly the best items in their class for the lowest prices.
 <br>
-## Table of Contents
+# Table of Contents
+1. [Hardware](#hardware)
+   - [Recommended Devices](#recommended-devices)
+     - [Minimal / Tiny PCs](#minimal--tiny-pcs)
+     - [SFF Suggestions](#sff-suggestions)
+   - [NIC (Network Cards)](#nic-network-cards)
+   - [SAS / HBA Cards](#sas--hba-cards)
+     - [LSI 9211-8i (IT Mode)](#lsi-9211-8i-it-mode)
+     - [Newer Recommended Alternatives (SAS2308 / SAS3008)](#newer-recommended-alternatives-sas2308--sas3008)
+   - [GPU](#gpu)
+     - [NVIDIA (vGPU / AI / Virtualization)](#nvidia-vgpu--ai--virtualization)
+       - Supported Generations
+       - Tesla Low-Power Options
+       - vGPU Licensing Notes
+       - vGPU Resources
+     - [Intel (SR-IOV / Arc Pro)](#intel-sr-iov--arc-pro)
+       - Arc Pro B-Series
+       - Firmware / Early Adopter Notes
+     - [AMD (MxGPU / SR-IOV)](#amd-mxgpu--sr-iov)
+       - Supported Professional Series
+       - MxGPU Overview
+       - Contribution Request
+     - [GPU Model Comparison Table](#gpu-model-comparison-table)
+       - [Intel GPU Master Table](#intel-gpu-master-table)
+       - [NVIDIA RTX 10 Series (Pascal)](#nvidia-rtx-10-series-pascal)
+       - [NVIDIA RTX 20 Series (Turing)](#nvidia-rtx-20-series-turing)
+       - [NVIDIA RTX 30 Series (Ampere)](#nvidia-rtx-30-series-ampere)
+       - [NVIDIA RTX 40 Series (Ada Lovelace)](#nvidia-rtx-40-series-ada-lovelace)
+       - [NVIDIA RTX 50 Series (Blackwell)](#nvidia-rtx-50-series-blackwell)
+       - [NVIDIA Quadro / Professional GPUs](#nvidia-quadro-professional-gpus)
+       - [NVIDIA RTX A-Series (Professional GPUs)](#nvidia-rtx-a-series-professional-gpus)
+       - [NVIDIA Tesla Series](#nvidia-tesla-series)
+       - [AMD Radeon RX 5000 Series (RDNA1)](#amd-radeon-rx-5000-series-rdna1)
+       - [AMD Radeon RX 6000 Series (RDNA2)](#amd-radeon-rx-6000-series-rdna2)
+       - [AMD Radeon RX 7000 Series (RDNA3)](#amd-radeon-rx-7000-series-rdna3)
+       - [AMD Radeon RX 9000 Series (RDNA4)](#amd-radeon-rx-9000-series-rdna4)
+       - [AMD Pro/Compute GPUs](#amd-procompute-gpus)
 
-- [Hardware](#hardware)
-  - [Recommended Devices](#recommended-devices)
-    - [Minimal / Tiny PCs](#recommended-devices)
-    - [SFF Suggestions](#sff-suggestion)
-  - [NIC (Network Cards)](#nic)
-  - [SAS / HBA Cards](#sas--hba-cards)
-    - [LSI 9211-8i (IT Mode)](#sas--hba-cards)
-    - [Newer Recommended Alternatives (SAS2308 / SAS3008)](#sas--hba-cards)
-  - [GPU](#gpu)
-    - [NVIDIA (vGPU / AI / Virtualization)](#gpu)
-      - Supported Generations
-      - Tesla Low-Power Options
-      - vGPU Licensing Notes
-      - vGPU Resources
-    - [Intel (SR-IOV / Arc Pro)](#gpu)
-      - Arc Pro B-Series
-      - Firmware / Early Adopter Notes
-    - [AMD (MxGPU / SR-IOV)](#gpu)
-      - Supported Professional Series
-      - MxGPU Overview
-      - Contribution Request
-    - [GPU Model Comparison Table](#gpu-models-to-compare-them-side-by-side)
+2. [Suggested OS](#suggested-os)
+   - [Proxmox](#proxmox)
+   - [Filesystems](#filesystems)
 
-- [Suggested OS](#suggested-os)
-  - [Proxmox](#proxmox)
-  - [Filesystems](#filesystems)
+3. [Software](#software)
+   - [RDP](#rdp)
+   - [Gaming](#gaming)
+   - [File Management](#file-management)
+   - [Caching](#caching)
+   - [Firewall / Networking](#firewallnetworking)
+   - [Host Power Management](#host-power-management)
 
-- [Software](#software)
-  - [RDP](#rdp)
-  - [Gaming](#gaming)
-  - [File Management](#file-management)
-  - [Caching](#caching)
-  - [Firewall / Networking](#firewallnetworking)
-  - [Host Power Management](#host-power-management)
+4. [SelfHosted](#selfhosted)
+   - [Awesome-Selfhosted](#awesome-selfhosted)
 <br>
 <br><b>Hardware:</b>
 <br>Recommended Devices:
@@ -712,392 +728,172 @@ AMD does have a hardware virtualization / SR-IOV capable ecosystem, but:
 
 For anyone experimenting with AMD GPUs + vGPU workflows, community experience is a very valuable resource!
 
-<hr>
-<br><b>GPU Models to compare them side by side:</b>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th>Model</th>
-      <th>VRAM</th>
-      <th>FP16 (half)</th>
-      <th>FP32 (float)</th>
-      <th>TDP</th>
-      <th>Suggested PSU</th>
-      <th>Bandwidth</th>
-    </tr>
-  </thead>
-  <tbody>
-<tr>
-  <td><a href="https://www.techpowerup.com/gpu-specs/arc-pro-a40.c3925" target="_blank">Intel Arc Pro A40</a></td>
-  <td>6GB</td>
-  <td>6.963 TFLOPS (2:1)</td>
-  <td>3.482 TFLOPS</td>
-  <td>50w</td>
-  <td>250w</td>
-  <td>192.0 GB/s</td>
-</tr>
-<tr>
-  <td><a href="https://www.techpowerup.com/gpu-specs/arc-pro-a50.c3926" target="_blank">Intel Arc Pro A50</a></td>
-  <td>6GB</td>
-  <td>9.626 TFLOPS (2:1)</td>
-  <td>4.813 TFLOPS</td>
-  <td>75w</td>
-  <td>250w</td>
-  <td>192.0 GB/s</td>
-</tr>
-<tr>
-  <td><a href="https://www.techpowerup.com/gpu-specs/arc-pro-a60.c4160" target="_blank">Intel Arc Pro A60</a></td>
-  <td>12GB</td>
-  <td>16.79 TFLOPS (2:1)</td>
-  <td>8.397 TFLOPS</td>
-  <td>130w</td>
-  <td>300w</td>
-  <td>384.0 GB/s</td>
-</tr>
-    <tr>
-      <td><a href="https://www.techpowerup.com/gpu-specs/arc-pro-b50.c4345" target="_blank">Intel Arc Pro B50</a></td>
-      <td>16GB</td>
-      <td>21.30 TFLOPS (2:1)</td>
-      <td>10.65 TFLOPS </td>
-      <td>70w</td>
-      <td>250w</td>
-      <td>224.0 GB/s </td>
-    </tr>
-        <tr>
-      <td><a href="https://www.techpowerup.com/gpu-specs/arc-pro-b60.c4350" target="_blank">Intel Arc Pro B60</a></td>
-      <td>24GB</td>
-      <td>24.58 TFLOPS (2:1)</td>
-      <td>12.29 TFLOPS </td>
-      <td>200w</td>
-      <td>550w</td>
-      <td>456.0 GB/s </td>
-    </tr>
-    <tr>
-      <td><a href="https://www.techpowerup.com/gpu-specs/tesla-p4.c2879" target="_blank">NVIDIA Tesla P4</a></td>
-      <td>8GB</td>
-      <td>89.12 GFLOPS (1:64)</td>
-      <td>5.704 TFLOPS </td>
-      <td>75w</td>
-      <td>250w</td>
-      <td>192.3 GB/s</td>
-    </tr>
-    <tr>
-  <td><a href="https://www.techpowerup.com/gpu-specs/tesla-p40.c2878" target="_blank">NVIDIA Tesla P40</a></td>
-  <td>24GB</td>
-  <td>N/A</td>
-  <td>N/A</td>
-  <td>250w</td>
-  <td>600w</td>
-  <td>(384-bit GDDR5)</td>
-</tr>
-<tr>
-  <td><a href="https://www.techpowerup.com/gpu-specs/tesla-p100-pcie-12-gb.c2915" target="_blank">NVIDIA Tesla P100 PCIe 12GB</a></td>
-  <td>12GB HBM2</td>
-  <td>19.05 TFLOPS (2:1)</td>
-  <td>9.526 TFLOPS</td>
-  <td>250w</td>
-  <td>600w</td>
-  <td>549.1 GB/s</td>
-</tr>
-<tr>
-  <td><a href="https://www.techpowerup.com/gpu-specs/tesla-p100-sxm2.c3183" target="_blank">NVIDIA Tesla P100 SXM2 16GB</a></td>
-  <td>16GB HBM2</td>
-  <td>21.22 TFLOPS (2:1)</td>
-  <td>10.61 TFLOPS</td>
-  <td>300w</td>
-  <td>700w</td>
-  <td>732.2 GB/s</td>
-</tr>
-<tr>
-  <td><a href="https://www.techpowerup.com/gpu-specs/tesla-v100-pcie-16-gb.c2957" target="_blank">NVIDIA Tesla V100 PCIe 16GB</a></td>
-  <td>16GB HBM2</td>
-  <td>28.26 TFLOPS (2:1)</td>
-  <td>14.13 TFLOPS</td>
-  <td>300w</td>
-  <td>700w</td>
-  <td>897.0 GB/s</td>
-</tr>
-    <tr>
-  <td><a href="https://www.techpowerup.com/gpu-specs/tesla-v100-pcie-32-gb.c3184" target="_blank">NVIDIA Tesla V100 PCIe 32GB</a></td>
-  <td>32GB HBM2</td>
-  <td>~28.26 TFLOPS (2:1)</td>
-  <td>~14.13 TFLOPS</td>
-  <td>300w</td>
-  <td>700w</td>
-  <td>897.0 GB/s</td>
-</tr>
-    <tr>
-  <td><a href="https://www.techpowerup.com/gpu-specs/quadro-p5000.c2864" target="_blank">NVIDIA Quadro P5000</a></td>
-  <td>16GB</td>
-  <td>N/A</td>
-  <td>N/A</td>
-  <td>180w</td>
-  <td>550w</td>
-  <td>(256-bit GDDR5X)</td>
-</tr>
-<tr>
-  <td><a href="https://www.techpowerup.com/gpu-specs/quadro-p6000.c2865" target="_blank">NVIDIA Quadro P6000</a></td>
-  <td>24GB</td>
-  <td>0.1974 TFLOPS</td>
-  <td>12.63 TFLOPS</td>
-  <td>250w</td>
-  <td>600w</td>
-  <td>432.8 GB/s</td>
-</tr>
-<tr>
-  <td><a href="https://www.techpowerup.com/gpu-specs/quadro-gp100.c2994" target="_blank">NVIDIA Quadro GP100</a></td>
-  <td>16GB</td>
-  <td>20.69 TFLOPS (2:1)</td>
-  <td>10.34 TFLOPS</td>
-  <td>235w</td>
-  <td>550w</td>
-  <td>732.2 GB/s</td>
-</tr>
-<tr>
-  <td><a href="https://www.techpowerup.com/gpu-specs/quadro-gv100.c3066" target="_blank">NVIDIA Quadro GV100</a></td>
-  <td>32GB HBM2</td>
-  <td>33.32 TFLOPS (2:1)</td>
-  <td>16.66 TFLOPS</td>
-  <td>250w</td>
-  <td>600w</td>
-  <td>868.4 GB/s</td>
-</tr>
-  <tr>
-  <td><a href="https://www.techpowerup.com/gpu-specs/quadro-rtx-6000.c3307" target="_blank">NVIDIA Quadro RTX 6000</a></td>
-  <td>24GB GDDR6</td>
-  <td>32.62 TFLOPS (2:1)</td>
-  <td>16.31 TFLOPS</td>
-  <td>260w</td>
-  <td>600w</td>
-  <td>672.0 GB/s</td>
-</tr>
-        <tr>
-      <td><a href="https://www.techpowerup.com/gpu-specs/tesla-t4.c3316" target="_blank">NVIDIA Tesla T4</a></td>
-      <td>16GB</td>
-      <td>65.13 TFLOPS (8:1)</td>
-      <td>8.141 TFLOPS  </td>
-      <td>70w</td>
-      <td>250w</td>
-      <td>320.0 GB/s</td>
-    </tr>
-     <tr>
-      <td><a href="https://www.techpowerup.com/gpu-specs/l4.c4091" target="_blank">NVIDIA Tesla L4</a></td>
-      <td>24GB</td>
-      <td>30.29 TFLOPS (1:1)</td>
-      <td>30.29 TFLOPS </td>
-      <td>72w</td>
-      <td>250w</td>
-      <td>192.3 GB/s</td>
-    </tr>
-    <tr>
-  <td><a href="https://www.techpowerup.com/gpu-specs/geforce-gtx-1080.c2839" target="_blank">NVIDIA GeForce GTX 1080</a></td>
-  <td>8GB</td>
-  <td>0.139 TFLOPS (1:64)</td>
-  <td>8.873 TFLOPS</td>
-  <td>180w</td>
-  <td>450w</td>
-  <td>320.3 GB/s</td>
-</tr>
-<tr>
-  <td><a href="https://www.techpowerup.com/gpu-specs/geforce-gtx-1080-ti.c2877" target="_blank">NVIDIA GeForce GTX 1080 Ti</a></td>
-  <td>11GB</td>
-  <td>0.177 TFLOPS (1:64)</td>
-  <td>11.34 TFLOPS</td>
-  <td>250w</td>
-  <td>600w</td>
-  <td>484.4 GB/s</td>
-</tr>
-<tr>
-  <td><a href="https://www.techpowerup.com/gpu-specs/geforce-rtx-2070.c3252" target="_blank">NVIDIA GeForce RTX 2070</a></td>
-  <td>8GB</td>
-  <td>14.93 TFLOPS (2:1)</td>
-  <td>7.465 TFLOPS</td>
-  <td>175w</td>
-  <td>450w</td>
-  <td>448.0 GB/s</td>
-</tr>
-<tr>
-  <td><a href="https://www.techpowerup.com/gpu-specs/geforce-rtx-2080.c3224" target="_blank">NVIDIA GeForce RTX 2080</a></td>
-  <td>8GB</td>
-  <td>20.14 TFLOPS (2:1)</td>
-  <td>10.07 TFLOPS</td>
-  <td>215w</td>
-  <td>550w</td>
-  <td>448.0 GB/s</td>
-</tr>
-         <tr>
-      <td><a href="https://www.techpowerup.com/gpu-specs/geforce-rtx-2080-ti.c3305" target="_blank">NVIDIA GeForce RTX 2080 Ti</a></td>
-      <td>11GB</td>
-      <td>26.90 TFLOPS (2:1)</td>
-      <td>13.45 TFLOPS  </td>
-      <td>250w</td>
-      <td>600w</td>
-      <td>616.0 GB/s</td>
-    </tr>
-         <tr>
-      <td><a href="https://www.techpowerup.com/gpu-specs/geforce-rtx-3080-ti.c3735" target="_blank">NVIDIA GeForce RTX 3080 Ti</a></td>
-      <td>12GB</td>
-      <td>34.10 TFLOPS (1:1) </td>
-      <td>34.10 TFLOPS </td>
-      <td>350w</td>
-      <td>7500w</td>
-      <td>912.4 GB/s</td>
-    </tr>
-         <tr>
-      <td><a href="https://www.techpowerup.com/gpu-specs/geforce-rtx-3090.c3622" target="_blank">NVIDIA GeForce RTX 3090</a></td>
-      <td>24GB</td>
-      <td>35.58 TFLOPS (1:1) </td>
-      <td>35.58 TFLOPS </td>
-      <td>350w</td>
-      <td>7500w</td>
-      <td>936.2 GB/s</td>
-    </tr>
-         <tr>
-      <td><a href="https://www.techpowerup.com/gpu-specs/geforce-rtx-3090-ti.c3829" target="_blank">NVIDIA GeForce RTX 3090 Ti</a></td>
-      <td>24GB</td>
-      <td>40.00 TFLOPS (1:1)</td>
-      <td>40.00 TFLOPS </td>
-      <td>450w</td>
-      <td>850w</td>
-      <td>1.01 TB/s </td>
-    </tr>
-<tr>
-  <td><a href="https://www.techpowerup.com/gpu-specs/geforce-rtx-4080.c3888" target="_blank">NVIDIA GeForce RTX 4080</a></td>
-  <td>16GB</td>
-  <td>48.74 TFLOPS (1:1)</td>
-  <td>48.74 TFLOPS</td>
-  <td>320w</td>
-  <td>700w</td>
-  <td>716.8 GB/s</td>
-</tr>
-      <tr>
-  <td><a href="https://www.techpowerup.com/gpu-specs/geforce-rtx-4080-super.c4182" target="_blank">NVIDIA GeForce RTX 4080 SUPER</a></td>
-  <td>16GB</td>
-  <td>52.22 TFLOPS (1:1)</td>
-  <td>52.22 TFLOPS</td>
-  <td>320w</td>
-  <td>700w</td>
-  <td>736.3 GB/s</td>
-</tr>
-    <tr>
-  <td><a href="https://www.techpowerup.com/gpu-specs/geforce-rtx-4090.c3621" target="_blank">NVIDIA GeForce RTX 4090</a></td>
-  <td>24GB</td>
-  <td>~82.6 TFLOPS*</td>
-  <td>~82.6 TFLOPS*</td>
-  <td>450w</td>
-  <td>1000w</td>
-  <td>1008 GB/s</td>
-</tr>
-  <tr>
-  <td><a href="https://www.techpowerup.com/gpu-specs/rtx-a2000.c3820" target="_blank">NVIDIA RTX A2000</a></td>
-  <td>6GB</td>
-  <td>7.987 TFLOPS (1:1)</td>
-  <td>7.987 TFLOPS</td>
-  <td>70w</td>
-  <td>250w</td>
-  <td>288.0 GB/s</td>
-</tr>
-<tr>
-  <td><a href="https://www.techpowerup.com/gpu-specs/rtx-a2000-12-gb.c3853" target="_blank">NVIDIA RTX A2000 (12GB)</a></td>
-  <td>12GB</td>
-  <td>7.987 TFLOPS (1:1)</td>
-  <td>7.987 TFLOPS</td>
-  <td>70w</td>
-  <td>250w</td>
-  <td>288.0 GB/s</td>
-</tr>
-<tr>
-  <td><a href="https://www.techpowerup.com/gpu-specs/rtx-a4500.c3849" target="_blank">NVIDIA RTX A4500</a></td>
-  <td>20GB</td>
-  <td>23.65 TFLOPS (1:1)</td>
-  <td>23.65 TFLOPS</td>
-  <td>200w</td>
-  <td>550w</td>
-  <td>640.0 GB/s</td>
-</tr>
-<tr>
-  <td><a href="https://www.techpowerup.com/gpu-specs/rtx-a5000.c3748" target="_blank">NVIDIA RTX A5000</a></td>
-  <td>24GB</td>
-  <td>27.77 TFLOPS (1:1)</td>
-  <td>27.77 TFLOPS</td>
-  <td>230w</td>
-  <td>550w</td>
-  <td>768.0 GB/s</td>
-</tr>
-<tr>
-  <td><a href="https://www.techpowerup.com/gpu-specs/rtx-a6000.c3686" target="_blank">NVIDIA RTX A6000</a></td>
-  <td>48GB</td>
-  <td>38.71 TFLOPS (1:1)</td>
-  <td>38.71 TFLOPS</td>
-  <td>300w</td>
-  <td>700w</td>
-  <td>768.0 GB/s</td>
-</tr>
-<tr>
-  <td><a href="https://www.techpowerup.com/gpu-specs/rtx-6000-ada-generation.c3933" target="_blank">NVIDIA RTX 6000 Ada Generation</a></td>
-  <td>48GB</td>
-  <td>91.06 TFLOPS (1:1)</td>
-  <td>91.06 TFLOPS</td>
-  <td>300w</td>
-  <td>700w</td>
-  <td>960.0 GB/s</td>
-</tr>
-<tr>
-  <td><a href="https://www.techpowerup.com/gpu-specs/quadro-rtx-6000.c3307" target="_blank">NVIDIA Quadro RTX 6000</a></td>
-  <td>24GB</td>
-  <td>32.62 TFLOPS (2:1)</td>
-  <td>16.31 TFLOPS</td>
-  <td>260w</td>
-  <td>600w</td>
-  <td>672.0 GB/s</td>
-</tr>
-<tr>
-  <td><a href="https://www.techpowerup.com/gpu-specs/radeon-rx-7900-xt.c3912" target="_blank">AMD Radeon RX 7900 XT</a></td>
-  <td>20GB</td>
-  <td>103.0 TFLOPS (2:1)</td>
-  <td>51.48 TFLOPS</td>
-  <td>300w</td>
-  <td>700w</td>
-  <td>800.0 GB/s</td>
-</tr>
-    <tr>
-  <td><a href="https://www.techpowerup.com/gpu-specs/radeon-rx-7900-xtx.c3941" target="_blank">AMD Radeon RX 7900 XTX</a></td>
-  <td>24GB</td>
-  <td>122.8 TFLOPS (2:1)</td>
-  <td>61.39 TFLOPS</td>
-  <td>355w</td>
-  <td>750w</td>
-  <td>960.0 GB/s</td>
-</tr>
-    <tr>
-  <td><a href="https://www.techpowerup.com/gpu-specs/radeon-rx-9060-xt.c???" target="_blank">AMD Radeon RX 9060 XT</a></td>
-  <td>8–16GB</td>
-  <td>~51.3 TFLOPS (2:1)</td>
-  <td>~25.6 TFLOPS</td>
-  <td>150–160w</td>
-  <td>450w</td>
-  <td>320.0 GB/s</td>
-</tr>
-<tr>
-  <td><a href="https://www.techpowerup.com/gpu-specs/radeon-rx-9070.c???" target="_blank">AMD Radeon RX 9070</a></td>
-  <td>16GB</td>
-  <td>~72.25 TFLOPS (2:1)</td>
-  <td>~36.12 TFLOPS</td>
-  <td>~220w</td>
-  <td>600w</td>
-  <td>896–960 GB/s</td>
-</tr>
-<tr>
-  <td><a href="https://www.techpowerup.com/gpu-specs/radeon-rx-9070-xt.c???" target="_blank">AMD Radeon RX 9070 XT</a></td>
-  <td>16GB</td>
-  <td>~97.32 TFLOPS (2:1)</td>
-  <td>~48.66 TFLOPS</td>
-  <td>~304w</td>
-  <td>750w</td>
-  <td>960.0 GB/s</td>
-</tr>
-  </tbody>
-</table>
+<br>## GPU Models to compare them side by side
+<br> NOTE: Idle est. may not be accurate, different configurations vary widely. 
+
+## Intel GPU Master Table
+
+| Model                                                                        | VRAM       | FP32         | FP16 | TDP  | Est. Idle | Bandwidth | Virtualization |
+| ---------------------------------------------------------------------------- | ---------- | ------------ | ---------- | ---- | --------- | --------- | -------------- |
+| [Intel Arc A310](https://www.techpowerup.com/gpu-specs/arc-a310.c3931)       | 4GB GDDR6  | 3.072 TFLOPS | 6.144 TFLOPS | 75W  | 8–15W     | 124 GB/s  | ❌ No SR-IOV    |
+| [Intel Arc A380](https://www.techpowerup.com/gpu-specs/arc-a380.c3913)       | 6GB GDDR6  | 4.198 TFLOPS  | 8.397 TFLOPS  | 75W  | 8–15W     | 186 GB/s  | ❌ No SR-IOV    |
+| [Intel Arc A580](https://www.techpowerup.com/gpu-specs/arc-a580.c3927)       | 8GB GDDR6  | 12.29 TFLOPS   | 24.58 TFLOPS  | 185W | 15–25W    | 256 GB/s  | ❌ No SR-IOV    |
+| [Intel Arc A750](https://www.techpowerup.com/gpu-specs/arc-a750.c3922)       | 8GB GDDR6  | 17.20 TFLOPS | 34.41 TFLOPS  | 225W | 18–30W    | 512 GB/s  | ❌ No SR-IOV    |
+| [Intel Arc A770 16GB](https://www.techpowerup.com/gpu-specs/arc-a770.c3914)  | 16GB GDDR6 | 19.66 TFLOPS | 39.32 TFLOPS  | 225W | 18–30W    | 512 GB/s  | ❌ No SR-IOV    |
+| [Intel Arc Pro A40](https://www.techpowerup.com/gpu-specs/arc-pro-a40.c3925) | 6GB GDDR6  | 3.482 TFLOPS  | 6.963 TFLOPS  | 50W  | 6–10W     | 192 GB/s  | ✅ SR-IOV       |
+| [Intel Arc Pro A50](https://www.techpowerup.com/gpu-specs/arc-pro-a50.c3926) | 6GB GDDR6  | 4.813 TFLOPS  | 9.626 TFLOPS  | 75W  | 8–15W     | 192 GB/s  | ✅ SR-IOV       |
+| [Intel Arc Pro A60](https://www.techpowerup.com/gpu-specs/arc-pro-a60.c4160) | 12GB GDDR6 | 8.397 TFLOPS  | 16.79 TFLOPS  | 130W | 10–20W    | 384 GB/s  | ✅ SR-IOV       |
+| [Intel Arc B580](https://www.techpowerup.com/gpu-specs/arc-b580.c4244)       | 12GB GDDR6  | 13.67 TFLOPS | 27.34 TFLOPS  | 190W | 15–25W    | 256 GB/s  | ❌ No SR-IOV    |
+| [Intel Arc Pro B50](https://www.techpowerup.com/gpu-specs/arc-pro-b50.c4345) | 16GB GDDR6 | 10.65 TFLOPS | 21.30 TFLOPS  | 70W  | 7–15W     | 224 GB/s  | ✅ SR-IOV       |
+| [Intel Arc Pro B60](https://www.techpowerup.com/gpu-specs/arc-pro-b60.c4350) | 24GB GDDR6 | 12.29 TFLOPS | 24.58 TFLOPS  | 200W | 15–30W    | 456 GB/s  | ✅ SR-IOV       |
+
+## NVIDIA RTX 10 Series (Pascal)
+
+| Model                                                                             | VRAM  | **FP16**                  | **FP32**                  | **TDP** | **Idle Power** | **Bandwidth** | **Virtualization** |
+| --------------------------------------------------------------------------------- | ----- | ------------------------- | ------------------------- | ------- | -------------- | ------------- | ------------------ |
+| [GTX 1050](https://www.techpowerup.com/gpu-specs/geforce-gtx-1050.c2875)          | 2 GB  | 29.10 GFLOPS              | 1.862 TFLOPS              | 75 W    | ~8–12 W        | 112 GB/s      | ✅ Unlock           |
+| [GTX 1050 Ti](https://www.techpowerup.com/gpu-specs/geforce-gtx-1050-ti.c2885)    | 4 GB  | 33.41 GFLOPS              | 2.138 TFLOPS              | 75 W    | ~8–12 W        | 112 GB/s      | ✅ Unlock           |
+| [GTX 1060 3GB](https://www.techpowerup.com/gpu-specs/geforce-gtx-1060-3-gb.c2867) | 3 GB  | 61.49 GFLOPS              |  3.935 TFLOPS             | 120 W   | ~10–18 W       | 192 GB/s      | ✅ Unlock           |
+| [GTX 1060 6GB](https://www.techpowerup.com/gpu-specs/geforce-gtx-1060-6-gb.c2862) | 6 GB  | 68.36 GFLOPS              |  4.375 TFLOPS             | 120 W   | ~10–18 W       | 192 GB/s      | ✅ Unlock           |
+| [GTX 1070](https://www.techpowerup.com/gpu-specs/geforce-gtx-1070.c2840)          | 8 GB  | 101.0 GFLOPS              | 6.463 TFLOPS              | 150 W   | ~12–20 W       | 256 GB/s      | ✅ Unlock           |
+| [GTX 1070 Ti](https://www.techpowerup.com/gpu-specs/geforce-gtx-1070-ti.c3010)    | 8 GB  | 127.9 GFLOPS              | 8.186 TFLOPS              | 180 W   | ~15–25 W       | 256 GB/s      | ✅ Unlock           |
+| [GTX 1080](https://www.techpowerup.com/gpu-specs/geforce-gtx-1080.c2839)          | 8 GB  | 139 GFLOPS                | 8.873 TFLOPS              | 180 W   | ~15–25 W       | 320.3 GB/s    | ✅ Unlock           |
+| [GTX 1080 Ti](https://www.techpowerup.com/gpu-specs/geforce-gtx-1080-ti.c2877)    | 11 GB | 177.2 GFLOPS              | 11.34 TFLOPS              | 250 W   | ~18–30 W       | 484.4 GB/s    | ✅ Unlock           |
+
+## NVIDIA RTX 20 Series (Turing)
+
+| GPU | CUDA | VRAM | FP32 | FP16 | TDP | Idle | Virtualization |
+|-----|------|------|------|------|-----|------|----------------|
+| [RTX 2060](https://www.techpowerup.com/gpu-specs/geforce-rtx-2060.c3310) | 1920 | 6GB GDDR6 192-bit | 6.5 TF | 6.5 TF | 160W | ~8W | ✅ Unlock |
+| [RTX 2060 Super](https://www.techpowerup.com/gpu-specs/geforce-rtx-2060-super.c3441) | 2176 | 8GB GDDR6 256-bit | 7.2 TF | 7.2 TF | 175W | ~9W | ✅ Unlock |
+| [RTX 2070](https://www.techpowerup.com/gpu-specs/geforce-rtx-2070.c3252) | 2304 | 8GB GDDR6 256-bit | 7.5 TF | 7.5 TF | 175W | ~9W | ✅ Unlock |
+| [RTX 2070 Super](https://www.techpowerup.com/gpu-specs/geforce-rtx-2070-super.c3440) | 2560 | 8GB GDDR6 256-bit | 9.1 TF | 9.1 TF | 215W | ~9W | ✅ Unlock |
+| [RTX 2080](https://www.techpowerup.com/gpu-specs/geforce-rtx-2080.c3224) | 2944 | 8GB GDDR6 256-bit | 10.1 TF | 10.1 TF | 215W | ~10W | ✅ Unlock |
+| [RTX 2080 Super](https://www.techpowerup.com/gpu-specs/geforce-rtx-2080-super.c3439) | 3072 | 8GB GDDR6 256-bit | 11.2 TF | 11.2 TF | 250W | ~10W | ✅ Unlock |
+| [RTX 2080 Ti](https://www.techpowerup.com/gpu-specs/geforce-rtx-2080-ti.c3305) | 4352 | 11GB GDDR6 352-bit | 13.4 TF | 13.4 TF | 250W | ~11W | ✅ Unlock |
+
+## NVIDIA RTX 30 Series (Ampere)
+
+| **Model**                                                                           | **VRAM** | **FP16**     | **FP32**     | **TDP** | **Idle Power** | **Bandwidth** | **Virtualization** |
+| ----------------------------------------------------------------------------------- | -------- | ------------ | ------------ | ------- | -------------- | ------------- | ------------------ |
+| [RTX 3060 12GB](https://www.techpowerup.com/gpu-specs/geforce-rtx-3060-12-gb.c3682) | 12 GB    | 12.74 TFLOPS | 12.74 TFLOPS | 170 W   | ~8–12 W        | 360 GB/s      | ❌                  |
+| [RTX 3060 Ti](https://www.techpowerup.com/gpu-specs/geforce-rtx-3060-ti.c3681)      | 8 GB     | 16.20 TFLOPS | 16.20 TFLOPS | 200 W   | ~10–15 W       | 448 GB/s      | ❌                  |
+| [RTX 3070](https://www.techpowerup.com/gpu-specs/geforce-rtx-3070.c3674)            | 8 GB     | 20.31 TFLOPS | 20.31 TFLOPS | 220 W   | ~9–15 W        | 448 GB/s      | ❌                  |
+| [RTX 3080](https://www.techpowerup.com/gpu-specs/geforce-rtx-3080.c3621)            | 10 GB    | 29.77 TFLOPS | 29.77 TFLOPS | 320 W   | ~9–15 W        | 760 GB/s      | ❌                  |
+| [RTX 3080 Ti](https://www.techpowerup.com/gpu-specs/geforce-rtx-3080-ti.c3735)      | 12 GB    | 34.10 TFLOPS | 34.10 TFLOPS | 350 W   | ~12–16 W       | 912 GB/s      | ❌                  |
+| [RTX 3090](https://www.techpowerup.com/gpu-specs/geforce-rtx-3090.c3622)            | 24 GB    | 35.58 TFLOPS | 35.58 TFLOPS | 350 W   | ~15–20 W       | 936 GB/s      | ❌                  |
+
+## NVIDIA RTX 40 Series (Ada Lovelace)
+
+| GPU | CUDA | VRAM | FP32 | FP16 | TDP | Idle | Virtualization |
+|-----|------|------|------|------|-----|------|----------------|
+| [RTX 4060](https://www.techpowerup.com/gpu-specs/geforce-rtx-4060.c4107) | 3072 | 8GB GDDR6 128-bit | 15.1 TF | 15.1 TF | 115W | ~7W | ❌ |
+| [RTX 4060 Ti 8GB](https://www.techpowerup.com/gpu-specs/geforce-rtx-4060-ti-8-gb.c4106) | 4352 | 8GB GDDR6 128-bit | 22.1 TF | 22.1 TF | 160W | ~8W | ❌ |
+| [RTX 4060 Ti 16GB](https://www.techpowerup.com/gpu-specs/geforce-rtx-4060-ti-16-gb.c4155) | 4352 | 16GB GDDR6 128-bit | 22.1 TF | 22.1 TF | 165W | ~8W | ❌ |
+| [RTX 4070](https://www.techpowerup.com/gpu-specs/geforce-rtx-4070.c3924) | 5888 | 12GB GDDR6X 192-bit | 29.1 TF | 29.1 TF | 200W | ~10W | ❌ |
+| [RTX 4070 Super](https://www.techpowerup.com/gpu-specs/geforce-rtx-4070-super.c4165) | 7168 | 12GB GDDR6X 192-bit | 35.5 TF | 35.5 TF | 220W | ~10W | ❌ |
+| [RTX 4070 Ti](https://www.techpowerup.com/gpu-specs/geforce-rtx-4070-ti.c3950) | 7680 | 12GB GDDR6X 192-bit | 40.1 TF | 40.1 TF | 285W | ~11W | ❌ |
+| [RTX 4080](https://www.techpowerup.com/gpu-specs/geforce-rtx-4080.c3888) | 9728 | 16GB GDDR6X 256-bit | 48.7 TF | 48.7 TF | 320W | ~13W | ❌ |
+| [RTX 4090](https://www.techpowerup.com/gpu-specs/geforce-rtx-4090.c3889) | 16384 | 24GB GDDR6X 384-bit | 82.6 TF | 82.6 TF | 450W | ~16W | ❌ |
+
+## NVIDIA RTX 50 Series (Blackwell)
+
+| GPU | CUDA | VRAM | FP32 | FP16 | TDP | Idle | Virtualization |
+|-----|------|------|------|------|-----|------|----------------|
+| [RTX 5080](https://www.techpowerup.com/gpu-specs/geforce-rtx-5080.c4190) | 10752 | 16GB GDDR7 256-bit | ~60 TF | ~60 TF | 400W | ~15W | ❌ |
+| [RTX 5090](https://www.techpowerup.com/gpu-specs/geforce-rtx-5090.c4189) | 21760 | 32GB GDDR7 512-bit | ~110 TF | ~110 TF | 600W | ~20W | ❌ |
+
+## NVIDIA Quadro / Professional GPUs
+
+| GPU | VRAM | FP16 (half) | FP32 (float) | TDP | Idle Power (typical) | Bandwidth | Virtualization |
+|-----|------|-------------|--------------|------|----------------------|-----------|----------------|
+| [Quadro P5000](https://www.techpowerup.com/gpu-specs/quadro-p5000.c2864) | 16GB | 138.6 GFLOPS | 8.873 TFLOPS  | 180W | ~15–20W | (256-bit GDDR5X) | ✅ |
+| [Quadro P6000](https://www.techpowerup.com/gpu-specs/quadro-p6000.c2865) | 24GB | 197 GFLOPS | 12.63 TFLOPS | 250W | ~20–25W | 432.8 GB/s | ✅ |
+| [Quadro GP100](https://www.techpowerup.com/gpu-specs/quadro-gp100.c2994) | 16GB | 20.69 TFLOPS | 10.34 TFLOPS | 235W | ~25–30W | 732.2 GB/s | ✅ |
+| [Quadro GV100](https://www.techpowerup.com/gpu-specs/quadro-gv100.c3066) | 32GB HBM2 | 33.32 TFLOPS | 16.66 TFLOPS | 250W | ~25–30W | 868.4 GB/s | ✅ |
+| [Quadro RTX 6000](https://www.techpowerup.com/gpu-specs/quadro-rtx-6000.c3307) | 24GB GDDR6 | 32.62 TFLOPS | 16.31 TFLOPS | 260W | ~22–30W | 672.0 GB/s | ✅ |
+
+## NVIDIA RTX A-Series (Professional GPUs)
+
+| GPU                                                                             | VRAM       | FP16 (half)  | FP32 (float) | TDP  | Idle Power (typical) | Bandwidth | Virtualization |
+| ------------------------------------------------------------------------------- | ---------- | ------------ | ------------ | ---- | -------------------- | --------- | -------------- |
+| [RTX A2000](https://www.techpowerup.com/gpu-specs/rtx-a2000.c3820)              | 6GB GDDR6  | 7.987 TFLOPS | 7.987 TFLOPS | 70W  | ~7–10W               | 288 GB/s  | ✅              |
+| [RTX A2000 (12GB)](https://www.techpowerup.com/gpu-specs/rtx-a2000-12-gb.c3853) | 12GB GDDR6 | 7.987 TFLOPS | 7.987 TFLOPS | 70W  | ~7–10W               | 288 GB/s  | ✅              |
+| [RTX A4500](https://www.techpowerup.com/gpu-specs/rtx-a4500.c3849)              | 20GB GDDR6 | 23.65 TFLOPS | 23.65 TFLOPS | 200W | ~13–18W              | 640 GB/s  | ✅              |
+| [RTX A5000](https://www.techpowerup.com/gpu-specs/rtx-a5000.c3748)              | 24GB GDDR6 | 27.77 TFLOPS | 27.77 TFLOPS | 230W | ~10–20W              | 768 GB/s  | ✅              |
+| [RTX A6000](https://www.techpowerup.com/gpu-specs/rtx-a6000.c3686)              | 48GB GDDR6 | 38.71 TFLOPS | 38.71 TFLOPS | 300W | ~8–12W               | 768 GB/s  | ✅              |
+
+
+
+## NVIDIA Tesla Series
+
+| GPU | VRAM | FP16 (half) | FP32 (float) | TDP | Idle Power (typical) | Bandwidth | Virtualization |
+|-----|------|-------------|--------------|------|----------------------|-----------|----------------|
+| [Tesla P4](https://www.techpowerup.com/gpu-specs/tesla-p4.c2879) | 8GB | 89.12 GFLOPS | 5.704 TFLOPS | 75W | ~6–10W (idle proxmox/vgpu case) | 192.3 GB/s | ✅ |
+| [Tesla P40](https://www.techpowerup.com/gpu-specs/tesla-p40.c2878) | 24GB | 183.7 GFLOPS | 11.76 TFLOPS | 250W | ~9–12W (reported idle) | 384-bit GDDR5 | ✅ |
+| [Tesla P100 PCIe 12GB](https://www.techpowerup.com/gpu-specs/tesla-p100-pcie-12-gb.c2915) | 12GB HBM2 | 19.05 TFLOPS (2:1) | 9.526 TFLOPS | 250W | ~25–27W | 549.1 GB/s | ✅ |
+| [Tesla P100 SXM2 16GB](https://www.techpowerup.com/gpu-specs/tesla-p100-sxm2.c3183) | 16GB HBM2 | 21.22 TFLOPS | 10.61 TFLOPS | 300W | ~25–30W | 732.2 GB/s | ✅ |
+| [Tesla V100 PCIe 16GB](https://www.techpowerup.com/gpu-specs/tesla-v100-pcie-16-gb.c2957) | 16GB HBM2 | 28.26 TFLOPS | 14.13 TFLOPS | 300W | ~20–30W | 897.0 GB/s | ✅ |
+| [Tesla V100 PCIe 32GB](https://www.techpowerup.com/gpu-specs/tesla-v100-pcie-32-gb.c3184) | 32GB HBM2 | ~28.26 TFLOPS | ~14.13 TFLOPS | 300W | ~20–30W | 897.0 GB/s | ✅ |
+| [Tesla T4](https://www.techpowerup.com/gpu-specs/tesla-t4.c3316) | 16GB | 65.13 TFLOPS (8:1) | 8.141 TFLOPS | 70W | ~8–12W | 320.0 GB/s | ✅ |
+| [Tesla L4](https://www.techpowerup.com/gpu-specs/l4.c4091) | 24GB | 30.29 TFLOPS (1:1) | 30.29 TFLOPS | 72W | ~8–12W | 192.3 GB/s | ✅ |
+
+## AMD Radeon RX 5000 Series (RDNA1)
+
+| GPU | VRAM | FP32 | FP16 | TDP | Idle (Typical) | Bandwidth | Virtualization |
+|-----|------|------|------|-----|----------------|-----------|----------------|
+| [Radeon RX 5500](https://www.techpowerup.com/gpu-specs/radeon-rx-5500.c3455) | 4GB GDDR6 128-bit | 5.20 TFLOPS | 10.40 TFLOPS | 110W | ~5–8W | 224 GB/s | ❌ |
+| [Radeon RX 5500 XT 4GB](https://www.techpowerup.com/gpu-specs/radeon-rx-5500-xt.c3468) | 4GB GDDR6 128-bit | 5.20 TFLOPS | 10.40 TFLOPS | 130W | ~6–10W | 224 GB/s | ❌ |
+| [Radeon RX 5500 XT 8GB](https://www.techpowerup.com/gpu-specs/radeon-rx-5500-xt-8-gb.c3499) | 8GB GDDR6 128-bit | 5.20 TFLOPS | 10.40 TFLOPS | 130W | ~6–10W | 224 GB/s | ❌ |
+| [Radeon RX 5600 XT](https://www.techpowerup.com/gpu-specs/radeon-rx-5600-xt.c3474) | 6GB GDDR6 192-bit | 7.19 TFLOPS | 14.38 TFLOPS | 150W | ~8–12W | 288 GB/s | ❌ |
+| [Radeon RX 5700](https://www.techpowerup.com/gpu-specs/radeon-rx-5700.c3437) | 8GB GDDR6 256-bit | 7.95 TFLOPS | 15.90 TFLOPS | 180W | ~10–15W | 448 GB/s | ❌ |
+| [Radeon RX 5700 XT](https://www.techpowerup.com/gpu-specs/radeon-rx-5700-xt.c3339) | 8GB GDDR6 256-bit | 9.75 TFLOPS | 19.50 TFLOPS | 225W | ~12–18W | 448 GB/s | ❌ |
+
+## AMD Radeon RX 6000 Series (RDNA2)
+
+| GPU | VRAM | FP32 | FP16 | TDP | Idle (Typical) | Bandwidth | Virtualization |
+|-----|------|------|------|-----|----------------|-----------|----------------|
+| [Radeon RX 6500 XT](https://www.techpowerup.com/gpu-specs/radeon-rx-6500-xt.c3850) | 4GB GDDR6 64-bit | 5.77 TFLOPS | 11.54 TFLOPS | 107W | ~5–8W | 144 GB/s | ❌ |
+| [Radeon RX 6600](https://www.techpowerup.com/gpu-specs/radeon-rx-6600.c3696) | 8GB GDDR6 128-bit | 8.93 TFLOPS | 17.86 TFLOPS | 132W | ~6–10W | 224 GB/s | ❌ |
+| [Radeon RX 6600 XT](https://www.techpowerup.com/gpu-specs/radeon-rx-6600-xt.c3774) | 8GB GDDR6 128-bit | 10.60 TFLOPS | 21.20 TFLOPS | 160W | ~7–12W | 256 GB/s | ❌ |
+| [Radeon RX 6650 XT](https://www.techpowerup.com/gpu-specs/radeon-rx-6650-xt.c3898) | 8GB GDDR6 128-bit | 10.79 TFLOPS | 21.58 TFLOPS | 176W | ~7–12W | 280 GB/s | ❌ |
+| [Radeon RX 6700](https://www.techpowerup.com/gpu-specs/radeon-rx-6700.c3716) | 10GB GDDR6 160-bit | 10.37 TFLOPS | 20.74 TFLOPS | 175W | ~10–15W | 320 GB/s | ❌ |
+| [Radeon RX 6700 XT](https://www.techpowerup.com/gpu-specs/radeon-rx-6700-xt.c3695) | 12GB GDDR6 192-bit | 13.21 TFLOPS | 26.42 TFLOPS | 230W | ~12–18W | 384 GB/s | ❌ |
+| [Radeon RX 6750 XT](https://www.techpowerup.com/gpu-specs/radeon-rx-6750-xt.c3899) | 12GB GDDR6 192-bit | 13.31 TFLOPS | 26.62 TFLOPS | 250W | ~12–18W | 432 GB/s | ❌ |
+| [Radeon RX 6800](https://www.techpowerup.com/gpu-specs/radeon-rx-6800.c3713) | 16GB GDDR6 256-bit | 16.17 TFLOPS | 32.34 TFLOPS | 250W | ~15–22W | 512 GB/s | ❌ |
+| [Radeon RX 6800 XT](https://www.techpowerup.com/gpu-specs/radeon-rx-6800-xt.c3694) | 16GB GDDR6 256-bit | 20.74 TFLOPS | 41.48 TFLOPS | 300W | ~15–25W | 512 GB/s | ❌ |
+| [Radeon RX 6900 XT](https://www.techpowerup.com/gpu-specs/radeon-rx-6900-xt.c3693) | 16GB GDDR6 256-bit | 23.04 TFLOPS | 46.08 TFLOPS | 300W | ~18–28W | 512 GB/s | ❌ |
+| [Radeon RX 6950 XT](https://www.techpowerup.com/gpu-specs/radeon-rx-6950-xt.c3897) | 16GB GDDR6 256-bit | 23.65 TFLOPS | 47.30 TFLOPS | 335W | ~18–30W | 576 GB/s | ❌ |
+
+## AMD Radeon RX 7000 Series (RDNA3)
+
+| GPU | VRAM | FP32 | FP16 | TDP | Idle (Typical) | Bandwidth | Virtualization |
+|-----|------|------|------|-----|----------------|-----------|----------------|
+| [Radeon RX 7600](https://www.techpowerup.com/gpu-specs/radeon-rx-7600.c4153) | 8GB GDDR6 128-bit | 21.75 TFLOPS | 43.50 TFLOPS | 165W | ~7–12W | 288 GB/s | ❌ |
+| [Radeon RX 7600 XT](https://www.techpowerup.com/gpu-specs/radeon-rx-7600-xt.c4198) | 16GB GDDR6 128-bit | 22.57 TFLOPS | 45.14 TFLOPS | 190W | ~8–14W | 288 GB/s | ❌ |
+| [Radeon RX 7700 XT](https://www.techpowerup.com/gpu-specs/radeon-rx-7700-xt.c3911) | 12GB GDDR6 192-bit | 35.17 TFLOPS | 70.34 TFLOPS | 245W | ~15–22W | 432 GB/s | ❌ |
+| [Radeon RX 7800 XT](https://www.techpowerup.com/gpu-specs/radeon-rx-7800-xt.c3839) | 16GB GDDR6 256-bit | 37.32 TFLOPS | 74.64 TFLOPS | 263W | ~18–25W | 624 GB/s | ❌ |
+| [Radeon RX 7900 GRE](https://www.techpowerup.com/gpu-specs/radeon-rx-7900-gre.c4156) | 16GB GDDR6 256-bit | 40.35 TFLOPS | 80.70 TFLOPS | 260W | ~18–25W | 576 GB/s | ❌ |
+| [Radeon RX 7900 XT](https://www.techpowerup.com/gpu-specs/radeon-rx-7900-xt.c3912) | 20GB GDDR6 320-bit | 51.48 TFLOPS | 102.96 TFLOPS | 300W | ~20–30W | 800 GB/s | ❌ |
+| [Radeon RX 7900 XTX](https://www.techpowerup.com/gpu-specs/radeon-rx-7900-xtx.c3941) | 24GB GDDR6 384-bit | 61.39 TFLOPS | 122.78 TFLOPS | 355W | ~20–35W* | 960 GB/s | ❌ |
+
+## AMD Radeon RX 9000 Series (RDNA4)
+
+| GPU | VRAM | FP16 (half) | FP32 (float) | TDP | Idle Power (typical) | Bandwidth | Virtualization |
+|-----|------|-------------|--------------|------|----------------------|-----------|----------------|
+| [AMD Radeon RX 9600](https://www.techpowerup.com/gpu-specs/radeon-rx-9060.c4326) | 8GB GDDR6 | ~42.9 TFLOPS | ~21.4 TFLOPS | ~132W | ~10–15W | 288 GB/s | ❌ |
+| [AMD Radeon RX 9060 XT 8GB](https://www.techpowerup.com/gpu-specs/radeon-rx-9060-xt-8-gb.c4251) | 8GB GDDR6 | 51.3 TFLOPS | 25.6 TFLOPS | 150W | ~12–18W | 320 GB/s | ❌ |
+| [AMD Radeon RX 9060 XT 16GB](https://www.techpowerup.com/gpu-specs/radeon-rx-9060-xt-16-gb.c4293) | 16GB GDDR6 | 51.3 TFLOPS | 25.6 TFLOPS | 160W | ~12–18W | 320 GB/s | ❌ |
+| [AMD Radeon RX 9070](https://www.techpowerup.com/gpu-specs/radeon-rx-9070.c4250) | 16GB GDDR6 | 72.25 TFLOPS | 36.13 TFLOPS | 220W | ~18–28W | ~640–896 GB/s | ❌ |
+| [AMD Radeon RX 9070 XT](https://www.techpowerup.com/gpu-specs/radeon-rx-9070-xt.c4229) | 16GB GDDR6 | 97.32 TFLOPS | 48.66 TFLOPS  | 260–304W | ~20–30W | 640 GB/s+ | ❌ |
+
+
+## AMD Pro/Compute GPUs
+
+| GPU | VRAM | FP16 (half) | FP32 (float) | TDP | Idle Power (typical) | Bandwidth | Virtualization |
+|-----|------|-------------|--------------|------|----------------------|------------|----------------|
+| [Radeon Instinct MI25](https://www.techpowerup.com/gpu-specs/radeon-instinct-mi25.c2983) | 16GB HBM2 | 24.58 TFLOPS | 12.29 TFLOPS | 300W | ~30–40W | 436.2 GB/s | 🟡 |
+
 </details>
 </details>
 <br>
