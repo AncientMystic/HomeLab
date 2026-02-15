@@ -1071,6 +1071,13 @@ All these filesystems (XFS, ZFS, and BTRFS) can be utilized on **Proxmox**, a ho
 ### File Sharing:
 - [croc](https://github.com/schollz/croc) - Easily and securely send files between computers.
 
+### File Compression:
+
+- [7-Zip](https://www.7-zip.org/) - A popular open-source file compression tool that supports various archive formats and offers high compression ratios.
+- [7-Zip ZSTD](https://github.com/mcmilk/7-Zip-zstd) - A fork of 7-Zip that adds support for the Zstandard (ZSTD) compression algorithm, offering faster speeds and higher compression ratios.
+- [Compactor](https://github.com/Freaky/Compactor) - A tool for compressing files and directories, designed for efficiency and easy use with high-quality compression techniques.
+- [CompactGUI](https://github.com/IridiumIO/CompactGUI) - A graphical user interface for the Compact tool, which allows users to compress files and folders using the Windows built-in compression features.
+
 ### Caching:
 - Windows: [Primo Cache](https://www.romexsoftware.com/en-us/primo-cache/).
 
