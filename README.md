@@ -521,6 +521,44 @@ All LSI cards run warm.
 
 </details>
 <details>
+<summary><b>SSD/Nvme Drives:</b></summary>
+
+# Enterprise NVMe / M.2 Drives with Endurance
+
+| **Drive Model**                                  | **Form Factor** | **Interface**   | **Endurance (TBW)**        |
+|-------------------------------------------------|-----------------|-----------------|----------------------------|
+| **Intel Optane SSD 905P (480GB, 960GB, 1.5TB)** | M.2 2280        | PCIe 3.0 x4     | 365 TBW (480GB)            | 
+| **Micron 9300 PRO (400GB, 800GB, 1.6TB, 3.2TB)**| M.2 2280        | PCIe 3.0 x4     | 3.2 PBW (3.2TB)            |
+| **Samsung PM1733 (1.6TB, 3.2TB)**               | M.2 2280        | PCIe 4.0 x4     | 1.3 PBW (1.6TB)            | 
+| **Samsung 980 Pro (1TB)**                       | M.2 2280        | PCIe 4.0 x4     | 600 TBW                    | 
+| **Seagate Nytro 5000 (1.6TB, 3.2TB, 6.4TB)**    | M.2 2280        | PCIe 3.0 x4     | 3.2 PBW (3.2TB)            | 
+| **Intel DC P5800X (400GB, 800GB, 1.6TB)**       | M.2 2280        | PCIe 4.0 x4     | 30 PBW (1.6TB)             | 
+| **Micron 9400 PRO (1.6TB, 3.2TB, 6.4TB)**       | M.2 2280        | PCIe 4.0 x4     | 3.5 PBW (3.2TB)            |
+| **ADATA XPG SX8200 Pro (1TB, 2TB, 4TB)**        | M.2 2280        | PCIe 3.0 x4     | 1600 TBW (2TB)             |
+| **Phison E12DC Enterprise SSDs (1.6TB, 3.2TB)** | M.2 2280        | PCIe 3.0 x4     | 2 PBW (3.2TB)              |
+| **Micron 7450 PRO 960GB**                       | M.2 2280        | PCIe 3.0 x4     | 1000 TBW                   |
+| **Micron 7450 MAX 800GB**                       | M.2 2280        | PCIe 3.0 x4     | 3.5 PBW                    |
+| **Intel P3700 800GB**                           | M.2 2280        | PCIe 3.0 x4     | 3 PBW                      |
+| **Intel Optane P4801X 375GB**                   | M.2 2280        | PCIe 3.0 x4     | 13 PBW                     |
+
+# Consumer NVMe / M.2 Drives
+
+| **Drive Model**                                        | **Form Factor** | **Interface**   | **Endurance (TBW)**        |       **Quality**       |
+|-------------------------------------------------------|-----------------|-----------------|----------------------------|--------------------------|
+| **Crucial P3 1TB**                                    | M.2 2280        | PCIe 3.0 x4     | 220 TB                     |   Cheap QLC Consumer     |
+| **Samsung 980 1TB**                                   | M.2 2280        | PCIe 3.0 x4     | 600 TB                     |    Normal TLC Consumer   |
+| **Samsung 980 Pro 1TB**                               | M.2 2280        | PCIe 4.0 x4     | 600 TB                     |   Modern TLC Prosumer    |
+| **Samsung 970 Pro 1TB**                               | M.2 2280        | PCIe 3.0 x4     | 1,200 TB                   | End-of-Life MLC Prosumer | 
+
+
+---
+
+## Consumer vs. Enterprise Price Comparison
+
+Enterprise drives are designed to handle much higher workloads and offer greater durability compared to consumer-grade drives. While consumer drives may seem more affordable, they often burn out quickly in high-write environments such as servers or when used with ZFS, which requires frequent read/write operations. Enterprise SSDs are built for sustained performance, higher endurance (TBW/PBW), and reliability, making them the preferable choice for demanding applications where data integrity and long-term use are crucial.
+
+</details>
+<details>
 <summary><b>GPU:</b></summary>
 <br><b>NVIDIA (vGPU / AI / Virtualization):</b>
 
