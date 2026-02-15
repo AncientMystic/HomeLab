@@ -1041,44 +1041,37 @@ In testing, I ran a Ubuntu VM with BTRFS and compressed roughly 5.5GB of OS file
 
 All these filesystems (XFS, ZFS, and BTRFS) can be utilized on **Proxmox**, a homelab virtualization server platform.
 
-</details>
-<br>
-<br><b>Useful Software:</b>
-<details>
-<summary><b>RDP:</b></summary>
-<a href="https://github.com/ClassicOldSong/Apollo" target="_blank">Apollo Sunshine fork</a>
-<br><a href="https://github.com/LizardByte/Sunshine" target="_blank">Original Sunshine</a>
-<br><a href="https://github.com/moonlight-stream" target="_blank">Moonlight</a>
-<br>Windows: <a href="https://github.com/Upinel/BetterRDP" target="_blank">BetterRDP for windows to enable 60fps and GPU acceleration on RDP connections</a> - Better RDP for more so seemless and native like interaction which makes the experience seem more like a native PC insted of RDP over the local network. this is great for most games and more intensive / latency dependant softwares.
-</details>
-<details>
-<summary><b>Gaming:</b></summary>
-Windows: <a href="https://github.com/microsoft/RdpGamepad" target="_blank">RdpGamepad - a Remote Desktop Plugin for Xbox Gamepads</a> - Use Xbox 360/One controllers over RDP/moonlight/sunshine
-</details>
-<details>
-<summary><b>File management:</b></summary>
-Windows: <a href="https://github.com/evsar3/sshfs-win-manager" target="_blank">SSHFS-Win Manager is a GUI for SSHFS on Windows</a>
-<br> Linux: <a href="https://github.com/libfuse/sshfs" target="_blank">SSHFS</a>
-</details>
-<details>
-<summary><b>File Sharing</b></summary>
-<a href="https://github.com/schollz/croc" target="_blank">croc</a> - Easily and securely send things from one computer to another
-</details>
-<details>
-<summary><b>Caching:</b></summary>
-Windows: <a href="https://www.romexsoftware.com/en-us/primo-cache/" target="_blank">Primo Cache</a>
-</details>
-<details>
-<summary><b>Firewall/Networking:</b></summary>
-Linux: <a href="https://github.com/evilsocket/opensnitch" target="_blank">OpenSnitch</a> - Network monitoring and rule based control
-<br> Windows: <a href="https://github.com/henrypp/simplewall" target="_blank">SimpleWall</a> - Windows firewll management and rules.
-<br> Mac: <a href="https://www.obdev.at/products/littlesnitch/index.html" target="_blank">LittleSnitch</a> - Network monitoring and control.
-<br> Win/Linux: <a href="https://safing.io/download/" target="_blank">Safing Portmaster</a>
-<br> Windows: <a href="https://www.netlimiter.com/" target="_blank">NetLimiter</a> - Per application bandwitdh limits
-</details>
-<details>
-<summary><b>Host Power Management:</b></summary>
-Linux: <a href="https://github.com/fenrus75/powertop" target="_blank">PowerTop</a> - Tweak Host for power savings.
-</details>
-<Br><b>SelfHosted:</b>
-<br><a href="https://github.com/awesome-selfhosted/awesome-selfhosted" target="_blank">Awesome-Selfhosted</a>
+## Useful Software:
+
+### RDP:
+- [Apollo Sunshine fork](https://github.com/ClassicOldSong/Apollo)  
+- [Original Sunshine](https://github.com/LizardByte/Sunshine)  
+- [Moonlight](https://github.com/moonlight-stream)  
+- Windows: [BetterRDP for Windows](https://github.com/Upinel/BetterRDP) - Enables 60fps and GPU acceleration on RDP connections, creating a seamless and native-like experience for intensive or latency-dependent software, including games.
+
+### Gaming:
+- Windows: [RdpGamepad - a Remote Desktop Plugin for Xbox Gamepads](https://github.com/microsoft/RdpGamepad) - Use Xbox 360/One controllers over RDP/Moonlight/Sunshine.
+
+### File Management:
+- Windows: [SSHFS-Win Manager](https://github.com/evsar3/sshfs-win-manager) - A GUI for SSHFS on Windows.  
+- Linux: [SSHFS](https://github.com/libfuse/sshfs).
+
+### File Sharing:
+- [croc](https://github.com/schollz/croc) - Easily and securely send files between computers.
+
+### Caching:
+- Windows: [Primo Cache](https://www.romexsoftware.com/en-us/primo-cache/).
+
+### Firewall/Networking:
+- Linux: [OpenSnitch](https://github.com/evilsocket/opensnitch) - Network monitoring and rule-based control.  
+- Windows: [SimpleWall](https://github.com/henrypp/simplewall) - Windows firewall management and rules.  
+- Mac: [LittleSnitch](https://www.obdev.at/products/littlesnitch/index.html) - Network monitoring and control.  
+- Win/Linux: [Safing Portmaster](https://safing.io/download/).  
+- Windows: [NetLimiter](https://www.netlimiter.com/) - Per-application bandwidth limits.
+
+### Host Power Management:
+- Linux: [PowerTop](https://github.com/fenrus75/powertop) - Tweak host for power savings.
+
+### SelfHosted:
+- [Awesome-Selfhosted](https://github.com/awesome-selfhosted/awesome-selfhosted).
+
