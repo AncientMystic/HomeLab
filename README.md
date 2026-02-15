@@ -530,6 +530,33 @@ All LSI cards run warm.
 
 <hr>
 
+### Enterprise SATA/SAS HDDs:
+
+| **Drive Model**                                 | **Form Factor** | **Interface**   | **Capacity Options** | **Workload Rating (TB/yr)** | **Watts (Idle/Active)**   |
+| ----------------------------------------------- | --------------- | --------------- | -------------------- | --------------------------- | ------------------------- |
+| **HGST Ultrastar He10 / HC310**                 | 3.5"            | SATA / SAS 12Gb | 10TB                 | 550 TB/yr                   | ~5.8W / ~9.5W             |
+| **HGST Ultrastar He12 / HC320**                 | 3.5"            | SATA / SAS 12Gb | 12TB                 | 550 TB/yr                   | ~6.0W / ~9.8W             |
+| **HGST Ultrastar He14 / HC330**                 | 3.5"            | SATA / SAS 12Gb | 14TB                 | 550 TB/yr                   | ~6.2W / ~10W              |
+| **HGST Ultrastar He16 / HC340**                 | 3.5"            | SATA / SAS 12Gb | 16TB                 | 550 TB/yr                   | ~6.4W / ~10.2W            |
+| **HGST Ultrastar He18 / HC350**                 | 3.5"            | SATA / SAS 12Gb | 18TB                 | 550 TB/yr                   | ~6.5W / ~10.4W            |
+| **WD Ultrastar DC HC500 (HGST Legacy)**         | 3.5"            | SATA / SAS 12Gb | 8TB, 10TB            | 550 TB/yr                   | ~5.6W / ~9.2W             |
+| **WD Ultrastar DC HC550**                       | 3.5"            | SATA / SAS 12Gb | 14TB, 16TB, 18TB     | 550 TB/yr                   | ~5.8W / ~9.5W             |
+| **WD Ultrastar DC HC560**                       | 3.5"            | SATA / SAS 12Gb | 20TB, 22TB           | 550 TB/yr                   | ~6.0W / ~9.8W             |
+| **WD Ultrastar DC SA620 (SATA SSD/HDD Hybrid)** | 2.5"            | SATA 6Gb/s      | 960GB — 7.68TB       | *N/A (SSHD)*                | ~2.9W / ~5.5W             |
+| **WD Gold Enterprise HDDs**                     | 3.5"            | SATA 6Gb/s      | 1TB — 18TB           | 550 TB/yr                   | 5W — 10W (varies by size) |
+| **Seagate Exos X18**                   | 3.5"            | SATA 6Gb/s    | 10TB, 12TB, 14TB, 16TB, 18TB      | 550 TB/yr                     | 5.3W / 9.4W             |
+| **Seagate Exos X20**                   | 3.5"            | SATA 6Gb/s    | 16TB, 18TB, 20TB                  | 550 TB/yr                     | 5.4W / 9.4W             |
+| **Seagate Exos 7E10**                  | 3.5"            | SAS 12Gb/s    | 1TB, 2TB, 4TB, 8TB                | 550 TB/yr                     | 7.6W / 11.5W            |
+| **Toshiba MG09 Series**                | 3.5"            | SATA / SAS    | 14TB, 16TB, 18TB                  | 550 TB/yr                     | 4.2W / 8.3W             |
+| **Toshiba MG10 Series**                | 3.5"            | SATA / SAS    | 20TB, 22TB                        | 550 TB/yr                     | 4.4W / 8.6W             |
+| **Seagate Exos 10E2400 (2.4TB)**       | 2.5"            | SAS 12Gb/s    | 600GB, 900GB, 1.2TB, 1.8TB, 2.4TB | 550 TB/yr                     | 3.8W / 6.9W             |
+| **Western Digital Ultrastar 10K600**   | 2.5"            | SAS 12Gb/s    | 600GB, 900GB, 1.2TB               | 550 TB/yr                     | 3.6W / 6.5W             |
+
+NOTES: HGST have the Lowest failure rates, followed by Western Digital. 
+<br> Seagate / Toshiba models tend to have higher failure rates depending on models. but they are often cheaper, sometimes by a fair amount. 
+
+<hr>
+
 ### SSD/Nvme Drives:
 
 # Enterprise NVMe / M.2 Drives with Endurance
