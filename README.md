@@ -60,17 +60,46 @@ HomeLab CheatSheet &amp; AwesomeList
 <br>
 <br><b>Hardware:</b>
 <br>Recommended Devices:
-<br>Optimal minimal setup device: Lenovo Tiny PC's 
+
+## Optimal Minimal Setup Device: Lenovo Tiny PCs
   <p align="left">
   <img width="200" src="https://github.com/AncientMystic/HomeLab/blob/main/img/devices/lenovo-tiny-pc/Lenovo-tiny-pc.jpg"><img width="200" src="https://github.com/AncientMystic/HomeLab/blob/main/img/devices/lenovo-tiny-pc/lenovo-thinkcentre-m715q-gen2-tiny-pc-amd-ryzen-5-2400ge.jpg"><img width="200" src="https://github.com/AncientMystic/HomeLab/blob/main/img/devices/lenovo-tiny-pc/lenovo-tiny-pc-gpu.png"><img width="200" src="https://github.com/AncientMystic/HomeLab/blob/main/img/devices/lenovo-tiny-pc/lenovo-tiny-pc-nvme.jpg">
 </p>
-  There are many hardware configuration options, some have intel cpus, some ryzen, some single nvme + sata 2.5in drives, some 2x nvme, some 2x nvme + pci-e slot, etc 
-   <br>Popular Uses for the Pci-e slot:
-  <ul><li>Nvidia Quadro P600/P620/P1000/T400/T600 included with some models</li>
-  <li>A Quad Port Nic (popular for router setups, such as Opnsense/Pfsense)</li>
-  <li>Nvme Expansion Card for 2x additional Nvme drives making for 4xnvme on some models</li></ul>
-  <br> Tiny PC's average as little as 5-7w idle power consumption depending on configuration and have Medium to Medium-high performance 35w TDP CPUs. 32GB to 128GB Ram support with 2 Slots (max ram depends on model), Mini Pci-e card slots for Wifi+bluetooth cards if desired and typically include 4-6 USB 3+ ports in newer models. these are basically the perfect AIO mini server for most any use cases. the intel versions iGPU can also be used with proxmox to share the iGPU to multiple virtual machines. They are small, powerful and perfect to plug a bunch of external hard drives into.
-  <br> Other mini pc's and SFF Pcs can be worthwhile, but personally, i feel these are the most optimal cost effective options. 
+
+---
+
+### Hardware Configuration Options
+
+Lenovo Tiny PCs offer various hardware configurations, such as:
+
+- **Intel CPUs** or **AMD Ryzen CPUs**
+- **Single NVMe + SATA 2.5in Drives**
+- **2x NVMe** or **2x NVMe + PCIe Slot**
+
+### Popular Uses for the PCIe Slot
+
+- Nvidia Quadro P600/P620/P1000/T400/T600 (included with some models)
+- A Quad Port NIC (popular for router setups, such as **Opnsense/Pfsense** )
+- NVMe Expansion Card (adds 2x additional NVMe drives, providing up to 4x NVMe on some models)
+
+---
+
+### Power and Performance
+
+- **Idle Power Consumption**: as low as 5-7W (depending on configuration)
+- **CPU TDP**: Medium to Medium-High performance with 35W TDP CPUs
+- **RAM Support**: 32GB to 128GB (depends on model, 2 slots)
+- **Mini PCIe Slots**: For WiFi + Bluetooth cards
+- **USB Ports**: 4-6 USB 3+ ports in newer models
+
+These devices are small, powerful, and make perfect all-in-one mini servers for various use cases. The **Intel** versions even allow you to share the **iGPU** with **Proxmox** for multiple virtual machines.
+
+---
+
+### Why Lenovo Tiny PCs?
+
+Other mini PCs and SFF PCs can be worthwhile, but personally, I find the Lenovo Tiny PCs to be the most optimal, cost-effective options for home labs and other small-scale setups.
+
 <table border="1" class="dataframe">
 <thead>
 <tr>
@@ -252,7 +281,7 @@ HomeLab CheatSheet &amp; AwesomeList
 </tbody>
 </table>
   <details>
-    <summary>SFF Suggestion:</summary>
+    <summary><b>SFF Suggestion:</b></summary>
     <br> One of the most cost effective SFF PCs for price vs hardware potential
     <br> HP z240 SFF
     <p align="left">
@@ -309,7 +338,7 @@ HomeLab CheatSheet &amp; AwesomeList
 <br> i have tested this on a Dell Optiplex 3020 and can verify it works if done properly. 
 </details>
 <details>
-<summary>NIC:</summary>
+<summary><b>NIC:</b></summary>
 
 <br>
 <a href="https://www.digikey.com/htmldatasheets/production/2068431/0/0/1/intel-ethernet-server-adapter-i350-brief.html" target="_blank">Intel I350</a> (Quad-Port 1GbE)
@@ -376,7 +405,7 @@ Clones may:
 • Not support SR-IOV properly 
 </details>
 <details>
-<summary>SAS / HBA cards:</summary>
+<summary><b>SAS / HBA cards:</b></summary>
 
 <a href="https://docs.broadcom.com/doc/12353333" target="_blank">LSI / Inspur 9211-8i</a> (Flashed to IT Mode)
 
@@ -492,7 +521,7 @@ All LSI cards run warm.
 
 </details>
 <details>
-<summary>GPU:</summary>
+<summary><b>GPU:</b></summary>
 <br><b>NVIDIA (vGPU / AI / Virtualization):</b>
 
 <hr>
@@ -900,7 +929,7 @@ For anyone experimenting with AMD GPUs + vGPU workflows, community experience is
 <br><b>Suggested OS:</b>
 <br><a href="https://www.proxmox.com/en/" target="_blank">Proxmox</a>
 <details>
-<summary>Proxmox related content:</summary>
+<summary><b>Proxmox related content:</b></summary>
 Additional Resources:
 <br><a href="https://community-scripts.github.io/ProxmoxVE/" target="_blank">Proxmox VE Helper scripts</a> - Hundreds of scripts to quickly setup a wide range of projects on proxmox.
 <br><a href="https://github.com/MacRimi/ProxMenux" target="_blank">ProxMenux</a> - Seperate Dashboard / CLI menu with more information & management options handy for proxmox management.
@@ -908,35 +937,65 @@ Additional Resources:
 <br><a href="https://github.com/kholia/OSX-KVM" target="_blank">OSX-KVM</a> - Mac OSX (multiple versions to choose from) On Proxmox. 
 </details>
 <details>
-<summary>Filesystems:</summary>
-<a href="https://blog.purestorage.com/purely-educational/xfs-vs-ext4-which-linux-file-system-is-better/" target="_blank">xfs-vs-ext4-which-linux-file-system-is-better</a>
-<br> Beyond what they cover in the short article,
-<br> In general XFS is more reliable for data in my experience, i have lost files to long term storage on EXT4. So media files, etc, for long term storage, XFS.
-<br> When it comes to operating system disks, like for a laptop, etc. EXT4. But EXT4 also has a space reservation so you lose a chunk of your disk automatically (typically 5%) and the larger the disk <br> the more space is in that 5% which you have automatically lost.
-<br> So XFS you can also fill with more files as it does not reserve space.
-<br> XFS does not seem to nest/stack as well, so using a Vm with an XFS virtual disk on top of an XFS drive is terrible, avoid stacking them like that. (Use ext4 on top of XFS if you stack them
-<br> Now comes the secret third thing nobody talked about:
-<br> <b>ZFS:</b>
-<br> <a href="https://itsfoss.com/what-is-zfs/" target="_blank">what-is-zfs</a>
-<br><b>ZFS the Zettabyte file system</b>
-<ul><li> Supports compression: 1z4, gzip, zstd, etc </li>
-<li> Supports deduplication. (Requires a ton of memory and raid to get the most out of it)</li>
-<li> Hashes files and in raid is self healing</li>
-<li> CoW (copy on write) Verification, files are verified before being written to disk and verified whenever they are read based on a wide variety of checksum options / hash algorithms</li>
-<li> Scales incredibly well</li>
-<li> Supports RAW filesystems, I.e. a VM disk can be written directly into the filesystem kind of like a container instead of a virtual disk file layered on top as file.</li>
-<li> Can copy live virtual machines.</li>
-<li> Superior performance potential</li>
-<li> Complex options for advanced and highly specific configurations</li></ul>
-<br><b>ZFS</b> is great all around and extremely reliable, it is best in a raid environment with minimum 2+ disks, but if speed is not a concern and you merely want to take advantage of all the wonderful features it will work fine on a single disk, just expect it to be slow at times and use a lot of ram and has a fairly steep learning curve. (There is a LOT to cover and it is not simple as a normal filesystem is as it is made for datacenters)
-<br>An alternative to ZFS for hash and ZSTD compression support is <b>BTRFS</b>
-<br><a href="https://www.maketecheasier.com/what-is-btrfs/" target="_blank">what-is-btrfs</a>
-<br>BTRFS can be better in some use cases but should not be considered reliable like ZFS. (Although its much easier to get the hang of and use)
-<br>For example a large number of small file writes can crash the filesystem resulting in total loss of data. (Databases, torrents, VMs, etc) as it is also a copy on write system but is not as well made as ZFS.
-<br>But for some uses it works quite well, in testing for example i ran a ubuntu VM with the filesystem and compressed the roughly 5.5gb of OS files to 2.8GB with ZSTD level 9 specified in FSTAB ( configuration file to mount disks in linux located at /etc/fstab)
-<br>With ZSTD you want to use at least a 3 otherwise you're just wasting resources to use it for nothing and at most
-9-11 otherwise the additional compression time goes up exponentially for minimal benefits, 5-7 is usually a safe middle ground option. That balances performance and compression ratio
-You can utilise all of these on proxmox if you are interested in a homelab virtualization server.
+<summary><b>Filesystems:</b></summary>
+
+### [XFS vs EXT4: Which Linux File System Is Better?](https://blog.purestorage.com/purely-educational/xfs-vs-ext4-which-linux-file-system-is-better/)  
+Beyond what is covered in the article:
+
+- **XFS**: In my experience, XFS is more reliable for long-term data storage. I’ve lost files to long-term storage on EXT4, particularly media files, so for that purpose, **XFS** is preferred.  
+- **EXT4**: For operating system disks (e.g., laptop), EXT4 works well. However, EXT4 has a space reservation system (typically 5%), which means you automatically lose a chunk of disk space as the disk size grows. **XFS**, on the other hand, doesn’t reserve space, so you can fill it more efficiently.
+
+> **Note**: Avoid using XFS on top of XFS in virtual machines (VMs). It doesn’t nest/stack well. Instead, use **EXT4** on top of XFS if you need to stack file systems.
+
+---
+
+### **ZFS - The Zettabyte File System**
+[What is ZFS?](https://itsfoss.com/what-is-zfs/)
+
+ZFS is a robust and highly reliable file system with several advanced features:
+
+- **Compression**: Supports 1z4, gzip, zstd, and more.
+- **Deduplication**: Requires significant memory and RAID setups for optimal performance.
+- **Self-healing RAID**: Uses hashing and is self-healing in RAID configurations.
+- **Copy-on-write (CoW) Verification**: Files are verified before being written to disk and every time they are read, with various checksum options.
+- **Scalability**: Scales incredibly well, ideal for large datasets.
+- **Raw Filesystems**: Allows VM disks to be written directly into the filesystem, functioning like containers.
+- **Live VM Copying**: Can copy live virtual machines.
+- **Superior Performance Potential**: Can deliver high-performance results when properly configured.
+- **Advanced Configurations**: Offers complex options for highly specific use cases.
+
+---
+
+### **Performance & Usage Considerations for ZFS**
+
+ZFS is extremely reliable, especially in RAID environments with at least 2+ disks. However, if performance isn’t critical, it can work well on a single disk, though it may be slower and require more RAM. 
+
+ZFS is made for data centers, and has a steep learning curve, but its extensive features make it a solid choice for advanced users.
+
+---
+
+### **BTRFS as an Alternative to ZFS**
+[BTRFS Overview](https://www.maketecheasier.com/what-is-btrfs/)
+
+BTRFS offers some similar features to ZFS, such as hash support and ZSTD compression, but it is generally less reliable. It’s easier to use compared to ZFS, but for certain use cases, it may not be as dependable.
+
+For example, a large number of small file writes can cause BTRFS to crash, leading to potential data loss (e.g., for databases, torrents, or VMs). Although BTRFS is a copy-on-write system, it’s not as robust as ZFS.
+
+---
+
+### **BTRFS Use Case Example**  
+In testing, I ran a Ubuntu VM with BTRFS and compressed roughly 5.5GB of OS files down to 2.8GB using ZSTD compression (level 9 specified in the **/etc/fstab** configuration).  
+
+- **ZSTD Compression**:  
+  - **Optimal Levels**: Use ZSTD level 3 or higher for meaningful compression. Levels 9-11 increase compression time exponentially with minimal benefits.  
+  - **Recommended Levels**: A level of 5-7 provides a good balance between performance and compression ratio.
+
+---
+
+### **Using These Filesystems with Proxmox**
+
+All these filesystems (XFS, ZFS, and BTRFS) can be utilized on **Proxmox**, a homelab virtualization server platform.
+
 </details>
 <br>
 <br><b>Useful Software:</b>
