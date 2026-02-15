@@ -1061,6 +1061,10 @@ Windows: <a href="https://github.com/evsar3/sshfs-win-manager" target="_blank">S
 <br> Linux: <a href="https://github.com/libfuse/sshfs" target="_blank">SSHFS</a>
 </details>
 <details>
+<summary><b>File Sharing</b></summary>
+<a href="https://github.com/schollz/croc" target="_blank">croc</a> - Easily and securely send things from one computer to another
+</details>
+<details>
 <summary><b>Caching:</b></summary>
 Windows: <a href="https://www.romexsoftware.com/en-us/primo-cache/" target="_blank">Primo Cache</a>
 </details>
