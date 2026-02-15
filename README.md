@@ -1047,10 +1047,13 @@ All these filesystems (XFS, ZFS, and BTRFS) can be utilized on **Proxmox**, a ho
 
 ### Awesome Lists:
 
+- [Curated List of Awesome Lists](https://project-awesome.org/) - A collection of curated "awesome" lists covering a wide variety of topics, providing valuable resources and tools for almost every field of interest.
 - [Awesome Programs and Tweaks for Windows, macOS, and Linux](https://github.com/alfaaarex/awesome-tweaks) - A curated collection of programs and tweaks to enhance the functionality, performance, and usability of Windows, macOS, and Linux systems.
 - [Awesome List of Windows Software](https://github.com/0PandaDEV/awesome-windows) - A curated list of useful and essential software for Windows users, covering a wide range of categories and needs.
 - [Awesome List of Linux Software](https://github.com/luong-komorebi/Awesome-Linux-Software) - A comprehensive list of open-source software and tools for Linux users, including productivity, development, and system management applications.
 - [Awesome List of macOS Software](https://github.com/iCHAIT/awesome-macOS) - A curated collection of software and tools for macOS, ranging from productivity applications to development utilities and system enhancements.
+- [Awesome Privacy](https://github.com/pluja/awesome-privacy) - A curated collection of privacy-focused software and tools designed to enhance your online and offline privacy and security.
+- [Awesome Piracy](https://github.com/genesis-kbm/awesome-piracy-fixed) - A curated list of resources and tools related to piracy, including websites, software, and services for accessing pirated content.
 
 ### RDP:
 - [Apollo Sunshine fork](https://github.com/ClassicOldSong/Apollo)  
