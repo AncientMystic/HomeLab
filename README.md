@@ -4,7 +4,7 @@ HomeLab CheatSheet &amp; AwesomeList
 <br>
 <br> This page will be updated randomly with new information, contributions welcome!, so stay tuned. 
 <br> Note: many of the hardware suggestions here are mostly the best items in their class for the lowest prices.
-<br>
+<br>ToDO: Update table of contents...
 # Table of Contents
 1. [Hardware](#hardware)
    - [Recommended Devices](#recommended-devices)
@@ -1074,6 +1074,54 @@ All these filesystems (XFS, ZFS, and BTRFS) can be utilized on **Proxmox**, a ho
 ### Host Power Management:
 - Linux: [PowerTop](https://github.com/fenrus75/powertop) - Tweak host for power savings.
 
+### Media Conversion:
+
+- [Hybrid](https://www.selur.de/) - A multi-purpose video conversion tool that integrates various encoders and applications, allowing easy media conversion from various formats.
+- [HandBrake](https://handbrake.fr/) - A widely-used open-source video transcoder that supports GPU acceleration for faster encoding and includes support for modern codecs like AV1.
+
+### Documents:
+
+- [Recoll](https://www.recoll.org/index.html) - A powerful, open-source desktop search tool that can index and search the contents of various document formats. It supports a wide range of file types and is great for organizing and retrieving personal documents locally.
+
+<hr>
+
 ### SelfHosted:
 - [Awesome-Selfhosted](https://github.com/awesome-selfhosted/awesome-selfhosted).
+
+### AI:
+
+- Text: [Ollama](https://github.com/ollama/ollama) - A tool to run LLMs (Large Language Models) on your own machine, enabling private and customizable AI instances.
+- Images: [EasyDiffusion](https://github.com/easydiffusion/easydiffusion) - A user-friendly interface for running Stable Diffusion locally to generate high-quality images.
+- Images: [Forge-WebUI](https://github.com/lllyasviel/stable-diffusion-webui-forge) - A web-based interface for managing and controlling AI model deployments on your own server.
+- multi: [Koboldcpp](https://github.com/LostRuins/koboldcpp) - KoboldCpp is an easy-to-use AI text-generation software for GGML and GGUF models, inspired by the original KoboldAI. 
+- TTS: [Kokoro FastAPI](https://github.com/remsky/Kokoro-FastAPI) - A Text-to-Speech service built with FastAPI, allowing fast and efficient text-to-speech conversion using AI models.
+- DeepResearch: [Local Deep Research](https://github.com/LearningCircuit/local-deep-research) - Local Deep Research achieves ~95% on SimpleQA benchmark (tested with GPT-4.1-mini). Supports local and cloud LLMs (Ollama, Google, Anthropic, ...). Searches 10+ sources - arXiv, PubMed, web, and your private documents. Everything Local & Encrypted. 
+
+### Media Streaming:
+
+- [Jellyfin](https://jellyfin.org/) - An open-source media server for managing and streaming your media content to various devices.
+- [Plex](https://www.plex.tv/) - A media server platform that allows you to stream and organize your media collection from your own server.
+- [Emby](https://emby.media/) - Another media server platform, offering advanced features for content management and streaming.
+- [seerr](https://github.com/seerr-team/seerr) - free and open source software application for managing requests for your media library. It integrates with the media server of your choice: Jellyfin, Plex, and Emby. In addition, it integrates with your existing services, such as Sonarr, Radarr.
+- [Radarr](https://github.com/Radarr/Radarr) - An automatic movie collection manager that works with your media server for a seamless experience.
+- [Sonarr](https://github.com/Sonarr/Sonarr) - A TV series manager for downloading, organizing, and streaming your favorite shows automatically.
+- [Tautulli](https://github.com/Tautulli/Tautulli) - A monitoring tool for your Plex server, providing detailed analytics and statistics on your media server's usage.
+
+### Documents:
+
+- [Ubooquity](https://vaemendis.net/ubooquity/) - A lightweight and easy-to-use home server for managing and streaming eBooks and comics. Ideal for personal digital libraries.
+- [OpenReader-WebUI](https://github.com/richardr1126/OpenReader-WebUI) - Read documents in realtime with high-quality TTS; or extract audiobooks. Use your own Kokoro-FastAPI, Deepinfa API, or Open AI API endpoint. .
+
+### Media Conversion:
+
+- [Tdarr](https://home.tdarr.io/) - A distributed media transcoding system designed to automate and optimize the conversion of your media collection, running on your own server.
+
+### Metasearch Engines:
+
+- [SearXNG](https://github.com/searxng/searxng) - SearXNG is a free internet metasearch engine which aggregates results from various search services and databases. Users are neither tracked nor profiled.
+
+### Virus Scanners:
+
+- [Malice](https://github.com/maliceio/malice) - Malice's mission is to be a free open source version of VirusTotal that anyone can use at any scale from an independent researcher to a fortune 500 company. (officially archived but still worth a mention.) 
+
 
