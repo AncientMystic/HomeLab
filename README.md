@@ -2,6 +2,7 @@
 HomeLab CheatSheet &amp; AwesomeList
 <br> Created for the [HomeLab Group](https://smp6.simplex.im/g#P45YjyWy-__e3p3OqoRvU_4sjcSorUz0v8hCtWEPRtk) on Simplex Chat [![Simplex Chat](https://avatars.githubusercontent.com/u/59927747?s=48&v=4)](https://simplex.chat/)
 <br>
+<br> The goal of this repo is to become your map to help you navigate the HomeLAbbing experience. 
 <br> This page will be updated randomly with new information, contributions welcome!, so stay tuned. 
 <br> Note: many of the hardware suggestions here are mostly the best items in their class for the lowest prices.
 <br>
@@ -624,7 +625,7 @@ Disabling Turbo Boost forces the CPU to remain at base clocks (PL1), reducing pe
 
 ---
 
-## 1️⃣ Disabling Turbo Boost in BIOS (Recommended Method)
+## 1. Disabling Turbo Boost in BIOS (Recommended Method)
 
 This is the most reliable and OS-independent method.
 
@@ -651,7 +652,7 @@ This is the most reliable and OS-independent method.
 
 ---
 
-## 2️⃣ Disabling Turbo Boost on Linux
+## 2. Disabling Turbo Boost on Linux
 
 ### Method A — Using rc.local
 
@@ -711,7 +712,7 @@ Useful for:
 
 ---
 
-## 3️⃣ Disabling Turbo Boost on Windows
+## 3. Disabling Turbo Boost on Windows
 
 Windows does not expose a simple Turbo toggle by default, but you can disable it via Power Options.
 
