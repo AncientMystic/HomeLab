@@ -2,7 +2,7 @@
 HomeLab CheatSheet &amp; AwesomeList
 <br> Created for the [HomeLab Group](https://smp6.simplex.im/g#P45YjyWy-__e3p3OqoRvU_4sjcSorUz0v8hCtWEPRtk) on Simplex Chat [![Simplex Chat](https://avatars.githubusercontent.com/u/59927747?s=48&v=4)](https://simplex.chat/)
 <br>
-<br> The goal of this repo is to become your map to help you navigate the HomeLAbbing experience. 
+<br> The goal of this repo is to become your map to help you navigate the HomeLabbing experience. 
 <br> This page will be updated randomly with new information, contributions welcome!, so stay tuned. 
 <br> Note: many of the hardware suggestions here are mostly the best items in their class for the lowest prices.
 <br>
