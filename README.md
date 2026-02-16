@@ -589,6 +589,221 @@ NOTES: HGST have the Lowest failure rates, followed by Western Digital.
 
 Enterprise drives are designed to handle much higher workloads and offer greater durability compared to consumer-grade drives. While consumer drives may seem more affordable, they often burn out quickly in high-write environments such as servers or when used with ZFS, which requires frequent read/write operations. Enterprise SSDs are built for sustained performance, higher endurance (TBW/PBW), and reliability, making them the preferable choice for demanding applications where data integrity and long-term use are crucial.
 
+### CPU: 
+<br> section in progress / to be updated
+<details>
+<summary><b>Intel:</b></summary>
+</details>
+
+<details>
+<summary><b>AMD:</b></summary>
+</details>
+
+### Disable Turbo Boost!
+
+# Turbo Boost – Power, Heat & How to Disable It
+
+Modern Intel CPUs support **Turbo Boost**, a feature that automatically increases clock speeds above the base frequency when thermal and power headroom allow.
+
+While this improves burst performance, it also significantly increases:
+
+- ⚡ Power consumption (PL2 spikes)
+- 🌡️ CPU temperature
+- 🔊 Fan noise
+- 🔋 Idle-to-load power variance
+- 🖥️ Sustained heat output in small form factor systems
+
+Turbo works by temporarily raising power limits (PL2) well above the rated TDP (PL1). For example, a 65W CPU may briefly pull 200W+ under turbo. In compact builds, homelabs, or always-on systems, this can:
+
+- Cause thermal throttling
+- Increase system instability
+- Raise long-term power costs
+- Increase VRM and PSU stress
+
+Disabling Turbo Boost forces the CPU to remain at base clocks (PL1), reducing peak temperatures and flattening power spikes.
+
+---
+
+## 1️⃣ Disabling Turbo Boost in BIOS (Recommended Method)
+
+This is the most reliable and OS-independent method.
+
+### Steps:
+
+1. Reboot your system.
+2. Enter BIOS/UEFI (usually `DEL`, `F2`, or `F10`).
+3. Navigate to:
+   - **Advanced CPU Settings**
+   - **Processor Configuration**
+   - **Overclocking / Performance**
+4. Locate one of the following options:
+   - **Intel Turbo Boost**
+   - **Intel Turbo Boost Technology**
+   - **Turbo Mode**
+5. Set it to **Disabled**.
+6. Save and exit.
+
+**Advantages:**
+
+- Completely prevents turbo at firmware level.
+- Works across Linux, Windows, hypervisors, etc.
+- Best method for servers and homelabs.
+
+---
+
+## 2️⃣ Disabling Turbo Boost on Linux
+
+### Method A — Using rc.local
+
+You can disable turbo at boot by writing to the Intel pstate driver.
+
+Create the file:
+
+```
+/etc/rc.local
+```
+
+Ensure:
+
+- Owner: `root`
+- Group: `root`
+- Permissions: `700` (`rwx------`)
+
+Add the following content:
+
+```bash
+#!/bin/sh
+echo 1 > /sys/devices/system/cpu/intel_pstate/no_turbo
+exit 0
+```
+
+Save the file.
+
+Reboot and verify:
+
+```bash
+cat /sys/devices/system/cpu/intel_pstate/no_turbo
+```
+
+If it returns:
+
+```
+1
+```
+
+Turbo is disabled.
+
+---
+
+### Method B — Using intel-noturbo
+
+Project:
+
+https://github.com/ShyVortex/intel-noturbo
+
+This provides a cleaner toggle utility for enabling/disabling turbo without manually editing system files.
+
+Useful for:
+
+- Laptops
+- Testing thermals
+- Scripted power profiles
+
+---
+
+## 3️⃣ Disabling Turbo Boost on Windows
+
+Windows does not expose a simple Turbo toggle by default, but you can disable it via Power Options.
+
+A commonly used method involves importing a `.reg` file that adds the hidden processor performance boost mode setting into Windows Power Options.
+
+- [.reg file link](https://www.geeks3d.com/dl/show/10060) 
+
+After importing:
+
+1. Open **Power Options**
+2. Edit your current power plan
+3. Go to:
+
+```
+Processor power management
+```
+
+4. Set:
+
+```
+Processor performance boost mode → Disabled
+```
+
+This effectively disables Turbo Boost at the OS level.
+
+**Note:**  
+BIOS-level disabling is more reliable. Windows-level disabling can sometimes be overridden by firmware or vendor utilities.
+
+---
+
+## When Should You Disable Turbo?
+
+### Turbo OFF is useful for:
+
+- Small form factor builds
+- Passive cooling systems
+- Homelabs
+- Always-on servers
+- Noise-sensitive environments
+- Power efficiency optimization
+- Thermal stability
+
+---
+
+## Power & Temperature Impact
+
+| Scenario         | Turbo ON               | Turbo OFF        |
+|------------------|------------------------|------------------|
+| Peak Power       | Very High (PL2 spikes) | Stable (PL1 only)|
+| Max Temperature  | 80–100°C common        | 50–75°C typical  |
+| Fan Noise        | High ramping           | Much quieter     |
+| Sustained Load   | May throttle           | More stable      |
+
+Actual results depend on CPU generation and cooling.
+
+<details>
+<summary><b>Turbo boost Power consumption Examples in watts<b></summary>
+   
+<br> PL1 = TDP - PL2 = Turbo Boost 
+
+| **Processor**                                                      | **PL1 Power (W)** | **PL2 Power (W)** | **TAU (Seconds)** |
+| ------------------------------------------------------------------ | ----------------- | ----------------- | ----------------- |
+| **11th Gen**                                                       |                   |                   |                   |
+| Core i9-11900K                                                     | 125               | 251               | 56                |
+| Core i7-11700K                                                     | 125               | 251               | 56                |
+| Core i5-11600K                                                     | 125               | 224               | 56                |
+| Core i9-11900                                                      | 65                | 224               | 28/56             |
+| Core i7-11700                                                      | 65                | 224               | 28/56             |
+| Core i5-11600, Core i5-11500, Core i5-11400                        | 65                | 154               | 28/56             |
+| Core i9-11900T                                                     | 35                | 115               | 28                |
+| Core i7-11700T                                                     | 35                | 115               | 28                |
+| Core i5-11600T                                                     | 35                | 84                | 28                |
+| Core i9-10900K                                                     | 125               | 250               | 56                |
+| **10th Gen**                                                       |                   |                   |                   |
+| Core i7-10700K                                                     | 125               | 229               | 56                |
+| Core i5-10600K                                                     | 125               | 182               | 56                |
+| Core i9-10900                                                      | 65                | 224               | 28                |
+| Core i7-10700                                                      | 65                | 224               | 28                |
+| Core i5-10600, Core i5-10500, Core i5-10400                        | 65                | 134               | 28                |
+| Core i3-10320, Core i3-10300, Core i3-10100                        | 65                | 90                | 28                |
+| Pentium Gold 6500, Pentium Gold 6400, Celeron G5920, Celeron G5900 | 58                | 58                | 28                |
+| Core i9-10900T                                                     | 35                | 123               | 28                |
+| Core i7-10700T                                                     | 35                | 123               | 28                |
+| Core i5-10000T                                                     | 35                | 92                | 28                |
+| Core i3-10000T                                                     | 35                | 55                | 28                |
+| Pentium Gold G6500T, Pentium Gold G6400T, Celeron 5900T            | 35                | 42                | 28                |
+
+<br> Note: As you can see, this can result in up to 3.5x brief spikes in watt usage, which also drastically increases temps.
+</details>
+
+<hr>
+
 ### GPU:
 <b>NVIDIA (vGPU / AI / Virtualization):</b>
 
@@ -1137,6 +1352,7 @@ All these filesystems (XFS, ZFS, and BTRFS) can be utilized on **Proxmox**, a ho
 - [UWT4](https://www.majorgeeks.com/files/details/ultimate_windows_tweaker_for_windows_10.html) - A comprehensive tweak tool for Windows 10 that allows you to customize various system settings and privacy options, improving performance and security.
 - [Win10BloatRemover](https://github.com/Fs00/Win10BloatRemover) - A tool that helps you remove bloatware and unwanted apps from Windows 10, freeing up space and improving system performance.
 - [Intelligent Standby List Cleaner](https://www.majorgeeks.com/files/details/intelligent_standby_list_cleaner.html) - A tool to reduce system stuttering and improve performance by clearing the standby memory list, optimizing RAM usage.
+- [Destroy Windows 10 Spying](https://www.majorgeeks.com/files/details/destroy_windows_10_spying.html) - A privacy tool designed to disable telemetry, tracking, and data collection features in Windows 10 for improved privacy and control.
 
 ### Windows 7:
 
