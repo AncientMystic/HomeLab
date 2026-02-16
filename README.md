@@ -8,12 +8,12 @@ HomeLab CheatSheet &amp; AwesomeList
 <br> Note: many of the hardware suggestions here are mostly the best items in their class for the lowest prices.
 <br>
 <br>ToDo: 
-<br> * Update table of contents...
-<br> * Add CPU Tables 
-<br> * Add more hardware information including more Nic models / HBA models / Enterprise drive models and information. 
-<br> * Add more general filesystem information / ZFS information / tips with more links to obscure useful information that will help manage ZFS better.  
-<br> * Add more software/Self hosting options and guide links. 
-<br> * Add more proxmox related information and helpful guides, including those related to GPU passthrough, LXCs, etc 
+- Update table of contents...
+- Add CPU Tables 
+- Add more hardware information including more Nic models / HBA models / Enterprise drive models and information. 
+- Add more general filesystem information / ZFS information / tips with more links to obscure useful information that will help manage ZFS better.  
+- Add more software/Self hosting options and guide links. 
+- Add more proxmox related information and helpful guides, including those related to GPU passthrough, LXCs, etc 
 # Table of Contents
 1. [Hardware](#hardware)
    - [Recommended Devices](#recommended-devices)
