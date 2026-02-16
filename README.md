@@ -3,10 +3,17 @@ HomeLab CheatSheet &amp; AwesomeList
 <br> Created for the [HomeLab Group](https://smp6.simplex.im/g#P45YjyWy-__e3p3OqoRvU_4sjcSorUz0v8hCtWEPRtk) on Simplex Chat [![Simplex Chat](https://avatars.githubusercontent.com/u/59927747?s=48&v=4)](https://simplex.chat/)
 <br>
 <br> The goal of this repo is to become your map to help you navigate the HomeLabbing experience. 
-<br> This page will be updated randomly with new information, contributions welcome!, so stay tuned. 
+<br> This page will be updated randomly with new information, so stay tuned. (contributions welcome!)
+<br>
 <br> Note: many of the hardware suggestions here are mostly the best items in their class for the lowest prices.
 <br>
-<br>ToDo: Update table of contents...
+<br>ToDo: 
+<br> * Update table of contents...
+<br> * Add CPU Tables 
+<br> * Add more hardware information including more Nic models / HBA models / Enterprise drive models and information. 
+<br> * Add more general filesystem information / ZFS information / tips with more links to obscure useful information that will help manage ZFS better.  
+<br> * Add more software/Self hosting options and guide links. 
+<br> * Add more proxmox related information and helpful guides, including those related to GPU passthrough, LXCs, etc 
 # Table of Contents
 1. [Hardware](#hardware)
    - [Recommended Devices](#recommended-devices)
