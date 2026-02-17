@@ -132,6 +132,8 @@ Lenovo Tiny PCs offer various hardware configurations, such as:
 - **Mini PCIe Slots**: For WiFi + Bluetooth cards
 - **USB Ports**: 4-6 USB 3+ ports in newer models
 
+*Clarification*: measured system idle depends on CPU model, storage devices, NICs, and OS power settings — expect higher real-world idle (typ. 8–20W for common configs). Use a real watt-meter to confirm.
+
 These devices are small, powerful, and make perfect all-in-one mini servers for various use cases. The **Intel** versions even allow you to share the **iGPU** with **Proxmox** for multiple virtual machines.
 
 ---
@@ -393,9 +395,242 @@ All LSI cards run warm.
 [5]: https://www.ebay.com/p/12062799086?utm_source=chatgpt.com "Internal Hard Disk Drives for Sale - eBay"
 
 
-NOTES: HGST have the Lowest failure rates, followed by Western Digital. 
+NOTES: in my opinion, HGST have the Lowest failure rates along side Western Digital. 
 <br> Seagate / Toshiba models tend to have higher failure rates depending on models. but they are often cheaper, sometimes by a fair amount. 
+<br> Seagates depending on the model can be the worst drives to purchase, so unless you want to research the specific model you are buying, you probably want HGST/WD. 
+<br> Samsung HDDs also have fairly high failure rates. SSDs are good but HDDs are hit and miss. 
+<details>
+<summary><b>BackBlaze Hard Drive Failure Data By Year</b></summary>
 
+**2024:**
+# Backblaze Hard Drive Failure Rates for 2024
+Reporting period: 1/1/2024 – 12/31/2024 inclusive  
+Drive models with drive count > 250 as of 12/31/2024 and drive days > 50,000 in 2024.
+
+| MFG     | Model             | Size (TB) | Drive Count | Avg Age (months) | Drive Days  | Drive Failures | AFR   |
+|---------|------------------|----------:|------------:|-----------------:|------------:|---------------:|------:|
+| HGST    | HMS5C4040ALE640  | 4  | 263   | 95.5 | 327,114   | 4   | 0.45% |
+| HGST    | HMS5C4040BLE640  | 4  | 4,120 | 95.9 | 3,078,618 | 18  | 0.21% |
+| HGST    | HUH728080ALE600  | 8  | 1,084 | 79.8 | 400,697   | 18  | 1.64% |
+| HGST    | HUH721212ALE600  | 12 | 2,606 | 61.8 | 949,117   | 32  | 1.23% |
+| HGST    | HUH721212ALE604  | 12 | 13,313| 43.3 | 4,786,933 | 435 | 3.32% |
+| HGST    | HUH721212ALN604  | 12 | 10,191| 66.5 | 3,814,797 | 590 | 5.65% |
+| Seagate | ST8000DM002      | 8  | 9,078 | 98.6 | 3,355,725 | 162 | 1.76% |
+| Seagate | ST8000NM0055     | 8  | 13,534| 87.0 | 5,020,845 | 356 | 2.59% |
+| Seagate | ST10000NM0086    | 10 | 1,034 | 84.4 | 391,133   | 58  | 5.41% |
+| Seagate | ST12000NM0007    | 12 | 1,038 | 61.3 | 400,953   | 125 | 11.38% |
+| Seagate | ST12000NM0008    | 12 | 19,134| 56.2 | 7,060,183 | 502 | 2.60% |
+| Seagate | ST12000NM000J    | 12 | 723   | 8.5  | 172,556   | 16  | 3.38% |
+| Seagate | ST12000NM001G    | 12 | 13,184| 46.8 | 4,814,820 | 166 | 1.26% |
+| Seagate | ST14000NM001G    | 14 | 10,589| 46.3 | 3,863,921 | 175 | 1.65% |
+| Seagate | ST14000NM0138    | 14 | 1,321 | 48.9 | 498,291   | 73  | 5.35% |
+| Seagate | ST16000NM001G    | 16 | 33,600| 28.6 | 11,737,654| 226 | 0.70% |
+| Seagate | ST16000NM002J    | 16 | 461   | 25.8 | 168,170   | 1   | 0.22% |
+| Toshiba | MG07ACA14TA      | 14 | 37,703| 49.7 | 13,729,393| 414 | 1.10% |
+| Toshiba | MG07ACA14TEY     | 14 | 742   | 36.4 | 230,649   | 10  | 1.58% |
+| Toshiba | MG08ACA16TA      | 16 | 40,185| 19.1 | 14,089,908| 484 | 1.25% |
+| Toshiba | MG08ACA16TE      | 16 | 5,912 | 38.4 | 2,173,570 | 68  | 1.14% |
+| Toshiba | MG08ACA16TEY     | 16 | 5,163 | 36.9 | 1,889,434 | 82  | 1.58% |
+| Toshiba | MG10ACA20TE      | 20 | 5,943 | 3.8  | 631,665   | 15  | 0.87% |
+| WDC     | WUH721414ALE6L4  | 14 | 8,542 | 47.8 | 3,110,146 | 72  | 0.84% |
+| WDC     | WUH721816ALE6L0  | 16 | 3,016 | 36.2 | 1,103,215 | 37  | 1.22% |
+| WDC     | WUH721816ALE6L4  | 16 | 26,475| 21.1 | 9,365,201 | 94  | 0.37% |
+| WDC     | WUH722222ALE6L4  | 22 | 30,000| 5.8  | 4,741,582 | 139 | 1.07% |
+
+| **TOTALS** |  |  | **298,954** |  | **101,906,290** | **4,372** | **1.57%** |
+  
+**2023:**
+# Backblaze Hard Drive Failure Rates for 2023
+Reporting period: 1/1/2023 – 12/31/2023 inclusive
+
+| MFG     | Model             | Drive Size | Drive Count | Avg Age (months) | Drive Days  | Drive Failures | AFR   |
+|---------|------------------|------------|------------:|-----------------:|------------:|---------------:|------:|
+| HGST    | HMS5C4040ALE640  | 4TB  | 1,950  | 85.5 | 1,182,145 | 12  | 0.37% |
+| HGST    | HMS5C4040BLE640  | 4TB  | 10,260 | 86.0 | 4,219,579 | 44  | 0.38% |
+| HGST    | HUH728080ALE600  | 8TB  | 1,103  | 68.0 | 401,471   | 27  | 2.45% |
+| HGST    | HUH728080ALE604  | 8TB  | 89     | 77.6 | 33,059    | 5   | 5.52% |
+| HGST    | HUH721212ALE600  | 12TB | 2,606  | 50.5 | 938,602   | 21  | 0.82% |
+| HGST    | HUH721212ALE604  | 12TB | 13,144 | 33.1 | 4,780,695 | 125 | 0.95% |
+| HGST    | HUH721212ALN604  | 12TB | 10,532 | 56.0 | 3,829,510 | 387 | 3.69% |
+| Seagate | ST4000DM000      | 4TB  | 11,391 | 96.6 | 6,149,245 | 560 | 3.32% |
+| Seagate | ST6000DX000      | 6TB  | 882    | 104.0| 322,461   | 6   | 0.68% |
+| Seagate | ST8000DM002      | 8TB  | 9,250  | 86.7 | 3,408,498 | 267 | 2.86% |
+| Seagate | ST8000NM000A     | 8TB  | 204    | 14.1 | 52,876    | 0   | 0.00% |
+| Seagate | ST8000NM0055     | 8TB  | 13,914 | 74.9 | 5,144,580 | 543 | 3.85% |
+| Seagate | ST10000NM0086    | 10TB | 1,097  | 72.5 | 410,970   | 74  | 6.57% |
+| Seagate | ST12000NM0007    | 12TB | 1,162  | 49.6 | 440,056   | 96  | 7.96% |
+| Seagate | ST12000NM0008    | 12TB | 19,449 | 44.7 | 7,128,136 | 573 | 2.93% |
+| Seagate | ST12000NM000J    | 12TB | 195    | 2.7  | 15,811    | 1   | 2.31% |
+| Seagate | ST12000NM001G    | 12TB | 13,108 | 35.5 | 4,700,930 | 153 | 1.19% |
+| Seagate | ST14000NM000J    | 14TB | 77     | 2.6  | 4,986     | 2   | 14.64% |
+| Seagate | ST14000NM0018    | 14TB | 66     | 17.1 | 16,492    | 6   | 13.28% |
+| Seagate | ST14000NM001G    | 14TB | 10,693 | 34.4 | 3,905,366 | 193 | 1.80% |
+| Seagate | ST14000NM0138    | 14TB | 1,400  | 36.9 | 528,390   | 116 | 8.01% |
+| Seagate | ST16000NM001G    | 16TB | 27,433 | 21.2 | 9,160,212 | 176 | 0.70% |
+| Seagate | ST16000NM002J    | 16TB | 463    | 13.7 | 123,261   | 2   | 0.59% |
+| Seagate | ST18000NM000J    | 18TB | 60     | 36.7 | 21,630    | 3   | 5.06% |
+| Toshiba | MD04ABA400V      | 4TB  | 93     | 103.4| 34,042    | 1   | 1.07% |
+| Toshiba | HDWF180          | 8TB  | 60     | 24.8 | 18,889    | 5   | 9.66% |
+| Toshiba | MG07ACA14TA      | 14TB | 37,913 | 37.8 | 13,827,478| 426 | 1.12% |
+| Toshiba | MG07ACA14TEY     | 14TB | 649    | 27.6 | 219,865   | 8   | 1.33% |
+| Toshiba | MG08ACA16TA      | 16TB | 33,750 | 9.0  | 4,995,010 | 149 | 1.09% |
+| Toshiba | MG08ACA16TE      | 16TB | 5,960  | 26.5 | 2,140,932 | 56  | 0.95% |
+| Toshiba | MG08ACA16TEY     | 16TB | 5,230  | 24.9 | 1,894,368 | 58  | 1.12% |
+| WDC     | WUH721414ALE6L4  | 14TB | 8,471  | 36.5 | 3,066,209 | 36  | 0.43% |
+| WDC     | WUH721816ALE6L0  | 16TB | 3,053  | 24.2 | 996,710   | 9   | 0.33% |
+| WDC     | WUH721816ALE6L4  | 16TB | 21,607 | 11.6 | 5,707,555 | 47  | 0.30% |
+| WDC     | WUH722222ALE6L4  | 22TB | 2,442  | 2.4  | 126,956   | 2   | 0.58% |
+
+| **TOTAL (35 models)** |  |  | **269,756** |  | **89,946,975** | **4,189** | **1.70%** |
+
+**2022:**
+# Backblaze Hard Drive Failure Rates for 2022
+Reporting period: 1/1/2022 – 12/31/2022 inclusive
+
+| MFG     | Model             | Drive Size | Drive Count | Avg Age (months) | Drive Days | Drive Failures | AFR   |
+|---------|------------------|------------|------------:|-----------------:|-----------:|---------------:|------:|
+| HGST    | HMS5C4040ALE640  | 4TB  | 3,723  | 77.1 | 1,322,966 | 23  | 0.63% |
+| HGST    | HMS5C4040BLE640  | 4TB  | 12,730 | 74.1 | 4,641,631 | 52  | 0.41% |
+| HGST    | HUH728080ALE600  | 8TB  | 1,117  | 56.6 | 408,895   | 16  | 1.43% |
+| HGST    | HUH728080ALE604  | 8TB  | 94     | 65.5 | 27,684    | 4   | 5.27% |
+| HGST    | HUH721212ALE600  | 12TB | 2,606  | 38.9 | 948,201   | 7   | 0.27% |
+| HGST    | HUH721212ALE604  | 12TB | 13,165 | 21.3 | 4,789,187 | 73  | 0.56% |
+| HGST    | HUH721212ALN604  | 12TB | 10,769 | 44.8 | 3,930,437 | 80  | 0.74% |
+| Seagate | ST4000DM000      | 4TB  | 18,246 | 85.9 | 6,699,353 | 633 | 3.45% |
+| Seagate | ST6000DX000      | 6TB  | 886    | 92.5 | 323,387   | 6   | 0.68% |
+| Seagate | ST8000DM002      | 8TB  | 9,523  | 74.6 | 3,505,962 | 189 | 1.97% |
+| Seagate | ST8000NM000A     | 8TB  | 79     | 14.2 | 22,839    | 0   | 0.00% |
+| Seagate | ST8000NM0055     | 8TB  | 14,417 | 63.2 | 5,230,097 | 347 | 2.42% |
+| Seagate | ST10000NM0086    | 10TB | 1,174  | 60.7 | 430,092   | 44  | 3.73% |
+| Seagate | ST12000NM0007    | 12TB | 1,262  | 37.7 | 469,211   | 61  | 4.75% |
+| Seagate | ST12000NM0008    | 12TB | 19,821 | 33.1 | 7,291,905 | 404 | 2.02% |
+| Seagate | ST12000NM001G    | 12TB | 12,623 | 24.9 | 4,515,095 | 116 | 0.94% |
+| Seagate | ST14000NM001G    | 14TB | 10,751 | 22.8 | 3,912,395 | 126 | 1.18% |
+| Seagate | ST14000NM0138    | 14TB | 1,519  | 24.8 | 570,042   | 89  | 5.70% |
+| Seagate | ST16000NM001G    | 16TB | 20,393 | 13.6 | 6,057,376 | 142 | 0.86% |
+| Seagate | ST16000NM002J    | 16TB | 310    | 6.6  | 50,625    | 2   | 1.44% |
+| Toshiba | MD04ABA400V      | 4TB  | 94     | 91.3 | 35,031    | 3   | 3.13% |
+| Toshiba | MG07ACA14TA      | 14TB | 38,182 | 26.0 | 13,921,635| 385 | 1.01% |
+| Toshiba | MG07ACA14TEY     | 14TB | 552    | 20.7 | 184,247   | 8   | 1.58% |
+| Toshiba | MG08ACA16TA      | 16TB | 3,751  | 6.9  | 625,329   | 10  | 0.58% |
+| Toshiba | MG08ACA16TE      | 16TB | 5,936  | 14.7 | 2,167,676 | 93  | 1.57% |
+| Toshiba | MG08ACA16TEY     | 16TB | 5,286  | 12.9 | 1,362,038 | 24  | 0.64% |
+| WDC     | WUH721414ALE6L4  | 14TB | 8,410  | 24.8 | 3,065,102 | 10  | 0.12% |
+| WDC     | WUH721816ALE6L0  | 16TB | 2,701  | 14.9 | 938,328   | 3   | 0.12% |
+| WDC     | WUH721816ALE6L4  | 16TB | 10,801 | 4.6  | 1,313,668 | 13  | 0.36% |
+
+| **TOTAL (29 models)** |  |  | **230,921** |  | **78,760,434** | **2,963** | **1.37%** |
+
+<details>
+<summary><b>Data Summary:</b></summary>
+  
+ ## 📊 Backblaze Drive Reliability Summary (2022–2024)
+
+This summary is based strictly on the 2022, 2023, and 2024 AFR data provided above.
+
+---
+
+## 🔎 Brand-Level Overview
+
+### 🟢 WDC (Western Digital)
+- Most consistent low failure rates across all three years
+- Rarely exceeds 1.2% AFR
+- Strong reliability trend overall
+
+### 🟢 Toshiba
+- Generally stable AFR (~1.0–1.5%)
+- Few extreme outliers
+- Consistent mid-range reliability
+
+### 🟡 HGST
+- Excellent reliability in 4TB models
+- Some 12TB models show elevated AFR in 2023–2024
+- Wider spread between best and worst models
+
+### 🔴 Seagate
+- Largest variability across models
+- Several high AFR spikes (5–11%+)
+- Also includes some very reliable 16TB models
+
+---
+
+# 🏆 Best Performing Models (Lowest AFR Observed)
+
+### ⭐ Absolute Lowest AFR
+- **Seagate ST8000NM000A (2022, 2023)** – 0.00%  
+  > Note: Very small sample size.
+
+---
+
+### ⭐ Consistently Excellent Models (<0.40% observed)
+
+- **WDC WUH721414ALE6L4**
+  - 2022: 0.12%
+  - 2023: 0.43%
+  - 2024: 0.84%
+
+- **WDC WUH721816ALE6L4**
+  - 2022: 0.36%
+  - 2023: 0.30%
+  - 2024: 0.37%
+
+- **HGST HMS5C4040BLE640**
+  - 2022: 0.41%
+  - 2023: 0.38%
+  - 2024: 0.21%
+
+- **Seagate ST16000NM001G**
+  - 2022: 0.86%
+  - 2023: 0.70%
+  - 2024: 0.70%
+
+---
+
+## 🔥 Worst Performing Models (Highest AFR Observed)
+
+### 🚨 Highest Single-Year AFR
+
+- **Seagate ST14000NM000J (2023)** – 14.64%
+- **Seagate ST14000NM0018 (2023)** – 13.28%
+- **Seagate ST12000NM0007 (2024)** – 11.38%
+- **Toshiba HDWF180 (2023)** – 9.66%
+- **Seagate ST14000NM0138 (2023)** – 8.01%
+- **Seagate ST12000NM0007 (2023)** – 7.96%
+
+---
+
+### ⚠ Consistently High AFR Across Multiple Years
+
+- **Seagate ST10000NM0086**
+  - 2023: 6.57%
+  - 2024: 5.41%
+
+- **HGST HUH721212ALN604**
+  - 2023: 3.69%
+  - 2024: 5.65%
+
+---
+
+# 📌 Overall Conclusions
+
+### 🥇 Most Reliable Brand (Overall Trend)
+**WDC** — lowest and most stable AFR across all years.
+
+### 🥈 Strong Overall Consistency
+**Toshiba** — stable, moderate AFR with few severe spikes.
+
+### ⚖ Mixed Performance
+**HGST** — excellent 4TB reliability, but some 12TB models show higher failure rates.
+
+### 🔴 Highest Variability
+**Seagate** — wide performance spread; some models highly reliable, others with significant AFR spikes.
+
+---
+
+> ⚠ Note: AFR values are based on Backblaze fleet data and are influenced by drive count, age, and operational environment.
+
+</details>
+</details>
 <hr>
 
 ### SSD/Nvme Drives:
@@ -741,6 +976,7 @@ The only downside is the added complexity around licensing and setup.
 <br><a href="https://git.collinwebdesigns.de/oscar.krause/fastapi-dls" target="_blank">FastAPI-DLS aka the licensing server.</a> 
 <br><a href="https://github.com/GreenDamTan/vgpu_unlock-rs" target="_blank">vgpu_unlock-rs mirror by GreenDamTan</a> 
 <br><a href="https://github.com/GreenDamTan/fastapi-dls_mirror" target="_blank">fastapi-dls_mirror by GreenDamTan</a>
+<br>⚠️ Legal Note: using third-party vGPU “unlocks” technically can violate NVIDIA licensing/EULA and carry possible legal/operational risk. production users should use official NVIDIA vGPU licensing, Unlocks should only be used on your own personal hardware for private non-commercial use cases. 
 </details>
 <br><b>Intel (SR-IOV / vGPU Capable GPUs):</b>
 
