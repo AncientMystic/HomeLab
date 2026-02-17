@@ -26,7 +26,7 @@ HomeLab CheatSheet &amp; AwesomeList
     - [NIC](#nic)
     - [SAS / HBA cards](#sas--hba-cards)
     - [Enterprise SATA/SAS HDDs](#enterprise-satasas-hdds)
-      - [BackBlaze Hard Drive Failure Data By Year](#BackBlaze-Hard-Drive-Failure-Data-By-Year)
+      - BackBlaze Hard Drive Failure Data By Year
          - Data summary
     - [SSD/Nvme Drives](#ssdnvme-drives)
 
