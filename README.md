@@ -5,72 +5,92 @@ HomeLab CheatSheet &amp; AwesomeList
 <br> The goal of this repo is to become your map to help you navigate the HomeLabbing experience. 
 <br> This page will be updated randomly with new information, so stay tuned. (contributions welcome!)
 <br>
-<br> Note: many of the hardware suggestions here are mostly the best items in their class for the lowest prices.
+<br> Note: many of the hardware suggestions here are mostly the best items in their class for the lowest prices. 
+<br> Hardware tables have average used prices from ebay.com as of 2/17/2026 
 <br>
 <br>ToDo: 
-- Update table of contents...
+- Update table of contents... :white_check_mark:
 - Add CPU Tables 
 - Add more hardware information including more Nic models / HBA models / Enterprise drive models and information. 
 - Add more general filesystem information / ZFS information / tips with more links to obscure useful information that will help manage ZFS better.  
 - Add more software/Self hosting options and guide links. 
 - Add more proxmox related information and helpful guides, including those related to GPU passthrough, LXCs, etc 
 # Table of Contents
-1. [Hardware](#hardware)
-   - [Recommended Devices](#recommended-devices)
-     - [Minimal / Tiny PCs](#minimal--tiny-pcs)
-     - [SFF Suggestions](#sff-suggestions)
-   - [NIC (Network Cards)](#nic-network-cards)
-   - [SAS / HBA Cards](#sas--hba-cards)
-     - [LSI 9211-8i (IT Mode)](#lsi-9211-8i-it-mode)
-     - [Newer Recommended Alternatives (SAS2308 / SAS3008)](#newer-recommended-alternatives-sas2308--sas3008)
-   - [SSD/Nvme Drives](#SSD/Nvme-Drives)
-     - [Enterprise NVMe / M.2 Drives with Endurance](#Enterprise-NVMe--M.2-Drives-with-Endurance)
-     - [Consumer NVMe / M.2 Drives](#Consumer-NVMe--M.2-Drives)
-     - [Consumer vs. Enterprise Price Comparison](#Consumer-vs.-Enterprise-Price-Comparison)
-   - [GPU](#gpu)
-     - [NVIDIA (vGPU / AI / Virtualization)](#nvidia-vgpu--ai--virtualization)
-       - Supported Generations
-       - Tesla Low-Power Options
-       - vGPU Licensing Notes
-       - vGPU Resources
-     - [Intel (SR-IOV / Arc Pro)](#intel-sr-iov--arc-pro)
-       - Arc Pro B-Series
-       - Firmware / Early Adopter Notes
-     - [AMD (MxGPU / SR-IOV)](#amd-mxgpu--sr-iov)
-       - Supported Professional Series
-       - MxGPU Overview
-       - Contribution Request
-     - [GPU Model Comparison Table](#gpu-model-comparison-table)
-       - [Intel GPU Master Table](#intel-gpu-master-table)
-       - [NVIDIA RTX 10 Series (Pascal)](#nvidia-rtx-10-series-pascal)
-       - [NVIDIA RTX 20 Series (Turing)](#nvidia-rtx-20-series-turing)
-       - [NVIDIA RTX 30 Series (Ampere)](#nvidia-rtx-30-series-ampere)
-       - [NVIDIA RTX 40 Series (Ada Lovelace)](#nvidia-rtx-40-series-ada-lovelace)
-       - [NVIDIA RTX 50 Series (Blackwell)](#nvidia-rtx-50-series-blackwell)
-       - [NVIDIA Quadro / Professional GPUs](#nvidia-quadro-professional-gpus)
-       - [NVIDIA RTX A-Series (Professional GPUs)](#nvidia-rtx-a-series-professional-gpus)
-       - [NVIDIA Tesla Series](#nvidia-tesla-series)
-       - [AMD Radeon RX 5000 Series (RDNA1)](#amd-radeon-rx-5000-series-rdna1)
-       - [AMD Radeon RX 6000 Series (RDNA2)](#amd-radeon-rx-6000-series-rdna2)
-       - [AMD Radeon RX 7000 Series (RDNA3)](#amd-radeon-rx-7000-series-rdna3)
-       - [AMD Radeon RX 9000 Series (RDNA4)](#amd-radeon-rx-9000-series-rdna4)
-       - [AMD Pro/Compute GPUs](#amd-procompute-gpus)
-
-2. [Suggested OS](#suggested-os)
-   - [Proxmox](#proxmox)
-   - [Filesystems](#filesystems)
-
-3. [Software](#software)
-   - [RDP](#rdp)
-   - [Gaming](#gaming)
-   - [File Management](#file-management)
-   - [File Sharing](#file-sharing)
-   - [Caching](#caching)
-   - [Firewall / Networking](#firewallnetworking)
-   - [Host Power Management](#host-power-management)
-
-4. [SelfHosted](#selfhosted)
-   - [Awesome-Selfhosted](#awesome-selfhosted)
+- [HomeLab](#homelab)
+  * [Optimal Minimal Setup Device: Lenovo Tiny PCs](#optimal-minimal-setup-device--lenovo-tiny-pcs)
+    + [Hardware Configuration Options](#hardware-configuration-options)
+    + [Popular Uses for the PCIe Slot](#popular-uses-for-the-pcie-slot)
+    + [Power and Performance](#power-and-performance)
+    + [Why Lenovo Tiny PCs?](#why-lenovo-tiny-pcs-)
+    + [SFF Suggestion](#sff-suggestion)
+    + [NIC:](#nic-)
+    + [SAS / HBA cards:](#sas---hba-cards-)
+    + [Enterprise SATA/SAS HDDs:](#enterprise-sata-sas-hdds-)
+    + [SSD/Nvme Drives:](#ssd-nvme-drives-)
+- [Enterprise NVMe / M.2 Drives with Endurance](#enterprise-nvme---m2-drives-with-endurance)
+- [Consumer NVMe / M.2 Drives](#consumer-nvme---m2-drives)
+  * [Consumer vs. Enterprise Price Comparison](#consumer-vs-enterprise-price-comparison)
+    + [CPU:](#cpu-)
+    + [Disable Turbo Boost!](#disable-turbo-boost-)
+- [Turbo Boost – Power, Heat & How to Disable It](#turbo-boost---power--heat---how-to-disable-it)
+  * [1. Disabling Turbo Boost in BIOS (Recommended Method)](#1-disabling-turbo-boost-in-bios--recommended-method-)
+    + [Steps:](#steps-)
+  * [2. Disabling Turbo Boost on Linux](#2-disabling-turbo-boost-on-linux)
+    + [Method A — Using rc.local](#method-a---using-rclocal)
+    + [Method B — Using intel-noturbo](#method-b---using-intel-noturbo)
+  * [3. Disabling Turbo Boost on Windows](#3-disabling-turbo-boost-on-windows)
+  * [When Should You Disable Turbo?](#when-should-you-disable-turbo-)
+    + [Turbo OFF is useful for:](#turbo-off-is-useful-for-)
+  * [Power & Temperature Impact](#power---temperature-impact)
+    + [GPU:](#gpu-)
+    + [GPU Models to compare them side by side:](#gpu-models-to-compare-them-side-by-side-)
+  * [Intel GPU Master Table](#intel-gpu-master-table)
+  * [NVIDIA RTX 10 Series (Pascal)](#nvidia-rtx-10-series--pascal-)
+  * [NVIDIA RTX 20 Series (Turing)](#nvidia-rtx-20-series--turing-)
+  * [NVIDIA RTX 30 Series (Ampere)](#nvidia-rtx-30-series--ampere-)
+  * [NVIDIA RTX 40 Series (Ada Lovelace)](#nvidia-rtx-40-series--ada-lovelace-)
+  * [NVIDIA RTX 50 Series (Blackwell)](#nvidia-rtx-50-series--blackwell-)
+  * [NVIDIA Quadro / Professional GPUs](#nvidia-quadro---professional-gpus)
+  * [NVIDIA RTX A-Series (Professional GPUs)](#nvidia-rtx-a-series--professional-gpus-)
+  * [NVIDIA Tesla Series](#nvidia-tesla-series)
+  * [AMD Radeon RX 5000 Series (RDNA1)](#amd-radeon-rx-5000-series--rdna1-)
+  * [AMD Radeon RX 6000 Series (RDNA2)](#amd-radeon-rx-6000-series--rdna2-)
+  * [AMD Radeon RX 7000 Series (RDNA3)](#amd-radeon-rx-7000-series--rdna3-)
+  * [AMD Radeon RX 9000 Series (RDNA4)](#amd-radeon-rx-9000-series--rdna4-)
+  * [AMD Pro/Compute GPUs](#amd-pro-compute-gpus)
+    + [Suggested OS:](#suggested-os-)
+    + [Proxmox related content:](#proxmox-related-content-)
+    + [Filesystems:](#filesystems-)
+    + [[XFS vs EXT4: Which Linux File System Is Better?](https://blog.purestorage.com/purely-educational/xfs-vs-ext4-which-linux-file-system-is-better/)](#-xfs-vs-ext4--which-linux-file-system-is-better---https---blogpurestoragecom-purely-educational-xfs-vs-ext4-which-linux-file-system-is-better--)
+    + [**ZFS - The Zettabyte File System**](#--zfs---the-zettabyte-file-system--)
+    + [**Performance & Usage Considerations for ZFS**](#--performance---usage-considerations-for-zfs--)
+    + [**BTRFS as an Alternative to ZFS**](#--btrfs-as-an-alternative-to-zfs--)
+    + [**BTRFS Use Case Example**](#--btrfs-use-case-example--)
+    + [**Using These Filesystems with Proxmox**](#--using-these-filesystems-with-proxmox--)
+  * [Useful Software:](#useful-software-)
+    + [Awesome Lists:](#awesome-lists-)
+    + [RDP:](#rdp-)
+    + [Gaming:](#gaming-)
+    + [File Management:](#file-management-)
+    + [File Sharing:](#file-sharing-)
+    + [File Compression:](#file-compression-)
+    + [Caching:](#caching-)
+    + [Firewall/Networking:](#firewall-networking-)
+    + [Host Power Management:](#host-power-management-)
+    + [Media Conversion:](#media-conversion-)
+    + [Documents:](#documents-)
+    + [Windows Tweaks & Privacy:](#windows-tweaks---privacy-)
+    + [Windows 7:](#windows-7-)
+    + [Linux Filesystems on Windows:](#linux-filesystems-on-windows-)
+    + [SelfHosted:](#selfhosted-)
+    + [Audiobooks & Podcasts:](#audiobooks---podcasts-)
+      - [Audiobookshelf Apps:](#audiobookshelf-apps-)
+    + [AI:](#ai-)
+    + [Media Streaming:](#media-streaming-)
+    + [Documents:](#documents--1)
+    + [Media Conversion:](#media-conversion--1)
+    + [Metasearch Engines:](#metasearch-engines-)
+    + [Virus Scanners:](#virus-scanners-)
 <br>
 <br><b>Hardware:</b>
 <br>Recommended Devices:
