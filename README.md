@@ -39,6 +39,23 @@ HomeLab CheatSheet &amp; AwesomeList
     - [Consumer vs. Enterprise Price Comparison](#consumer-vs-enterprise-price-comparison)
     
 - [CPU](#cpu)
+    - [CPU backdoor modules](#CPU-backdoor-modules)
+      - Intel Management Engine (ME)
+        - Notable documented vulnerabilities / advisories
+        - Neutralization / mitigation options (community + vendor)
+      - AMD Platform Security Processor (PSP) / AMD Secure Processor
+        - Documented vulnerabilities and research
+        - Reverse-engineering / tools
+        - Neutralization / mitigation
+      - ARM TrustZone & Trusted Execution Environments (TEE)
+        - Real research showing TEE risks
+      - Cross-Technology Comparison (high level)
+      - Tools, Mitigations & Privacy-focused Vendors
+        - Intel ME
+        - AMD PSP
+        - ARM TrustZone / TEEs
+      - Selected authoritative sources
+      
     - [Disable Turbo Boost](#disable-turbo-boost)
 
 - [Turbo Boost – Power, Heat & How to Disable It](#turbo-boost--power-heat--how-to-disable-it)
@@ -749,6 +766,183 @@ Enterprise drives are designed to handle much higher workloads and offer greater
 
 ### CPU: 
 <br> section in progress / to be updated
+
+### CPU backdoor modules 
+
+Modern CPU platforms embed *trusted subsystems* that run outside the control of the main OS. The most widely discussed components are:
+
+- **Intel Management Engine (ME)** — a proprietary microcontroller inside Intel chipsets with deep hardware privileges and (in some configs) network access via AMT.  
+- **AMD Platform Security Processor (PSP)** — AMD’s ARM-based co-processor that implements secure boot and platform security.  
+- **ARM TrustZone / Trusted Execution Environments (TEEs)** — hardware partitioning widely used on ARM SoCs to create a Secure World for sensitive code.
+
+These subsystems are closed-source and run below the OS, so researchers treat them as high-value attack surfaces. This report sticks to documented facts (CVE entries, vendor security advisories, academic and industry research) and includes links to the original sources.
+
+---
+
+## 🧩 1) Intel Management Engine (ME)
+
+### What it is
+The **Intel Management Engine (ME)** (sometimes referred to in parts as CSME/CSME firmware) is a separate microcontroller and firmware stack embedded in Intel chipsets. It performs platform management and security-related functions and is active whenever the system receives power. For details and security advisories see Intel’s product security center.
+
+- Intel security advisories and firmware updates: [Intel Product Security Center](https://www.intel.com/content/www/us/en/security-center/default.html)
+
+### Notable documented vulnerabilities / advisories
+Intel regularly publishes advisories for ME/CSME/AMT vulnerabilities. A few concrete, publicly documented advisories / CVEs:
+
+- **INTEL-SA-01315 (Feb 2026)** — Intel published chipset/CSME/AMT advisories describing denial-of-service and information-disclosure issues and issued firmware updates.  
+  [Intel INTEL-SA-01315 advisory](https://www.intel.com/content/www/us/en/security-center/advisory/intel-sa-01315.html)
+
+- **INTEL-SA-00783 (2023 / revised 2024)** — chipset/CSME advisory listing multiple issues; use this page to check affected platform lists and mitigation steps.  
+  [Intel INTEL-SA-00783 advisory](https://www.intel.com/content/www/us/en/security-center/advisory/intel-sa-00783.html)
+
+- **INTEL-SA-00295 / CVE-2020-0594** — example AMT/ISM IPv6 out-of-bounds read issue allowing unauthenticated denial of service or information disclosure.  
+  [Intel INTEL-SA-00295 advisory (includes CVE list)](https://www.intel.com/content/www/us/en/security-center/advisory/intel-sa-00295.html)  
+  [NVD: CVE-2020-0594](https://nvd.nist.gov/vuln/detail/CVE-2020-0594)
+
+- Historical AMT/ME CVEs (e.g., **CVE-2017-5712**) show remote exploitation of AMT/ME components when reachable.  
+  [NVD: CVE-2017-5712](https://nvd.nist.gov/vuln/detail/CVE-2017-5712)
+
+**What these mean:** some ME/AMT/CSME CVEs can be triggered remotely (network) and operate outside the OS, which is why ME is treated as a serious platform risk when vulnerable firmware is present.
+
+### Neutralization / mitigation options (community + vendor)
+- **Firmware updates from OEMs** are the primary official mitigation; apply vendor firmware. See Intel advisories linked above.  
+- **me_cleaner** — community tool for *partial de-blobbing / neutralization* of Intel ME firmware images (reduces runtime functionality and attack surface). Use with caution; flashing modified firmware can brick devices.  
+  [me_cleaner (GitHub)](https://github.com/corna/me_cleaner)
+
+- **Vendor approaches:** some privacy-focused vendors and open-firmware initiatives attempt to neutralize or minimize ME at runtime (examples below). Behavior and support vary by model and Intel generation — no universal full-removal method exists for modern chips.
+
+---
+
+## 🧠 2) AMD Platform Security Processor (PSP) / AMD Secure Processor
+
+### What it is
+**AMD PSP (Secure Processor / ASP)** is an ARM Cortex-A5 (or similar) core integrated on AMD CPUs that runs a closed firmware stack (sometimes called ASP / Secure OS). PSP handles secure boot, measured boot functions, cryptographic services, and sometimes virtualization/security features.
+
+- AMD product security and firmware bulletins: [AMD Product Security](https://www.amd.com/en/resources/product-security.html)
+
+### Documented vulnerabilities and research
+AMD publishes security bulletins covering PSP and related firmware issues. Representative examples:
+
+- **AMD-SB-5001 (Feb 2024)** — lists PSP-related CVEs such as **CVE-2020-12930** and **CVE-2020-12931** involving improper parameter handling in PSP drivers/kernels.  
+  [AMD-SB-5001 (PSP bulletin)](https://www.amd.com/en/resources/product-security/bulletin/amd-sb-5001.html)
+
+- **AMD-SB-5002 (Aug 2024)** — additional embedded processor firmware advisories and mitigation guidance.  
+  [AMD-SB-5002 (bulletin)](https://www.amd.com/en/resources/product-security/bulletin/amd-sb-5002.html)
+
+- **CVE-2022-23820 / CVE-2022-23821** — high-severity firmware / SMM kernel issues affecting AMD client platforms (SMRAM/SPI ROM access and SMM buffer validation issues). See the NVD and AMD bulletin references for technical details and vendor mitigation guidance.  
+  [NVD: CVE-2022-23820](https://nvd.nist.gov/vuln/detail/CVE-2022-23820)  
+  [NVD: CVE-2022-23821](https://nvd.nist.gov/vuln/detail/CVE-2022-23821)
+
+**What these mean:** PSP vulnerabilities commonly require local or privileged access to exploit, but they show that trusted firmware can contain exploitable issues with severe platform-level impact.
+
+### Reverse-engineering / tools
+- **PSPTool / PSPReverse** — community tools for extracting and analyzing AMD PSP firmware blobs (useful for research, not for casual disabling).  
+  [PSPTool (GitHub)](https://github.com/PSPReverse/PSPTool)  
+- Research papers demonstrate hardware fault injection and other attacks on AMD secure subsystems (e.g., fault injection research). Example: "One Glitch to Rule Them All" supplemental materials.  
+  [amd-sp-glitch (GitHub)](https://github.com/PSPReverse/amd-sp-glitch)
+
+### Neutralization / mitigation
+- AMD firmware is signed and required for platform initialization; there is **no widely-used neutralizer** like me_cleaner for PSP. Firmware updates from OEMs / AMD and secure BIOS settings are the main mitigations.
+
+---
+
+## 🛡 3) ARM TrustZone & Trusted Execution Environments (TEE)
+
+### What TrustZone provides
+ARM **TrustZone** is an architectural extension that divides CPU execution into a **Secure World** and **Normal World**, enabling a Trusted Execution Environment (TEE) for secure operations (key storage, secure boot, payment, DRM). TrustZone is not a single closed firmware blob like ME/PSP; it is hardware with vendor-supplied Secure World firmware stacks (many of which are proprietary).
+
+- ARM TrustZone technical overview: [Arm: TrustZone for Cortex-A](https://developer.arm.com/architectures/security-architectures/trustzone)
+
+### Real research showing TEE risks
+- **Google Project Zero — "Trust Issues: Exploiting TrustZone TEEs"** — in-depth analysis and exploits against real TrustZone TEEs (QSEE/Kinibi), demonstrating how TEE OSes lag in mitigations and how real attack chains were constructed.  
+  [Project Zero: Trust Issues: Exploiting TrustZone TEEs](https://projectzero.google/2017/07/trust-issues-exploiting-trustzone-tees.html)
+
+- Academic/systematic reviews of TrustZone/TEE security show many practical attack vectors (TA revocation gaps, memory corruption, lack of modern mitigations).  
+  [SoK: Understanding Security Vulnerabilities in TrustZone TEEs (paper)](https://syssec.dpss.inesc-id.pt/papers/cerdeira-sp20.pdf)
+
+**What these mean:** TrustZone hardware is neutral or beneficial by design, but TEE firmware/Trusted Apps frequently contain exploitable problems because many implementations are closed and lack hardening.
+
+---
+
+## ⚔ Cross-Technology Comparison (high level)
+
+| Property | Intel ME / CSME | AMD PSP / ASP | ARM TrustZone (TEE) |
+|---|---:|---:|---:|
+| Runs below OS? | Yes | Yes | Yes (when Secure World active) |
+| Independent network access | Yes (AMT / out-of-band on vPro) | No (not by default) | No (TEE doesn't usually manage NIC) |
+| Firmware open? | No (proprietary) | No (proprietary) | TEE OS often proprietary; hardware spec public |
+| Typical exploit vector | Network + local | Local / privileged | Local / privileged / side-channel |
+| Neutralization available? | Partial (me_cleaner, vendor efforts) | Not generally | Not applicable (hardware feature) |
+
+---
+
+## 🧰 Tools, Mitigations & Privacy-focused Vendors
+
+### Intel ME
+- **me_cleaner (GitHub)** — tool to strip/neutralize ME firmware regions. *Use with extreme caution; flashing modified firmware can brick devices.*  
+  https://github.com/corna/me_cleaner
+
+- **Intel security advisories / vendor firmware updates** — official mitigation is vendor firmware; check OEM download pages and Intel advisories listed above.  
+  https://www.intel.com/content/www/us/en/security-center/default.html
+
+- **Vendor examples (partial neutralization / open firmware):**  
+  - **Purism** — explains ME neutralization on Librem laptops (historical practices vary by model).  
+    https://puri.sm/learn/intel-me/  
+  - **System76** — documents Open Firmware and ME state handling for supported models.  
+    https://support.system76.com/articles/intel-me/
+
+### AMD PSP
+- **AMD product security bulletins** and OEM firmware updates are the primary mitigation path. There is **no official/popular neutralizer** equivalent to me_cleaner for PSP at time of writing.  
+  https://www.amd.com/en/resources/product-security.html
+
+- **PSPTool (GitHub)** — firmware analysis / extraction tool for researchers.  
+  https://github.com/PSPReverse/PSPTool
+
+### ARM TrustZone / TEEs
+- Use **open, auditable TEE implementations** where possible (examples: OP-TEE) and apply vendor security updates.  
+  https://www.op-tee.org/
+
+---
+
+<details><summary>Selected authoritative sources (examples, read these for technical depth)</summary>
+
+- Intel Security Advisories (ME/CSME/AMT):  
+  https://www.intel.com/content/www/us/en/security-center/default.html
+
+- INTEL-SA-01315 advisory (Feb 2026):  
+  https://www.intel.com/content/www/us/en/security-center/advisory/intel-sa-01315.html
+
+- INTEL-SA-00783 advisory (2023 / updated 2024):  
+  https://www.intel.com/content/www/us/en/security-center/advisory/intel-sa-00783.html
+
+- Intel advisory example (INTEL-SA-00295; includes CVE-2020-0594):  
+  https://www.intel.com/content/www/us/en/security-center/advisory/intel-sa-00295.html  
+  NVD entry for **CVE-2020-0594**: https://nvd.nist.gov/vuln/detail/CVE-2020-0594
+
+- me_cleaner (community tool):  
+  https://github.com/corna/me_cleaner
+
+- AMD Security Bulletins (PSP & embedded processors):  
+  https://www.amd.com/en/resources/product-security.html  
+  AMD-SB-5001: https://www.amd.com/en/resources/product-security/bulletin/amd-sb-5001.html  
+  AMD-SB-5002: https://www.amd.com/en/resources/product-security/bulletin/amd-sb-5002.html
+
+- NVD entries (examples):  
+  CVE-2017-5712 (Intel AMT): https://nvd.nist.gov/vuln/detail/CVE-2017-5712  
+  CVE-2022-23820: https://nvd.nist.gov/vuln/detail/CVE-2022-23820  
+  CVE-2022-23821: https://nvd.nist.gov/vuln/detail/CVE-2022-23821
+
+- Project Zero research on TrustZone TEEs:  
+  https://projectzero.google/2017/07/trust-issues-exploiting-trustzone-tees.html
+
+- Academic/systematic survey of TEE vulnerabilities:  
+  https://syssec.dpss.inesc-id.pt/papers/cerdeira-sp20.pdf
+</details>
+
+---
+
+[Remove_IntelME_FPT](https://github.com/mostav02/Remove_IntelME_FPT) - A guide for disabling Intel Management Engine using FPT on PCH SPI 
+
 <details>
 <summary><b>Intel:</b></summary>
  <b>14th Gen - Raptor Lake Desktop:</b>
@@ -1656,9 +1850,13 @@ i often found myself looking up these details when comparing GPUs to try to find
 
 <hr>
 
+<p align="center">
+  <img width="800" src="https://github.com/AncientMystic/HomeLab/blob/main/img/OS-Banner.png"></p>
+  
 ### Suggested OS:
 
-<a href="https://www.proxmox.com/en/" target="_blank">Proxmox</a>
+[Proxmox](https://www.proxmox.com/en/) - For virtualization, self-hosting and all around general usage. it can even be used for gaming and other high performance tasks such as AI within VMs/Containers. 
+<br>[QubesOS](https://www.qubes-os.org/) - For heightened Security / Pirvacy and a compartmented OS on a single PC via the Xen hypervisor base. features some very interesting methods for security and is worth checking out if ou value security / privacy as your top priority. 
 
 ### Proxmox related content:
 Additional Resources:
