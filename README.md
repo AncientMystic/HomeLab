@@ -146,16 +146,19 @@ Other mini PCs and SFF PCs can be worthwhile, but personally, I find the Lenovo 
 
 | Model                                                                                                                                                             | CPU                                                                                                                                                                                                                                                                                                  | Cores / Threads    | Passmark CPU Bench                                                                                                                                                   | RAM Max | Drives / NVMe Slots | PCIe Slot              | iGPU          | Quick Sync | Idle Power* | Power (TDP) | Year | Best Use Case                                      | **Avg Used eBay.com Price (≈)**                                                                                           |
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- | ------------------- | ---------------------- | ------------- | ---------- | ----------- | ----------- | ---- | -------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
-| **ThinkCentre M715q Gen2**                                                                                                                                        | [Ryzen 5 2400GE](https://www.hacktiny.com/wp-content/uploads/2019/09/M920x-Tiny.pdf)                                                                                                                                                                                                                 | 4C / 8T            | [7192](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+5+2400GE)                                                                                                  | 32GB    | 1x 2.5" / 1x M.2    | None                   | Vega 11       | N/A        | ~7–10W      | 35W         | 2018 | Budget NAS, light Proxmox                          | **~$80 – $140** – common used M715q listings on eBay.com include Ryzen 5 / Ryzen Pro units around this range. ([eBay][1]) |
-| **ThinkCentre M720Q**                                                                                                                                             | [i5-8400T](https://www.intel.com/content/www/us/en/products/sku/129940/intel-core-i58400t-processor-9m-cache-up-to-3-30-ghz/specifications.html) / [i7-8700T](https://www.intel.com/content/www/us/en/products/sku/129948/intel-core-i78700t-processor-12m-cache-up-to-4-00-ghz/specifications.html) | 6C / 6T – 6C / 12T | [7419](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i5-8400T+%40+1.70GHz) / [10225](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i7-8700T+%40+2.40GHz) | 32GB    | 1x 2.5" / 1x M.2    | 1x PCIe 3.0 x8 (riser) | Intel UHD 630 | Gen9.5     | ~8–12W      | 35W         | 2018 | NAS, Network appliance, media server, Proxmox host | **~$120 – $200** – based on midspec ThinkCentre Tiny used listings (i5/i7 options). ([eBay][1])                           |
-| **ThinkCentre M920q**                                                                                                                                             | [i5-8400T](https://www.intel.com/content/www/us/en/products/sku/129940/intel-core-i58400t-processor-9m-cache-up-to-3-30-ghz/specifications.html) / [i7-8700T](https://www.intel.com/content/www/us/en/products/sku/129948/intel-core-i78700t-processor-12m-cache-up-to-4-00-ghz/specifications.html) | 6C / 6T – 6C / 12T | [7419](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i5-8400T+%40+1.70GHz) / [10225](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i7-8700T+%40+2.40GHz) | 32GB    | 1x 2.5" / 1x M.2    | 1x PCIe 3.0 x8 (riser) | Intel UHD 630 | Gen9.5     | ~8–12W      | 35W         | 2018 | Same as M720Q + vPro enterprise features           | **~$140 – $230** – slightly higher than M720Q used listings. ([eBay][1])                                                  |
-| **[ThinkCentre M920x](https://www.hacktiny.com/wp-content/uploads/2019/09/M920x-Tiny.pdf)**                                                                       | [i5-9400T](https://www.intel.com/content/www/us/en/products/sku/134893/intel-core-i59400t-processor-9m-cache-up-to-3-40-ghz/specifications.html) / [i7-9700T](https://www.intel.com/content/www/us/en/products/sku/191048/intel-core-i79700t-processor-12m-cache-up-to-4-30-ghz/specifications.html) | 6C / 6T – 8C / 8T  | [8148](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i5-9400T+%40+1.80GHz) / [10553](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i7-9700T+%40+2.00GHz) | 32GB    | 2x M.2              | 1x PCIe 3.0 x8         | Intel UHD 630 | Gen9.5     | ~9–13W      | 35W         | 2019 | Dual NVMe NAS, serious homelab                     | **~$180 – $300** – typical for M920x used units with 2x NVMe capability. ([eBay][1])                                      |
-| **[ThinkCentre P330](https://thinkstation-specs.com/wp-content/uploads/2019/09/P330-Tiny-Lenovo-ThinkStation.pdf)**                                               | [i5-9400T](https://www.intel.com/content/www/us/en/products/sku/134893/intel-core-i59400t-processor-9m-cache-up-to-3-40-ghz/specifications.html) / [i7-9700T](https://www.intel.com/content/www/us/en/products/sku/191048/intel-core-i79700t-processor-12m-cache-up-to-4-30-ghz/specifications.html) | 6C / 6T – 8C / 8T  | [8148](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i5-9400T+%40+1.80GHz) / [10553](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i7-9700T+%40+2.00GHz) | 64GB    | 2x M.2              | 1x PCIe 3.0 x8         | Intel UHD 630 | Gen9.5     | ~9–13W      | 35W         | 2019 | Best 9th gen Tiny for virtualization               | **~$220 – $350** – eBay listings for P330 Tiny machines cluster around this bracket. ([eBay][1])                          |
-| **[ThinkCentre P340](https://www.lenovo.com/content/dam/lenovo/pcsd/north-america/en/solutions/workstations/datasheets/na-datasheet-thinkstation-p340-tiny.pdf)** | [i5-9400T](https://www.intel.com/content/www/us/en/products/sku/134893/intel-core-i59400t-processor-9m-cache-up-to-3-40-ghz/specifications.html) / [i7-9700T](https://www.intel.com/content/www/us/en/products/sku/191048/intel-core-i79700t-processor-12m-cache-up-to-4-30-ghz/specifications.html) | 6C / 6T – 8C / 8T  | [8148](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i5-9400T+%40+1.80GHz) / [10553](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i7-9700T+%40+2.00GHz) | 64GB    | 2x M.2              | 1x PCIe 3.0 x8         | Intel UHD 630 | Gen9.5     | ~8–11W      | 35W         | 2020 | Improved efficiency, better thermals               | **~$250 – $400** – typical used pricing for P340 Tiny models. ([eBay][1])                                                 |
-| **[ThinkCentre P350](https://news.lenovo.com/wp-content/uploads/2021/07/ThinkStationP350TinyDatasheet-Final.pdf)**                                                | [i7-11700T](https://www.intel.com/content/www/us/en/products/sku/212251/intel-core-i711700t-processor-16m-cache-up-to-4-60-ghz/specifications.html)                                                                                                                                                  | 8C / 16T           | [15363](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i7-11700T+%40+1.40GHz)                                                                                   | 64GB    | 2x M.2              | 1x PCIe 4.0 capable    | Intel UHD 750 | Gen12      | ~7–10W      | 35W         | 2021 | Best for Plex, heavy VM host                       | **~$350 – $550+** – eBay.com used/refurbished listings for P350 Tiny (e.g., i5 and i7 units ~US $375–$400+). ([eBay][2])  |
+| **ThinkCentre M715q Gen2**                                                                                                                                        | [Ryzen 5 2400GE](https://www.hacktiny.com/wp-content/uploads/2019/09/M920x-Tiny.pdf)                                                                                                                                                                                                                 | 4C / 8T            | [7192](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+5+2400GE)                                                                                                  | 32GB    | 1x 2.5" / 1x M.2    | None                   | Vega 11       | N/A        | ~7–10W      | 35W         | 2018 | Budget NAS, light Proxmox                          | **~$80 – $140** – common used M715q listings on eBay.com include Ryzen 5 / Ryzen Pro units around this range.  |
+| **ThinkCentre M720Q**                                                                                                                                             | [i5-8400T](https://www.intel.com/content/www/us/en/products/sku/129940/intel-core-i58400t-processor-9m-cache-up-to-3-30-ghz/specifications.html) / [i7-8700T](https://www.intel.com/content/www/us/en/products/sku/129948/intel-core-i78700t-processor-12m-cache-up-to-4-00-ghz/specifications.html) | 6C / 6T – 6C / 12T | [7419](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i5-8400T+%40+1.70GHz) / [10225](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i7-8700T+%40+2.40GHz) | 32GB    | 1x 2.5" / 1x M.2    | 1x PCIe 3.0 x8 (riser) | Intel UHD 630 | Gen9.5     | ~8–12W      | 35W         | 2018 | NAS, Network appliance, media server, Proxmox host | **~$120 – $200** – based on midspec ThinkCentre Tiny used listings (i5/i7 options).                            |
+| **ThinkCentre M920q**                                                                                                                                             | [i5-8400T](https://www.intel.com/content/www/us/en/products/sku/129940/intel-core-i58400t-processor-9m-cache-up-to-3-30-ghz/specifications.html) / [i7-8700T](https://www.intel.com/content/www/us/en/products/sku/129948/intel-core-i78700t-processor-12m-cache-up-to-4-00-ghz/specifications.html) | 6C / 6T – 6C / 12T | [7419](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i5-8400T+%40+1.70GHz) / [10225](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i7-8700T+%40+2.40GHz) | 32GB    | 1x 2.5" / 1x M.2    | 1x PCIe 3.0 x8 (riser) | Intel UHD 630 | Gen9.5     | ~8–12W      | 35W         | 2018 | Same as M720Q + vPro enterprise features           | **~$140 – $230** – slightly higher than M720Q used listings.                                                   |
+| **[ThinkCentre M920x](https://www.hacktiny.com/wp-content/uploads/2019/09/M920x-Tiny.pdf)**                                                                       | [i5-9400T](https://www.intel.com/content/www/us/en/products/sku/134893/intel-core-i59400t-processor-9m-cache-up-to-3-40-ghz/specifications.html) / [i7-9700T](https://www.intel.com/content/www/us/en/products/sku/191048/intel-core-i79700t-processor-12m-cache-up-to-4-30-ghz/specifications.html) | 6C / 6T – 8C / 8T  | [8148](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i5-9400T+%40+1.80GHz) / [10553](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i7-9700T+%40+2.00GHz) | 32GB    | 2x M.2              | 1x PCIe 3.0 x8         | Intel UHD 630 | Gen9.5     | ~9–13W      | 35W         | 2019 | Dual NVMe NAS, serious homelab                     | **~$180 – $300** – typical for M920x used units with 2x NVMe capability.                                       |
+| **[ThinkCentre P330](https://thinkstation-specs.com/wp-content/uploads/2019/09/P330-Tiny-Lenovo-ThinkStation.pdf)**                                               | [i5-9400T](https://www.intel.com/content/www/us/en/products/sku/134893/intel-core-i59400t-processor-9m-cache-up-to-3-40-ghz/specifications.html) / [i7-9700T](https://www.intel.com/content/www/us/en/products/sku/191048/intel-core-i79700t-processor-12m-cache-up-to-4-30-ghz/specifications.html) | 6C / 6T – 8C / 8T  | [8148](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i5-9400T+%40+1.80GHz) / [10553](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i7-9700T+%40+2.00GHz) | 64GB    | 2x M.2              | 1x PCIe 3.0 x8         | Intel UHD 630 | Gen9.5     | ~9–13W      | 35W         | 2019 | Best 9th gen Tiny for virtualization               | **~$220 – $350** – eBay listings for P330 Tiny machines cluster around this bracket.                           |
+| **[ThinkCentre P340](https://www.lenovo.com/content/dam/lenovo/pcsd/north-america/en/solutions/workstations/datasheets/na-datasheet-thinkstation-p340-tiny.pdf)** | [i5-9400T](https://www.intel.com/content/www/us/en/products/sku/134893/intel-core-i59400t-processor-9m-cache-up-to-3-40-ghz/specifications.html) / [i7-9700T](https://www.intel.com/content/www/us/en/products/sku/191048/intel-core-i79700t-processor-12m-cache-up-to-4-30-ghz/specifications.html) | 6C / 6T – 8C / 8T  | [8148](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i5-9400T+%40+1.80GHz) / [10553](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i7-9700T+%40+2.00GHz) | 64GB    | 2x M.2              | 1x PCIe 3.0 x8         | Intel UHD 630 | Gen9.5     | ~8–11W      | 35W         | 2020 | Improved efficiency, better thermals               | **~$250 – $400** – typical used pricing for P340 Tiny models.                                                  |
+| **[ThinkCentre P350](https://news.lenovo.com/wp-content/uploads/2021/07/ThinkStationP350TinyDatasheet-Final.pdf)**                                                | [i7-11700T](https://www.intel.com/content/www/us/en/products/sku/212251/intel-core-i711700t-processor-16m-cache-up-to-4-60-ghz/specifications.html)                                                                                                                                                  | 8C / 16T           | [15363](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i7-11700T+%40+1.40GHz)                                                                                   | 64GB    | 2x M.2              | 1x PCIe 4.0 capable    | Intel UHD 750 | Gen12      | ~7–10W      | 35W         | 2021 | Best for Plex, heavy VM host                       | **~$350 – $550+** – eBay.com used/refurbished listings for P350 Tiny (e.g., i5 and i7 units ~US $375–$400+).   |
 
-[1]: https://www.ebay.com/shop/m715q?_nkw=m715q&utm_source=chatgpt.com "M715q | eBay"
-[2]: https://www.ebay.com/itm/167813873476?utm_source=chatgpt.com "Lenovo ThinkStation P350 Tiny Core i5 11500T 1.50GHz 16.0GB DDR4 512GB M.2 PC | eBay"
+<details>
+<summary>links:</summary>
+ https://www.ebay.com/shop/m715q?_nkw=m715q "M715q | eBay"
+ <br> https://www.ebay.com/itm/167813873476 "Lenovo ThinkStation P350 Tiny Core i5 11500T 1.50GHz 16.0GB DDR4 512GB M.2 PC | eBay"
+</details>
 
 
 
@@ -247,6 +250,35 @@ Clones may:
 • Have unstable drivers  
 • Fail under load  
 • Not support SR-IOV properly 
+
+## Network Cards 
+
+| Model                                    | Speed         | Ports | Typical Used eBay (US) | **SR-IOV in Proxmox VE**                   | Notes                                                                                                                                                                |
+| ---------------------------------------- | ------------- | ----- | ---------------------- | ------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Intel X520-DA2**                       | 10 GbE SFP+   | 2     | ~$20 – $35             | ✅                                          | Works with SR-IOV on Proxmox; users report VF creation + passthrough working reliably. ([Proxmox Support Forum][1])                                                  |
+| **Intel X520-SR2**                       | 10 GbE SFP+   | 2     | ~$15 – $30             | ✅                                          | Same 82599 chipset as DA2; known to show VFs. ([Proxmox Support Forum][1])                                                                                           |
+| **Intel X710/XL710**                     | 10 GbE SFP+   | 2     | ~$30 – $80+            | ✅*                                         | Works & shows VF capability in Proxmox (driver reports SR-IOV) but some quirks reported in specific boards/firmware. ([Proxmox Support Forum][2])                    |
+| **Intel X540-T2**                        | 10 GbE Base-T | 2     | ~$50 – $70             | ⚠️ / Mostly Good                           | Has SR-IOV hardware & some community reports of use with Proxmox; less common than X520/X710.                                                      |
+| **Intel X550-T2**                        | 10 GbE Base-T | 2     | ~$80 – $120            | ⚠️ / Likely                                | Enterprise card with SR-IOV reported; Proxmox forum experience exists but is sparse.                                                               |
+| **Intel E810 (25/100 GbE)**              | 25 GbE+       | 2     | ~$80 – $200+           | ✅                                          | Modern Intel SR-IOV capable device with Linux `ice` driver; not as cheap but Proxmox compatible. ([docs.starlingx.io][4])                                            |
+| **Mellanox ConnectX-4 / ConnectX-5**     | 10/25/100 GbE | 1–2   | ~$30 – $150+           | ✅                                          | Strong SR-IOV support with mlx5 driver; documented config guides for Proxmox. ([docs.starlingx.io][5])                                                               |
+| **Mellanox ConnectX-3**                  | 10 GbE SFP+   | 1–2   | ~$20 – $50             | ⚠️ / Manual                                | Likely works *if* firmware flags are configured properly; community guides exist for config, but not as plug-and-play. ([Proxmox Support Forum][6])                  |
+| **Broadcom BCM57xxx / NetXtreme 10 GbE** | 10 GbE        | 2     | ~$50 – $120+           | ⚠️ / Mixed                                 | Linux supports these, but SR-IOV support in Proxmox is inconsistent and depends on driver/firmware.                                                |
+| **Chelsio T4 / T5 / T6 10 GbE**          | 10 GbE        | 1–2   | ~$30 – $80             | ⚠️ / Chelsio kernel driver supports SR-IOV | Driver declares VF support, but Proxmox forum experience is limited/sparse.                                                                        |
+| **Intel I350-T2 / T4**                   | 1 GbE         | 2 / 4 | ~$15 – $40             | ⚠️ / Depends                               | I350 *can* have SR-IOV *in hardware* per spec, but many users report mixed success under Proxmox; sometimes firmware lacks SR-IOV bits. ([Proxmox Support Forum][7]) |
+| **Intel I210 / I225 / I226**             | 1–2.5 GbE     | 1–2   | ~$30 – $50             | ❌                                          | Generally *not* practical for SR-IOV in Proxmox — drivers either don’t expose VFs or they aren’t usable.                                           |
+| **Realtek RTL8125 / RTL8xxx 2.5 GbE**    | 2.5 GbE       | 1–2   | ~$30 – $40             | ❌                                          | No usable SR-IOV support in Linux drivers; never shows VFs in Proxmox.                                                                             |
+
+<details>
+<summary>links:</summary>
+ https://forum.proxmox.com/threads/intel-i710-sr-iov.145534/ "Intel i710 SR-IOV | Proxmox Support Forum"
+<br> https://forum.proxmox.com/threads/dell-x710-and-sr-iov.161459/ "Dell X710 and SR-IOV | Proxmox Support Forum"
+<br> https://www.nuface.tw/evaluating-proxmox-support-for-high-end-network-cards/ "Evaluating Proxmox Support for High-End Network Cards - Nuface Blog"
+<br> https://docs.starlingx.io/planning/kubernetes/verified-commercial-hardware.html "Kubernetes Verified Commercial Hardware — StarlingX documentation"
+<Br> https://docs.starlingx.io/r/stx.5.0/planning/kubernetes/verified-commercial-hardware.html "Kubernetes Verified Commercial Hardware — StarlingX R5.0 documentation"
+<br> https://forum.proxmox.com/threads/how-to-configure-mellanox-connectx-3-cards-for-sriov-and-vfs.121927/ "How-to: configure Mellanox ConnectX-3 cards for SRIOV ..."
+<br> https://forum.proxmox.com/threads/sr-iov-not-working-for-intel-i350-t4.83026/ "SR-IOV Not working for Intel i350-T4 | Proxmox Support Forum"
+</details>
 
 <hr>
 
@@ -347,6 +379,26 @@ Always confirm chipset before buying.
 
 Note: full trim support requires IT firmware and driver support. Some versions of the mpt3sas driver break trim. otherwise it is required that the SSD to support RZAT (deterministic read zeros after trim)
 
+| Model                                 | Type | Ports / Speed    | Est. US eBay Price | **IT Mode Support** | **Passthrough to VM**                                   | TRIM/UNMAP Notes | Source                                                                                                   |
+| ------------------------------------- | ---- | ---------------- | -----------------: | ------------------- | ------------------------------------------------------- | ---------------- | -------------------------------------------------------------------------------------------------------- |
+| **LSI 9211-8i (SAS2008)**             | HBA  | 8 @ 6 Gb/s SAS   |         ~$30 – $60 | ✅                   | ✅                                                       | ⚠️               | Proxmox forum: LSI 9211 passthrough to TrueNAS VM discussion ([Proxmox Support Forum][1])                |
+| **LSI 9207-8i (SAS2308)**             | HBA  | 8 @ 6 Gb/s SAS   |         ~$30 – $60 | ✅                   | ⚠️ / Yes                                                | ⚠️               | Proxmox passthrough working on older kernel; may have quirks ([Proxmox Support Forum][2])                |
+| **LSI 9300-8i (SAS3008)**             | HBA  | 8 @ 12 Gb/s SAS  |         ~$40 – $90 | ✅                   | ⚠️ / Yes                                                | ⚠️               | User reports passing through 9300-8i and needing extra config (rombar etc.) ([Proxmox Support Forum][3]) |
+| **LSI 9300-16i (SAS3008)**            | HBA  | 16 @ 12 Gb/s SAS |        ~$80 – $150 | ⚠️ / Yes            | ⚠️ / Yes                                                | ⚠️               | Users have flashed 9300-16i to IT mode for NAS setups ([Proxmox Support Forum][4])                       |
+| **Dell PERC H310 (rebadged LSI9211)** | HBA* | 8 @ 6 Gb/s SAS   |         ~$25 – $50 | ⚠️ (must flash)     | ✅                                                       | ⚠️               | Flashing H310 to 9211-8i IT mode documented ([Thomas Aldrian][5])                                        |
+| **LSI MegaRAID 9271-8i / 9361**       | RAID | 8 @ 6–12 Gb/s    |        ~$60 – $140 | *Possible (flash)   | ⚠️ / Only controller without IT provides logical arrays | ⚠️               | LSI RAID cards require conversion to IT for simple passthrough ([Proxmox Support Forum][4])              |
+
+<details>
+<summary>links:</summary>
+
+ https://forum.proxmox.com/threads/enabling-iommu-for-lsi-9211-8i-passhtrough.144619/ "Enabling IOMMU for LSI 9211-8i passhtrough"
+<br> https://forum.proxmox.com/threads/failing-sas-passthrough-on-proxmox-9-with-8-14-kernel.170165/ "Failing SAS Passthrough on Proxmox 9 with 8.14 kernel"
+<br> https://forum.proxmox.com/threads/sas3008-e-g-lsi-9300-8i-incompatible-with-proxmox.103159/ "SAS3008 (e.g. LSI 9300-8i) incompatible with Proxmox | Proxmox Support Forum"
+<br> https://forum.proxmox.com/tags/hba-passthrough/ "hba passthrough | Proxmox Support Forum"
+<br> https://weissnix4711.github.io/homelab/2024/05/14/dell-h310-it-mode/ "Dell PERC H310 raid card flashed to IT Mode - Thomas Aldrian"
+
+</details>
+
 <hr>
 
 <b>Thermals:</b>
@@ -372,30 +424,34 @@ All LSI cards run warm.
 
 | **Drive Model**                                 | **Form Factor** | **Interface**   | **Capacity Options**              | **Workload Rating (TB/yr)** | **Watts (Idle/Active)**   | **Avg Used eBay.com Price (≈)**                                                                                                                                                                                          |
 | ----------------------------------------------- | --------------- | --------------- | --------------------------------- | --------------------------- | ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **HGST Ultrastar He10 / HC310**                 | 3.5"            | SATA / SAS 12Gb | 10TB                              | 550 TB/yr                   | ~5.8W / ~9.5W             | **~$90 – $240** – used 10TB HGST Ultrastar He10/SAS/SATA enterprise HDDs commonly sell around ~$90–$240 USD on eBay.com depending on condition and interface. (e.g., ~$95 sold listing; ~$138–$255+ active). ([eBay][1]) |
-| **HGST Ultrastar He12 / HC320**                 | 3.5"            | SATA / SAS 12Gb | 12TB                              | 550 TB/yr                   | ~6.0W / ~9.8W             | **~$100 – $270+** – 12TB enterprise HGST/SAS drives often trade in this bracket on eBay.com, with prices influenced by condition and seller. (estimated from 10TB / similar listings). ([eBay][2])                       |
-| **HGST Ultrastar He14 / HC330**                 | 3.5"            | SATA / SAS 12Gb | 14TB                              | 550 TB/yr                   | ~6.2W / ~10W              | **~$120 – $300+** – Larger enterprise drives like 14TB models on eBay.com see listings in this range, though individual prices vary with health/state and SAS vs SATA. ([eBay][2])                                       |
-| **HGST Ultrastar He16 / HC340**                 | 3.5"            | SATA / SAS 12Gb | 16TB                              | 550 TB/yr                   | ~6.4W / ~10.2W            | **~$140 – $330+** – 16TB enterprise drives (HGST/SAS/SATA) often appear near ~$140–$330+ on eBay.com. ([eBay][3])                                                                                                        |
-| **HGST Ultrastar He18 / HC350**                 | 3.5"            | SATA / SAS 12Gb | 18TB                              | 550 TB/yr                   | ~6.5W / ~10.4W            | **~$150 – $350+** – Used 18TB enterprise HGST/SAS drives typically trade near this range. Listings vary by condition and seller. ([eBay][4])                                                                          |
-| **WD Ultrastar DC HC500 (HGST Legacy)**         | 3.5"            | SATA / SAS 12Gb | 8TB, 10TB                         | 550 TB/yr                   | ~5.6W / ~9.2W             | **~$70 – $220** – Used WD/HGST 8–10TB enterprise drives on US eBay.com commonly fall in this range depending on capacity and condition. ([eBay][2])                                                                      |
-| **WD Ultrastar DC HC550**                       | 3.5"            | SATA / SAS 12Gb | 14TB, 16TB, 18TB                  | 550 TB/yr                   | ~5.8W / ~9.5W             | **~$120 – $330+** – Enterprise DC HC550 drives often list around ~$120–$330+ on eBay.com based on large capacity used listings. ([eBay][2])                                                                              |
-| **WD Ultrastar DC HC560**                       | 3.5"            | SATA / SAS 12Gb | 20TB, 22TB                        | 550 TB/yr                   | ~6.0W / ~9.8W             | **~$200 – $380+** – Larger 20–22TB enterprise WD DC HC560 used drives generally trade in this approximate price bracket on US eBay.com. ([eBay][4])                                                                   |
-| **WD Ultrastar DC SA620 (SATA SSD/HDD Hybrid)** | 2.5"            | SATA 6Gb/s      | 960GB — 7.68TB                    | *N/A (SSHD)*                | ~2.9W / ~5.5W             | **~$40 – $150** – Used SATA hybrid drives (SSHD) of similar capacities on eBay.com often list in the ~$40–$150 USD range. ([eBay][5])                                                                                    |
-| **WD Gold Enterprise HDDs**                     | 3.5"            | SATA 6Gb/s      | 1TB — 18TB                        | 550 TB/yr                   | 5W — 10W (varies by size) | **~$50 – $330+** – Used WD Gold HDD enterprise drives vary by capacity: smaller (~1–4TB) often ~$50–$120, larger (~12–18TB) near ~$200–$330+ on eBay.com. ([eBay][5])                                                    |
-| **Seagate Exos X18**                            | 3.5"            | SATA 6Gb/s      | 10TB, 12TB, 14TB, 16TB, 18TB      | 550 TB/yr                   | 5.3W / 9.4W               | **~$120 – $340+** – Used Seagate Exos X18 enterprise drives typically appear around ~$120–$340+ USD on eBay.com depending on capacity and condition. ([eBay][5])                                                         |
-| **Seagate Exos X20**                            | 3.5"            | SATA 6Gb/s      | 16TB, 18TB, 20TB                  | 550 TB/yr                   | 5.4W / 9.4W               | **~$180 – $400+** – Larger Exos X20 drives on eBay.com often trade for roughly ~$180–$400+ used, varying by model and health. ([eBay][5])                                                                                |
-| **Seagate Exos 7E10**                           | 3.5"            | SAS 12Gb/s      | 1TB, 2TB, 4TB, 8TB                | 550 TB/yr                   | 7.6W / 11.5W              | **~$30 – $180** – Used smaller Exos enterprise drives (~1–8TB) on US eBay.com often list roughly ~$30–$180 depending on capacity and condition. ([eBay][5])                                                              |
-| **Toshiba MG09 Series**                         | 3.5"            | SATA / SAS      | 14TB, 16TB, 18TB                  | 550 TB/yr                   | 4.2W / 8.3W               | **~$130 – $300+** – Used Toshiba MG09 enterprise drives typically show prices around ~$130–$300+ USD on eBay.com. ([eBay][5])                                                                                            |
-| **Toshiba MG10 Series**                         | 3.5"            | SATA / SAS      | 20TB, 22TB                        | 550 TB/yr                   | 4.4W / 8.6W               | **~$200 – $380+** – Used Toshiba MG10 (20–22TB) enterprise drives eBay.com listings often in the ~$200–$380+ range. ([eBay][5])                                                                                          |
-| **Seagate Exos 10E2400 (2.4TB)**                | 2.5"            | SAS 12Gb/s      | 600GB, 900GB, 1.2TB, 1.8TB, 2.4TB | 550 TB/yr                   | 3.8W / 6.9W               | **~$30 – $120** – Used 2.5" SAS enterprise drives (e.g., ~600GB–2.4TB) on eBay.com generally fall in the ~$30–$120 range. ([eBay][5])                                                                                    |
-| **Western Digital Ultrastar 10K600**            | 2.5"            | SAS 12Gb/s      | 600GB, 900GB, 1.2TB               | 550 TB/yr                   | 3.6W / 6.5W               | **~$30 – $120** – Smaller SAS enterprise HDDs (10K RPM) used on eBay.com often list around ~$30–$120 USD depending on capacity. ([eBay][5])                                                                              |
+| **HGST Ultrastar He10 / HC310**                 | 3.5"            | SATA / SAS 12Gb | 10TB                              | 550 TB/yr                   | ~5.8W / ~9.5W             | **~$90 – $240** – used 10TB HGST Ultrastar He10/SAS/SATA enterprise HDDs commonly sell around ~$90–$240 USD on eBay.com depending on condition and interface. (e.g., ~$95 sold listing; ~$138–$255+ active).  |
+| **HGST Ultrastar He12 / HC320**                 | 3.5"            | SATA / SAS 12Gb | 12TB                              | 550 TB/yr                   | ~6.0W / ~9.8W             | **~$100 – $270+** – 12TB enterprise HGST/SAS drives often trade in this bracket on eBay.com, with prices influenced by condition and seller. (estimated from 10TB / similar listings).                        |
+| **HGST Ultrastar He14 / HC330**                 | 3.5"            | SATA / SAS 12Gb | 14TB                              | 550 TB/yr                   | ~6.2W / ~10W              | **~$120 – $300+** – Larger enterprise drives like 14TB models on eBay.com see listings in this range, though individual prices vary with health/state and SAS vs SATA.                                        |
+| **HGST Ultrastar He16 / HC340**                 | 3.5"            | SATA / SAS 12Gb | 16TB                              | 550 TB/yr                   | ~6.4W / ~10.2W            | **~$140 – $330+** – 16TB enterprise drives (HGST/SAS/SATA) often appear near ~$140–$330+ on eBay.com.                                                                                                         |
+| **HGST Ultrastar He18 / HC350**                 | 3.5"            | SATA / SAS 12Gb | 18TB                              | 550 TB/yr                   | ~6.5W / ~10.4W            | **~$150 – $350+** – Used 18TB enterprise HGST/SAS drives typically trade near this range. Listings vary by condition and seller.                                                                           |
+| **WD Ultrastar DC HC500 (HGST Legacy)**         | 3.5"            | SATA / SAS 12Gb | 8TB, 10TB                         | 550 TB/yr                   | ~5.6W / ~9.2W             | **~$70 – $220** – Used WD/HGST 8–10TB enterprise drives on US eBay.com commonly fall in this range depending on capacity and condition.                                                                       |
+| **WD Ultrastar DC HC550**                       | 3.5"            | SATA / SAS 12Gb | 14TB, 16TB, 18TB                  | 550 TB/yr                   | ~5.8W / ~9.5W             | **~$120 – $330+** – Enterprise DC HC550 drives often list around ~$120–$330+ on eBay.com based on large capacity used listings.                                                                               |
+| **WD Ultrastar DC HC560**                       | 3.5"            | SATA / SAS 12Gb | 20TB, 22TB                        | 550 TB/yr                   | ~6.0W / ~9.8W             | **~$200 – $380+** – Larger 20–22TB enterprise WD DC HC560 used drives generally trade in this approximate price bracket on US eBay.com.                                                                    |
+| **WD Ultrastar DC SA620 (SATA SSD/HDD Hybrid)** | 2.5"            | SATA 6Gb/s      | 960GB — 7.68TB                    | *N/A (SSHD)*                | ~2.9W / ~5.5W             | **~$40 – $150** – Used SATA hybrid drives (SSHD) of similar capacities on eBay.com often list in the ~$40–$150 USD range.                                                                                     |
+| **WD Gold Enterprise HDDs**                     | 3.5"            | SATA 6Gb/s      | 1TB — 18TB                        | 550 TB/yr                   | 5W — 10W (varies by size) | **~$50 – $330+** – Used WD Gold HDD enterprise drives vary by capacity: smaller (~1–4TB) often ~$50–$120, larger (~12–18TB) near ~$200–$330+ on eBay.com.                                                     |
+| **Seagate Exos X18**                            | 3.5"            | SATA 6Gb/s      | 10TB, 12TB, 14TB, 16TB, 18TB      | 550 TB/yr                   | 5.3W / 9.4W               | **~$120 – $340+** – Used Seagate Exos X18 enterprise drives typically appear around ~$120–$340+ USD on eBay.com depending on capacity and condition.                                                          |
+| **Seagate Exos X20**                            | 3.5"            | SATA 6Gb/s      | 16TB, 18TB, 20TB                  | 550 TB/yr                   | 5.4W / 9.4W               | **~$180 – $400+** – Larger Exos X20 drives on eBay.com often trade for roughly ~$180–$400+ used, varying by model and health.                                                                                 |
+| **Seagate Exos 7E10**                           | 3.5"            | SAS 12Gb/s      | 1TB, 2TB, 4TB, 8TB                | 550 TB/yr                   | 7.6W / 11.5W              | **~$30 – $180** – Used smaller Exos enterprise drives (~1–8TB) on US eBay.com often list roughly ~$30–$180 depending on capacity and condition.                                                               |
+| **Toshiba MG09 Series**                         | 3.5"            | SATA / SAS      | 14TB, 16TB, 18TB                  | 550 TB/yr                   | 4.2W / 8.3W               | **~$130 – $300+** – Used Toshiba MG09 enterprise drives typically show prices around ~$130–$300+ USD on eBay.com.                                                                                             |
+| **Toshiba MG10 Series**                         | 3.5"            | SATA / SAS      | 20TB, 22TB                        | 550 TB/yr                   | 4.4W / 8.6W               | **~$200 – $380+** – Used Toshiba MG10 (20–22TB) enterprise drives eBay.com listings often in the ~$200–$380+ range.                                                                                           |
+| **Seagate Exos 10E2400 (2.4TB)**                | 2.5"            | SAS 12Gb/s      | 600GB, 900GB, 1.2TB, 1.8TB, 2.4TB | 550 TB/yr                   | 3.8W / 6.9W               | **~$30 – $120** – Used 2.5" SAS enterprise drives (e.g., ~600GB–2.4TB) on eBay.com generally fall in the ~$30–$120 range.                                                                                     |
+| **Western Digital Ultrastar 10K600**            | 2.5"            | SAS 12Gb/s      | 600GB, 900GB, 1.2TB               | 550 TB/yr                   | 3.6W / 6.5W               | **~$30 – $120** – Smaller SAS enterprise HDDs (10K RPM) used on eBay.com often list around ~$30–$120 USD depending on capacity.                                                                               |
 
-[1]: https://www.ebay.com/itm/257100620905?hash=item3bdc642469%3Ag%3AUl8AAeSwM6BotJcQ&itmmeta=01K4SSDQY8QT5N5JHGJY356CD3&itmprp=enc%3AAQAKAAAA4MHg7L1Zz0LA5DYYmRTS30lnm1OX9xbE1yK%2FDB1WTBH4x%2BuJB8YX32Rdw5Ql%2BB3M3%2BRIY6q6tkv2ROAxTPOYO49p7uzdhTJURAgZwf5GEBgpcuAuZj0aKwBaqmIuLluc5FaFoP3r9sX%2Bn0kGGV6xPXCaY81gfc00Fqd9CaDb8gtI296okYHV3uT%2FopXrSvB0LEvMP2Ood4yHb4efwfWaE9IQW28BzCvsM8OpeO17uqteajkWKm0iKSEwUTsOZWvTm4%2FxNrEmZzIBDT%2Fry7o3SalRKXZGbyvodgwyTelpvRos%7Ctkp%3ABk9SR6T_trmmZg&utm_source=chatgpt.com "Western digital HGST Ultrastar He10 10TB Enterprise HDD ..."
-[2]: https://www.ebay.com/b/HGST-Internal-Hard-Disk-Drives-10-TB-Storage-Capacity/56083/bn_71160838?utm_source=chatgpt.com "HGST Internal Hard Disk Drives 10 TB Storage Capacity for sale | eBay"
-[3]: https://www.ebay.com/shop/16tb-hard-drive?_nkw=16tb+hard+drive&utm_source=chatgpt.com "16TB Hard Drive"
-[4]: https://www.ebay.com/sch/i.html?_nkw=18tb+hard+drive "18TB Hard Drive"
-[5]: https://www.ebay.com/p/12062799086?utm_source=chatgpt.com "Internal Hard Disk Drives for Sale - eBay"
+<details>
+<summary>links:</summary>
 
+ https://www.ebay.com/itm/257100620905?hash=item3bdc642469%3Ag%3AUl8AAeSwM6BotJcQ&itmmeta=01K4SSDQY8QT5N5JHGJY356CD3&itmprp=enc%3AAQAKAAAA4MHg7L1Zz0LA5DYYmRTS30lnm1OX9xbE1yK%2FDB1WTBH4x%2BuJB8YX32Rdw5Ql%2BB3M3%2BRIY6q6tkv2ROAxTPOYO49p7uzdhTJURAgZwf5GEBgpcuAuZj0aKwBaqmIuLluc5FaFoP3r9sX%2Bn0kGGV6xPXCaY81gfc00Fqd9CaDb8gtI296okYHV3uT%2FopXrSvB0LEvMP2Ood4yHb4efwfWaE9IQW28BzCvsM8OpeO17uqteajkWKm0iKSEwUTsOZWvTm4%2FxNrEmZzIBDT%2Fry7o3SalRKXZGbyvodgwyTelpvRos%7Ctkp%3ABk9SR6T_trmmZg "Western digital HGST Ultrastar He10 10TB Enterprise HDD ..."
+<br> https://www.ebay.com/b/HGST-Internal-Hard-Disk-Drives-10-TB-Storage-Capacity/56083/bn_71160838 "HGST Internal Hard Disk Drives 10 TB Storage Capacity for sale | eBay"
+<br> https://www.ebay.com/shop/16tb-hard-drive?_nkw=16tb+hard+drive "16TB Hard Drive"
+<br> https://www.ebay.com/sch/i.html?_nkw=18tb+hard+drive "18TB Hard Drive"
+<br> https://www.ebay.com/p/12062799086 "Internal Hard Disk Drives for Sale - eBay"
+
+</details>
 
 NOTES: in my opinion, HGST have the Lowest failure rates along side Western Digital. 
 <br> Seagate / Toshiba models tend to have higher failure rates depending on models. but they are often cheaper, sometimes by a fair amount. 
@@ -641,35 +697,42 @@ This summary is based strictly on the 2022, 2023, and 2024 AFR data provided abo
 
 | **Drive Model**                              | **Form Factor**  | **Interface** | **Endurance (TBW/PBW)**     | **Watts (Idle/Active)** | **Avg Used eBay.com Price (≈)**                                                    |
 | -------------------------------------------- | ---------------- | ------------- | --------------------------- | ----------------------- | ---------------------------------------------------------------------------------- |
-| **Intel Optane M10 (16GB)**                  | M.2 2280         | PCIe 3.0 x2   | 365 TBW                     | 0.08W/2W                | **~$5 – $15** (small Optane modules frequently listed cheap) ([Reddit][1])         |
-| **Intel Optane M10 (32GB)**                  | M.2 2280         | PCIe 3.0 x2   | 182.5 TBW                   | 1W/3.5W                 | **~$20 – $35** (new/used available) ([eBay][2])                                    |
-| **Intel Optane SSD 905P (480GB)**            | M.2/U.2/HHHL     | PCIe 3.0 x4   | 17.52 PB                    | 6W/16.4W                | **~$350 – $450** (used 480GB approx) ([eBay][3])                                   |
-| **Intel Optane SSD 905P (960GB)**            | U.2/HHHL         | PCIe 3.0 x4   | 17.52 PB                    | 6W/16.4W                | **~$600 – $900** (used 960GB listings) ([eBay][4])                                 |
+| **Intel Optane M10 (16GB)**                  | M.2 2280         | PCIe 3.0 x2   | 365 TBW                     | 0.08W/2W                | **~$5 – $15** (small Optane modules frequently listed cheap)          |
+| **Intel Optane M10 (32GB)**                  | M.2 2280         | PCIe 3.0 x2   | 182.5 TBW                   | 1W/3.5W                 | **~$20 – $35** (new/used available)                                     |
+| **Intel Optane SSD 905P (480GB)**            | M.2/U.2/HHHL     | PCIe 3.0 x4   | 17.52 PB                    | 6W/16.4W                | **~$350 – $450** (used 480GB approx)                                    |
+| **Intel Optane SSD 905P (960GB)**            | U.2/HHHL         | PCIe 3.0 x4   | 17.52 PB                    | 6W/16.4W                | **~$600 – $900** (used 960GB listings)                                  |
 | **Samsung PM9A3 (960GB, 1920GB, 3840GB)**    | M.2 22110        | PCIe 4.0 x4   | 1.7 PBW / 3.5 PBW / 7.0 PBW | 3.5W/8W Avg             | **N/A** (rare to no used eBay listings)                                            |
 | **Seagate Nytro 5000 (1.6TB, 3.2TB, 6.4TB)** | M.2 22110        | PCIe 3.0 x4   | 3.2 PBW                     | 9W Avg/12.5W Max        | **N/A** (rare to no eBay used data)                                                |
-| **Intel DC P5800X (400GB,800GB,1.6TB)**      | U.2              | PCIe 4.0 x4   | 73–292 PBW                  | 4.2W/18W                | **~$900 – $1,200+** (varies hugely; some reports of ~$1,200-$2,000+) ([Reddit][1]) |
+| **Intel DC P5800X (400GB,800GB,1.6TB)**      | U.2              | PCIe 4.0 x4   | 73–292 PBW                  | 4.2W/18W                | **~$900 – $1,200+** (varies hugely; some reports of ~$1,200-$2,000+)  |
 | **ADATA XPG SX8200 Pro (256GB–2TB)**         | M.2 2280         | PCIe 3.0 x4   | 160–640 TBW                 | 0.05W/1.9W/4.1W Max     | **~$70 – $110** (rough average for 1TB) *(typical eBay used SSD pricing)*          |
 | **Intel DC P3700 400GB**                     | PCIe Add-in Card | PCIe 3.0 x4   | 7.3 PBW                     | 4W/9W/12W               | **~$50 – $90** (used PCIe P3700 cards) *(typical older enterprise SSD prices)*     |
 | **Intel Optane P4801X 100GB**                | M.2 2280         | PCIe 3.0 x4   | 10.9 PBW                    | 3W/7W                   | **~$150 – $300** *(occasional US eBay used listings)*                              |
 
-[1]: https://www.reddit.com/r/DataHoarder/comments/1nferxo/i_finally_got_my_grail_intel_optane_p5800x_16t/?utm_source=chatgpt.com "I finally got my grail. Intel Optane P5800X 1.6T. This is gonna be a family heirloom"
-[2]: https://il.ebay.com/b/Intel-PCI-Express-Solid-State-Drives/175669/bn_25407512?utm_source=chatgpt.com "Intel PCI Express Solid State Drives for sale | eBay"
-[3]: https://www.ebay.com/itm/236331332040?utm_source=chatgpt.com "compatible Intel/HP OPTANE SSD 9 OPTANE 905P ... - eBay"
-[4]: https://www.ebay.com/itm/396371709317?utm_source=chatgpt.com "USED-Intel Optane 905P Series 960GB PCIe3.0 NVMe ..."
+<details>
+<summary>links:</summary>
 
+ https://www.reddit.com/r/DataHoarder/comments/1nferxo/i_finally_got_my_grail_intel_optane_p5800x_16t/ "I finally got my grail. Intel Optane P5800X 1.6T. This is gonna be a family heirloom"
+<br> https://il.ebay.com/b/Intel-PCI-Express-Solid-State-Drives/175669/bn_25407512 "Intel PCI Express Solid State Drives for sale | eBay"
+<br> https://www.ebay.com/itm/236331332040 "compatible Intel/HP OPTANE SSD 9 OPTANE 905P ... - eBay"
+<br> https://www.ebay.com/itm/396371709317 "USED-Intel Optane 905P Series 960GB PCIe3.0 NVMe ..."
+
+</details>
 
 # Consumer NVMe / M.2 Drives
 | **Drive Model**         | **Form Factor** | **Interface** | **Endurance (TBW)** | **Quality**              | **Avg Used eBay.com Price (≈)**                                                                   |
 | ----------------------- | --------------- | ------------- | ------------------- | ------------------------ | ------------------------------------------------------------------------------------------------- |
-| **Crucial P3 1TB**      | M.2 2280        | PCIe 3.0 x4   | 220 TB              | Cheap QLC Consumer       | **~$25 – $50** (pre-owned listings range from ~$20–$95) ([eBay][1])                               |
-| **Samsung 980 1TB**     | M.2 2280        | PCIe 3.0 x4   | 600 TB              | Normal TLC Consumer      | **~$70 – $110** (used prices commonly ~$80–$120 on eBay) ([eBay][2])                              |
-| **Samsung 980 Pro 1TB** | M.2 2280        | PCIe 4.0 x4   | 600 TB              | Modern TLC Prosumer      | **~$110 – $140** (used avg visible ~ $125) ([eBay][2])                                            |
-| **Samsung 970 Pro 1TB** | M.2 2280        | PCIe 3.0 x4   | 1,200 TB            | End-of-Life MLC Prosumer | **~$180 – $260** (older enterprise SSD, used listings less frequent but often ~$200+) ([eBay][2]) |
+| **Crucial P3 1TB**      | M.2 2280        | PCIe 3.0 x4   | 220 TB              | Cheap QLC Consumer       | **~$25 – $50** (pre-owned listings range from ~$20–$95)                                |
+| **Samsung 980 1TB**     | M.2 2280        | PCIe 3.0 x4   | 600 TB              | Normal TLC Consumer      | **~$70 – $110** (used prices commonly ~$80–$120 on eBay)                               |
+| **Samsung 980 Pro 1TB** | M.2 2280        | PCIe 4.0 x4   | 600 TB              | Modern TLC Prosumer      | **~$110 – $140** (used avg visible ~ $125)                                             |
+| **Samsung 970 Pro 1TB** | M.2 2280        | PCIe 3.0 x4   | 1,200 TB            | End-of-Life MLC Prosumer | **~$180 – $260** (older enterprise SSD, used listings less frequent but often ~$200+)  |
 
-[1]: https://www.ebay.com/shop/crucial-p3?_nkw=crucial+p3&utm_source=chatgpt.com "Crucial P3"
-[2]: https://www.ebay.com/b/Samsung-1-TB-PCI-Express-Solid-State-Drives/175669/bn_77238159?utm_source=chatgpt.com "Samsung 1 TB PCI Express Solid State Drives for sale | eBay"
+<details>
+<summary>links:</summary>
 
+ https://www.ebay.com/shop/crucial-p3?_nkw=crucial+p3 "Crucial P3"
+<br> https://www.ebay.com/b/Samsung-1-TB-PCI-Express-Solid-State-Drives/175669/bn_77238159 "Samsung 1 TB PCI Express Solid State Drives for sale | eBay"
 
+</details>
 
 ---
 
@@ -681,6 +744,62 @@ Enterprise drives are designed to handle much higher workloads and offer greater
 <br> section in progress / to be updated
 <details>
 <summary><b>Intel:</b></summary>
+ <b>14th Gen - Raptor Lake Desktop:</b>
+  
+| Model                     | Cores | Threads | P-Cores | E-Cores | Base Clock | TDP (W) | Turbo Power (W) | iGPU | Avg Used eBay.com Price (US)                                 |
+| ------------------------- | ----- | ------- | ------- | ------- | ---------- | ------- | --------------- | ---- | ------------------------------------------------------------ |
+| Intel Core **i9-14900K**  | 24    | 32      | 8       | 16      | ~3.2 GHz   | 125     | 253             | ✔️   | **~$430-$480** (listing range)                    |
+| Intel Core **i9-14900KF** | 24    | 32      | 8       | 16      | ~3.2 GHz   | 125     | 253             | ❌    | *(used price data limited)*                                  |
+| Intel Core **i7-14700K**  | 20    | 28      | 8       | 12      | ~3.4 GHz   | 125     | 253             | ✔️   | **~$385-$450** (common used listings)             |
+| Intel Core **i7-14700KF** | 20    | 28      | 8       | 12      | ~3.4 GHz   | 125     | 253             | ❌    | *(used price data limited)*                                  |
+| Intel Core **i5-14600K**  | 14    | 20      | 6       | 8       | ~3.5 GHz   | 125     | 181             | ✔️   | **~$250-$299** (actual used sale reported ~$254)  |
+| Intel Core **i5-14600KF** | 14    | 20      | 6       | 8       | ~3.5 GHz   | 125     | 181             | ❌    | *(used price data limited but likely similar to K variant)*  |
+| Intel Core **i5-14600**   | 14    | 20      | 6       | 8       | –          | 65      | –               | ✔️   | *(used prices not clearly available)*                        |
+| Intel Core **i5-14500**   | 14    | 20      | 6       | 8       | –          | 65      | –               | ✔️   | *(used prices not clearly available)*                        |
+| Intel Core **i5-14400**   | 10    | 16      | 6       | 4       | –          | 65      | –               | ✔️   | *(used prices not clearly available)*                        |
+| Intel Core **i5-14400F**  | 10    | 16      | 6       | 4       | –          | 65      | –               | ❌    | *(used prices not clearly available)*                        |
+| Intel Core **i3-14100**   | 4     | 8       | 4       | 0       | –          | 60      | –               | ✔️   | *(used prices not clearly available)*                        |
+| Intel Core **i3-14100F**  | 4     | 8       | 4       | 0       | –          | 60      | –               | ❌    | *(used prices not clearly available)*                        |
+<details>
+<summary>links:</summary>
+
+ https://www.ebay.com/itm/187168854143 "Intel Core i9-14900K Processor (5.6 GHz, 24 Cores, LGA 1700) Box - BX8071514900K for sale online | eBay"
+<br> https://www.ebay.com/shop/i7-14700k?_nkw=i7+14700k "I7 14700k"
+<br> https://www.ebay.com/itm/406019578715 "Intel Core i5-14600K SRN43 LGA1700 14-core 20-thread ..."
+
+</details>
+
+
+| Model                     | Cores | Threads | P-Cores | E-Cores | Base Clock | TDP (W) | Turbo Power (W) | iGPU | Avg Used eBay.com Price (US)                |
+| ------------------------- | ----- | ------- | ------- | ------- | ---------- | ------- | --------------- | ---- | ------------------------------------------- |
+| Intel Core **i9-13900K**  | 24    | 32      | 8       | 16      | ~3.0 GHz   | 125     | 253             | ✔️   | **~$370–$640**                   |
+| Intel Core **i9-13900KF** | 24    | 32      | 8       | 16      | ~3.0 GHz   | 125     | 253             | ❌    | *(used prices vary widely)*      |
+| Intel Core **i9-13900**   | 24    | 32      | 8       | 16      | –          | 65      | –               | ✔️   | *(limited clear used data)* ([Wccftech][2]) |
+| Intel Core **i7-13700K**  | 16    | 24      | 8       | 8       | ~3.4 GHz   | 125     | 253             | ✔️   | **~$470–$480**                   |
+| Intel Core **i7-13700KF** | 16    | 24      | 8       | 8       | ~3.4 GHz   | 125     | 253             | ❌    | **~$200–$300+** *(varies)*       |
+| Intel Core **i7-13700**   | 16    | 24      | 8       | 8       | –          | 65      | –               | ✔️   | *(limited clear used data)* ([Wccftech][2]) |
+| Intel Core **i5-13600K**  | 14    | 20      | 6       | 8       | ~3.5 GHz   | 125     | 181             | ✔️   | **~$240–$300**                   |
+| Intel Core **i5-13600KF** | 14    | 20      | 6       | 8       | ~3.5 GHz   | 125     | 181             | ❌    | **~$215–$260**                   |
+| Intel Core **i5-13600**   | 14    | 20      | 6       | 8       | –          | 65      | –               | ✔️   | *(used prices sporadic)* ([Wccftech][2])    |
+| Intel Core **i5-13500**   | 14    | 20      | 6       | 8       | –          | 65      | –               | ✔️   | *(used prices sporadic)* ([Wccftech][2])    |
+| Intel Core **i5-13400**   | 10    | 16      | 6       | 4       | –          | 65      | –               | ✔️   | *(used prices sporadic)* ([TechPowerUp][6]) |
+| Intel Core **i5-13400F**  | 10    | 16      | 6       | 4       | –          | 65      | –               | ❌    | *(used prices sporadic)* ([TechPowerUp][6]) |
+| Intel Core **i3-13100**   | 4     | 8       | 4       | 0       | –          | 60      | –               | ✔️   | *(limited used data)* ([TechPowerUp][6])    |
+| Intel Core **i3-13100F**  | 4     | 8       | 4       | 0       | –          | 60      | –               | ❌    | *(limited used data)* ([TechPowerUp][6])    |
+
+<details>
+<summary>links:</summary>
+
+ https://www.ebay.com/shop/13900k-cpu?_nkw=13900k+cpu "13900k CPU"
+<br> https://wccftech.com/roundup/intel-13th-gen-raptor-lake-cpus/ "Intel 13th Gen Raptor Lake Desktop CPUs Specs, Performance, Price, & Availability - Everything We Know So Far - Wccftech"
+<br> https://www.ebay.com/itm/357981735548 "Intel Core i7-13700K Unlocked Desktop Processor - eBay"
+<br> https://www.ebay.com/shop/intel-13700kf?_nkw=intel+13700kf "Intel 13700kf"
+<br> https://www.ebay.com/shop/intel-13600k?_nkw=intel+13600k "Intel 13600k"
+<br> https://www.techpowerup.com/302937/intel-launches-lower-priced-13th-gen-core-desktop-processors-with-65w "Intel Launches Lower-Priced 13th Gen Core Desktop Processors with 65W | TechPowerUp"
+
+</details>
+
+
 </details>
 
 <details>
@@ -1137,241 +1256,306 @@ i often found myself looking up these details when comparing GPUs to try to find
 
 | **Model**                                                                        | **VRAM**   | **FP32**     | **FP16**     | **TDP** | **Est. Idle** | **Bandwidth** | **Virtualization** | **Avg Used eBay.com Price (≈)**                         |
 | -------------------------------------------------------------------------------- | ---------- | ------------ | ------------ | ------- | ------------- | ------------- | ------------------ | ------------------------------------------------------- |
-| [**Intel Arc A310**](https://www.techpowerup.com/gpu-specs/arc-a310.c3931)       | 4GB GDDR6  | 3.072 TFLOPS | 6.144 TFLOPS | 75 W    | 8–15 W        | 124 GB/s      | ❌ No SR-IOV        | **~$160 – $200** (used & some new listings) ([eBay][1]) |
-| [**Intel Arc A380**](https://www.techpowerup.com/gpu-specs/arc-a380.c3913)       | 6GB GDDR6  | 4.198 TFLOPS | 8.397 TFLOPS | 75 W    | 8–15 W        | 186 GB/s      | ❌ No SR-IOV        | **~$160 – $240** (common eBay US range) ([eBay][2])     |
-| [**Intel Arc A580**](https://www.techpowerup.com/gpu-specs/arc-a580.c3927)       | 8GB GDDR6  | 12.29 TFLOPS | 24.58 TFLOPS | 185 W   | 15–25 W       | 256 GB/s      | ❌ No SR-IOV        | **~$200 – $300** (used listings vary) ([eBay][1])       |
-| [**Intel Arc A750**](https://www.techpowerup.com/gpu-specs/arc-a750.c3922)       | 8GB GDDR6  | 17.20 TFLOPS | 34.41 TFLOPS | 225 W   | 18–30 W       | 512 GB/s      | ❌ No SR-IOV        | **~$160 – $220** (used average) ([eBay][1])             |
-| [**Intel Arc A770 16GB**](https://www.techpowerup.com/gpu-specs/arc-a770.c3914)  | 16GB GDDR6 | 19.66 TFLOPS | 39.32 TFLOPS | 225 W   | 18–30 W       | 512 GB/s      | ❌ No SR-IOV        | **~$250 – $350** (used & new) ([eBay][1])               |
-| [**Intel Arc Pro A40**](https://www.techpowerup.com/gpu-specs/arc-pro-a40.c3925) | 6GB GDDR6  | 3.482 TFLOPS | 6.963 TFLOPS | 50 W    | 6–10 W        | 192 GB/s      | ✅ SR-IOV           | **~$220 – $280** (rare used eBay sales) ([eBay][1])     |
-| [**Intel Arc Pro A50**](https://www.techpowerup.com/gpu-specs/arc-pro-a50.c3926) | 6GB GDDR6  | 4.813 TFLOPS | 9.626 TFLOPS | 75 W    | 8–15 W        | 192 GB/s      | ✅ SR-IOV           | **~$250 – $320** (used listings) ([eBay][1])            |
-| [**Intel Arc Pro A60**](https://www.techpowerup.com/gpu-specs/arc-pro-a60.c4160) | 12GB GDDR6 | 8.397 TFLOPS | 16.79 TFLOPS | 130 W   | 10–20 W       | 384 GB/s      | ✅ SR-IOV           | **~$350 – $500** (scarcer on eBay) ([eBay][1])          |
-| [**Intel Arc B580**](https://www.techpowerup.com/gpu-specs/arc-b580.c4244)       | 12GB GDDR6 | 13.67 TFLOPS | 27.34 TFLOPS | 190 W   | 15–25 W       | 256 GB/s      | ❌ No SR-IOV        | **~$230 – $300** (used & some new pricing) ([eBay][1])  |
-| [**Intel Arc Pro B50**](https://www.techpowerup.com/gpu-specs/arc-pro-b50.c4345) | 16GB GDDR6 | 10.65 TFLOPS | 21.30 TFLOPS | 70 W    | 7–15 W        | 224 GB/s      | ✅ SR-IOV           | **~$350 – $450** (limited used) ([eBay][1])             |
-| [**Intel Arc Pro B60**](https://www.techpowerup.com/gpu-specs/arc-pro-b60.c4350) | 24GB GDDR6 | 12.29 TFLOPS | 24.58 TFLOPS | 200 W   | 15–30 W       | 456 GB/s      | ✅ SR-IOV           | **~$500 – $800** (very limited) ([eBay][1])             |
+| [**Intel Arc A310**](https://www.techpowerup.com/gpu-specs/arc-a310.c3931)       | 4GB GDDR6  | 3.072 TFLOPS | 6.144 TFLOPS | 75 W    | 8–15 W        | 124 GB/s      | ❌ No SR-IOV        | **~$160 – $200** (used & some new listings)  |
+| [**Intel Arc A380**](https://www.techpowerup.com/gpu-specs/arc-a380.c3913)       | 6GB GDDR6  | 4.198 TFLOPS | 8.397 TFLOPS | 75 W    | 8–15 W        | 186 GB/s      | ❌ No SR-IOV        | **~$160 – $240** (common eBay US range)      |
+| [**Intel Arc A580**](https://www.techpowerup.com/gpu-specs/arc-a580.c3927)       | 8GB GDDR6  | 12.29 TFLOPS | 24.58 TFLOPS | 185 W   | 15–25 W       | 256 GB/s      | ❌ No SR-IOV        | **~$200 – $300** (used listings vary)        |
+| [**Intel Arc A750**](https://www.techpowerup.com/gpu-specs/arc-a750.c3922)       | 8GB GDDR6  | 17.20 TFLOPS | 34.41 TFLOPS | 225 W   | 18–30 W       | 512 GB/s      | ❌ No SR-IOV        | **~$160 – $220** (used average)              |
+| [**Intel Arc A770 16GB**](https://www.techpowerup.com/gpu-specs/arc-a770.c3914)  | 16GB GDDR6 | 19.66 TFLOPS | 39.32 TFLOPS | 225 W   | 18–30 W       | 512 GB/s      | ❌ No SR-IOV        | **~$250 – $350** (used & new)                |
+| [**Intel Arc Pro A40**](https://www.techpowerup.com/gpu-specs/arc-pro-a40.c3925) | 6GB GDDR6  | 3.482 TFLOPS | 6.963 TFLOPS | 50 W    | 6–10 W        | 192 GB/s      | ✅ SR-IOV           | **~$220 – $280** (rare used eBay sales)      |
+| [**Intel Arc Pro A50**](https://www.techpowerup.com/gpu-specs/arc-pro-a50.c3926) | 6GB GDDR6  | 4.813 TFLOPS | 9.626 TFLOPS | 75 W    | 8–15 W        | 192 GB/s      | ✅ SR-IOV           | **~$250 – $320** (used listings)             |
+| [**Intel Arc Pro A60**](https://www.techpowerup.com/gpu-specs/arc-pro-a60.c4160) | 12GB GDDR6 | 8.397 TFLOPS | 16.79 TFLOPS | 130 W   | 10–20 W       | 384 GB/s      | ✅ SR-IOV           | **~$350 – $500** (scarcer on eBay)           |
+| [**Intel Arc B580**](https://www.techpowerup.com/gpu-specs/arc-b580.c4244)       | 12GB GDDR6 | 13.67 TFLOPS | 27.34 TFLOPS | 190 W   | 15–25 W       | 256 GB/s      | ❌ No SR-IOV        | **~$230 – $300** (used & some new pricing)   |
+| [**Intel Arc Pro B50**](https://www.techpowerup.com/gpu-specs/arc-pro-b50.c4345) | 16GB GDDR6 | 10.65 TFLOPS | 21.30 TFLOPS | 70 W    | 7–15 W        | 224 GB/s      | ✅ SR-IOV           | **~$350 – $450** (limited used)              |
+| [**Intel Arc Pro B60**](https://www.techpowerup.com/gpu-specs/arc-pro-b60.c4350) | 24GB GDDR6 | 12.29 TFLOPS | 24.58 TFLOPS | 200 W   | 15–30 W       | 456 GB/s      | ✅ SR-IOV           | **~$500 – $800** (very limited)              |
 
-[1]: https://cr.ebay.com/b/Intel-Computer-Graphics-Cards/27386/bn_7113457456?utm_source=chatgpt.com "Intel Computer Graphics Cards for sale - eBay"
-[2]: https://www.ebay.com/shop/intel-a310?_nkw=intel+a310&utm_source=chatgpt.com "Intel A310 | eBay"
+<details>
+<summary>links:</summary>
 
+ https://cr.ebay.com/b/Intel-Computer-Graphics-Cards/27386/bn_7113457456 "Intel Computer Graphics Cards for sale - eBay"
+<br> https://www.ebay.com/shop/intel-a310?_nkw=intel+a310 "Intel A310 | eBay"
 
+</details>
 
 
 ## NVIDIA RTX 10 Series (Pascal)
 
 | **Model**                                                                             | **VRAM** | **FP16**     | **FP32**     | **TDP** | **Idle Power** | **Bandwidth** | **Virtualization** | **Avg Used eBay.com Price (≈)**                                                  |
 | ------------------------------------------------------------------------------------- | -------- | ------------ | ------------ | ------- | -------------- | ------------- | ------------------ | -------------------------------------------------------------------------------- |
-| [**GTX 1050**](https://www.techpowerup.com/gpu-specs/geforce-gtx-1050.c2875)          | 2 GB     | 29.10 GFLOPS | 1.862 TFLOPS | 75 W    | ~8–12 W        | 112 GB/s      | ✅ Unlock           | **~$50 – $80** (many used ~75 USD listed) ([eBay][1])                            |
-| [**GTX 1050 Ti**](https://www.techpowerup.com/gpu-specs/geforce-gtx-1050-ti.c2885)    | 4 GB     | 33.41 GFLOPS | 2.138 TFLOPS | 75 W    | ~8–12 W        | 112 GB/s      | ✅ Unlock           | **~$60 – $95** (common used range) ([eBay][1])                                   |
-| [**GTX 1060 3GB**](https://www.techpowerup.com/gpu-specs/geforce-gtx-1060-3-gb.c2867) | 3 GB     | 61.49 GFLOPS | 3.935 TFLOPS | 120 W   | ~10–18 W       | 192 GB/s      | ✅ Unlock           | **~$70 – $110** (used teen-range sale reports & community pricing) ([Reddit][2]) |
-| [**GTX 1060 6GB**](https://www.techpowerup.com/gpu-specs/geforce-gtx-1060-6-gb.c2862) | 6 GB     | 68.36 GFLOPS | 4.375 TFLOPS | 120 W   | ~10–18 W       | 192 GB/s      | ✅ Unlock           | **~$80 – $120** (common actual eBay used prices) ([Reddit][3])                   |
-| [**GTX 1070**](https://www.techpowerup.com/gpu-specs/geforce-gtx-1070.c2840)          | 8 GB     | 101.0 GFLOPS | 6.463 TFLOPS | 150 W   | ~12–20 W       | 256 GB/s      | ✅ Unlock           | **~$90 – $140** (community eBay pricing) ([Reddit][4])                           |
-| [**GTX 1070 Ti**](https://www.techpowerup.com/gpu-specs/geforce-gtx-1070-ti.c3010)    | 8 GB     | 127.9 GFLOPS | 8.186 TFLOPS | 180 W   | ~15–25 W       | 256 GB/s      | ✅ Unlock           | **~$110 – $180** (user report and typical used sale) ([Reddit][5])               |
-| [**GTX 1080**](https://www.techpowerup.com/gpu-specs/geforce-gtx-1080.c2839)          | 8 GB     | 139 GFLOPS   | 8.873 TFLOPS | 180 W   | ~15–25 W       | 320.3 GB/s    | ✅ Unlock           | **~$110 – $160** (recent used prices seen) ([Reddit][3])                         |
-| [**GTX 1080 Ti**](https://www.techpowerup.com/gpu-specs/geforce-gtx-1080-ti.c2877)    | 11 GB    | 177.2 GFLOPS | 11.34 TFLOPS | 250 W   | ~18–30 W       | 484.4 GB/s    | ✅ Unlock           | **~$140 – $220** (many used listings around $150-$200) ([eBay][6])               |
+| [**GTX 1050**](https://www.techpowerup.com/gpu-specs/geforce-gtx-1050.c2875)          | 2 GB     | 29.10 GFLOPS | 1.862 TFLOPS | 75 W    | ~8–12 W        | 112 GB/s      | ✅ Unlock           | **~$50 – $80** (many used ~75 USD listed)                             |
+| [**GTX 1050 Ti**](https://www.techpowerup.com/gpu-specs/geforce-gtx-1050-ti.c2885)    | 4 GB     | 33.41 GFLOPS | 2.138 TFLOPS | 75 W    | ~8–12 W        | 112 GB/s      | ✅ Unlock           | **~$60 – $95** (common used range)                                    |
+| [**GTX 1060 3GB**](https://www.techpowerup.com/gpu-specs/geforce-gtx-1060-3-gb.c2867) | 3 GB     | 61.49 GFLOPS | 3.935 TFLOPS | 120 W   | ~10–18 W       | 192 GB/s      | ✅ Unlock           | **~$70 – $110** (used teen-range sale reports & community pricing)  |
+| [**GTX 1060 6GB**](https://www.techpowerup.com/gpu-specs/geforce-gtx-1060-6-gb.c2862) | 6 GB     | 68.36 GFLOPS | 4.375 TFLOPS | 120 W   | ~10–18 W       | 192 GB/s      | ✅ Unlock           | **~$80 – $120** (common actual eBay used prices)                    |
+| [**GTX 1070**](https://www.techpowerup.com/gpu-specs/geforce-gtx-1070.c2840)          | 8 GB     | 101.0 GFLOPS | 6.463 TFLOPS | 150 W   | ~12–20 W       | 256 GB/s      | ✅ Unlock           | **~$90 – $140** (community eBay pricing)                            |
+| [**GTX 1070 Ti**](https://www.techpowerup.com/gpu-specs/geforce-gtx-1070-ti.c3010)    | 8 GB     | 127.9 GFLOPS | 8.186 TFLOPS | 180 W   | ~15–25 W       | 256 GB/s      | ✅ Unlock           | **~$110 – $180** (user report and typical used sale)                |
+| [**GTX 1080**](https://www.techpowerup.com/gpu-specs/geforce-gtx-1080.c2839)          | 8 GB     | 139 GFLOPS   | 8.873 TFLOPS | 180 W   | ~15–25 W       | 320.3 GB/s    | ✅ Unlock           | **~$110 – $160** (recent used prices seen)                          |
+| [**GTX 1080 Ti**](https://www.techpowerup.com/gpu-specs/geforce-gtx-1080-ti.c2877)    | 11 GB    | 177.2 GFLOPS | 11.34 TFLOPS | 250 W   | ~18–30 W       | 484.4 GB/s    | ✅ Unlock           | **~$140 – $220** (many used listings around $150-$200)                |
 
-[1]: https://www.ebay.com/shop/nvidia-geforce-gtx-1050-ti?_nkw=nvidia+geforce+gtx+1050+ti&utm_source=chatgpt.com "Nvidia Geforce GTX 1050 Ti"
-[2]: https://www.reddit.com/r/HardwareSwapUK/comments/158gf0l?utm_source=chatgpt.com "[BG] GTX 1060 3GB/10 Series GPU [H] £40"
-[3]: https://www.reddit.com/r/hardwareswap/comments/1hegwse?utm_source=chatgpt.com "[USA-IL] [H] MSI GTX 1080 DUKE 8GB, MSI GTX 1060 GAMING X 6GB, EVGA GTX 1050 Ti SSC GAMING 4GB [W] Cash or PayPal"
-[4]: https://www.reddit.com/r/PcBuild/comments/1h43499?utm_source=chatgpt.com "Used gtx graphics cards prices"
-[5]: https://www.reddit.com/r/nvidia/comments/hz23nr?utm_source=chatgpt.com "Is 250$ a good price for a barely used GTX 1070 Ti?"
-[6]: https://www.ebay.com/b/NVIDIA-GeForce-GTX-1080-Ti-NVIDIA-Computer-Graphics-Cards/27386/bn_7116464572?utm_source=chatgpt.com "NVIDIA GeForce GTX 1080 Ti - eBay"
+<details>
+<summary>links:</summary>
+
+ https://www.ebay.com/shop/nvidia-geforce-gtx-1050-ti?_nkw=nvidia+geforce+gtx+1050+ti "Nvidia Geforce GTX 1050 Ti"
+<br> https://www.reddit.com/r/HardwareSwapUK/comments/158gf0l "[BG] GTX 1060 3GB/10 Series GPU [H] £40"
+<br> https://www.reddit.com/r/hardwareswap/comments/1hegwse "[USA-IL] [H] MSI GTX 1080 DUKE 8GB, MSI GTX 1060 GAMING X 6GB, EVGA GTX 1050 Ti SSC GAMING 4GB [W] Cash or PayPal"
+<br> https://www.reddit.com/r/PcBuild/comments/1h43499 "Used gtx graphics cards prices"
+<br> https://www.reddit.com/r/nvidia/comments/hz23nr "Is 250$ a good price for a barely used GTX 1070 Ti?"
+<br> https://www.ebay.com/b/NVIDIA-GeForce-GTX-1080-Ti-NVIDIA-Computer-Graphics-Cards/27386/bn_7116464572 "NVIDIA GeForce GTX 1080 Ti - eBay"
+
+</details>
 
 
 ## NVIDIA RTX 20 Series (Turing)
 
 | **GPU**                                                                                  | **CUDA** | **VRAM**    | **FP32** | **FP16** | **TDP** | **Idle** | **Virtualization** | **Avg Used eBay.com Price (≈)**        |
 | ---------------------------------------------------------------------------------------- | -------- | ----------- | -------- | -------- | ------- | -------- | ------------------ | -------------------------------------- |
-| [**RTX 2060**](https://www.techpowerup.com/gpu-specs/geforce-rtx-2060.c3310)             | 1920     | 6 GB GDDR6  | 6.5 TF   | 6.5 TF   | 160 W   | ~8 W     | ✅ Unlock           | **~$170 – $200** ([Tom's Hardware][1]) |
-| [**RTX 2060 Super**](https://www.techpowerup.com/gpu-specs/geforce-rtx-2060-super.c3441) | 2176     | 8 GB GDDR6  | 7.2 TF   | 7.2 TF   | 175 W   | ~9 W     | ✅ Unlock           | **~$180 – $230** ([Tom's Hardware][1]) |
-| [**RTX 2070**](https://www.techpowerup.com/gpu-specs/geforce-rtx-2070.c3252)             | 2304     | 8 GB GDDR6  | 7.5 TF   | 7.5 TF   | 175 W   | ~9 W     | ✅ Unlock           | **~$200 – $250** ([Tom's Hardware][1]) |
-| [**RTX 2070 Super**](https://www.techpowerup.com/gpu-specs/geforce-rtx-2070-super.c3440) | 2560     | 8 GB GDDR6  | 9.1 TF   | 9.1 TF   | 215 W   | ~9 W     | ✅ Unlock           | **~$220 – $270** ([Tom's Hardware][1]) |
-| [**RTX 2080**](https://www.techpowerup.com/gpu-specs/geforce-rtx-2080.c3224)             | 2944     | 8 GB GDDR6  | 10.1 TF  | 10.1 TF  | 215 W   | ~10 W    | ✅ Unlock           | **~$240 – $300** ([Tom's Hardware][1]) |
-| [**RTX 2080 Super**](https://www.techpowerup.com/gpu-specs/geforce-rtx-2080-super.c3439) | 3072     | 8 GB GDDR6  | 11.2 TF  | 11.2 TF  | 250 W   | ~10 W    | ✅ Unlock           | **~$250 – $320** ([Tom's Hardware][1]) |
-| [**RTX 2080 Ti**](https://www.techpowerup.com/gpu-specs/geforce-rtx-2080-ti.c3305)       | 4352     | 11 GB GDDR6 | 13.4 TF  | 13.4 TF  | 250 W   | ~11 W    | ✅ Unlock           | **~$300 – $380** ([Tom's Hardware][1]) |
+| [**RTX 2060**](https://www.techpowerup.com/gpu-specs/geforce-rtx-2060.c3310)             | 1920     | 6 GB GDDR6  | 6.5 TF   | 6.5 TF   | 160 W   | ~8 W     | ✅ Unlock           | **~$170 – $200**  |
+| [**RTX 2060 Super**](https://www.techpowerup.com/gpu-specs/geforce-rtx-2060-super.c3441) | 2176     | 8 GB GDDR6  | 7.2 TF   | 7.2 TF   | 175 W   | ~9 W     | ✅ Unlock           | **~$180 – $230**  |
+| [**RTX 2070**](https://www.techpowerup.com/gpu-specs/geforce-rtx-2070.c3252)             | 2304     | 8 GB GDDR6  | 7.5 TF   | 7.5 TF   | 175 W   | ~9 W     | ✅ Unlock           | **~$200 – $250**  |
+| [**RTX 2070 Super**](https://www.techpowerup.com/gpu-specs/geforce-rtx-2070-super.c3440) | 2560     | 8 GB GDDR6  | 9.1 TF   | 9.1 TF   | 215 W   | ~9 W     | ✅ Unlock           | **~$220 – $270**  |
+| [**RTX 2080**](https://www.techpowerup.com/gpu-specs/geforce-rtx-2080.c3224)             | 2944     | 8 GB GDDR6  | 10.1 TF  | 10.1 TF  | 215 W   | ~10 W    | ✅ Unlock           | **~$240 – $300**  |
+| [**RTX 2080 Super**](https://www.techpowerup.com/gpu-specs/geforce-rtx-2080-super.c3439) | 3072     | 8 GB GDDR6  | 11.2 TF  | 11.2 TF  | 250 W   | ~10 W    | ✅ Unlock           | **~$250 – $320**  |
+| [**RTX 2080 Ti**](https://www.techpowerup.com/gpu-specs/geforce-rtx-2080-ti.c3305)       | 4352     | 11 GB GDDR6 | 13.4 TF  | 13.4 TF  | 250 W   | ~11 W    | ✅ Unlock           | **~$300 – $380**  |
+<details>
+<summary>links:</summary>
 
-[1]: https://www.tomshardware.com/news/gpus-historical-ebay-pricing/8?utm_source=chatgpt.com "March 2023 eBay GPU Prices - eBay Historical GPU Prices 2023: November 2023 Update - Page 8 | Tom's Hardware"
+ https://www.tomshardware.com/news/gpus-historical-ebay-pricing/8 "March 2023 eBay GPU Prices - eBay Historical GPU Prices 2023: November 2023 Update - Page 8 | Tom's Hardware"
+
+</details>
 
 
 
 ## NVIDIA RTX 30 Series (Ampere)
 | **Model**                                                                               | **VRAM** | **FP32**     | **FP16**     | **TDP** | **Est. Idle** | **Bandwidth** | **Virtualization** | **Avg Used eBay.com Price (≈)**                                             |
 | --------------------------------------------------------------------------------------- | -------- | ------------ | ------------ | ------- | ------------- | ------------- | ------------------ | --------------------------------------------------------------------------- |
-| [**RTX 3060 12GB**](https://www.techpowerup.com/gpu-specs/geforce-rtx-3060-12-gb.c3682) | 12 GB    | 12.74 TFLOPS | 12.74 TFLOPS | 170 W   | ~8–12 W       | 360 GB/s      | ❌                  | **~$200 – $280** (eBay used listings around $220–$280) ([eBay][1])     |
-| [**RTX 3060 Ti**](https://www.techpowerup.com/gpu-specs/geforce-rtx-3060-ti.c3681)      | 8 GB     | 16.20 TFLOPS | 16.20 TFLOPS | 200 W   | ~10–15 W      | 448 GB/s      | ❌                  | **~$220 – $300** (pre-owned listings & reports ~$220–$290) ([eBay][1]) |
-| [**RTX 3070**](https://www.techpowerup.com/gpu-specs/geforce-rtx-3070.c3674)            | 8 GB     | 20.31 TFLOPS | 20.31 TFLOPS | 220 W   | ~9–15 W       | 448 GB/s      | ❌                  | **~$240 – $300** (community price reports for used) ([Reddit][2])      |
-| [**RTX 3080**](https://www.techpowerup.com/gpu-specs/geforce-rtx-3080.c3621)            | 10 GB    | 29.77 TFLOPS | 29.77 TFLOPS | 320 W   | ~9–15 W       | 760 GB/s      | ❌                  | **~$320 – $500** (used prices reported ~$320–$500) ([Reddit][3])       |
-| [**RTX 3080 Ti**](https://www.techpowerup.com/gpu-specs/geforce-rtx-3080-ti.c3735)      | 12 GB    | 34.10 TFLOPS | 34.10 TFLOPS | 350 W   | ~12–16 W      | 912 GB/s      | ❌                  | **~$450 – $650+** (reports ~$450+) ([Reddit][2])                |
-| [**RTX 3090**](https://www.techpowerup.com/gpu-specs/geforce-rtx-3090.c3622)            | 24 GB    | 35.58 TFLOPS | 35.58 TFLOPS | 350 W   | ~15–20 W      | 936 GB/s      | ❌                  | **~$600 – $800+** (pricing trend ~$600+) ([Reddit][2])            |
+| [**RTX 3060 12GB**](https://www.techpowerup.com/gpu-specs/geforce-rtx-3060-12-gb.c3682) | 12 GB    | 12.74 TFLOPS | 12.74 TFLOPS | 170 W   | ~8–12 W       | 360 GB/s      | ❌                  | **~$200 – $280** (eBay used listings around $220–$280)      |
+| [**RTX 3060 Ti**](https://www.techpowerup.com/gpu-specs/geforce-rtx-3060-ti.c3681)      | 8 GB     | 16.20 TFLOPS | 16.20 TFLOPS | 200 W   | ~10–15 W      | 448 GB/s      | ❌                  | **~$220 – $300** (pre-owned listings & reports ~$220–$290)  |
+| [**RTX 3070**](https://www.techpowerup.com/gpu-specs/geforce-rtx-3070.c3674)            | 8 GB     | 20.31 TFLOPS | 20.31 TFLOPS | 220 W   | ~9–15 W       | 448 GB/s      | ❌                  | **~$240 – $300** (community price reports for used)       |
+| [**RTX 3080**](https://www.techpowerup.com/gpu-specs/geforce-rtx-3080.c3621)            | 10 GB    | 29.77 TFLOPS | 29.77 TFLOPS | 320 W   | ~9–15 W       | 760 GB/s      | ❌                  | **~$320 – $500** (used prices reported ~$320–$500)        |
+| [**RTX 3080 Ti**](https://www.techpowerup.com/gpu-specs/geforce-rtx-3080-ti.c3735)      | 12 GB    | 34.10 TFLOPS | 34.10 TFLOPS | 350 W   | ~12–16 W      | 912 GB/s      | ❌                  | **~$450 – $650+** (reports ~$450+)                 |
+| [**RTX 3090**](https://www.techpowerup.com/gpu-specs/geforce-rtx-3090.c3622)            | 24 GB    | 35.58 TFLOPS | 35.58 TFLOPS | 350 W   | ~15–20 W      | 936 GB/s      | ❌                  | **~$600 – $800+** (pricing trend ~$600+)             |
 
-[1]: https://www.ebay.com/shop/used-3060?_nkw=used+3060&utm_source=chatgpt.com "Used 3060 | eBay"
-[2]: https://www.reddit.com/r/pcmasterrace/comments/1npm2x7?utm_source=chatgpt.com "Just got a Xfx Mercury 9070 XT for $500..did I steal this? Lol"
-[3]: https://www.reddit.com/r/buildapc/comments/1ha9m61?utm_source=chatgpt.com "Ebay RTX3080 and 3090's going for under or at 200?? (Pricing all over the place)"
+<details>
+<summary>links:</summary>
+
+ https://www.ebay.com/shop/used-3060?_nkw=used+3060 "Used 3060 | eBay"
+<br> https://www.reddit.com/r/pcmasterrace/comments/1npm2x7 "Just got a Xfx Mercury 9070 XT for $500..did I steal this? Lol"
+<br> https://www.reddit.com/r/buildapc/comments/1ha9m61 "Ebay RTX3080 and 3090's going for under or at 200?? (Pricing all over the place)"
+
+</details>
+
 
 
 ## NVIDIA RTX 40 Series (Ada Lovelace)
 
 | **GPU**                                                                                       | **CUDA** | **VRAM**             | **FP32** | **FP16** | **TDP** | **Idle** | **Virtualization** | **Avg Used eBay.com Price (≈)**                                      |
 | --------------------------------------------------------------------------------------------- | -------- | -------------------- | -------- | -------- | ------- | -------- | ------------------ | -------------------------------------------------------------------- |
-| [**RTX 4060**](https://www.techpowerup.com/gpu-specs/geforce-rtx-4060.c4107)                  | 3072     | 8 GB GDDR6 128-bit   | 15.1 TF  | 15.1 TF  | 115 W   | ~7 W     | ❌                  | **~$220 – $300** (active used listings ~$230–$300) ([eBay][1])       |
-| [**RTX 4060 Ti 8GB**](https://www.techpowerup.com/gpu-specs/geforce-rtx-4060-ti-8-gb.c4106)   | 4352     | 8 GB GDDR6 128-bit   | 22.1 TF  | 22.1 TF  | 160 W   | ~8 W     | ❌                  | **~$250 – $350** (used/Refurb shows ~$250–$350) ([eBay][2])          |
-| [**RTX 4060 Ti 16GB**](https://www.techpowerup.com/gpu-specs/geforce-rtx-4060-ti-16-gb.c4155) | 4352     | 16 GB GDDR6 128-bit  | 22.1 TF  | 22.1 TF  | 165 W   | ~8 W     | ❌                  | **~$280 – $380** (used 16 GB variants ~$280+) ([eBay][2])            |
-| [**RTX 4070**](https://www.techpowerup.com/gpu-specs/geforce-rtx-4070.c3924)                  | 5888     | 12 GB GDDR6X 192-bit | 29.1 TF  | 29.1 TF  | 200 W   | ~10 W    | ❌                  | **~$350 – $500+** (used pricing broader range on eBay) ([eBay][3])   |
-| [**RTX 4070 Super**](https://www.techpowerup.com/gpu-specs/geforce-rtx-4070-super.c4165)      | 7168     | 12 GB GDDR6X 192-bit | 35.5 TF  | 35.5 TF  | 220 W   | ~10 W    | ❌                  | **~$400 – $550+** (used listings suggest ~$400+ typical) ([eBay][3]) |
-| [**RTX 4070 Ti**](https://www.techpowerup.com/gpu-specs/geforce-rtx-4070-ti.c3950)            | 7680     | 12 GB GDDR6X 192-bit | 40.1 TF  | 40.1 TF  | 285 W   | ~11 W    | ❌                  | **~$450 – $650+** (commonly listed used) ([eBay][3])                 |
-| [**RTX 4080**](https://www.techpowerup.com/gpu-specs/geforce-rtx-4080.c3888)                  | 9728     | 16 GB GDDR6X 256-bit | 48.7 TF  | 48.7 TF  | 320 W   | ~13 W    | ❌                  | **~$700 – $1,000+** (used listings vary widely) ([eBay][3])          |
-| [**RTX 4090**](https://www.techpowerup.com/gpu-specs/geforce-rtx-4090.c3889)                  | 16384    | 24 GB GDDR6X 384-bit | 82.6 TF  | 82.6 TF  | 450 W   | ~16 W    | ❌                  | **~$1,400 – $2,000+** (many used listings in this range) ([eBay][3]) |
+| [**RTX 4060**](https://www.techpowerup.com/gpu-specs/geforce-rtx-4060.c4107)                  | 3072     | 8 GB GDDR6 128-bit   | 15.1 TF  | 15.1 TF  | 115 W   | ~7 W     | ❌                  | **~$220 – $300** (active used listings ~$230–$300)        |
+| [**RTX 4060 Ti 8GB**](https://www.techpowerup.com/gpu-specs/geforce-rtx-4060-ti-8-gb.c4106)   | 4352     | 8 GB GDDR6 128-bit   | 22.1 TF  | 22.1 TF  | 160 W   | ~8 W     | ❌                  | **~$250 – $350** (used/Refurb shows ~$250–$350)           |
+| [**RTX 4060 Ti 16GB**](https://www.techpowerup.com/gpu-specs/geforce-rtx-4060-ti-16-gb.c4155) | 4352     | 16 GB GDDR6 128-bit  | 22.1 TF  | 22.1 TF  | 165 W   | ~8 W     | ❌                  | **~$280 – $380** (used 16 GB variants ~$280+)             |
+| [**RTX 4070**](https://www.techpowerup.com/gpu-specs/geforce-rtx-4070.c3924)                  | 5888     | 12 GB GDDR6X 192-bit | 29.1 TF  | 29.1 TF  | 200 W   | ~10 W    | ❌                  | **~$350 – $500+** (used pricing broader range on eBay)    |
+| [**RTX 4070 Super**](https://www.techpowerup.com/gpu-specs/geforce-rtx-4070-super.c4165)      | 7168     | 12 GB GDDR6X 192-bit | 35.5 TF  | 35.5 TF  | 220 W   | ~10 W    | ❌                  | **~$400 – $550+** (used listings suggest ~$400+ typical)  |
+| [**RTX 4070 Ti**](https://www.techpowerup.com/gpu-specs/geforce-rtx-4070-ti.c3950)            | 7680     | 12 GB GDDR6X 192-bit | 40.1 TF  | 40.1 TF  | 285 W   | ~11 W    | ❌                  | **~$450 – $650+** (commonly listed used)                  |
+| [**RTX 4080**](https://www.techpowerup.com/gpu-specs/geforce-rtx-4080.c3888)                  | 9728     | 16 GB GDDR6X 256-bit | 48.7 TF  | 48.7 TF  | 320 W   | ~13 W    | ❌                  | **~$700 – $1,000+** (used listings vary widely)           |
+| [**RTX 4090**](https://www.techpowerup.com/gpu-specs/geforce-rtx-4090.c3889)                  | 16384    | 24 GB GDDR6X 384-bit | 82.6 TF  | 82.6 TF  | 450 W   | ~16 W    | ❌                  | **~$1,400 – $2,000+** (many used listings in this range)  |
 
-[1]: https://www.ebay.com/shop/nvidia-geforce-rtx-4060?_nkw=nvidia+geforce+rtx+4060&utm_source=chatgpt.com "Nvidia Geforce Rtx 4060"
-[2]: https://www.ebay.com/shop/used-4060?_nkw=used+4060&utm_source=chatgpt.com "Used 4060"
-[3]: https://www.ebay.com/shop/rtx-4090?_nkw=rtx+4090&utm_source=chatgpt.com "Rtx 4090"
+<details>
+<summary>links:</summary>
+
+ https://www.ebay.com/shop/nvidia-geforce-rtx-4060?_nkw=nvidia+geforce+rtx+4060 "Nvidia Geforce Rtx 4060"
+<br> https://www.ebay.com/shop/used-4060?_nkw=used+4060 "Used 4060"
+<br> https://www.ebay.com/shop/rtx-4090?_nkw=rtx+4090 "Rtx 4090"
+
+</details>
 
 
 ## NVIDIA RTX 50 Series (Blackwell)
 
 | **GPU**                                                                      | **CUDA** | **VRAM**            | **FP32**     | **FP16**     | **TDP** | **Idle** | **Virtualization** | **Avg Used eBay.com Price (≈)**                                                                                               |
 | ---------------------------------------------------------------------------- | -------- | ------------------- | ------------ | ------------ | ------- | -------- | ------------------ | ----------------------------------------------------------------------------------------------------------------------------- |
-| [**RTX 5050**](https://www.techpowerup.com/gpu-specs/geforce-rtx-5050.c4220) | 2560     | 8 GB GDDR6 128-bit  | 13.17 TFLOPS | 13.17 TFLOPS | 130 W   | ~12 W    | ❌                  | **~$350 – $450** (used listings like MSI RTX 5050 ~$450) ([eBay][1])                                                          |
-| [**RTX 5060**](https://www.techpowerup.com/gpu-specs/geforce-rtx-5060.c4219) | 3840     | 8 GB GDDR7 128-bit  | 19.18 TFLOPS | 19.18 TFLOPS | 145 W   | ~13 W    | ❌                  | **~$250 – $350** (used eBay listings for RTX 5060 shown ~$274) ([eBay][2])                                                    |
-| [**RTX 5070**](https://www.techpowerup.com/gpu-specs/geforce-rtx-5070.c4218) | 6144     | 12 GB GDDR7 256-bit | 30.87 TFLOPS | 30.87 TFLOPS | 250 W   | ~14 W    | ❌                  | **~$500 – $600** (used eBay listings show ~$550 for RTX 5070) ([eBay][2])                                                     |
-| [**RTX 5080**](https://www.techpowerup.com/gpu-specs/geforce-rtx-5080.c4190) | 10752    | 16 GB GDDR7 256-bit | 56.28 TFLOPS | 56.28 TFLOPS | 360 W   | ~15 W    | ❌                  | **~$800 – $1,200+** (used availability limited; high pricing trends) ([eBay][2])                                              |
-| [**RTX 5090**](https://www.techpowerup.com/gpu-specs/geforce-rtx-5090.c4189) | 21760    | 32 GB GDDR7 512-bit | 104.8 TFLOPS | 104.8 TFLOPS | 575 W   | ~20 W    | ❌                  | **~$2,300 – $4,500+** (eBay listings show high priced flagship cards; scalpers reported significantly above MSRP) ([eBay][2]) |
+| [**RTX 5050**](https://www.techpowerup.com/gpu-specs/geforce-rtx-5050.c4220) | 2560     | 8 GB GDDR6 128-bit  | 13.17 TFLOPS | 13.17 TFLOPS | 130 W   | ~12 W    | ❌                  | **~$350 – $450** (used listings like MSI RTX 5050 ~$450)                                                           |
+| [**RTX 5060**](https://www.techpowerup.com/gpu-specs/geforce-rtx-5060.c4219) | 3840     | 8 GB GDDR7 128-bit  | 19.18 TFLOPS | 19.18 TFLOPS | 145 W   | ~13 W    | ❌                  | **~$250 – $350** (used eBay listings for RTX 5060 shown ~$274)                                                     |
+| [**RTX 5070**](https://www.techpowerup.com/gpu-specs/geforce-rtx-5070.c4218) | 6144     | 12 GB GDDR7 256-bit | 30.87 TFLOPS | 30.87 TFLOPS | 250 W   | ~14 W    | ❌                  | **~$500 – $600** (used eBay listings show ~$550 for RTX 5070)                                                      |
+| [**RTX 5080**](https://www.techpowerup.com/gpu-specs/geforce-rtx-5080.c4190) | 10752    | 16 GB GDDR7 256-bit | 56.28 TFLOPS | 56.28 TFLOPS | 360 W   | ~15 W    | ❌                  | **~$800 – $1,200+** (used availability limited; high pricing trends)                                               |
+| [**RTX 5090**](https://www.techpowerup.com/gpu-specs/geforce-rtx-5090.c4189) | 21760    | 32 GB GDDR7 512-bit | 104.8 TFLOPS | 104.8 TFLOPS | 575 W   | ~20 W    | ❌                  | **~$2,300 – $4,500+** (eBay listings show high priced flagship cards; scalpers reported significantly above MSRP)  |
 
-[1]: https://www.ebay.com/itm/257040138024?utm_source=chatgpt.com "MSI SHADOW GeForce RTX 5050 8GB GDDR6 PCI ..."
-[2]: https://www.ebay.com/t/Nvidia-Geforce/27386/bn_7023364009?utm_source=chatgpt.com "Best Nvidia Geforce"
+<details>
+<summary>links:</summary>
+
+ https://www.ebay.com/itm/257040138024 "MSI SHADOW GeForce RTX 5050 8GB GDDR6 PCI ..."
+<br> https://www.ebay.com/t/Nvidia-Geforce/27386/bn_7023364009 "Best Nvidia Geforce"
+
+</details>
+
 
 
 ## NVIDIA Quadro / Professional GPUs
 
 | **Model**                                                                      | **VRAM**   | **FP16 (half)** | **FP32 (float)** | **TDP** | **Idle Power (typical)** | **Bandwidth**    | **Virtualization** | **Avg. eBay.com Used Price**                                           |
 | ------------------------------------------------------------------------------ | ---------- | --------------- | ---------------- | ------- | ------------------------ | ---------------- | ------------------ | ---------------------------------------------------------------------- |
-| [Quadro P5000](https://www.techpowerup.com/gpu-specs/quadro-p5000.c2864)       | 16GB       | 138.6 GFLOPS    | 8.873 TFLOPS     | 180W    | ~15–20W                  | (256-bit GDDR5X) | ✅                  | **~$300 – $450** (many listings around ~$250-$349) ([eBay][1])         |
-| [Quadro P6000](https://www.techpowerup.com/gpu-specs/quadro-p6000.c2865)       | 24GB       | 197 GFLOPS      | 12.63 TFLOPS     | 250W    | ~20–25W                  | 432.8 GB/s       | ✅                  | **~$550 – $700** (common used around ~$548-$694) ([eBay][2])           |
-| [Quadro GP100](https://www.techpowerup.com/gpu-specs/quadro-gp100.c2994)        | 16GB HBM2  | 20.69 TFLOPS    | 10.34 TFLOPS     | 235W    | ~25–30W                  | 732.2 GB/s       | ✅                  | **~$300-$330** (typical Quadro GP100 used price) ([eBay][3])           |
-| [Quadro GV100](https://www.techpowerup.com/gpu-specs/quadro-gv100.c3066)         | 32GB HBM2  | 33.32 TFLOPS    | 16.66 TFLOPS     | 250W    | ~25–30W                  | 868.4 GB/s       | ✅                  | **~$900+** (used GV100 listings often near or above ~$900) ([eBay][3]) |
-| [Quadro RTX 6000](https://www.techpowerup.com/gpu-specs/quadro-rtx-6000.c3307) | 24GB GDDR6 | 32.62 TFLOPS    | 16.31 TFLOPS     | 260W    | ~22–30W                  | 672.0 GB/s       | ✅                  | **~$1,000 – $1,399** (common used around ~$1,019-$1,390) ([eBay][4])   |
+| [Quadro P5000](https://www.techpowerup.com/gpu-specs/quadro-p5000.c2864)       | 16GB       | 138.6 GFLOPS    | 8.873 TFLOPS     | 180W    | ~15–20W                  | (256-bit GDDR5X) | ✅                  | **~$300 – $450** (many listings around ~$250-$349)          |
+| [Quadro P6000](https://www.techpowerup.com/gpu-specs/quadro-p6000.c2865)       | 24GB       | 197 GFLOPS      | 12.63 TFLOPS     | 250W    | ~20–25W                  | 432.8 GB/s       | ✅                  | **~$550 – $700** (common used around ~$548-$694)            |
+| [Quadro GP100](https://www.techpowerup.com/gpu-specs/quadro-gp100.c2994)        | 16GB HBM2  | 20.69 TFLOPS    | 10.34 TFLOPS     | 235W    | ~25–30W                  | 732.2 GB/s       | ✅                  | **~$300-$330** (typical Quadro GP100 used price)            |
+| [Quadro GV100](https://www.techpowerup.com/gpu-specs/quadro-gv100.c3066)         | 32GB HBM2  | 33.32 TFLOPS    | 16.66 TFLOPS     | 250W    | ~25–30W                  | 868.4 GB/s       | ✅                  | **~$900+** (used GV100 listings often near or above ~$900)  |
+| [Quadro RTX 6000](https://www.techpowerup.com/gpu-specs/quadro-rtx-6000.c3307) | 24GB GDDR6 | 32.62 TFLOPS    | 16.31 TFLOPS     | 260W    | ~22–30W                  | 672.0 GB/s       | ✅                  | **~$1,000 – $1,399** (common used around ~$1,019-$1,390)    |
 
-[1]: https://www.ebay.com/shop/nvidia-quadro-p5000-16gb?_nkw=nvidia+quadro+p5000+16gb&utm_source=chatgpt.com "Nvidia Quadro P5000 16GB"
-[2]: https://www.ebay.com/itm/357770011779?utm_source=chatgpt.com "NVIDIA Quadro P6000 24GB Graphic Card 699-5G611-0500-210 | eBay"
-[3]: https://cl.ebay.com/b/NVIDIA-NVIDIA-Quadro-NVIDIA-Computer-Graphics-Cards/27386/bn_110676354?utm_source=chatgpt.com "NVIDIA NVIDIA Quadro NVIDIA Computer Graphics Cards for sale | eBay"
-[4]: https://www.ebay.com/b/NVIDIA-NVIDIA-Computer-Graphics-Cards-NVIDIA-Quadro-6000/27386/bn_7116917630?utm_source=chatgpt.com "NVIDIA NVIDIA Computer Graphics Cards NVIDIA Quadro 6000 for sale - eBay"
+<details>
+<summary>links:</summary>
+
+ https://www.ebay.com/shop/nvidia-quadro-p5000-16gb?_nkw=nvidia+quadro+p5000+16gb "Nvidia Quadro P5000 16GB"
+<br> https://www.ebay.com/itm/357770011779 "NVIDIA Quadro P6000 24GB Graphic Card 699-5G611-0500-210 | eBay"
+<br> https://cl.ebay.com/b/NVIDIA-NVIDIA-Quadro-NVIDIA-Computer-Graphics-Cards/27386/bn_110676354 "NVIDIA NVIDIA Quadro NVIDIA Computer Graphics Cards for sale | eBay"
+<br> https://www.ebay.com/b/NVIDIA-NVIDIA-Computer-Graphics-Cards-NVIDIA-Quadro-6000/27386/bn_7116917630 "NVIDIA NVIDIA Computer Graphics Cards NVIDIA Quadro 6000 for sale - eBay"
+
+</details>
 
 
 ## NVIDIA RTX A-Series (Professional GPUs)
 
 | **GPU**                                                                         | **VRAM**   | **FP16 (half)** | **FP32 (float)** | **TDP** | **Idle Power** | **Bandwidth** | **Virtualization** | **Avg Used eBay.com Price (USD)** |
 | ------------------------------------------------------------------------------- | ---------- | --------------- | ---------------- | ------- | -------------- | ------------- | ------------------ | --------------------------------- |
-| [RTX A2000](https://www.techpowerup.com/gpu-specs/rtx-a2000.c3820) 6GB          | 6GB GDDR6  | 7.987 TFLOPS    | 7.987 TFLOPS     | 70W     | ~7–10W         | 288 GB/s      | ✅                  | ~$300–$450 ([eBay][1])            |
-| [RTX A2000 (12GB)](https://www.techpowerup.com/gpu-specs/rtx-a2000-12-gb.c3853) | 12GB GDDR6 | 7.987 TFLOPS    | 7.987 TFLOPS     | 70W     | ~7–10W         | 288 GB/s      | ✅                  | ~$575–$650 ([eBay][1])            |
-| [RTX A4500](https://www.techpowerup.com/gpu-specs/rtx-a4500.c3849)              | 20GB GDDR6 | 23.65 TFLOPS    | 23.65 TFLOPS     | 200W    | ~13–18W        | 640 GB/s      | ✅                  | ~$1,295–$1,450 ([eBay][2])        |
-| [RTX A5000](https://www.techpowerup.com/gpu-specs/rtx-a5000.c3748)              | 24GB GDDR6 | 27.77 TFLOPS    | 27.77 TFLOPS     | 230W    | ~10–20W        | 768 GB/s      | ✅                  | ~$1,675–$1,900 ([eBay][3])        |
-| [RTX A6000](https://www.techpowerup.com/gpu-specs/rtx-a6000.c3686)              | 48GB GDDR6 | 38.71 TFLOPS    | 38.71 TFLOPS     | 300W    | ~8–12W         | 768 GB/s      | ✅                  | ~$4,250–$5,000 ([eBay][4])        |
+| [RTX A2000](https://www.techpowerup.com/gpu-specs/rtx-a2000.c3820) 6GB          | 6GB GDDR6  | 7.987 TFLOPS    | 7.987 TFLOPS     | 70W     | ~7–10W         | 288 GB/s      | ✅                  | ~$300–$450             |
+| [RTX A2000 (12GB)](https://www.techpowerup.com/gpu-specs/rtx-a2000-12-gb.c3853) | 12GB GDDR6 | 7.987 TFLOPS    | 7.987 TFLOPS     | 70W     | ~7–10W         | 288 GB/s      | ✅                  | ~$575–$650             |
+| [RTX A4500](https://www.techpowerup.com/gpu-specs/rtx-a4500.c3849)              | 20GB GDDR6 | 23.65 TFLOPS    | 23.65 TFLOPS     | 200W    | ~13–18W        | 640 GB/s      | ✅                  | ~$1,295–$1,450         |
+| [RTX A5000](https://www.techpowerup.com/gpu-specs/rtx-a5000.c3748)              | 24GB GDDR6 | 27.77 TFLOPS    | 27.77 TFLOPS     | 230W    | ~10–20W        | 768 GB/s      | ✅                  | ~$1,675–$1,900         |
+| [RTX A6000](https://www.techpowerup.com/gpu-specs/rtx-a6000.c3686)              | 48GB GDDR6 | 38.71 TFLOPS    | 38.71 TFLOPS     | 300W    | ~8–12W         | 768 GB/s      | ✅                  | ~$4,250–$5,000         |
 
-[1]: https://www.ebay.com/shop/a2000-12gb?_nkw=a2000+12gb&utm_source=chatgpt.com "A2000 12GB | eBay"
-[2]: https://www.ebay.com/shop/quadro-rtx-a4500?_nkw=quadro+rtx+a4500&utm_source=chatgpt.com "Quadro Rtx A4500"
-[3]: https://www.ebay.com/shop/nvidia-rtx-a5000?_nkw=nvidia+rtx+a5000&utm_source=chatgpt.com "Nvidia Rtx A5000"
-[4]: https://www.ebay.com/itm/187325705020?utm_source=chatgpt.com "NVIDIA RTX A6000 48GB GDDR6 GPU - Pro Workstation, AI, Rendering, ECC | eBay"
+<details>
+<summary>links:</summary>
 
+ https://www.ebay.com/shop/a2000-12gb?_nkw=a2000+12gb "A2000 12GB | eBay"
+<br> https://www.ebay.com/shop/quadro-rtx-a4500?_nkw=quadro+rtx+a4500 "Quadro Rtx A4500"
+<br> https://www.ebay.com/shop/nvidia-rtx-a5000?_nkw=nvidia+rtx+a5000 "Nvidia Rtx A5000"
+<br> https://www.ebay.com/itm/187325705020 "NVIDIA RTX A6000 48GB GDDR6 GPU - Pro Workstation, AI, Rendering, ECC | eBay"
+
+</details>
 
 ## NVIDIA Tesla Series
 
 | **GPU**                                                                                       | **VRAM**   | **FP16 (half)**    | **FP32 (float)** | **TDP** | **Idle Power (typical)** | **Bandwidth** | **Virtualization** | **Avg Used eBay.com Price (≈)**                                                                                    |
 | --------------------------------------------------------------------------------------------- | ---------- | ------------------ | ---------------- | ------- | ------------------------ | ------------- | ------------------ | ------------------------------------------------------------------------------------------------------------------ |
-| [**Tesla P4**](https://www.techpowerup.com/gpu-specs/tesla-p4.c2879)                          | 8 GB       | 89.12 GFLOPS       | 5.704 TFLOPS     | 75 W    | ~6–10 W                  | 192.3 GB/s    | ✅                  | **~$65 – $100** – Tesla P4 listings often show used cards in the $65–$100 range. ([eBay][1])                       |
-| [**Tesla P40**](https://www.techpowerup.com/gpu-specs/tesla-p40.c2878)                        | 24 GB      | 183.7 GFLOPS       | 11.76 TFLOPS     | 250 W   | ~9–12 W                  | 384-bit GDDR5 | ✅                  | **~$190 – $300+** – Multiple used Tesla P40 listings available between about $180 and $300. ([eBay][2])            |
-| [**Tesla P100 PCIe 12GB**](https://www.techpowerup.com/gpu-specs/tesla-p100-pcie-12-gb.c2915) | 12 GB HBM2 | 19.05 TFLOPS       | 9.526 TFLOPS     | 250 W   | ~25–27 W                 | 549.1 GB/s    | ✅                  | **~$90 – $130** – Typical used cards around ~$100+ on eBay. ([eBay][1])                                            |
-| [**Tesla P100 SXM2 16GB**](https://www.techpowerup.com/gpu-specs/tesla-p100-sxm2.c3183)       | 16GB HBM2  | 21.22 TFLOPS       | 10.61 TFLOPS     | 300 W   | ~25–30 W                 | 732.2 GB/s    | ✅                  | **~$180 – $300+** – Listings vary based on adapter combos; typical range observed. ([eBay][1])                     |
-| [**Tesla V100 PCIe 16GB**](https://www.techpowerup.com/gpu-specs/tesla-v100-pcie-16-gb.c2957) | 16 GB HBM2 | 28.26 TFLOPS       | 14.13 TFLOPS     | 300 W   | ~20–30 W                 | 897.0 GB/s    | ✅                  | **~$300 – $500+** – Used listings frequently show V100 16GB cards around this range. ([eBay][1])                   |
-| [**Tesla V100 PCIe 32GB**](https://www.techpowerup.com/gpu-specs/tesla-v100-pcie-32-gb.c3184) | 32 GB HBM2 | ~28.26 TFLOPS      | ~14.13 TFLOPS    | 300 W   | ~20–30 W                 | 897.0 GB/s    | ✅                  | **~$700 – $1,000+** – Larger-memory units on eBay.com trend significantly higher. ([eBay][1])                      |
-| [**Tesla T4**](https://www.techpowerup.com/gpu-specs/tesla-t4.c3316)                          | 16 GB      | 65.13 TFLOPS (8:1) | 8.141 TFLOPS     | 70 W    | ~8–12 W                  | 320.0 GB/s    | ✅                  | **~$100 – $200** – Used T4 cards often appear in this range on eBay.com. ([eBay][1])                               |
-| [**Tesla L4**](https://www.techpowerup.com/gpu-specs/l4.c4091)                                | 24 GB      | 30.29 TFLOPS (1:1) | 30.29 TFLOPS     | 72 W    | ~8–12 W                  | 192.3 GB/s    | ✅                  | **~$600 – $900+ (est.)** – Limited direct used eBay.com data; inference-class cards often list higher. ([eBay][1]) |
+| [**Tesla P4**](https://www.techpowerup.com/gpu-specs/tesla-p4.c2879)                          | 8 GB       | 89.12 GFLOPS       | 5.704 TFLOPS     | 75 W    | ~6–10 W                  | 192.3 GB/s    | ✅                  | **~$65 – $100** – Tesla P4 listings often show used cards in the $65–$100 range.                        |
+| [**Tesla P40**](https://www.techpowerup.com/gpu-specs/tesla-p40.c2878)                        | 24 GB      | 183.7 GFLOPS       | 11.76 TFLOPS     | 250 W   | ~9–12 W                  | 384-bit GDDR5 | ✅                  | **~$190 – $300+** – Multiple used Tesla P40 listings available between about $180 and $300.             |
+| [**Tesla P100 PCIe 12GB**](https://www.techpowerup.com/gpu-specs/tesla-p100-pcie-12-gb.c2915) | 12 GB HBM2 | 19.05 TFLOPS       | 9.526 TFLOPS     | 250 W   | ~25–27 W                 | 549.1 GB/s    | ✅                  | **~$90 – $130** – Typical used cards around ~$100+ on eBay.                                             |
+| [**Tesla P100 SXM2 16GB**](https://www.techpowerup.com/gpu-specs/tesla-p100-sxm2.c3183)       | 16GB HBM2  | 21.22 TFLOPS       | 10.61 TFLOPS     | 300 W   | ~25–30 W                 | 732.2 GB/s    | ✅                  | **~$180 – $300+** – Listings vary based on adapter combos; typical range observed.                      |
+| [**Tesla V100 PCIe 16GB**](https://www.techpowerup.com/gpu-specs/tesla-v100-pcie-16-gb.c2957) | 16 GB HBM2 | 28.26 TFLOPS       | 14.13 TFLOPS     | 300 W   | ~20–30 W                 | 897.0 GB/s    | ✅                  | **~$300 – $500+** – Used listings frequently show V100 16GB cards around this range.                    |
+| [**Tesla V100 PCIe 32GB**](https://www.techpowerup.com/gpu-specs/tesla-v100-pcie-32-gb.c3184) | 32 GB HBM2 | ~28.26 TFLOPS      | ~14.13 TFLOPS    | 300 W   | ~20–30 W                 | 897.0 GB/s    | ✅                  | **~$700 – $1,000+** – Larger-memory units on eBay.com trend significantly higher.                       |
+| [**Tesla T4**](https://www.techpowerup.com/gpu-specs/tesla-t4.c3316)                          | 16 GB      | 65.13 TFLOPS (8:1) | 8.141 TFLOPS     | 70 W    | ~8–12 W                  | 320.0 GB/s    | ✅                  | **~$100 – $200** – Used T4 cards often appear in this range on eBay.com.                                |
+| [**Tesla L4**](https://www.techpowerup.com/gpu-specs/l4.c4091)                                | 24 GB      | 30.29 TFLOPS (1:1) | 30.29 TFLOPS     | 72 W    | ~8–12 W                  | 192.3 GB/s    | ✅                  | **~$600 – $900+ (est.)** – Limited direct used eBay.com data; inference-class cards often list higher.  |
 
-[1]: https://www.ebay.com/shop/nvidia-tesla-p4?_nkw=nvidia+tesla+p4&utm_source=chatgpt.com "Nvidia Tesla P4"
-[2]: https://www.ebay.com/shop/tesla-p40-24gb?_nkw=tesla+p40+24gb&utm_source=chatgpt.com "Tesla P40 24GB"
+<details>
+<summary>links:</summary>
+
+ https://www.ebay.com/shop/nvidia-tesla-p4?_nkw=nvidia+tesla+p4 "Nvidia Tesla P4"
+<br> https://www.ebay.com/shop/tesla-p40-24gb?_nkw=tesla+p40+24gb "Tesla P40 24GB"
+
+</details>
+
 
 ## AMD Radeon RX 5000 Series (RDNA1)
 
 | **GPU**                                                                                         | **VRAM**          | **FP32**    | **FP16**     | **TDP** | **Idle (Typical)** | **Bandwidth** | **Virtualization** | **Avg Used eBay.com Price (≈)**                                                                                                                   |
 | ----------------------------------------------------------------------------------------------- | ----------------- | ----------- | ------------ | ------- | ------------------ | ------------- | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [**Radeon RX 5500**](https://www.techpowerup.com/gpu-specs/radeon-rx-5500.c3455)                | 4GB GDDR6 128-bit | 5.20 TFLOPS | 10.40 TFLOPS | 110W    | ~5–8W              | 224 GB/s      | ❌                  | **~$60 – $90** – early used listings for RX 5500 variants appear around ~$60-$90 on eBay.com (e.g., pre-owned RX 5500 XT/5500 cards). ([eBay][1]) |
-| [**Radeon RX 5500 XT 4GB**](https://www.techpowerup.com/gpu-specs/radeon-rx-5500-xt.c3468)      | 4GB GDDR6 128-bit | 5.20 TFLOPS | 10.40 TFLOPS | 130W    | ~6–10W             | 224 GB/s      | ❌                  | **~$70 – $110** – eBay.com used RX 5500 XT 4GB listings often range ~$60-$110+. ([eBay][1])                                                       |
-| [**Radeon RX 5500 XT 8GB**](https://www.techpowerup.com/gpu-specs/radeon-rx-5500-xt-8-gb.c3499) | 8GB GDDR6 128-bit | 5.20 TFLOPS | 10.40 TFLOPS | 130W    | ~6–10W             | 224 GB/s      | ❌                  | **~$110 – $150** – Many pre-owned RX 5500 XT 8GB listings around ~$120-$130+ on eBay.com. ([eBay][1])                                             |
-| [**Radeon RX 5600 XT**](https://www.techpowerup.com/gpu-specs/radeon-rx-5600-xt.c3474)          | 6GB GDDR6 192-bit | 7.19 TFLOPS | 14.38 TFLOPS | 150W    | ~8–12W             | 288 GB/s      | ❌                  | **~$120 – $200** – eBay.com shows *RX 5600 XT* used listings commonly around ~$140-$180+, though some show higher. ([eBay][2])                    |
-| [**Radeon RX 5700**](https://www.techpowerup.com/gpu-specs/radeon-rx-5700.c3437)                | 8GB GDDR6 256-bit | 7.95 TFLOPS | 15.90 TFLOPS | 180W    | ~10–15W            | 448 GB/s      | ❌                  | **~$140 – $180** – eBay.com used RX 5700 marketplace listings often around ~$150+. ([eBay][3])                                                    |
-| [**Radeon RX 5700 XT**](https://www.techpowerup.com/gpu-specs/radeon-rx-5700-xt.c3339)          | 8GB GDDR6 256-bit | 9.75 TFLOPS | 19.50 TFLOPS | 225W    | ~12–18W            | 448 GB/s      | ❌                  | **~$140 – $200** – RX 5700 XT used cards commonly list around $145-$180+ on eBay.com. ([eBay][3])                                                 |
+| [**Radeon RX 5500**](https://www.techpowerup.com/gpu-specs/radeon-rx-5500.c3455)                | 4GB GDDR6 128-bit | 5.20 TFLOPS | 10.40 TFLOPS | 110W    | ~5–8W              | 224 GB/s      | ❌                  | **~$60 – $90** – early used listings for RX 5500 variants appear around ~$60-$90 on eBay.com (e.g., pre-owned RX 5500 XT/5500 cards).  |
+| [**Radeon RX 5500 XT 4GB**](https://www.techpowerup.com/gpu-specs/radeon-rx-5500-xt.c3468)      | 4GB GDDR6 128-bit | 5.20 TFLOPS | 10.40 TFLOPS | 130W    | ~6–10W             | 224 GB/s      | ❌                  | **~$70 – $110** – eBay.com used RX 5500 XT 4GB listings often range ~$60-$110+.                                                        |
+| [**Radeon RX 5500 XT 8GB**](https://www.techpowerup.com/gpu-specs/radeon-rx-5500-xt-8-gb.c3499) | 8GB GDDR6 128-bit | 5.20 TFLOPS | 10.40 TFLOPS | 130W    | ~6–10W             | 224 GB/s      | ❌                  | **~$110 – $150** – Many pre-owned RX 5500 XT 8GB listings around ~$120-$130+ on eBay.com.                                              |
+| [**Radeon RX 5600 XT**](https://www.techpowerup.com/gpu-specs/radeon-rx-5600-xt.c3474)          | 6GB GDDR6 192-bit | 7.19 TFLOPS | 14.38 TFLOPS | 150W    | ~8–12W             | 288 GB/s      | ❌                  | **~$120 – $200** – eBay.com shows *RX 5600 XT* used listings commonly around ~$140-$180+, though some show higher.                     |
+| [**Radeon RX 5700**](https://www.techpowerup.com/gpu-specs/radeon-rx-5700.c3437)                | 8GB GDDR6 256-bit | 7.95 TFLOPS | 15.90 TFLOPS | 180W    | ~10–15W            | 448 GB/s      | ❌                  | **~$140 – $180** – eBay.com used RX 5700 marketplace listings often around ~$150+.                                                     |
+| [**Radeon RX 5700 XT**](https://www.techpowerup.com/gpu-specs/radeon-rx-5700-xt.c3339)          | 8GB GDDR6 256-bit | 9.75 TFLOPS | 19.50 TFLOPS | 225W    | ~12–18W            | 448 GB/s      | ❌                  | **~$140 – $200** – RX 5700 XT used cards commonly list around $145-$180+ on eBay.com.                                                  |
 
-[1]: https://www.ebay.com/shop/rx-5500-xt?_nkw=rx+5500+xt&utm_source=chatgpt.com "RX 5500 XT"
-[2]: https://www.ebay.com/shop/amd-radeon-rx-5600-xt?_nkw=amd+radeon+rx+5600+xt&utm_source=chatgpt.com "AMD Radeon RX 5600 XT"
-[3]: https://www.ebay.com/shop/rx-5700-xt?_nkw=rx+5700+xt&utm_source=chatgpt.com "RX 5700 XT"
+<details>
+<summary>links:</summary>
 
+ https://www.ebay.com/shop/rx-5500-xt?_nkw=rx+5500+xt "RX 5500 XT"
+<br> https://www.ebay.com/shop/amd-radeon-rx-5600-xt?_nkw=amd+radeon+rx+5600+xt "AMD Radeon RX 5600 XT"
+<br> https://www.ebay.com/shop/rx-5700-xt?_nkw=rx+5700+xt "RX 5700 XT"
+
+</details>
 
 ## AMD Radeon RX 6000 Series (RDNA2)
 
 | **GPU**                                                                            | **VRAM**           | **FP32**     | **FP16**     | **TDP** | **Idle (Typical)** | **Bandwidth** | **Virtualization** | **Avg Used eBay.com Price (≈)**                                                                                                                                         |
 | ---------------------------------------------------------------------------------- | ------------------ | ------------ | ------------ | ------- | ------------------ | ------------- | ------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [Radeon RX 6500 XT](https://www.techpowerup.com/gpu-specs/radeon-rx-6500-xt.c3850) | 4GB GDDR6 64-bit   | 5.77 TFLOPS  | 11.54 TFLOPS | 107W    | ~5–8W              | 144 GB/s      | ❌                  | **~$70 – $160** – multiple eBay.com used listings show 4GB RX 6500 XT cards commonly **~$60–$150+ USD** (e.g., $63.99–$150+). ([eBay][1])                               |
-| [Radeon RX 6600](https://www.techpowerup.com/gpu-specs/radeon-rx-6600.c3696)       | 8GB GDDR6 128-bit  | 8.93 TFLOPS  | 17.86 TFLOPS | 132W    | ~6–10W             | 224 GB/s      | ❌                  | **~$140 – $200** – used RX 6600 listings typically around **$150–$180+ USD** on eBay.com (e.g., $155, $180). ([eBay][2])                                                |
-| [Radeon RX 6600 XT](https://www.techpowerup.com/gpu-specs/radeon-rx-6600-xt.c3774) | 8GB GDDR6 128-bit  | 10.60 TFLOPS | 21.20 TFLOPS | 160W    | ~7–12W             | 256 GB/s      | ❌                  | **~$170 – $250** – various RX 6600 XT used listings roughly **$175–$250+ USD** on eBay.com. ([eBay][3])                                                                 |
-| [Radeon RX 6650 XT](https://www.techpowerup.com/gpu-specs/radeon-rx-6650-xt.c3898) | 8GB GDDR6 128-bit  | 10.79 TFLOPS | 21.58 TFLOPS | 176W    | ~7–12W             | 280 GB/s      | ❌                  | **~$200 – $300** – limited direct data, but common used RX 6650 XT listings appear around ~$200–$300 USD on eBay.com. ([eBay][4])                                       |
-| [Radeon RX 6700](https://www.techpowerup.com/gpu-specs/radeon-rx-6700.c3716)       | 10GB GDDR6 160-bit | 10.37 TFLOPS | 20.74 TFLOPS | 175W    | ~10–15W            | 320 GB/s      | ❌                  | **~$200 – $300+** – representative used RX 6700 XT (similar generation) listings often around **$270–$340** (RX 6700 used may trend similar). ([eBay][4])               |
-| [Radeon RX 6700 XT](https://www.techpowerup.com/gpu-specs/radeon-rx-6700-xt.c3695) | 12GB GDDR6 192-bit | 13.21 TFLOPS | 26.42 TFLOPS | 230W    | ~12–18W            | 384 GB/s      | ❌                  | **~$250 – $350+** – used RX 6700 XT listings frequently show prices roughly **~$249–$340+ USD** on eBay.com. ([eBay][4])                                                |
-| [Radeon RX 6750 XT](https://www.techpowerup.com/gpu-specs/radeon-rx-6750-xt.c3899) | 12GB GDDR6 192-bit | 13.31 TFLOPS | 26.62 TFLOPS | 250W    | ~12–18W            | 432 GB/s      | ❌                  | **~$250 – $350+** – some used listings for RX 6750 XT show ~**$270+**, suggesting similar mid-upper RDNA2 pricing. ([eBay][4])                                          |
-| [Radeon RX 6800](https://www.techpowerup.com/gpu-specs/radeon-rx-6800.c3713)       | 16GB GDDR6 256-bit | 16.17 TFLOPS | 32.34 TFLOPS | 250W    | ~15–22W            | 512 GB/s      | ❌                  | **~$280 – $380** – used cards from the same generation often list **~$285–$380+ USD** on eBay.com (approximate from 6800 XT comparables and 6800 listings). ([eBay][5]) |
-| [Radeon RX 6800 XT](https://www.techpowerup.com/gpu-specs/radeon-rx-6800-xt.c3694) | 16GB GDDR6 256-bit | 20.74 TFLOPS | 41.48 TFLOPS | 300W    | ~15–25W            | 512 GB/s      | ❌                  | **~$350 – $450** – common used RX 6800 XT listings around **$379–$450+ USD** on eBay.com. ([eBay][5])                                                                   |
-| [Radeon RX 6900 XT](https://www.techpowerup.com/gpu-specs/radeon-rx-6900-xt.c3693) | 16GB GDDR6 256-bit | 23.04 TFLOPS | 46.08 TFLOPS | 300W    | ~18–28W            | 512 GB/s      | ❌                  | **~$400 – $600+** – used listings for RX 6900 XT often show **~$400–$600+ USD** on eBay.com. ([eBay][4])                                                                |
-| [Radeon RX 6950 XT](https://www.techpowerup.com/gpu-specs/radeon-rx-6950-xt.c3897) | 16GB GDDR6 256-bit | 23.65 TFLOPS | 47.30 TFLOPS | 335W    | ~18–30W            | 576 GB/s      | ❌                  | **~$450 – $650+** – used RX 6950 XT listings commonly around **$450–$650 USD** on eBay.com. ([eBay][6])                                                                 |
+| [Radeon RX 6500 XT](https://www.techpowerup.com/gpu-specs/radeon-rx-6500-xt.c3850) | 4GB GDDR6 64-bit   | 5.77 TFLOPS  | 11.54 TFLOPS | 107W    | ~5–8W              | 144 GB/s      | ❌                  | **~$70 – $160** – multiple eBay.com used listings show 4GB RX 6500 XT cards commonly **~$60–$150+ USD** (e.g., $63.99–$150+).                                |
+| [Radeon RX 6600](https://www.techpowerup.com/gpu-specs/radeon-rx-6600.c3696)       | 8GB GDDR6 128-bit  | 8.93 TFLOPS  | 17.86 TFLOPS | 132W    | ~6–10W             | 224 GB/s      | ❌                  | **~$140 – $200** – used RX 6600 listings typically around **$150–$180+ USD** on eBay.com (e.g., $155, $180).                                                 |
+| [Radeon RX 6600 XT](https://www.techpowerup.com/gpu-specs/radeon-rx-6600-xt.c3774) | 8GB GDDR6 128-bit  | 10.60 TFLOPS | 21.20 TFLOPS | 160W    | ~7–12W             | 256 GB/s      | ❌                  | **~$170 – $250** – various RX 6600 XT used listings roughly **$175–$250+ USD** on eBay.com.                                                                  |
+| [Radeon RX 6650 XT](https://www.techpowerup.com/gpu-specs/radeon-rx-6650-xt.c3898) | 8GB GDDR6 128-bit  | 10.79 TFLOPS | 21.58 TFLOPS | 176W    | ~7–12W             | 280 GB/s      | ❌                  | **~$200 – $300** – limited direct data, but common used RX 6650 XT listings appear around ~$200–$300 USD on eBay.com.                                        |
+| [Radeon RX 6700](https://www.techpowerup.com/gpu-specs/radeon-rx-6700.c3716)       | 10GB GDDR6 160-bit | 10.37 TFLOPS | 20.74 TFLOPS | 175W    | ~10–15W            | 320 GB/s      | ❌                  | **~$200 – $300+** – representative used RX 6700 XT (similar generation) listings often around **$270–$340** (RX 6700 used may trend similar).                |
+| [Radeon RX 6700 XT](https://www.techpowerup.com/gpu-specs/radeon-rx-6700-xt.c3695) | 12GB GDDR6 192-bit | 13.21 TFLOPS | 26.42 TFLOPS | 230W    | ~12–18W            | 384 GB/s      | ❌                  | **~$250 – $350+** – used RX 6700 XT listings frequently show prices roughly **~$249–$340+ USD** on eBay.com.                                                 |
+| [Radeon RX 6750 XT](https://www.techpowerup.com/gpu-specs/radeon-rx-6750-xt.c3899) | 12GB GDDR6 192-bit | 13.31 TFLOPS | 26.62 TFLOPS | 250W    | ~12–18W            | 432 GB/s      | ❌                  | **~$250 – $350+** – some used listings for RX 6750 XT show ~**$270+**, suggesting similar mid-upper RDNA2 pricing.                                           |
+| [Radeon RX 6800](https://www.techpowerup.com/gpu-specs/radeon-rx-6800.c3713)       | 16GB GDDR6 256-bit | 16.17 TFLOPS | 32.34 TFLOPS | 250W    | ~15–22W            | 512 GB/s      | ❌                  | **~$280 – $380** – used cards from the same generation often list **~$285–$380+ USD** on eBay.com (approximate from 6800 XT comparables and 6800 listings).  |
+| [Radeon RX 6800 XT](https://www.techpowerup.com/gpu-specs/radeon-rx-6800-xt.c3694) | 16GB GDDR6 256-bit | 20.74 TFLOPS | 41.48 TFLOPS | 300W    | ~15–25W            | 512 GB/s      | ❌                  | **~$350 – $450** – common used RX 6800 XT listings around **$379–$450+ USD** on eBay.com.                                                                    |
+| [Radeon RX 6900 XT](https://www.techpowerup.com/gpu-specs/radeon-rx-6900-xt.c3693) | 16GB GDDR6 256-bit | 23.04 TFLOPS | 46.08 TFLOPS | 300W    | ~18–28W            | 512 GB/s      | ❌                  | **~$400 – $600+** – used listings for RX 6900 XT often show **~$400–$600+ USD** on eBay.com.                                                                 |
+| [Radeon RX 6950 XT](https://www.techpowerup.com/gpu-specs/radeon-rx-6950-xt.c3897) | 16GB GDDR6 256-bit | 23.65 TFLOPS | 47.30 TFLOPS | 335W    | ~18–30W            | 576 GB/s      | ❌                  | **~$450 – $650+** – used RX 6950 XT listings commonly around **$450–$650 USD** on eBay.com.                                                                  |
 
-[1]: https://www.ebay.com/shop/amd-6500-xt?_nkw=amd+6500+xt&utm_source=chatgpt.com "Amd 6500 XT"
-[2]: https://www.ebay.com/itm/357569961453?utm_source=chatgpt.com "ASRock Radeon RX 6600 8GB GDDR6 Graphics Card Black, Used | eBay"
-[3]: https://www.ebay.com/shop/rx-660-xt?_nkw=rx+660+xt&utm_source=chatgpt.com "RX 660 XT"
-[4]: https://www.ebay.com/shop/radeon-xt?_nkw=radeon+xt&utm_source=chatgpt.com "Radeon XT | eBay"
-[5]: https://www.ebay.com/shop/amd-radeon-rx-6800-xt?_nkw=amd+radeon+rx+6800+xt&utm_source=chatgpt.com "AMD Radeon RX 6800 XT"
-[6]: https://www.ebay.com/shop/amd-radeon-rx-6950-xt?_nkw=amd+radeon+rx+6950+xt&utm_source=chatgpt.com "AMD Radeon RX 6950 XT | eBay"
+<details>
+<summary>links:</summary>
+
+ https://www.ebay.com/shop/amd-6500-xt?_nkw=amd+6500+xt "Amd 6500 XT"
+<br> https://www.ebay.com/itm/357569961453 "ASRock Radeon RX 6600 8GB GDDR6 Graphics Card Black, Used | eBay"
+<br> https://www.ebay.com/shop/rx-660-xt?_nkw=rx+660+xt "RX 660 XT"
+<br> https://www.ebay.com/shop/radeon-xt?_nkw=radeon+xt "Radeon XT | eBay"
+<br> https://www.ebay.com/shop/amd-radeon-rx-6800-xt?_nkw=amd+radeon+rx+6800+xt "AMD Radeon RX 6800 XT"
+<br> https://www.ebay.com/shop/amd-radeon-rx-6950-xt?_nkw=amd+radeon+rx+6950+xt "AMD Radeon RX 6950 XT | eBay"
+
+</details>
 
 
 ## AMD Radeon RX 7000 Series (RDNA3)
 
 | **GPU**                                                                              | **VRAM**           | **FP32**     | **FP16**      | **TDP** | **Idle (Typical)** | **Bandwidth** | **Virtualization** | **Avg Used eBay.com Price (≈)**                                                                                                               |
 | ------------------------------------------------------------------------------------ | ------------------ | ------------ | ------------- | ------- | ------------------ | ------------- | ------------------ | --------------------------------------------------------------------------------------------------------------------------------------------- |
-| [Radeon RX 7600](https://www.techpowerup.com/gpu-specs/radeon-rx-7600.c4153)         | 8GB GDDR6 128-bit  | 21.75 TFLOPS | 43.50 TFLOPS  | 165W    | ~7–12W             | 288 GB/s      | ❌                  | **~$160 – $230** – Used RX 7600 ended around **$170 USD** in recent eBay sold listings. ([eBay][1])                                           |
-| [Radeon RX 7600 XT](https://www.techpowerup.com/gpu-specs/radeon-rx-7600-xt.c4198)   | 16GB GDDR6 128-bit | 22.57 TFLOPS | 45.14 TFLOPS  | 190W    | ~8–14W             | 288 GB/s      | ❌                  | **~$250 – $320+** – Used RX 7600 XT listings like one at **$289.99 USD** show typical current ranges. ([eBay][2])                             |
-| [Radeon RX 7700 XT](https://www.techpowerup.com/gpu-specs/radeon-rx-7700-xt.c3911)   | 12GB GDDR6 192-bit | 35.17 TFLOPS | 70.34 TFLOPS  | 245W    | ~15–22W            | 432 GB/s      | ❌                  | **~$350 – $480** – eBay shows mixed used listings and price variations; typical offers often cluster around **$350–$480+**. ([eBay][3])       |
-| [Radeon RX 7800 XT](https://www.techpowerup.com/gpu-specs/radeon-rx-7800-xt.c3839)   | 16GB GDDR6 256-bit | 37.32 TFLOPS | 74.64 TFLOPS  | 263W    | ~18–25W            | 624 GB/s      | ❌                  | **~$450 – $600+** – U.S. eBay used/pre-owned typical prices often seen **~$450–$550+**. ([eBay][4])                                           |
-| [Radeon RX 7900 GRE](https://www.techpowerup.com/gpu-specs/radeon-rx-7900-gre.c4156) | 16GB GDDR6 256-bit | 40.35 TFLOPS | 80.70 TFLOPS  | 260W    | ~18–25W            | 576 GB/s      | ❌                  | **~$450 – $650** – Used GRE variants likely track similar to other RX 7900 series pricing (e.g., XT) on eBay.com. ([eBay][5])                 |
-| [Radeon RX 7900 XT](https://www.techpowerup.com/gpu-specs/radeon-rx-7900-xt.c3912)   | 20GB GDDR6 320-bit | 51.48 TFLOPS | 102.96 TFLOPS | 300W    | ~20–30W            | 800 GB/s      | ❌                  | **~$600 – $800+** – Pre-owned listings often show around **$600–$800+ USD** on eBay.com. ([eBay][5])                                          |
-| [Radeon RX 7900 XTX](https://www.techpowerup.com/gpu-specs/radeon-rx-7900-xtx.c3941) | 24GB GDDR6 384-bit | 61.39 TFLOPS | 122.78 TFLOPS | 355W    | ~20–35W*           | 960 GB/s      | ❌                  | **~$690 – $1,300+** – Used reference editions have been listed near **$690 USD**, while higher-end OC units approach **$1,300+**. ([eBay][6]) |
+| [Radeon RX 7600](https://www.techpowerup.com/gpu-specs/radeon-rx-7600.c4153)         | 8GB GDDR6 128-bit  | 21.75 TFLOPS | 43.50 TFLOPS  | 165W    | ~7–12W             | 288 GB/s      | ❌                  | **~$160 – $230** – Used RX 7600 ended around **$170 USD** in recent eBay sold listings.                                            |
+| [Radeon RX 7600 XT](https://www.techpowerup.com/gpu-specs/radeon-rx-7600-xt.c4198)   | 16GB GDDR6 128-bit | 22.57 TFLOPS | 45.14 TFLOPS  | 190W    | ~8–14W             | 288 GB/s      | ❌                  | **~$250 – $320+** – Used RX 7600 XT listings like one at **$289.99 USD** show typical current ranges.                              |
+| [Radeon RX 7700 XT](https://www.techpowerup.com/gpu-specs/radeon-rx-7700-xt.c3911)   | 12GB GDDR6 192-bit | 35.17 TFLOPS | 70.34 TFLOPS  | 245W    | ~15–22W            | 432 GB/s      | ❌                  | **~$350 – $480** – eBay shows mixed used listings and price variations; typical offers often cluster around **$350–$480+**.        |
+| [Radeon RX 7800 XT](https://www.techpowerup.com/gpu-specs/radeon-rx-7800-xt.c3839)   | 16GB GDDR6 256-bit | 37.32 TFLOPS | 74.64 TFLOPS  | 263W    | ~18–25W            | 624 GB/s      | ❌                  | **~$450 – $600+** – U.S. eBay used/pre-owned typical prices often seen **~$450–$550+**.                                            |
+| [Radeon RX 7900 GRE](https://www.techpowerup.com/gpu-specs/radeon-rx-7900-gre.c4156) | 16GB GDDR6 256-bit | 40.35 TFLOPS | 80.70 TFLOPS  | 260W    | ~18–25W            | 576 GB/s      | ❌                  | **~$450 – $650** – Used GRE variants likely track similar to other RX 7900 series pricing (e.g., XT) on eBay.com.                  |
+| [Radeon RX 7900 XT](https://www.techpowerup.com/gpu-specs/radeon-rx-7900-xt.c3912)   | 20GB GDDR6 320-bit | 51.48 TFLOPS | 102.96 TFLOPS | 300W    | ~20–30W            | 800 GB/s      | ❌                  | **~$600 – $800+** – Pre-owned listings often show around **$600–$800+ USD** on eBay.com.                                           |
+| [Radeon RX 7900 XTX](https://www.techpowerup.com/gpu-specs/radeon-rx-7900-xtx.c3941) | 24GB GDDR6 384-bit | 61.39 TFLOPS | 122.78 TFLOPS | 355W    | ~20–35W*           | 960 GB/s      | ❌                  | **~$690 – $1,300+** – Used reference editions have been listed near **$690 USD**, while higher-end OC units approach **$1,300+**.  |
 
-[1]: https://www.ebay.com/itm/389341971269?utm_source=chatgpt.com "AMD Radeon RX 7600 | eBay"
-[2]: https://www.ebay.com/itm/177496579703?utm_source=chatgpt.com "AMD Radeon RX 7600 XT 16GB – With Box, Tested & Working | eBay"
-[3]: https://www.ebay.com/shop/7700-xt?_nkw=7700+xt&utm_source=chatgpt.com "7700 XT"
-[4]: https://www.ebay.com/shop/7800-xt-graphics-card?_nkw=7800+xt+graphics+card&utm_source=chatgpt.com "7800 XT Graphics Card"
-[5]: https://www.ebay.com/shop/radeon-rx-7900-xt?_nkw=radeon+rx+7900+xt&utm_source=chatgpt.com "Radeon RX 7900 XT"
-[6]: https://www.ebay.com/itm/389470601371?utm_source=chatgpt.com "AMD Radeon RX 7900 XTX 24GB Reference Edition Graphics Card | eBay"
+<details>
+<summary>links:</summary>
+
+ https://www.ebay.com/itm/389341971269 "AMD Radeon RX 7600 | eBay"
+<br> https://www.ebay.com/itm/177496579703 "AMD Radeon RX 7600 XT 16GB – With Box, Tested & Working | eBay"
+<br> https://www.ebay.com/shop/7700-xt?_nkw=7700+xt "7700 XT"
+<br> https://www.ebay.com/shop/7800-xt-graphics-card?_nkw=7800+xt+graphics+card "7800 XT Graphics Card"
+<br> https://www.ebay.com/shop/radeon-rx-7900-xt?_nkw=radeon+rx+7900+xt "Radeon RX 7900 XT"
+<br> https://www.ebay.com/itm/389470601371 "AMD Radeon RX 7900 XTX 24GB Reference Edition Graphics Card | eBay"
+
+</details>
 
 
 ## AMD Radeon RX 9000 Series (RDNA4)
 
 | **GPU**                                                                                           | **VRAM**   | **FP16 (half)** | **FP32 (float)** | **TDP**  | **Idle Power (typical)** | **Bandwidth** | **Virtualization** | **Avg Used eBay.com Price (≈)**                                                                                                                                                                 |
 | ------------------------------------------------------------------------------------------------- | ---------- | --------------- | ---------------- | -------- | ------------------------ | ------------- | ------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [AMD Radeon RX 9600](https://www.techpowerup.com/gpu-specs/radeon-rx-9060.c4326)                  | 8GB GDDR6  | ~42.9 TFLOPS    | ~21.4 TFLOPS     | ~132W    | ~10–15W                  | 288 GB/s      | ❌                  | **~$250 – $350** – while direct used listings are sparse, similar RX 9000-series boards suggest this rough range on eBay.com based on market pricing trends and adjacent model data.([eBay][1]) |
-| [AMD Radeon RX 9060 XT 8GB](https://www.techpowerup.com/gpu-specs/radeon-rx-9060-xt-8-gb.c4251)   | 8GB GDDR6  | 51.3 TFLOPS     | 25.6 TFLOPS      | 150W     | ~12–18W                  | 320 GB/s      | ❌                  | **~$280 – $380** – eBay.com shows various used/near-new RX 9060 XT 8GB listings (e.g., Gigabyte ~**$299.99 USD** for used) suggesting a ~low-$300s range.([eBay][2])                            |
-| [AMD Radeon RX 9060 XT 16GB](https://www.techpowerup.com/gpu-specs/radeon-rx-9060-xt-16-gb.c4293) | 16GB GDDR6 | 51.3 TFLOPS     | 25.6 TFLOPS      | 160W     | ~12–18W                  | 320 GB/s      | ❌                  | **~$360 – $550** – eBay.com used listings for 9060 XT 16GB show examples around **~$425–$480 USD** (pre-owned); higher end reflects condition/brand.([eBay][3])                                 |
-| [AMD Radeon RX 9070](https://www.techpowerup.com/gpu-specs/radeon-rx-9070.c4250)                  | 16GB GDDR6 | 72.25 TFLOPS    | 36.13 TFLOPS     | 220W     | ~18–28W                  | ~640–896 GB/s | ❌                  | **~$450 – $650+** – similar RX 9070 eBay.com used listings and comparative search results suggest typical used prices around **$500+ USD**.([eBay][4])                                          |
-| [AMD Radeon RX 9070 XT](https://www.techpowerup.com/gpu-specs/radeon-rx-9070-xt.c4229)            | 16GB GDDR6 | 97.32 TFLOPS    | 48.66 TFLOPS     | 260–304W | ~20–30W                  | 640 GB/s+     | ❌                  | **~$600 – $800+** – eBay.com has *used/pre-owned* RX 9070 XT listings (e.g., PowerColor ~**$699 USD**) with a broad range depending on condition.([eBay][1])                                    |
+| [AMD Radeon RX 9600](https://www.techpowerup.com/gpu-specs/radeon-rx-9060.c4326)                  | 8GB GDDR6  | ~42.9 TFLOPS    | ~21.4 TFLOPS     | ~132W    | ~10–15W                  | 288 GB/s      | ❌                  | **~$250 – $350** – while direct used listings are sparse, similar RX 9000-series boards suggest this rough range on eBay.com based on market pricing trends and adjacent model data. |
+| [AMD Radeon RX 9060 XT 8GB](https://www.techpowerup.com/gpu-specs/radeon-rx-9060-xt-8-gb.c4251)   | 8GB GDDR6  | 51.3 TFLOPS     | 25.6 TFLOPS      | 150W     | ~12–18W                  | 320 GB/s      | ❌                  | **~$280 – $380** – eBay.com shows various used/near-new RX 9060 XT 8GB listings (e.g., Gigabyte ~**$299.99 USD** for used) suggesting a ~low-$300s range.                            |
+| [AMD Radeon RX 9060 XT 16GB](https://www.techpowerup.com/gpu-specs/radeon-rx-9060-xt-16-gb.c4293) | 16GB GDDR6 | 51.3 TFLOPS     | 25.6 TFLOPS      | 160W     | ~12–18W                  | 320 GB/s      | ❌                  | **~$360 – $550** – eBay.com used listings for 9060 XT 16GB show examples around **~$425–$480 USD** (pre-owned); higher end reflects condition/brand.                                 |
+| [AMD Radeon RX 9070](https://www.techpowerup.com/gpu-specs/radeon-rx-9070.c4250)                  | 16GB GDDR6 | 72.25 TFLOPS    | 36.13 TFLOPS     | 220W     | ~18–28W                  | ~640–896 GB/s | ❌                  | **~$450 – $650+** – similar RX 9070 eBay.com used listings and comparative search results suggest typical used prices around **$500+ USD**.                                          |
+| [AMD Radeon RX 9070 XT](https://www.techpowerup.com/gpu-specs/radeon-rx-9070-xt.c4229)            | 16GB GDDR6 | 97.32 TFLOPS    | 48.66 TFLOPS     | 260–304W | ~20–30W                  | 640 GB/s+     | ❌                  | **~$600 – $800+** – eBay.com has *used/pre-owned* RX 9070 XT listings (e.g., PowerColor ~**$699 USD**) with a broad range depending on condition.                                    |
+<details>
+<summary>links:</summary>
 
-[1]: https://www.ebay.com/shop/amd-rx-9070-xt?_nkw=amd+rx+9070+xt&utm_source=chatgpt.com "Amd RX 9070 XT"
-[2]: https://www.ebay.com/itm/406557591590?utm_source=chatgpt.com "Gigabyte Radeon RX 9060 xt 8GB GDDR6X Graphics Card GV- ..."
-[3]: https://www.ebay.com/p/6085827196?utm_source=chatgpt.com "SAPPHIRE PULSE AMD Radeon RX 9060 XT Gaming OC 16GB ..."
-[4]: https://www.ebay.com/b/SAPPHIRE-AMD-Computer-Graphics-Cards/27386/bn_7113421085?utm_source=chatgpt.com "SAPPHIRE AMD Computer Graphics Cards for sale"
+ https://www.ebay.com/shop/amd-rx-9070-xt?_nkw=amd+rx+9070+xt "Amd RX 9070 XT"
+<br> https://www.ebay.com/itm/406557591590 "Gigabyte Radeon RX 9060 xt 8GB GDDR6X Graphics Card GV- ..."
+<br> https://www.ebay.com/p/6085827196 "SAPPHIRE PULSE AMD Radeon RX 9060 XT Gaming OC 16GB ..."
+<br> https://www.ebay.com/b/SAPPHIRE-AMD-Computer-Graphics-Cards/27386/bn_7113421085 "SAPPHIRE AMD Computer Graphics Cards for sale"
 
+</details>
 
 
 ## AMD Pro/Compute GPUs
 
 | **GPU**         | **VRAM**  | **FP16 (half)** | **FP32 (float)** | **TDP** | **Idle Power (typical)** | **Bandwidth** | **Virtualization** | **Avg Used eBay.com Price (≈)**            |
 | ----------------------------- | --------- | --------------- | ---------------- | ------- | ------------------------ | ------------- | ------------------ | ----------------------------------------- |
-| [Radeon Instinct MI25](https://www.techpowerup.com/gpu-specs/radeon-instinct-mi25.c2983) | 16GB HBM2 | 24.58 TFLOPS | 12.29 TFLOPS | 300W | ~30–40W | 436.2 GB/s | 🟡 | **~$90 – $180** ([eBay][1]) |
+| [Radeon Instinct MI25](https://www.techpowerup.com/gpu-specs/radeon-instinct-mi25.c2983) | 16GB HBM2 | 24.58 TFLOPS | 12.29 TFLOPS | 300W | ~30–40W | 436.2 GB/s | 🟡 | **~$90 – $180**  |
 
-[1]: https://www.ebay.com/p/17070539862?utm_source=chatgpt.com "AMD Radeon Instinct MI25 16GB HBM2 GPU AI HPC Accelerator Card 102D0513300 for sale online | eBay"
+<details>
+<summary>links:</summary>
 
+ https://www.ebay.com/p/17070539862 "AMD Radeon Instinct MI25 16GB HBM2 GPU AI HPC Accelerator Card 102D0513300 for sale online | eBay"
+
+</details>
 
 
 <hr>
