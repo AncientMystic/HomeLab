@@ -56,6 +56,7 @@ HomeLab CheatSheet &amp; AwesomeList
     - [GPU Models to compare them side by side](#gpu-models-to-compare-them-side-by-side)
     - [Intel GPU Master Table](#intel-gpu-master-table)
     - [NVIDIA RTX 10 Series (Pascal)](#nvidia-rtx-10-series-pascal)
+    - [NVIDIA GTX 16 Series (Turing)](#nvidia-gtx-16-series-turing)
     - [NVIDIA RTX 20 Series (Turing)](#nvidia-rtx-20-series-turing)
     - [NVIDIA RTX 30 Series (Ampere)](#nvidia-rtx-30-series-ampere)
     - [NVIDIA RTX 40 Series (Ada Lovelace)](#nvidia-rtx-40-series-ada-lovelace)
@@ -1339,6 +1340,7 @@ i often found myself looking up these details when comparing GPUs to try to find
 | [**GTX 1080 Ti**](https://www.techpowerup.com/gpu-specs/geforce-gtx-1080-ti.c2877)    | 11 GB    | 177.2 GFLOPS | 11.34 TFLOPS | 250W   | ~18–30W       | 484.4 GB/s    | ✅ Unlock           | **~$140 – $220** (many used listings around $150-$200)                |
 | [**NVIDIA TITAN X (Pascal)**](https://www.techpowerup.com/gpu-specs/titan-x-pascal.c2863) | 3584 | 12 GB GDDR5X | ~11.0 TF | ~11.0 TF | 250W | ~10W | ✅ Unlock | **~$120 – $200** |
 
+<br> Note: Pascal Series Cards are FP32 **ONLY** so AI performance is not great, this includes the p4, p40 and quadro gen pascal cards. 
 <details>
 <summary>links:</summary>
 
@@ -1351,6 +1353,17 @@ i often found myself looking up these details when comparing GPUs to try to find
 
 </details>
 
+## NVIDIA GTX 16 Series (Turing)
+
+| **GPU**                                                                                  | **CUDA** | **VRAM**    | **FP32**   | **FP16**   | **TDP** | **Idle**   | **Virtualization** | **Avg Used eBay.com Price (≈)** |
+| ---------------------------------------------------------------------------------------- | -------- | ----------- | ---------- | ---------- | ------- | ----------- | ------------------ | ------------------------------- |
+| [**GTX 1650**](https://www.techpowerup.com/gpu-specs/geforce-gtx-1650.c3366)             | 896      | 4 GB GDDR6  | ~3.0 TF    | ~6.0 TF    | 75 W    | ~8–10 W     | ✅                 | **~$75 – $130** |
+| [**GTX 1650 Super**](https://www.techpowerup.com/gpu-specs/geforce-gtx-1650-super.c3411)  | 1280     | 4 GB GDDR6  | ~4.4 TF    | ~8.8 TF    | 100 W   | ~9–12 W     | ✅                 | **~$90 – $140** |
+| [**GTX 1660**](https://www.techpowerup.com/gpu-specs/geforce-gtx-1660.c3365)             | 1408     | 6 GB GDDR5  | ~5.0 TF    | ~10.0 TF   | 120 W   | ~9–12 W     | ✅                 | **~$90 – $140** |
+| [**GTX 1660 Super**](https://www.techpowerup.com/gpu-specs/geforce-gtx-1660-super.c3458)  | 1408     | 6 GB GDDR6  | ~5.0 TF    | ~10.0 TF   | 125 W   | ~9–12 W     | ✅                 | **~$115 – $140** |
+| [**GTX 1660 Ti**](https://www.techpowerup.com/gpu-specs/geforce-gtx-1660-ti.c3364)        | 1536     | 6 GB GDDR6  | ~5.4 TF    | ~10.8 TF   | 120 W   | ~9–12 W     | ✅                 | **~$110 – $160** |
+
+<br>Note: The turing GTX 16 series is the first Nvidia series with solid AI performance. this is basically the oldest card series you want to focus on for AI use cases. 
 
 ## NVIDIA RTX 20 Series (Turing)
 
