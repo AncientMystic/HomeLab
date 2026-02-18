@@ -1,5 +1,5 @@
 <p align="center">
-  <img width="600" src="https://github.com/AncientMystic/HomeLab/blob/main/img/main-transparent.png"></p>
+  <img width="600" src="https://github.com/AncientMystic/HomeLab/blob/main/img/main-banner.png"></p>
   
 # HomeLab
 HomeLab CheatSheet &amp; AwesomeList
@@ -1014,6 +1014,9 @@ Actual results depend on CPU generation and cooling.
 </details>
 
 <hr>
+
+<p align="center">
+  <img width="800" src="https://github.com/AncientMystic/HomeLab/blob/main/img/GPU-banner.png"></p>
 
 ### GPU:
 <b>NVIDIA (vGPU / AI / Virtualization):</b>
