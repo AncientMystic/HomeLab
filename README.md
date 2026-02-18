@@ -1,3 +1,6 @@
+<p align="center">
+  <img width="600" src="https://github.com/AncientMystic/HomeLab/blob/main/img/main-transparent.png"></p>
+  
 # HomeLab
 HomeLab CheatSheet &amp; AwesomeList
 <br> Created for the [HomeLab Group](https://smp6.simplex.im/g#P45YjyWy-__e3p3OqoRvU_4sjcSorUz0v8hCtWEPRtk) on Simplex Chat [![Simplex Chat](https://avatars.githubusercontent.com/u/59927747?s=48&v=4)](https://simplex.chat/)
@@ -15,6 +18,7 @@ HomeLab CheatSheet &amp; AwesomeList
 - Add more general filesystem information / ZFS information / tips with more links to obscure useful information that will help manage ZFS better.  
 - Add more software/Self hosting options and guide links. 
 - Add more proxmox related information and helpful guides, including those related to GPU passthrough, LXCs, etc 
+
 # Table of Contents
 - [HomeLab](#homelab)
   - [Optimal Minimal Setup Device: Lenovo Tiny PCs](#optimal-minimal-setup-device-lenovo-tiny-pcs)
