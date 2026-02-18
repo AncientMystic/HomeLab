@@ -774,18 +774,18 @@ Enterprise drives are designed to handle much higher workloads and offer greater
 | ------------------------- | ----- | ------- | ------- | ------- | ---------- | ------- | --------------- | ---- | ------------------------------------------- |
 | Intel Core **i9-13900K**  | 24    | 32      | 8       | 16      | ~3.0 GHz   | 125     | 253             | ✔️   | **~$370–$640**                   |
 | Intel Core **i9-13900KF** | 24    | 32      | 8       | 16      | ~3.0 GHz   | 125     | 253             | ❌    | *(used prices vary widely)*      |
-| Intel Core **i9-13900**   | 24    | 32      | 8       | 16      | –          | 65      | –               | ✔️   | *(limited clear used data)* ([Wccftech][2]) |
+| Intel Core **i9-13900**   | 24    | 32      | 8       | 16      | –          | 65      | –               | ✔️   | *(limited clear used data)* |
 | Intel Core **i7-13700K**  | 16    | 24      | 8       | 8       | ~3.4 GHz   | 125     | 253             | ✔️   | **~$470–$480**                   |
 | Intel Core **i7-13700KF** | 16    | 24      | 8       | 8       | ~3.4 GHz   | 125     | 253             | ❌    | **~$200–$300+** *(varies)*       |
-| Intel Core **i7-13700**   | 16    | 24      | 8       | 8       | –          | 65      | –               | ✔️   | *(limited clear used data)* ([Wccftech][2]) |
+| Intel Core **i7-13700**   | 16    | 24      | 8       | 8       | –          | 65      | –               | ✔️   | *(limited clear used data)* |
 | Intel Core **i5-13600K**  | 14    | 20      | 6       | 8       | ~3.5 GHz   | 125     | 181             | ✔️   | **~$240–$300**                   |
 | Intel Core **i5-13600KF** | 14    | 20      | 6       | 8       | ~3.5 GHz   | 125     | 181             | ❌    | **~$215–$260**                   |
-| Intel Core **i5-13600**   | 14    | 20      | 6       | 8       | –          | 65      | –               | ✔️   | *(used prices sporadic)* ([Wccftech][2])    |
-| Intel Core **i5-13500**   | 14    | 20      | 6       | 8       | –          | 65      | –               | ✔️   | *(used prices sporadic)* ([Wccftech][2])    |
-| Intel Core **i5-13400**   | 10    | 16      | 6       | 4       | –          | 65      | –               | ✔️   | *(used prices sporadic)* ([TechPowerUp][6]) |
-| Intel Core **i5-13400F**  | 10    | 16      | 6       | 4       | –          | 65      | –               | ❌    | *(used prices sporadic)* ([TechPowerUp][6]) |
-| Intel Core **i3-13100**   | 4     | 8       | 4       | 0       | –          | 60      | –               | ✔️   | *(limited used data)* ([TechPowerUp][6])    |
-| Intel Core **i3-13100F**  | 4     | 8       | 4       | 0       | –          | 60      | –               | ❌    | *(limited used data)* ([TechPowerUp][6])    |
+| Intel Core **i5-13600**   | 14    | 20      | 6       | 8       | –          | 65      | –               | ✔️   | *(used prices sporadic)*   |
+| Intel Core **i5-13500**   | 14    | 20      | 6       | 8       | –          | 65      | –               | ✔️   | *(used prices sporadic)*    |
+| Intel Core **i5-13400**   | 10    | 16      | 6       | 4       | –          | 65      | –               | ✔️   | *(used prices sporadic)*  |
+| Intel Core **i5-13400F**  | 10    | 16      | 6       | 4       | –          | 65      | –               | ❌    | *(used prices sporadic)*  |
+| Intel Core **i3-13100**   | 4     | 8       | 4       | 0       | –          | 60      | –               | ✔️   | *(limited used data)*     |
+| Intel Core **i3-13100F**  | 4     | 8       | 4       | 0       | –          | 60      | –               | ❌    | *(limited used data)*    |
 
 <details>
 <summary>links:</summary>
