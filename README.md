@@ -55,6 +55,10 @@ HomeLab CheatSheet &amp; AwesomeList
         - AMD PSP
         - ARM TrustZone / TEEs
       - Selected authoritative sources
+    - Vendors & Projects Offering Open Firmware / Reduced Proprietary Firmware Hardware
+      - Community Open Firmware Projects
+      - Vendors & Distributions Shipping Open Firmware
+      - Additional Hardware & Architecture Notes
       
     - [Disable Turbo Boost](#disable-turbo-boost)
 
@@ -882,6 +886,8 @@ ARM **TrustZone** is an architectural extension that divides CPU execution into 
 - **me_cleaner (GitHub)** — tool to strip/neutralize ME firmware regions. *Use with extreme caution; flashing modified firmware can brick devices.*  
   https://github.com/corna/me_cleaner
 
+- [Remove_IntelME_FPT](https://github.com/mostav02/Remove_IntelME_FPT) - A guide for disabling Intel Management Engine using FPT on PCH SPI 
+
 - **Intel security advisories / vendor firmware updates** — official mitigation is vendor firmware; check OEM download pages and Intel advisories listed above.  
   https://www.intel.com/content/www/us/en/security-center/default.html
 
@@ -939,9 +945,121 @@ ARM **TrustZone** is an architectural extension that divides CPU execution into 
   https://syssec.dpss.inesc-id.pt/papers/cerdeira-sp20.pdf
 </details>
 
+--- 
+ 
+## 🛠️ Vendors & Projects Offering Open Firmware / Reduced Proprietary Firmware Hardware
+
+Many smaller vendors, open-firmware projects, and hardware suppliers offer machines that ship with or support **open firmware (coreboot / Libreboot / Dasharo)** — reducing reliance on proprietary BIOS/UEFI and allowing greater control over platform firmware. These vary from full laptops to embedded boards and network appliances.
+
+> ⚠️ **Caution:** Support for open firmware and neutralization of proprietary subsystems (e.g., Intel ME) varies by model and vendor. Check specific product documentation before purchasing.
+
 ---
 
-[Remove_IntelME_FPT](https://github.com/mostav02/Remove_IntelME_FPT) - A guide for disabling Intel Management Engine using FPT on PCH SPI 
+### 🧠 Community Open Firmware Projects
+
+#### **Libreboot**
+Libreboot is a fully libre distribution of coreboot designed to replace proprietary BIOS/UEFI firmware on select compatible systems. You can also purchase machines with Libreboot pre-installed from associated vendors.  
+👉 https://libreboot.org **(Libreboot main site)** 
+
+### 🛠 **Coreboot & Related Firmware Projects**
+
+**coreboot** (formerly LinuxBIOS) is a free and open-source firmware platform that replaces traditional BIOS/UEFI. It is used by many community and vendor projects, including Libreboot, Dasharo, and more:
+
+- **Dasharo** — a coreboot-based firmware distribution with emphasis on security, stability, and transparency, often used on laptops from community vendors. 
+- **Heads** — a coreboot-compatible boot firmware project focusing on secure boot, measured boot, and tamper detection, often paired with a TPM to verify firmware integrity. 
+- **MrChromebox Firmware** — community-maintained firmware images for Chromebooks that leverage coreboot/EDK2 to support non-ChromeOS operating systems.
+- **Skulls** — user-friendly coreboot images for ThinkPad laptops. 
+
+👉 https://www.coreboot.org **(coreboot official project page)**
+
+These projects make it easier for users to **install and use open firmware** on supported systems, increasing transparency and reducing proprietary code in the boot process.
+
+### 📌 **LinuxBoot – Firmware as a Linux Stack**
+
+**LinuxBoot** is another free software firmware project that replaces key parts of UEFI firmware with a Linux kernel and userland tools:
+
+- It runs on top of early firmware (PEI, coreboot, or U-Boot) and boots Linux directly.  
+- LinuxBoot is already supported on some server platforms and open compute boards.  
+👉 https://linuxboot.org **(LinuxBoot project)**
+
+This approach treats the firmware stack more like a small Linux environment rather than a proprietary UEFI runtime, enabling deep customization.
+
+### 📌 **Community Firmware Innovation on Older Platforms**
+
+Some independent community projects are pushing open firmware even further on older hardware where firmware signature protections don’t block modification:
+
+- The **15h.org project** is developing open-source firmware updates for older AMD Bulldozer/Piledriver platforms, enabling *fully open firmware operation* without modern signature restrictions.  
+👉 Search “15h.org firmware support for AMD” (reported project supporting older boards)
+
+These efforts help demonstrate what *fully open firmware ecosystems* can look like when hardware security restrictions are not enforced.
+
+---
+
+### 🖥️ Vendors & Distributions Shipping Open Firmware
+
+The following vendors are either referenced directly by coreboot project documentation or widely acknowledged in open firmware communities as shipping systems with coreboot/Dasharo firmware:
+
+#### **Nitrokey**
+Nitrokey refurbishes laptops and sells devices with **coreboot + Dasharo firmware** and often includes open boot firmware with measured/verified boot options.  
+👉 https://shop.nitrokey.com **(Nitrokey hardware & coreboot)**
+
+#### **NovaCustom**
+NovaCustom sells configurable laptops shipped with **Dasharo-based coreboot firmware**, maintained by 3mdeb, with support for Linux and Windows.  
+👉 https://novacustom.com **(NovaCustom laptops)**
+
+#### **Protectli**
+Protectli offers Vault network appliances and small PCs with the option of **coreboot firmware**, or flashing via open tools, often jointly maintained with 3mdeb (Dasharo).  
+👉 https://protectli.com/coreboot/ **(Protectli coreboot info)**
+
+#### **Star Labs**
+Star Labs sells Linux-focused laptops that are available with **coreboot firmware** and include options such as disabling the Intel Management Engine via NVRAM tools.  
+👉 https://starlabs.systems **(Star Labs laptops)**
+
+#### **PC Engines**
+PC Engines produces embedded hardware (e.g., APU boards) that ship with **coreboot firmware** and are upstream supported through community channels.  
+👉 https://pcengines.ch **(PC Engines)**
+
+#### **Purism**
+Purism sells Librem laptops designed for open source and privacy, with **coreboot firmware and ME neutralization** as part of their security strategy.  
+👉 https://puri.sm/learn/intel-me/ **(Purism ME/firmware info)**
+
+---
+
+## 📌 Summary Table
+
+| Vendor / Project | Firmware Type | Notes |
+|------------------|---------------|-------|
+| **Nitrokey** | coreboot / Dasharo | Refurbished open firmware hardware |
+| **NovaCustom** | coreboot / Dasharo | Custom laptops with open firmware |
+| **Protectli** | coreboot / Dasharo | Vault network appliances with coreboot |
+| **Star Labs** | coreboot | Linux laptops with open firmware |
+| **PC Engines** | coreboot | Embedded boards with open firmware |
+| **Purism** | coreboot + ME neutralization | Privacy-focused open firmware laptops |
+| **Libreboot Project** | Libreboot | Fully libre firmware distribution |
+
+---
+
+## 📄 Notes & Considerations
+
+- Not all models from the same vendor are open firmware by default — some require **user flashing** of coreboot/Libreboot. 
+- On many modern Intel platforms, **Intel Boot Guard** may prevent flashing alternative firmware unless hardware-specific de-guarding is used (a technical process).   
+- Some vendors work with firmware integrators like **3mdeb** to provide improved firmware quality and security features (measured boot, verified boot). 
+
+---
+
+## 📌 Additional Hardware & Architecture Notes
+
+### 💡 RISC-V and Non-x86 Architectures
+
+For users seeking **hardware with minimal proprietary subsystems**, RISC-V is an emerging alternative:
+
+- It is a **completely open instruction set architecture**, enabling hardware and firmware designs that are fully open from top to bottom.  
+- Projects like **Raptor Computing Systems** offer POWER9-based hardware that eschews Intel/AMD proprietary backplanes in favor of open firmware designs and auditability.  
+- RISC-V boards (e.g., SiFive) and ecosystem products are growing, providing future paths toward hardware transparency.
+
+Community discussion on RISC-V and alternatives often highlights the lack of opaque controllers like ME/PSP on open architectures.
+
+---
 
 <details>
 <summary><b>Intel:</b></summary>
