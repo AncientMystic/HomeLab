@@ -1256,17 +1256,17 @@ i often found myself looking up these details when comparing GPUs to try to find
 
 | **Model**                                                                        | **VRAM**   | **FP32**     | **FP16**     | **TDP** | **Est. Idle** | **Bandwidth** | **Virtualization** | **Avg Used eBay.com Price (≈)**                         |
 | -------------------------------------------------------------------------------- | ---------- | ------------ | ------------ | ------- | ------------- | ------------- | ------------------ | ------------------------------------------------------- |
-| [**Intel Arc A310**](https://www.techpowerup.com/gpu-specs/arc-a310.c3931)       | 4GB GDDR6  | 3.072 TFLOPS | 6.144 TFLOPS | 75 W    | 8–15 W        | 124 GB/s      | ❌ No SR-IOV        | **~$160 – $200** (used & some new listings)  |
-| [**Intel Arc A380**](https://www.techpowerup.com/gpu-specs/arc-a380.c3913)       | 6GB GDDR6  | 4.198 TFLOPS | 8.397 TFLOPS | 75 W    | 8–15 W        | 186 GB/s      | ❌ No SR-IOV        | **~$160 – $240** (common eBay US range)      |
-| [**Intel Arc A580**](https://www.techpowerup.com/gpu-specs/arc-a580.c3927)       | 8GB GDDR6  | 12.29 TFLOPS | 24.58 TFLOPS | 185 W   | 15–25 W       | 256 GB/s      | ❌ No SR-IOV        | **~$200 – $300** (used listings vary)        |
-| [**Intel Arc A750**](https://www.techpowerup.com/gpu-specs/arc-a750.c3922)       | 8GB GDDR6  | 17.20 TFLOPS | 34.41 TFLOPS | 225 W   | 18–30 W       | 512 GB/s      | ❌ No SR-IOV        | **~$160 – $220** (used average)              |
-| [**Intel Arc A770 16GB**](https://www.techpowerup.com/gpu-specs/arc-a770.c3914)  | 16GB GDDR6 | 19.66 TFLOPS | 39.32 TFLOPS | 225 W   | 18–30 W       | 512 GB/s      | ❌ No SR-IOV        | **~$250 – $350** (used & new)                |
-| [**Intel Arc Pro A40**](https://www.techpowerup.com/gpu-specs/arc-pro-a40.c3925) | 6GB GDDR6  | 3.482 TFLOPS | 6.963 TFLOPS | 50 W    | 6–10 W        | 192 GB/s      | ✅ SR-IOV           | **~$220 – $280** (rare used eBay sales)      |
-| [**Intel Arc Pro A50**](https://www.techpowerup.com/gpu-specs/arc-pro-a50.c3926) | 6GB GDDR6  | 4.813 TFLOPS | 9.626 TFLOPS | 75 W    | 8–15 W        | 192 GB/s      | ✅ SR-IOV           | **~$250 – $320** (used listings)             |
-| [**Intel Arc Pro A60**](https://www.techpowerup.com/gpu-specs/arc-pro-a60.c4160) | 12GB GDDR6 | 8.397 TFLOPS | 16.79 TFLOPS | 130 W   | 10–20 W       | 384 GB/s      | ✅ SR-IOV           | **~$350 – $500** (scarcer on eBay)           |
-| [**Intel Arc B580**](https://www.techpowerup.com/gpu-specs/arc-b580.c4244)       | 12GB GDDR6 | 13.67 TFLOPS | 27.34 TFLOPS | 190 W   | 15–25 W       | 256 GB/s      | ❌ No SR-IOV        | **~$230 – $300** (used & some new pricing)   |
-| [**Intel Arc Pro B50**](https://www.techpowerup.com/gpu-specs/arc-pro-b50.c4345) | 16GB GDDR6 | 10.65 TFLOPS | 21.30 TFLOPS | 70 W    | 7–15 W        | 224 GB/s      | ✅ SR-IOV           | **~$350 – $450** (limited used)              |
-| [**Intel Arc Pro B60**](https://www.techpowerup.com/gpu-specs/arc-pro-b60.c4350) | 24GB GDDR6 | 12.29 TFLOPS | 24.58 TFLOPS | 200 W   | 15–30 W       | 456 GB/s      | ✅ SR-IOV           | **~$500 – $800** (very limited)              |
+| [**Intel Arc A310**](https://www.techpowerup.com/gpu-specs/arc-a310.c3931)       | 4GB GDDR6  | 3.072 TFLOPS | 6.144 TFLOPS | 75W    | 8–15W        | 124 GB/s      | ❌ No SR-IOV        | **~$160 – $200** (used & some new listings)  |
+| [**Intel Arc A380**](https://www.techpowerup.com/gpu-specs/arc-a380.c3913)       | 6GB GDDR6  | 4.198 TFLOPS | 8.397 TFLOPS | 75W    | 8–15W        | 186 GB/s      | ❌ No SR-IOV        | **~$160 – $240** (common eBay US range)      |
+| [**Intel Arc A580**](https://www.techpowerup.com/gpu-specs/arc-a580.c3927)       | 8GB GDDR6  | 12.29 TFLOPS | 24.58 TFLOPS | 185W   | 15–25W       | 256 GB/s      | ❌ No SR-IOV        | **~$200 – $300** (used listings vary)        |
+| [**Intel Arc A750**](https://www.techpowerup.com/gpu-specs/arc-a750.c3922)       | 8GB GDDR6  | 17.20 TFLOPS | 34.41 TFLOPS | 225W   | 18–30W       | 512 GB/s      | ❌ No SR-IOV        | **~$160 – $220** (used average)              |
+| [**Intel Arc A770 16GB**](https://www.techpowerup.com/gpu-specs/arc-a770.c3914)  | 16GB GDDR6 | 19.66 TFLOPS | 39.32 TFLOPS | 225W   | 18–30W       | 512 GB/s      | ❌ No SR-IOV        | **~$250 – $350** (used & new)                |
+| [**Intel Arc Pro A40**](https://www.techpowerup.com/gpu-specs/arc-pro-a40.c3925) | 6GB GDDR6  | 3.482 TFLOPS | 6.963 TFLOPS | 50W    | 6–10W        | 192 GB/s      | ✅ SR-IOV           | **~$220 – $280** (rare used eBay sales)      |
+| [**Intel Arc Pro A50**](https://www.techpowerup.com/gpu-specs/arc-pro-a50.c3926) | 6GB GDDR6  | 4.813 TFLOPS | 9.626 TFLOPS | 75W    | 8–15W        | 192 GB/s      | ✅ SR-IOV           | **~$250 – $320** (used listings)             |
+| [**Intel Arc Pro A60**](https://www.techpowerup.com/gpu-specs/arc-pro-a60.c4160) | 12GB GDDR6 | 8.397 TFLOPS | 16.79 TFLOPS | 130W   | 10–20W       | 384 GB/s      | ✅ SR-IOV           | **~$350 – $500** (scarcer on eBay)           |
+| [**Intel Arc B580**](https://www.techpowerup.com/gpu-specs/arc-b580.c4244)       | 12GB GDDR6 | 13.67 TFLOPS | 27.34 TFLOPS | 190W   | 15–25W       | 256 GB/s      | ❌ No SR-IOV        | **~$230 – $300** (used & some new pricing)   |
+| [**Intel Arc Pro B50**](https://www.techpowerup.com/gpu-specs/arc-pro-b50.c4345) | 16GB GDDR6 | 10.65 TFLOPS | 21.30 TFLOPS | 70W    | 7–15W        | 224 GB/s      | ✅ SR-IOV           | **~$350 – $450** (limited used)              |
+| [**Intel Arc Pro B60**](https://www.techpowerup.com/gpu-specs/arc-pro-b60.c4350) | 24GB GDDR6 | 12.29 TFLOPS | 24.58 TFLOPS | 200W   | 15–30W       | 456 GB/s      | ✅ SR-IOV           | **~$500 – $800** (very limited)              |
 
 <details>
 <summary>links:</summary>
@@ -1276,19 +1276,59 @@ i often found myself looking up these details when comparing GPUs to try to find
 
 </details>
 
+| **Older Nvidia Cards**                               | **CUDA** | **VRAM**        | **FP32**      | **TDP** | **Virtualization** | **Avg Used eBay US ≈** |
+|-----------------------------------------------|---------:|----------------:|---------------:|--------:|-------------------:|------------------------:|
+| **GTX 710**                                   |   192    | 1–2 GB DDR3    | ~0.25 TF       | 19W   | ❌                 | ~$30–$50               |
+| **GT 720**                                    |   192    | 1–2 GB DDR3    | ~0.30 TF       | 23W   | ❌                 | ~$30–$60               |
+| **GT 730**                                    |   384    | 1–4 GB DDR3    | ~0.55 TF       | 38W   | ❌                 | ~$40–$70               |
+| **GT 740**                                    |   384    | 1–4 GB DDR3    | ~0.60 TF       | 49W   | ❌                 | ~$50–$80               |
+| **GTX 645**                                   |   384    | 1–2 GB GDDR5   | ~0.75 TF       | ~64W  | ❌                 | ~$40–$70               |
+| **GTX 650**                                   |   384    | 1–2 GB GDDR5   | ~0.80 TF       | 64W   | ❌                 | ~$40–$80               |
+| **GTX 650 Ti / Ti Boost**                     |   768    | 1–2 GB GDDR5   | ~1.5 TF        | 110W  | ❌                 | ~$60–$110              |
+| **GTX 660**                                   |  960     | 2 GB GDDR5     | ~2.2 TF        | 140W  | ❌                 | ~$80–$130              |
+| **GTX 660 Ti**                                | 1344     | 2 GB GDDR5     | ~3.0 TF        | 150W  | ❌                 | ~$90–$150              |
+| **GTX 670**                                   | 1344     | 2 GB GDDR5     | ~3.1 TF        | 170W  | ❌                 | ~$100–$160             |
+| **GTX 680**                                   | 1536     | 2–4 GB GDDR5   | ~3.3–3.5 TF    | 195W  | ❌                 | ~$110–$180             |
+| **GTX 690** *(dual GPU)*                      | 2×1536  | 4 GB GDDR5     | ~6.6–7.0 TF    | 300W  | ❌                 | ~$180–$280             |
+| **GTX 760**                                   | 1152     | 2–4 GB GDDR5   | ~2.8 TF        | 170W  | ❌                 | ~$80–$140              |
+| **GTX 760 Ti**                                | 1344     | 2 GB GDDR5     | ~3.2 TF        | 170W  | ❌                 | ~$90–$150              |
+| **GTX 770**                                   | 1536     | 2–4 GB GDDR5   | ~3.5 TF        | 230W  | ❌                 | ~$100–$160             |
+| **GTX 780**                                   | 2304     | 3 GB GDDR5     | ~4.1 TF        | 250W  | ❌                 | ~$140–$220             |
+| **GTX 780 Ti**                                | 2880     | 3 GB GDDR5     | ~5.3 TF        | 250W  | ❌                 | ~$180–$260             |
+| **GTX TITAN** *(Kepler)*                      | 2688     | 6 GB GDDR5     | ~4.7 TF        | 250W  | ❌                 | ~$130–$200             |
+| **GTX TITAN Black**                           | 2880     | 6 GB GDDR5     | ~5.1 TF        | 250W  | ❌                 | ~$160–$260             |
+| **GTX TITAN Z** *(dual GK110)*                 | 2×2880  | 12 GB GDDR5    | ~10 TF (combined) | 375W | ❌               | ~$300–$500             |
 
-## NVIDIA RTX 10 Series (Pascal)
+<br>Note: Not recommended.
+
+## Nvidia 900 Series (Maxwell) 
+
+| **GPU (Maxwell)** | **CUDA Cores** | **VRAM** | **FP32** | **TDP** | **Virtualization** | **Avg Used eBay US ≈** |
+|------------------|---------------:|----------:|----------:|--------:|-------------------:|------------------------:|
+| [**GTX 750**](https://www.techpowerup.com/gpu-specs/geforce-gtx-750.c2778) | 512 | 1–2 GB GDDR5 | ~1.0 TF | ~55W | ✅ | ~$30 – $60 |
+| [**GTX 750 Ti**](https://www.techpowerup.com/gpu-specs/geforce-gtx-750-ti.c2777) | 640 | 2 GB GDDR5 | ~1.3 TF | ~60W | ✅ | ~$40 – $70 |
+| [**GTX 950**](https://www.techpowerup.com/gpu-specs/geforce-gtx-950.c3217) | 768 | 2 GB GDDR5 | ~1.8 TF | 90W | ✅ | ~$50 – $90 |
+| [**GTX 960**](https://www.techpowerup.com/gpu-specs/geforce-gtx-960.c2871) | 1024 | 2–4 GB GDDR5 | ~2.4 TF | 120W | ✅ | ~$60 – $110 |
+| [**GTX 970**](https://www.techpowerup.com/gpu-specs/geforce-gtx-970.c2922) | 1664 | 4 GB GDDR5 | ~3.9 TF | 145W | ❌ | ~$90 – $160 |
+| [**GTX 980**](https://www.techpowerup.com/gpu-specs/geforce-gtx-980.c2621) | 2048 | 4 GB GDDR5 | ~5.0 TF | 165W | ✅ | ~$110 – $190 |
+| [**GTX 980 Ti**](https://www.techpowerup.com/gpu-specs/geforce-gtx-980-ti.c2874) | 2816 | 6 GB GDDR5 | ~6.1–6.3 TF | 250W | ✅ | ~$150 – $280 |
+| [**GTX TITAN X (Maxwell)**](https://www.techpowerup.com/gpu-specs/geforce-gtx-titan-x.c3053) | 3072 | 12 GB GDDR5 | ~6.6 TF | 250W | ✅ | ~$250 – $400 |
+
+<br>Note: Also Not recommended. but most of these should work with vGPU unlock at least.
+
+## NVIDIA GTX 10 Series (Pascal)
 
 | **Model**                                                                             | **VRAM** | **FP16**     | **FP32**     | **TDP** | **Idle Power** | **Bandwidth** | **Virtualization** | **Avg Used eBay.com Price (≈)**                                                  |
 | ------------------------------------------------------------------------------------- | -------- | ------------ | ------------ | ------- | -------------- | ------------- | ------------------ | -------------------------------------------------------------------------------- |
-| [**GTX 1050**](https://www.techpowerup.com/gpu-specs/geforce-gtx-1050.c2875)          | 2 GB     | 29.10 GFLOPS | 1.862 TFLOPS | 75 W    | ~8–12 W        | 112 GB/s      | ✅ Unlock           | **~$50 – $80** (many used ~75 USD listed)                             |
-| [**GTX 1050 Ti**](https://www.techpowerup.com/gpu-specs/geforce-gtx-1050-ti.c2885)    | 4 GB     | 33.41 GFLOPS | 2.138 TFLOPS | 75 W    | ~8–12 W        | 112 GB/s      | ✅ Unlock           | **~$60 – $95** (common used range)                                    |
-| [**GTX 1060 3GB**](https://www.techpowerup.com/gpu-specs/geforce-gtx-1060-3-gb.c2867) | 3 GB     | 61.49 GFLOPS | 3.935 TFLOPS | 120 W   | ~10–18 W       | 192 GB/s      | ✅ Unlock           | **~$70 – $110** (used teen-range sale reports & community pricing)  |
-| [**GTX 1060 6GB**](https://www.techpowerup.com/gpu-specs/geforce-gtx-1060-6-gb.c2862) | 6 GB     | 68.36 GFLOPS | 4.375 TFLOPS | 120 W   | ~10–18 W       | 192 GB/s      | ✅ Unlock           | **~$80 – $120** (common actual eBay used prices)                    |
-| [**GTX 1070**](https://www.techpowerup.com/gpu-specs/geforce-gtx-1070.c2840)          | 8 GB     | 101.0 GFLOPS | 6.463 TFLOPS | 150 W   | ~12–20 W       | 256 GB/s      | ✅ Unlock           | **~$90 – $140** (community eBay pricing)                            |
-| [**GTX 1070 Ti**](https://www.techpowerup.com/gpu-specs/geforce-gtx-1070-ti.c3010)    | 8 GB     | 127.9 GFLOPS | 8.186 TFLOPS | 180 W   | ~15–25 W       | 256 GB/s      | ✅ Unlock           | **~$110 – $180** (user report and typical used sale)                |
-| [**GTX 1080**](https://www.techpowerup.com/gpu-specs/geforce-gtx-1080.c2839)          | 8 GB     | 139 GFLOPS   | 8.873 TFLOPS | 180 W   | ~15–25 W       | 320.3 GB/s    | ✅ Unlock           | **~$110 – $160** (recent used prices seen)                          |
-| [**GTX 1080 Ti**](https://www.techpowerup.com/gpu-specs/geforce-gtx-1080-ti.c2877)    | 11 GB    | 177.2 GFLOPS | 11.34 TFLOPS | 250 W   | ~18–30 W       | 484.4 GB/s    | ✅ Unlock           | **~$140 – $220** (many used listings around $150-$200)                |
+| [**GTX 1050**](https://www.techpowerup.com/gpu-specs/geforce-gtx-1050.c2875)          | 2 GB     | 29.10 GFLOPS | 1.862 TFLOPS | 75W    | ~8–12W        | 112 GB/s      | ✅ Unlock           | **~$50 – $80** (many used ~75 USD listed)                             |
+| [**GTX 1050 Ti**](https://www.techpowerup.com/gpu-specs/geforce-gtx-1050-ti.c2885)    | 4 GB     | 33.41 GFLOPS | 2.138 TFLOPS | 75W    | ~8–12W        | 112 GB/s      | ✅ Unlock           | **~$60 – $95** (common used range)                                    |
+| [**GTX 1060 3GB**](https://www.techpowerup.com/gpu-specs/geforce-gtx-1060-3-gb.c2867) | 3 GB     | 61.49 GFLOPS | 3.935 TFLOPS | 120W   | ~10–18W       | 192 GB/s      | ✅ Unlock           | **~$70 – $110** (used teen-range sale reports & community pricing)  |
+| [**GTX 1060 6GB**](https://www.techpowerup.com/gpu-specs/geforce-gtx-1060-6-gb.c2862) | 6 GB     | 68.36 GFLOPS | 4.375 TFLOPS | 120W   | ~10–18W       | 192 GB/s      | ✅ Unlock           | **~$80 – $120** (common actual eBay used prices)                    |
+| [**GTX 1070**](https://www.techpowerup.com/gpu-specs/geforce-gtx-1070.c2840)          | 8 GB     | 101.0 GFLOPS | 6.463 TFLOPS | 150W   | ~12–20W       | 256 GB/s      | ✅ Unlock           | **~$90 – $140** (community eBay pricing)                            |
+| [**GTX 1070 Ti**](https://www.techpowerup.com/gpu-specs/geforce-gtx-1070-ti.c3010)    | 8 GB     | 127.9 GFLOPS | 8.186 TFLOPS | 180W   | ~15–25W       | 256 GB/s      | ✅ Unlock           | **~$110 – $180** (user report and typical used sale)                |
+| [**GTX 1080**](https://www.techpowerup.com/gpu-specs/geforce-gtx-1080.c2839)          | 8 GB     | 139 GFLOPS   | 8.873 TFLOPS | 180W   | ~15–25W       | 320.3 GB/s    | ✅ Unlock           | **~$110 – $160** (recent used prices seen)                          |
+| [**GTX 1080 Ti**](https://www.techpowerup.com/gpu-specs/geforce-gtx-1080-ti.c2877)    | 11 GB    | 177.2 GFLOPS | 11.34 TFLOPS | 250W   | ~18–30W       | 484.4 GB/s    | ✅ Unlock           | **~$140 – $220** (many used listings around $150-$200)                |
+| [**NVIDIA TITAN X (Pascal)**](https://www.techpowerup.com/gpu-specs/titan-x-pascal.c2863) | 3584 | 12 GB GDDR5X | ~11.0 TF | ~11.0 TF | 250W | ~10W | ✅ Unlock | **~$120 – $200** |
 
 <details>
 <summary>links:</summary>
@@ -1307,13 +1347,15 @@ i often found myself looking up these details when comparing GPUs to try to find
 
 | **GPU**                                                                                  | **CUDA** | **VRAM**    | **FP32** | **FP16** | **TDP** | **Idle** | **Virtualization** | **Avg Used eBay.com Price (≈)**        |
 | ---------------------------------------------------------------------------------------- | -------- | ----------- | -------- | -------- | ------- | -------- | ------------------ | -------------------------------------- |
-| [**RTX 2060**](https://www.techpowerup.com/gpu-specs/geforce-rtx-2060.c3310)             | 1920     | 6 GB GDDR6  | 6.5 TF   | 6.5 TF   | 160 W   | ~8 W     | ✅ Unlock           | **~$170 – $200**  |
-| [**RTX 2060 Super**](https://www.techpowerup.com/gpu-specs/geforce-rtx-2060-super.c3441) | 2176     | 8 GB GDDR6  | 7.2 TF   | 7.2 TF   | 175 W   | ~9 W     | ✅ Unlock           | **~$180 – $230**  |
-| [**RTX 2070**](https://www.techpowerup.com/gpu-specs/geforce-rtx-2070.c3252)             | 2304     | 8 GB GDDR6  | 7.5 TF   | 7.5 TF   | 175 W   | ~9 W     | ✅ Unlock           | **~$200 – $250**  |
-| [**RTX 2070 Super**](https://www.techpowerup.com/gpu-specs/geforce-rtx-2070-super.c3440) | 2560     | 8 GB GDDR6  | 9.1 TF   | 9.1 TF   | 215 W   | ~9 W     | ✅ Unlock           | **~$220 – $270**  |
-| [**RTX 2080**](https://www.techpowerup.com/gpu-specs/geforce-rtx-2080.c3224)             | 2944     | 8 GB GDDR6  | 10.1 TF  | 10.1 TF  | 215 W   | ~10 W    | ✅ Unlock           | **~$240 – $300**  |
-| [**RTX 2080 Super**](https://www.techpowerup.com/gpu-specs/geforce-rtx-2080-super.c3439) | 3072     | 8 GB GDDR6  | 11.2 TF  | 11.2 TF  | 250 W   | ~10 W    | ✅ Unlock           | **~$250 – $320**  |
-| [**RTX 2080 Ti**](https://www.techpowerup.com/gpu-specs/geforce-rtx-2080-ti.c3305)       | 4352     | 11 GB GDDR6 | 13.4 TF  | 13.4 TF  | 250 W   | ~11 W    | ✅ Unlock           | **~$300 – $380**  |
+| [**RTX 2060**](https://www.techpowerup.com/gpu-specs/geforce-rtx-2060.c3310)             | 1920     | 6 GB GDDR6  | 6.5 TF   | 6.5 TF   | 160W   | ~8W     | ✅ Unlock           | **~$170 – $200**  |
+| [**RTX 2060 Super**](https://www.techpowerup.com/gpu-specs/geforce-rtx-2060-super.c3441) | 2176     | 8 GB GDDR6  | 7.2 TF   | 7.2 TF   | 175W   | ~9W     | ✅ Unlock           | **~$180 – $230**  |
+| [**RTX 2070**](https://www.techpowerup.com/gpu-specs/geforce-rtx-2070.c3252)             | 2304     | 8 GB GDDR6  | 7.5 TF   | 7.5 TF   | 175W   | ~9W     | ✅ Unlock           | **~$200 – $250**  |
+| [**RTX 2070 Super**](https://www.techpowerup.com/gpu-specs/geforce-rtx-2070-super.c3440) | 2560     | 8 GB GDDR6  | 9.1 TF   | 9.1 TF   | 215W   | ~9W     | ✅ Unlock           | **~$220 – $270**  |
+| [**RTX 2080**](https://www.techpowerup.com/gpu-specs/geforce-rtx-2080.c3224)             | 2944     | 8 GB GDDR6  | 10.1 TF  | 10.1 TF  | 215W   | ~10W    | ✅ Unlock           | **~$240 – $300**  |
+| [**RTX 2080 Super**](https://www.techpowerup.com/gpu-specs/geforce-rtx-2080-super.c3439) | 3072     | 8 GB GDDR6  | 11.2 TF  | 11.2 TF  | 250W   | ~10W    | ✅ Unlock           | **~$250 – $320**  |
+| [**RTX 2080 Ti**](https://www.techpowerup.com/gpu-specs/geforce-rtx-2080-ti.c3305)       | 4352     | 11 GB GDDR6 | 13.4 TF  | 13.4 TF  | 250W   | ~11W    | ✅ Unlock           | **~$300 – $380**  |
+| [**NVIDIA TITAN RTX**](https://www.techpowerup.com/gpu-specs/titan-rtx.c3311) | 4608 | 24 GB GDDR6 | 16.3 TF | 32.6 TF | 280W | ~12W | ✅ Unlock | **~$600 – $800** |
+
 <details>
 <summary>links:</summary>
 
@@ -1326,12 +1368,12 @@ i often found myself looking up these details when comparing GPUs to try to find
 ## NVIDIA RTX 30 Series (Ampere)
 | **Model**                                                                               | **VRAM** | **FP32**     | **FP16**     | **TDP** | **Est. Idle** | **Bandwidth** | **Virtualization** | **Avg Used eBay.com Price (≈)**                                             |
 | --------------------------------------------------------------------------------------- | -------- | ------------ | ------------ | ------- | ------------- | ------------- | ------------------ | --------------------------------------------------------------------------- |
-| [**RTX 3060 12GB**](https://www.techpowerup.com/gpu-specs/geforce-rtx-3060-12-gb.c3682) | 12 GB    | 12.74 TFLOPS | 12.74 TFLOPS | 170 W   | ~8–12 W       | 360 GB/s      | ❌                  | **~$200 – $280** (eBay used listings around $220–$280)      |
-| [**RTX 3060 Ti**](https://www.techpowerup.com/gpu-specs/geforce-rtx-3060-ti.c3681)      | 8 GB     | 16.20 TFLOPS | 16.20 TFLOPS | 200 W   | ~10–15 W      | 448 GB/s      | ❌                  | **~$220 – $300** (pre-owned listings & reports ~$220–$290)  |
-| [**RTX 3070**](https://www.techpowerup.com/gpu-specs/geforce-rtx-3070.c3674)            | 8 GB     | 20.31 TFLOPS | 20.31 TFLOPS | 220 W   | ~9–15 W       | 448 GB/s      | ❌                  | **~$240 – $300** (community price reports for used)       |
-| [**RTX 3080**](https://www.techpowerup.com/gpu-specs/geforce-rtx-3080.c3621)            | 10 GB    | 29.77 TFLOPS | 29.77 TFLOPS | 320 W   | ~9–15 W       | 760 GB/s      | ❌                  | **~$320 – $500** (used prices reported ~$320–$500)        |
-| [**RTX 3080 Ti**](https://www.techpowerup.com/gpu-specs/geforce-rtx-3080-ti.c3735)      | 12 GB    | 34.10 TFLOPS | 34.10 TFLOPS | 350 W   | ~12–16 W      | 912 GB/s      | ❌                  | **~$450 – $650+** (reports ~$450+)                 |
-| [**RTX 3090**](https://www.techpowerup.com/gpu-specs/geforce-rtx-3090.c3622)            | 24 GB    | 35.58 TFLOPS | 35.58 TFLOPS | 350 W   | ~15–20 W      | 936 GB/s      | ❌                  | **~$600 – $800+** (pricing trend ~$600+)             |
+| [**RTX 3060 12GB**](https://www.techpowerup.com/gpu-specs/geforce-rtx-3060-12-gb.c3682) | 12 GB    | 12.74 TFLOPS | 12.74 TFLOPS | 170W   | ~8–12W       | 360 GB/s      | ❌                  | **~$200 – $280** (eBay used listings around $220–$280)      |
+| [**RTX 3060 Ti**](https://www.techpowerup.com/gpu-specs/geforce-rtx-3060-ti.c3681)      | 8 GB     | 16.20 TFLOPS | 16.20 TFLOPS | 200W   | ~10–15W      | 448 GB/s      | ❌                  | **~$220 – $300** (pre-owned listings & reports ~$220–$290)  |
+| [**RTX 3070**](https://www.techpowerup.com/gpu-specs/geforce-rtx-3070.c3674)            | 8 GB     | 20.31 TFLOPS | 20.31 TFLOPS | 220W   | ~9–15W       | 448 GB/s      | ❌                  | **~$240 – $300** (community price reports for used)       |
+| [**RTX 3080**](https://www.techpowerup.com/gpu-specs/geforce-rtx-3080.c3621)            | 10 GB    | 29.77 TFLOPS | 29.77 TFLOPS | 320W   | ~9–15W       | 760 GB/s      | ❌                  | **~$320 – $500** (used prices reported ~$320–$500)        |
+| [**RTX 3080 Ti**](https://www.techpowerup.com/gpu-specs/geforce-rtx-3080-ti.c3735)      | 12 GB    | 34.10 TFLOPS | 34.10 TFLOPS | 350W   | ~12–16W      | 912 GB/s      | ❌                  | **~$450 – $650+** (reports ~$450+)                 |
+| [**RTX 3090**](https://www.techpowerup.com/gpu-specs/geforce-rtx-3090.c3622)            | 24 GB    | 35.58 TFLOPS | 35.58 TFLOPS | 350W   | ~15–20W      | 936 GB/s      | ❌                  | **~$600 – $800+** (pricing trend ~$600+)             |
 
 <details>
 <summary>links:</summary>
@@ -1348,14 +1390,14 @@ i often found myself looking up these details when comparing GPUs to try to find
 
 | **GPU**                                                                                       | **CUDA** | **VRAM**             | **FP32** | **FP16** | **TDP** | **Idle** | **Virtualization** | **Avg Used eBay.com Price (≈)**                                      |
 | --------------------------------------------------------------------------------------------- | -------- | -------------------- | -------- | -------- | ------- | -------- | ------------------ | -------------------------------------------------------------------- |
-| [**RTX 4060**](https://www.techpowerup.com/gpu-specs/geforce-rtx-4060.c4107)                  | 3072     | 8 GB GDDR6 128-bit   | 15.1 TF  | 15.1 TF  | 115 W   | ~7 W     | ❌                  | **~$220 – $300** (active used listings ~$230–$300)        |
-| [**RTX 4060 Ti 8GB**](https://www.techpowerup.com/gpu-specs/geforce-rtx-4060-ti-8-gb.c4106)   | 4352     | 8 GB GDDR6 128-bit   | 22.1 TF  | 22.1 TF  | 160 W   | ~8 W     | ❌                  | **~$250 – $350** (used/Refurb shows ~$250–$350)           |
-| [**RTX 4060 Ti 16GB**](https://www.techpowerup.com/gpu-specs/geforce-rtx-4060-ti-16-gb.c4155) | 4352     | 16 GB GDDR6 128-bit  | 22.1 TF  | 22.1 TF  | 165 W   | ~8 W     | ❌                  | **~$280 – $380** (used 16 GB variants ~$280+)             |
-| [**RTX 4070**](https://www.techpowerup.com/gpu-specs/geforce-rtx-4070.c3924)                  | 5888     | 12 GB GDDR6X 192-bit | 29.1 TF  | 29.1 TF  | 200 W   | ~10 W    | ❌                  | **~$350 – $500+** (used pricing broader range on eBay)    |
-| [**RTX 4070 Super**](https://www.techpowerup.com/gpu-specs/geforce-rtx-4070-super.c4165)      | 7168     | 12 GB GDDR6X 192-bit | 35.5 TF  | 35.5 TF  | 220 W   | ~10 W    | ❌                  | **~$400 – $550+** (used listings suggest ~$400+ typical)  |
-| [**RTX 4070 Ti**](https://www.techpowerup.com/gpu-specs/geforce-rtx-4070-ti.c3950)            | 7680     | 12 GB GDDR6X 192-bit | 40.1 TF  | 40.1 TF  | 285 W   | ~11 W    | ❌                  | **~$450 – $650+** (commonly listed used)                  |
-| [**RTX 4080**](https://www.techpowerup.com/gpu-specs/geforce-rtx-4080.c3888)                  | 9728     | 16 GB GDDR6X 256-bit | 48.7 TF  | 48.7 TF  | 320 W   | ~13 W    | ❌                  | **~$700 – $1,000+** (used listings vary widely)           |
-| [**RTX 4090**](https://www.techpowerup.com/gpu-specs/geforce-rtx-4090.c3889)                  | 16384    | 24 GB GDDR6X 384-bit | 82.6 TF  | 82.6 TF  | 450 W   | ~16 W    | ❌                  | **~$1,400 – $2,000+** (many used listings in this range)  |
+| [**RTX 4060**](https://www.techpowerup.com/gpu-specs/geforce-rtx-4060.c4107)                  | 3072     | 8 GB GDDR6 128-bit   | 15.1 TF  | 15.1 TF  | 115W   | ~7W     | ❌                  | **~$220 – $300** (active used listings ~$230–$300)        |
+| [**RTX 4060 Ti 8GB**](https://www.techpowerup.com/gpu-specs/geforce-rtx-4060-ti-8-gb.c4106)   | 4352     | 8 GB GDDR6 128-bit   | 22.1 TF  | 22.1 TF  | 160W   | ~8W     | ❌                  | **~$250 – $350** (used/Refurb shows ~$250–$350)           |
+| [**RTX 4060 Ti 16GB**](https://www.techpowerup.com/gpu-specs/geforce-rtx-4060-ti-16-gb.c4155) | 4352     | 16 GB GDDR6 128-bit  | 22.1 TF  | 22.1 TF  | 165W   | ~8W     | ❌                  | **~$280 – $380** (used 16 GB variants ~$280+)             |
+| [**RTX 4070**](https://www.techpowerup.com/gpu-specs/geforce-rtx-4070.c3924)                  | 5888     | 12 GB GDDR6X 192-bit | 29.1 TF  | 29.1 TF  | 200W   | ~10W    | ❌                  | **~$350 – $500+** (used pricing broader range on eBay)    |
+| [**RTX 4070 Super**](https://www.techpowerup.com/gpu-specs/geforce-rtx-4070-super.c4165)      | 7168     | 12 GB GDDR6X 192-bit | 35.5 TF  | 35.5 TF  | 220W   | ~10W    | ❌                  | **~$400 – $550+** (used listings suggest ~$400+ typical)  |
+| [**RTX 4070 Ti**](https://www.techpowerup.com/gpu-specs/geforce-rtx-4070-ti.c3950)            | 7680     | 12 GB GDDR6X 192-bit | 40.1 TF  | 40.1 TF  | 285W   | ~11W    | ❌                  | **~$450 – $650+** (commonly listed used)                  |
+| [**RTX 4080**](https://www.techpowerup.com/gpu-specs/geforce-rtx-4080.c3888)                  | 9728     | 16 GB GDDR6X 256-bit | 48.7 TF  | 48.7 TF  | 320W   | ~13W    | ❌                  | **~$700 – $1,000+** (used listings vary widely)           |
+| [**RTX 4090**](https://www.techpowerup.com/gpu-specs/geforce-rtx-4090.c3889)                  | 16384    | 24 GB GDDR6X 384-bit | 82.6 TF  | 82.6 TF  | 450W   | ~16W    | ❌                  | **~$1,400 – $2,000+** (many used listings in this range)  |
 
 <details>
 <summary>links:</summary>
@@ -1371,11 +1413,11 @@ i often found myself looking up these details when comparing GPUs to try to find
 
 | **GPU**                                                                      | **CUDA** | **VRAM**            | **FP32**     | **FP16**     | **TDP** | **Idle** | **Virtualization** | **Avg Used eBay.com Price (≈)**                                                                                               |
 | ---------------------------------------------------------------------------- | -------- | ------------------- | ------------ | ------------ | ------- | -------- | ------------------ | ----------------------------------------------------------------------------------------------------------------------------- |
-| [**RTX 5050**](https://www.techpowerup.com/gpu-specs/geforce-rtx-5050.c4220) | 2560     | 8 GB GDDR6 128-bit  | 13.17 TFLOPS | 13.17 TFLOPS | 130 W   | ~12 W    | ❌                  | **~$350 – $450** (used listings like MSI RTX 5050 ~$450)                                                           |
-| [**RTX 5060**](https://www.techpowerup.com/gpu-specs/geforce-rtx-5060.c4219) | 3840     | 8 GB GDDR7 128-bit  | 19.18 TFLOPS | 19.18 TFLOPS | 145 W   | ~13 W    | ❌                  | **~$250 – $350** (used eBay listings for RTX 5060 shown ~$274)                                                     |
-| [**RTX 5070**](https://www.techpowerup.com/gpu-specs/geforce-rtx-5070.c4218) | 6144     | 12 GB GDDR7 256-bit | 30.87 TFLOPS | 30.87 TFLOPS | 250 W   | ~14 W    | ❌                  | **~$500 – $600** (used eBay listings show ~$550 for RTX 5070)                                                      |
-| [**RTX 5080**](https://www.techpowerup.com/gpu-specs/geforce-rtx-5080.c4190) | 10752    | 16 GB GDDR7 256-bit | 56.28 TFLOPS | 56.28 TFLOPS | 360 W   | ~15 W    | ❌                  | **~$800 – $1,200+** (used availability limited; high pricing trends)                                               |
-| [**RTX 5090**](https://www.techpowerup.com/gpu-specs/geforce-rtx-5090.c4189) | 21760    | 32 GB GDDR7 512-bit | 104.8 TFLOPS | 104.8 TFLOPS | 575 W   | ~20 W    | ❌                  | **~$2,300 – $4,500+** (eBay listings show high priced flagship cards; scalpers reported significantly above MSRP)  |
+| [**RTX 5050**](https://www.techpowerup.com/gpu-specs/geforce-rtx-5050.c4220) | 2560     | 8 GB GDDR6 128-bit  | 13.17 TFLOPS | 13.17 TFLOPS | 130W   | ~12W    | ❌                  | **~$350 – $450** (used listings like MSI RTX 5050 ~$450)                                                           |
+| [**RTX 5060**](https://www.techpowerup.com/gpu-specs/geforce-rtx-5060.c4219) | 3840     | 8 GB GDDR7 128-bit  | 19.18 TFLOPS | 19.18 TFLOPS | 145W   | ~13W    | ❌                  | **~$250 – $350** (used eBay listings for RTX 5060 shown ~$274)                                                     |
+| [**RTX 5070**](https://www.techpowerup.com/gpu-specs/geforce-rtx-5070.c4218) | 6144     | 12 GB GDDR7 256-bit | 30.87 TFLOPS | 30.87 TFLOPS | 250W   | ~14W    | ❌                  | **~$500 – $600** (used eBay listings show ~$550 for RTX 5070)                                                      |
+| [**RTX 5080**](https://www.techpowerup.com/gpu-specs/geforce-rtx-5080.c4190) | 10752    | 16 GB GDDR7 256-bit | 56.28 TFLOPS | 56.28 TFLOPS | 360W   | ~15W    | ❌                  | **~$800 – $1,200+** (used availability limited; high pricing trends)                                               |
+| [**RTX 5090**](https://www.techpowerup.com/gpu-specs/geforce-rtx-5090.c4189) | 21760    | 32 GB GDDR7 512-bit | 104.8 TFLOPS | 104.8 TFLOPS | 575W   | ~20W    | ❌                  | **~$2,300 – $4,500+** (eBay listings show high priced flagship cards; scalpers reported significantly above MSRP)  |
 
 <details>
 <summary>links:</summary>
@@ -1389,13 +1431,34 @@ i often found myself looking up these details when comparing GPUs to try to find
 
 ## NVIDIA Quadro / Professional GPUs
 
-| **Model**                                                                      | **VRAM**   | **FP16 (half)** | **FP32 (float)** | **TDP** | **Idle Power (typical)** | **Bandwidth**    | **Virtualization** | **Avg. eBay.com Used Price**                                           |
+| **GPU (Maxwell Quadro / Tesla)** | **CUDA Cores** | **VRAM** | **Approx FP32** | **TDP** | **Use Case** | **Avg Used eBay US ≈** |
+|----------------------------------|---------------:|----------:|----------------:|--------:|--------------|------------------------:|
+| [**Quadro M4000**](https://www.techpowerup.com/gpu-specs/quadro-m4000.c3423) | 1664 | 8 GB GDDR5 | ~2.6 TF | ~108W | Workstation | **~$65 – $80**  |
+| [**Quadro M5000**](https://www.techpowerup.com/gpu-specs/quadro-m5000.c3457) | ~2048 | 8 GB GDDR5 | ~3.2 TF | ~180W+ | Workstation | **$80** |
+| [**Quadro M6000**](https://www.techpowerup.com/gpu-specs/quadro-m6000.c3231) | 3072 | 12 GB GDDR5 | ~4.5–5.0 TF | ~250W | High-end Workstation | **$500** |
+| **Tesla M4** | 1024 | 4 GB GDDR5 | ~1.8–2.2 TF | ~50–75W | Server / Compute | **$45-55** |
+| **Tesla M6** | 1536 | 8 GB GDDR5 | ~2.2–3.2 TF | ~75–100W | Server / Compute | **No active eBay listings found** |
+| [**Tesla M10**](https://www.techpowerup.com/gpu-specs/tesla-m40.c2771) | 2560 (4×640) | 32 GB GDDR5 | ~5.2 TF | ~225W | Multi-GPU Compute | **$75-100** |
+| [**Tesla M40**](https://www.techpowerup.com/gpu-specs/tesla-m40.c2771) | 3072 | 12 GB GDDR5 | ~5.8–6.8 TF | ~250W | Compute Accelerator | **~$84 – $108**  |
+| **Tesla M60** | 4096 (2×2048) | 16 GB GDDR5 | ~7.4–9.6 TF | ~225–300W | High-Density Compute | **$60-70** |
+
+
+
+| **Pascal based Quardo**                                                               | **VRAM**   | **FP16 (half)** | **FP32 (float)** | **TDP** | **Idle Power (typical)** | **Bandwidth**    | **Virtualization** | **Avg. eBay.com Used Price**                                           |
 | ------------------------------------------------------------------------------ | ---------- | --------------- | ---------------- | ------- | ------------------------ | ---------------- | ------------------ | ---------------------------------------------------------------------- |
 | [Quadro P5000](https://www.techpowerup.com/gpu-specs/quadro-p5000.c2864)       | 16GB       | 138.6 GFLOPS    | 8.873 TFLOPS     | 180W    | ~15–20W                  | (256-bit GDDR5X) | ✅                  | **~$300 – $450** (many listings around ~$250-$349)          |
 | [Quadro P6000](https://www.techpowerup.com/gpu-specs/quadro-p6000.c2865)       | 24GB       | 197 GFLOPS      | 12.63 TFLOPS     | 250W    | ~20–25W                  | 432.8 GB/s       | ✅                  | **~$550 – $700** (common used around ~$548-$694)            |
 | [Quadro GP100](https://www.techpowerup.com/gpu-specs/quadro-gp100.c2994)        | 16GB HBM2  | 20.69 TFLOPS    | 10.34 TFLOPS     | 235W    | ~25–30W                  | 732.2 GB/s       | ✅                  | **~$300-$330** (typical Quadro GP100 used price)            |
 | [Quadro GV100](https://www.techpowerup.com/gpu-specs/quadro-gv100.c3066)         | 32GB HBM2  | 33.32 TFLOPS    | 16.66 TFLOPS     | 250W    | ~25–30W                  | 868.4 GB/s       | ✅                  | **~$900+** (used GV100 listings often near or above ~$900)  |
 | [Quadro RTX 6000](https://www.techpowerup.com/gpu-specs/quadro-rtx-6000.c3307) | 24GB GDDR6 | 32.62 TFLOPS    | 16.31 TFLOPS     | 260W    | ~22–30W                  | 672.0 GB/s       | ✅                  | **~$1,000 – $1,399** (common used around ~$1,019-$1,390)    |
+
+
+| **Turing based Quardo**                                                                         | **VRAM**   | **FP16 (half)** | **FP32 (float)** | **TDP** | **Idle Power** | **Bandwidth** | **Virtualization** | **Avg Used eBay.com Price (USD)** |
+| ------------------------------------------------------------------------------- | ---------- | --------------- | ---------------- | ------- | -------------- | ------------- | ------------------ | --------------------------------- |
+| [Quadro RTX 8000](https://www.techpowerup.com/gpu-specs/quadro-rtx-8000.c3306)            | 48 GB GDDR6 | 32.62 TFLOPS | 16.3 TFLOPS    | 260W | ~20–30W (est.)         | 672 GB/s‡    | ✅                  | **~$1,975 – $2,875** |
+| [Quadro RTX 6000](https://www.techpowerup.com/gpu-specs/quadro-rtx-6000.c3307)            | 24 GB GDDR6 | 32.62 TFLOPS | 16.31 TFLOPS    | 260W | ~20–30W (est.)         | 672 GB/s‡    | ✅                  | **~$990 – $2,000** |
+| [Quadro RTX 5000](https://www.techpowerup.com/gpu-specs/quadro-rtx-5000.c3308)            | 16 GB GDDR6 | 22.30 TFLOPS | 11.15 TFLOPS   | 230W | ~15–20W (est.)         | 448 GB/s‡    | ✅                  | **~$449 - $600** |
+| [Quadro RTX 4000](https://www.techpowerup.com/gpu-specs/quadro-rtx-4000.c3336)            | 8 GB GDDR6  | 14.24 TFLOPS | 7.119 TFLOPS   | 160W | ~12–18W (est.)         | 448 GB/s‡    | ✅                  | **~$180 - $220** |
 
 <details>
 <summary>links:</summary>
@@ -1412,11 +1475,14 @@ i often found myself looking up these details when comparing GPUs to try to find
 
 | **GPU**                                                                         | **VRAM**   | **FP16 (half)** | **FP32 (float)** | **TDP** | **Idle Power** | **Bandwidth** | **Virtualization** | **Avg Used eBay.com Price (USD)** |
 | ------------------------------------------------------------------------------- | ---------- | --------------- | ---------------- | ------- | -------------- | ------------- | ------------------ | --------------------------------- |
+| [RTX A400](https://www.techpowerup.com/gpu-specs/rtx-a400.c4212)     | 4 GB GDDR6  | 2.706 TFLOPS      | 2.706 TFLOPS     | 50W    | ~6–10W*        | 96 GB/s       | ✅                  | **~$180 – $220** |
 | [RTX A2000](https://www.techpowerup.com/gpu-specs/rtx-a2000.c3820) 6GB          | 6GB GDDR6  | 7.987 TFLOPS    | 7.987 TFLOPS     | 70W     | ~7–10W         | 288 GB/s      | ✅                  | ~$300–$450             |
 | [RTX A2000 (12GB)](https://www.techpowerup.com/gpu-specs/rtx-a2000-12-gb.c3853) | 12GB GDDR6 | 7.987 TFLOPS    | 7.987 TFLOPS     | 70W     | ~7–10W         | 288 GB/s      | ✅                  | ~$575–$650             |
 | [RTX A4500](https://www.techpowerup.com/gpu-specs/rtx-a4500.c3849)              | 20GB GDDR6 | 23.65 TFLOPS    | 23.65 TFLOPS     | 200W    | ~13–18W        | 640 GB/s      | ✅                  | ~$1,295–$1,450         |
 | [RTX A5000](https://www.techpowerup.com/gpu-specs/rtx-a5000.c3748)              | 24GB GDDR6 | 27.77 TFLOPS    | 27.77 TFLOPS     | 230W    | ~10–20W        | 768 GB/s      | ✅                  | ~$1,675–$1,900         |
 | [RTX A6000](https://www.techpowerup.com/gpu-specs/rtx-a6000.c3686)              | 48GB GDDR6 | 38.71 TFLOPS    | 38.71 TFLOPS     | 300W    | ~8–12W         | 768 GB/s      | ✅                  | ~$4,250–$5,000         |
+
+<br>NOTE: Nvidia dropped the quadro name after turing now they are RTX A-series. 
 
 <details>
 <summary>links:</summary>
@@ -1432,14 +1498,22 @@ i often found myself looking up these details when comparing GPUs to try to find
 
 | **GPU**                                                                                       | **VRAM**   | **FP16 (half)**    | **FP32 (float)** | **TDP** | **Idle Power (typical)** | **Bandwidth** | **Virtualization** | **Avg Used eBay.com Price (≈)**                                                                                    |
 | --------------------------------------------------------------------------------------------- | ---------- | ------------------ | ---------------- | ------- | ------------------------ | ------------- | ------------------ | ------------------------------------------------------------------------------------------------------------------ |
-| [**Tesla P4**](https://www.techpowerup.com/gpu-specs/tesla-p4.c2879)                          | 8 GB       | 89.12 GFLOPS       | 5.704 TFLOPS     | 75 W    | ~6–10 W                  | 192.3 GB/s    | ✅                  | **~$65 – $100** – Tesla P4 listings often show used cards in the $65–$100 range.                        |
-| [**Tesla P40**](https://www.techpowerup.com/gpu-specs/tesla-p40.c2878)                        | 24 GB      | 183.7 GFLOPS       | 11.76 TFLOPS     | 250 W   | ~9–12 W                  | 384-bit GDDR5 | ✅                  | **~$190 – $300+** – Multiple used Tesla P40 listings available between about $180 and $300.             |
-| [**Tesla P100 PCIe 12GB**](https://www.techpowerup.com/gpu-specs/tesla-p100-pcie-12-gb.c2915) | 12 GB HBM2 | 19.05 TFLOPS       | 9.526 TFLOPS     | 250 W   | ~25–27 W                 | 549.1 GB/s    | ✅                  | **~$90 – $130** – Typical used cards around ~$100+ on eBay.                                             |
-| [**Tesla P100 SXM2 16GB**](https://www.techpowerup.com/gpu-specs/tesla-p100-sxm2.c3183)       | 16GB HBM2  | 21.22 TFLOPS       | 10.61 TFLOPS     | 300 W   | ~25–30 W                 | 732.2 GB/s    | ✅                  | **~$180 – $300+** – Listings vary based on adapter combos; typical range observed.                      |
-| [**Tesla V100 PCIe 16GB**](https://www.techpowerup.com/gpu-specs/tesla-v100-pcie-16-gb.c2957) | 16 GB HBM2 | 28.26 TFLOPS       | 14.13 TFLOPS     | 300 W   | ~20–30 W                 | 897.0 GB/s    | ✅                  | **~$300 – $500+** – Used listings frequently show V100 16GB cards around this range.                    |
-| [**Tesla V100 PCIe 32GB**](https://www.techpowerup.com/gpu-specs/tesla-v100-pcie-32-gb.c3184) | 32 GB HBM2 | ~28.26 TFLOPS      | ~14.13 TFLOPS    | 300 W   | ~20–30 W                 | 897.0 GB/s    | ✅                  | **~$700 – $1,000+** – Larger-memory units on eBay.com trend significantly higher.                       |
-| [**Tesla T4**](https://www.techpowerup.com/gpu-specs/tesla-t4.c3316)                          | 16 GB      | 65.13 TFLOPS (8:1) | 8.141 TFLOPS     | 70 W    | ~8–12 W                  | 320.0 GB/s    | ✅                  | **~$100 – $200** – Used T4 cards often appear in this range on eBay.com.                                |
-| [**Tesla L4**](https://www.techpowerup.com/gpu-specs/l4.c4091)                                | 24 GB      | 30.29 TFLOPS (1:1) | 30.29 TFLOPS     | 72 W    | ~8–12 W                  | 192.3 GB/s    | ✅                  | **~$600 – $900+ (est.)** – Limited direct used eBay.com data; inference-class cards often list higher.  |
+| [**Tesla P4**](https://www.techpowerup.com/gpu-specs/tesla-p4.c2879)                          | 8 GB       | 89.12 GFLOPS       | 5.704 TFLOPS     | 75W    | ~6–10W                  | 192.3 GB/s    | ✅                  | **~$65 – $100** – Tesla P4 listings often show used cards in the $65–$100 range.                        |
+| [**Tesla P40**](https://www.techpowerup.com/gpu-specs/tesla-p40.c2878)                        | 24 GB      | 183.7 GFLOPS       | 11.76 TFLOPS     | 250W   | ~9–12W                  | 384-bit GDDR5 | ✅                  | **~$190 – $300+** – Multiple used Tesla P40 listings available between about $180 and $300.             |
+| [**Tesla P100 PCIe 12GB**](https://www.techpowerup.com/gpu-specs/tesla-p100-pcie-12-gb.c2915) | 12 GB HBM2 | 19.05 TFLOPS       | 9.526 TFLOPS     | 250W   | ~25–27W                 | 549.1 GB/s    | ✅                  | **~$90 – $130** – Typical used cards around ~$100+ on eBay.                                             |
+| [**Tesla P100 SXM2 16GB**](https://www.techpowerup.com/gpu-specs/tesla-p100-sxm2.c3183)       | 16GB HBM2  | 21.22 TFLOPS       | 10.61 TFLOPS     | 300W   | ~25–30W                 | 732.2 GB/s    | ✅                  | **~$180 – $300+** – Listings vary based on adapter combos; typical range observed.                      |
+| [**Tesla V100 PCIe 16GB**](https://www.techpowerup.com/gpu-specs/tesla-v100-pcie-16-gb.c2957) | 16 GB HBM2 | 28.26 TFLOPS       | 14.13 TFLOPS     | 300W   | ~20–30W                 | 897.0 GB/s    | ✅                  | **~$300 – $500+** – Used listings frequently show V100 16GB cards around this range.                    |
+| [**Tesla V100 PCIe 32GB**](https://www.techpowerup.com/gpu-specs/tesla-v100-pcie-32-gb.c3184) | 32 GB HBM2 | ~28.26 TFLOPS      | ~14.13 TFLOPS    | 300W   | ~20–30W                 | 897.0 GB/s    | ✅                  | **~$700 – $1,000+** – Larger-memory units on eBay.com trend significantly higher.                       |
+| [**Tesla T4**](https://www.techpowerup.com/gpu-specs/tesla-t4.c3316)                          | 16 GB      | 65.13 TFLOPS (8:1) | 8.141 TFLOPS     | 70W    | ~8–12W                  | 320.0 GB/s    | ✅                  | **$750** – Used T4 cards often appear in this range on eBay.com.                                |
+| [**Tesla L4**](https://www.techpowerup.com/gpu-specs/l4.c4091)                                | 24 GB      | 30.29 TFLOPS (1:1) | 30.29 TFLOPS     | 72W    | ~8–12W                  | 192.3 GB/s    | ✅                  | **$3,000**  |
+| [Tesla H100 80GB (PCIe / SXM5)](https://www.techpowerup.com/gpu-specs/h100-pcie-80-gb.c3899) | 80 GB HBM3 | 204.9 TFLOPS | 51.22 TFLOPS | 350W | ~30–40W (typical) | ~2,000–3,350 GB/s | ✅ | **~$14,000 – $22,500+** |
+| [Tesla H100 NVL 94GB](https://www.techpowerup.com/gpu-specs/h100-nvl-94-gb.c4327) | 94 GB HBM3 | 241.3 TFLOPS | 60.32 TFLOPS  | 400W | ~30–40W (typical) | ~3,900 GB/s | ✅ | **~$25,000 – $33,000+** |
+
+| **GPU**                                                                                       | **VRAM**   | **BF16**           | **BF16**           | **FP16 (half)**    | **FP32 (float)** | **TDP** | **Idle Power (typical)** | **Bandwidth** | **Virtualization** | **Avg Used eBay.com Price (≈)**                                                                                    |
+| --------------------------------------------------------------------------------------------- | ---------- | ------------------ | ------------------ | ------------------ | ---------------- | ------- | ------------------------ | ------------- | ------------------ | ------------------------------------------------------------------------------------------------------------------ |
+| [Tesla A100 40GB](https://www.techpowerup.com/gpu-specs/a100-pcie-40-gb.c3623)    | 40 GB HBM2e | 311.84 TFLOPS | 155.92 TFLOPs | 77.97 TFLOPS | 19.49 TFLOPS  | 250W | ~25–30W | 1,555 GB/s | ✅ | **~$4,000 – $9,000** |
+| [Tesla A100 80GB](https://www.techpowerup.com/gpu-specs/a100-pcie-80-gb.c3821)    | 80 GB HBM2e | 311.84 TFLOPS | 155.92 TFLOPs | 77.97 TFLOPS | 19.49 TFLOPS | 300W | ~25–30W | 1,935 GB/s | ✅ | **~$8,500 – $18,500+** |
+
 
 <details>
 <summary>links:</summary>
