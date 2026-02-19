@@ -769,6 +769,9 @@ Enterprise drives are designed to handle much higher workloads and offer greater
 
 ---
 
+<p align="center">
+  <img width="800" src="https://github.com/AncientMystic/HomeLab/blob/main/img/CPU-banner.png"></p>
+
 ### CPU: 
 
 <br> section in progress / to be updated
