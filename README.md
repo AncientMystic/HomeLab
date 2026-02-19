@@ -13,7 +13,7 @@ HomeLab CheatSheet &amp; AwesomeList
 <br>
 <br>ToDo: 
 - Update table of contents... :white_check_mark:
-- Add CPU Tables 
+- Add CPU Tables :white_check_mark:
 - Add more hardware information including more Nic models / HBA models / Enterprise drive models and information. 
 - Add more general filesystem information / ZFS information / tips with more links to obscure useful information that will help manage ZFS better.  
 - Add more software/Self hosting options and guide links. 
@@ -768,7 +768,10 @@ This summary is based strictly on the 2022, 2023, and 2024 AFR data provided abo
 
 Enterprise drives are designed to handle much higher workloads and offer greater durability compared to consumer-grade drives. While consumer drives may seem more affordable, they often burn out quickly in high-write environments such as servers or when used with ZFS, which requires frequent read/write operations. Enterprise SSDs are built for sustained performance, higher endurance (TBW/PBW), and reliability, making them the preferable choice for demanding applications where data integrity and long-term use are crucial.
 
+---
+
 ### CPU: 
+
 <br> section in progress / to be updated
 
 ### CPU backdoor modules 
@@ -1063,66 +1066,948 @@ Community discussion on RISC-V and alternatives often highlights the lack of opa
 
 <details>
 <summary><b>Intel:</b></summary>
- <b>14th Gen - Raptor Lake Desktop:</b>
   
-| Model                     | Cores | Threads | P-Cores | E-Cores | Base Clock | TDP (W) | Turbo Power (W) | iGPU | Avg Used eBay.com Price (US)                                 |
-| ------------------------- | ----- | ------- | ------- | ------- | ---------- | ------- | --------------- | ---- | ------------------------------------------------------------ |
-| Intel Core **i9-14900K**  | 24    | 32      | 8       | 16      | ~3.2 GHz   | 125     | 253             | ✔️   | **~$430-$480** (listing range)                    |
-| Intel Core **i9-14900KF** | 24    | 32      | 8       | 16      | ~3.2 GHz   | 125     | 253             | ❌    | *(used price data limited)*                                  |
-| Intel Core **i7-14700K**  | 20    | 28      | 8       | 12      | ~3.4 GHz   | 125     | 253             | ✔️   | **~$385-$450** (common used listings)             |
-| Intel Core **i7-14700KF** | 20    | 28      | 8       | 12      | ~3.4 GHz   | 125     | 253             | ❌    | *(used price data limited)*                                  |
-| Intel Core **i5-14600K**  | 14    | 20      | 6       | 8       | ~3.5 GHz   | 125     | 181             | ✔️   | **~$250-$299** (actual used sale reported ~$254)  |
-| Intel Core **i5-14600KF** | 14    | 20      | 6       | 8       | ~3.5 GHz   | 125     | 181             | ❌    | *(used price data limited but likely similar to K variant)*  |
-| Intel Core **i5-14600**   | 14    | 20      | 6       | 8       | –          | 65      | –               | ✔️   | *(used prices not clearly available)*                        |
-| Intel Core **i5-14500**   | 14    | 20      | 6       | 8       | –          | 65      | –               | ✔️   | *(used prices not clearly available)*                        |
-| Intel Core **i5-14400**   | 10    | 16      | 6       | 4       | –          | 65      | –               | ✔️   | *(used prices not clearly available)*                        |
-| Intel Core **i5-14400F**  | 10    | 16      | 6       | 4       | –          | 65      | –               | ❌    | *(used prices not clearly available)*                        |
-| Intel Core **i3-14100**   | 4     | 8       | 4       | 0       | –          | 60      | –               | ✔️   | *(used prices not clearly available)*                        |
-| Intel Core **i3-14100F**  | 4     | 8       | 4       | 0       | –          | 60      | –               | ❌    | *(used prices not clearly available)*                        |
-<details>
-<summary>links:</summary>
+## Intel Desktop CPUs:
 
- https://www.ebay.com/itm/187168854143 "Intel Core i9-14900K Processor (5.6 GHz, 24 Cores, LGA 1700) Box - BX8071514900K for sale online | eBay"
-<br> https://www.ebay.com/shop/i7-14700k?_nkw=i7+14700k "I7 14700k"
-<br> https://www.ebay.com/itm/406019578715 "Intel Core i5-14600K SRN43 LGA1700 14-core 20-thread ..."
+<details>
+<summary><b>14th Gen - Raptor Lake Refresh Desktop:</b></summary>
+
+| Model                     | Cores / Threads | Passmark CPU Bench                                                                                     | TDP (W) | Turbo Power (W) | iGPU    | Avg Used eBay.com Price (US)                                  |
+| ------------------------- | --------------- | ------------------------------------------------------------------------------------------------------ | ------- | --------------- | ------- | ------------------------------------------------------------- |
+| **Intel Core i9-14900K**  | 24C / 32T       | [~60,305](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i9-14900K)                               | 125     | 253             | UHD 770 | **~$430 – $480**                                              |
+| **Intel Core i9-14900KF** | 24C / 32T       | [~60,305](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i9-14900KF)                              | 125     | 253             | None    | **~$410 – $460**                                              |
+| **Intel Core i9-14900**   | 24C / 32T       | [~49,272](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i9-14900)                                | 65      | 219             | UHD 770 | **~$350 – $420**                                              |
+| **Intel Core i7-14700K**  | 20C / 28T       | [~53,653](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i7-14700K)                               | 125     | 253             | UHD 770 | **~$385 – $450**                                              |
+| **Intel Core i7-14700KF** | 20C / 28T       | [~53,653](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i7-14700KF)                              | 125     | 253             | None    | **~$360 – $430**                                              |
+| **Intel Core i7-14700**   | 20C / 28T       | [~46,680](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i7-14700)                                | 65      | 219             | UHD 770 | **~$300 – $380**                                              |
+| **Intel Core i5-14600K**  | 14C / 20T       | [~39,199](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i5-14600K)                               | 125     | 181             | UHD 770 | **~$250 – $300**                                              |
+| **Intel Core i5-14600KF** | 14C / 20T       | [~39,199](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i5-14600KF)                              | 125     | 181             | None    | **~$230 – $280**                                              |
+| **Intel Core i5-14600**   | 14C / 20T       | [~33,182](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i5-14600)                                | 65      | 154             | UHD 770 | **~$200 – $260**                                              |
+| **Intel Core i5-14500**   | 14C / 20T       | [~31,282](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i5-14500)                                | 65      | 154             | UHD 770 | **~$180 – $240**                                              |
+| **Intel Core i5-14400**   | 10C / 16T       | [~25,242](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i5-14400)                                | 65      | 148             | UHD 730 | **~$150 – $200**                                              |
+| **Intel Core i5-14400F**  | 10C / 16T       | [~25,786](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i5-14400F)                               | 65      | 148             | None    | **~$140 – $190**                                              |
+| **Intel Core i3-14100**   | 4C / 8T         | [~15,478](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i3-14100)                                | 60      | 89              | UHD 730 | **~$90 – $130**                                               |
+| **Intel Core i3-14100F**  | 4C / 8T         | [~15,383](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i3-14100F)                               | 60      | 89              | None    | **~$80 – $120**                                               |
 
 </details>
 
-
-| Model                     | Cores | Threads | P-Cores | E-Cores | Base Clock | TDP (W) | Turbo Power (W) | iGPU | Avg Used eBay.com Price (US)                |
-| ------------------------- | ----- | ------- | ------- | ------- | ---------- | ------- | --------------- | ---- | ------------------------------------------- |
-| Intel Core **i9-13900K**  | 24    | 32      | 8       | 16      | ~3.0 GHz   | 125     | 253             | ✔️   | **~$370–$640**                   |
-| Intel Core **i9-13900KF** | 24    | 32      | 8       | 16      | ~3.0 GHz   | 125     | 253             | ❌    | *(used prices vary widely)*      |
-| Intel Core **i9-13900**   | 24    | 32      | 8       | 16      | –          | 65      | –               | ✔️   | *(limited clear used data)* |
-| Intel Core **i7-13700K**  | 16    | 24      | 8       | 8       | ~3.4 GHz   | 125     | 253             | ✔️   | **~$470–$480**                   |
-| Intel Core **i7-13700KF** | 16    | 24      | 8       | 8       | ~3.4 GHz   | 125     | 253             | ❌    | **~$200–$300+** *(varies)*       |
-| Intel Core **i7-13700**   | 16    | 24      | 8       | 8       | –          | 65      | –               | ✔️   | *(limited clear used data)* |
-| Intel Core **i5-13600K**  | 14    | 20      | 6       | 8       | ~3.5 GHz   | 125     | 181             | ✔️   | **~$240–$300**                   |
-| Intel Core **i5-13600KF** | 14    | 20      | 6       | 8       | ~3.5 GHz   | 125     | 181             | ❌    | **~$215–$260**                   |
-| Intel Core **i5-13600**   | 14    | 20      | 6       | 8       | –          | 65      | –               | ✔️   | *(used prices sporadic)*   |
-| Intel Core **i5-13500**   | 14    | 20      | 6       | 8       | –          | 65      | –               | ✔️   | *(used prices sporadic)*    |
-| Intel Core **i5-13400**   | 10    | 16      | 6       | 4       | –          | 65      | –               | ✔️   | *(used prices sporadic)*  |
-| Intel Core **i5-13400F**  | 10    | 16      | 6       | 4       | –          | 65      | –               | ❌    | *(used prices sporadic)*  |
-| Intel Core **i3-13100**   | 4     | 8       | 4       | 0       | –          | 60      | –               | ✔️   | *(limited used data)*     |
-| Intel Core **i3-13100F**  | 4     | 8       | 4       | 0       | –          | 60      | –               | ❌    | *(limited used data)*    |
-
 <details>
-<summary>links:</summary>
+<summary><b>13th Gen - Raptor Lake Desktop:</b></summary>
 
- https://www.ebay.com/shop/13900k-cpu?_nkw=13900k+cpu "13900k CPU"
-<br> https://wccftech.com/roundup/intel-13th-gen-raptor-lake-cpus/ "Intel 13th Gen Raptor Lake Desktop CPUs Specs, Performance, Price, & Availability - Everything We Know So Far - Wccftech"
-<br> https://www.ebay.com/itm/357981735548 "Intel Core i7-13700K Unlocked Desktop Processor - eBay"
-<br> https://www.ebay.com/shop/intel-13700kf?_nkw=intel+13700kf "Intel 13700kf"
-<br> https://www.ebay.com/shop/intel-13600k?_nkw=intel+13600k "Intel 13600k"
-<br> https://www.techpowerup.com/302937/intel-launches-lower-priced-13th-gen-core-desktop-processors-with-65w "Intel Launches Lower-Priced 13th Gen Core Desktop Processors with 65W | TechPowerUp"
+| Model                     | Cores / Threads | Passmark CPU Bench                                                                                     | TDP (W) | Turbo Power (W) | iGPU    | Avg Used eBay.com Price (US)                                  |
+| ------------------------- | --------------- | ------------------------------------------------------------------------------------------------------ | ------- | --------------- | ------- | ------------------------------------------------------------- |
+| **Intel Core i9-13900K**  | 24C / 32T       | [~60,000](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i9-13900K)                               | 125     | 253             | UHD 770 | **~$370 – $440**                                              |
+| **Intel Core i9-13900KF** | 24C / 32T       | [~60,000](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i9-13900KF)                              | 125     | 253             | None    | **~$350 – $420**                                              |
+| **Intel Core i9-13900**   | 24C / 32T       | [~53,780](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i9-13900)                                | 65      | 219             | UHD 770 | **~$300 – $380**                                              |
+| **Intel Core i7-13700K**  | 16C / 24T       | [~47,002](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i7-13700K)                               | 125     | 253             | UHD 770 | **~$320 – $400**                                              |
+| **Intel Core i7-13700KF** | 16C / 24T       | [~47,002](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i7-13700KF)                              | 125     | 253             | None    | **~$300 – $380**                                              |
+| **Intel Core i7-13700**   | 16C / 24T       | [~42,000](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i7-13700)                                | 65      | 219             | UHD 770 | **~$250 – $320**                                              |
+| **Intel Core i5-13600K**  | 14C / 20T       | [~38,745](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i5-13600K)                               | 125     | 181             | UHD 770 | **~$220 – $280**                                              |
+| **Intel Core i5-13600KF** | 14C / 20T       | [~38,745](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i5-13600KF)                              | 125     | 181             | None    | **~$200 – $260**                                              |
+| **Intel Core i5-13600**   | 14C / 20T       | [~35,000](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i5-13600)                                | 65      | 154             | UHD 770 | **~$180 – $240**                                              |
+| **Intel Core i5-13500**   | 14C / 20T       | [~30,650](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i5-13500)                                | 65      | 154             | UHD 770 | **~$160 – $220**                                              |
+| **Intel Core i5-13400**   | 10C / 16T       | [~26,355](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i5-13400)                                | 65      | 148             | UHD 730 | **~$130 – $180**                                              |
+| **Intel Core i5-13400F**  | 10C / 16T       | [~25,129](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i5-13400F)                               | 65      | 148             | None    | **~$120 – $170**                                              |
+| **Intel Core i3-13100**   | 4C / 8T         | [~17,500](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i3-13100)                                | 60      | 89              | UHD 730 | **~$80 – $120**                                               |
+| **Intel Core i3-13100F**  | 4C / 8T         | [~17,500](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i3-13100F)                               | 60      | 89              | None    | **~$70 – $110**                                               |
+
+</details>
+<details>
+<summary><b>12th Gen - Alder Lake Desktop:</b></summary>
+
+| Model                     | Cores / Threads | Passmark CPU Bench                                                                                     | TDP (W) | Turbo Power (W) | iGPU    | Avg Used eBay.com Price (US)                                  |
+| ------------------------- | --------------- | ------------------------------------------------------------------------------------------------------ | ------- | --------------- | ------- | ------------------------------------------------------------- |
+| **Intel Core i9-12900K**  | 16C / 24T       | [~39,693](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i9-12900K)                               | 125     | 241             | UHD 770 | **~$300 – $400**                                              |
+| **Intel Core i9-12900KF** | 16C / 24T       | [~39,693](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i9-12900KF)                              | 125     | 241             | None    | **~$280 – $380**                                              |
+| **Intel Core i7-12700K**  | 12C / 20T       | [~34,422](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i7-12700K)                               | 125     | 190             | UHD 770 | **~$220 – $300**                                              |
+| **Intel Core i7-12700KF** | 12C / 20T       | [~34,422](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i7-12700KF)                              | 125     | 190             | None    | **~$200 – $280**                                              |
+| **Intel Core i5-12600K**  | 10C / 16T       | [~27,580](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i5-12600K)                               | 125     | 150             | UHD 770 | **~$150 – $220**                                              |
+| **Intel Core i5-12600KF** | 10C / 16T       | [~27,580](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i5-12600KF)                              | 125     | 150             | None    | **~$140 – $200**                                              |
+| **Intel Core i5-12400**   | 6C / 12T        | [~21,715](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i5-12400)                                | 65      | 117             | UHD 730 | **~$100 – $150**                                              |
+| **Intel Core i5-12400F**  | 6C / 12T        | [~21,715](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i5-12400F)                               | 65      | 117             | None    | **~$90 – $140**                                               |
+| **Intel Core i3-12100**   | 4C / 8T         | [~15,380](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i3-12100)                                | 60      | 89              | UHD 730 | **~$70 – $100**                                               |
+| **Intel Core i3-12100F**  | 4C / 8T         | [~15,380](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i3-12100F)                               | 60      | 89              | None    | **~$60 – $90**                                                |
 
 </details>
 
+<details>
+<summary><b>11th Gen - Rocket Lake Desktop:</b></summary>
 
+| Model                     | Cores / Threads | Passmark CPU Bench                                                                                     | TDP (W) | Turbo Power (W) | iGPU    | Avg Used eBay.com Price (US)                                  |
+| ------------------------- | --------------- | ------------------------------------------------------------------------------------------------------ | ------- | --------------- | ------- | ------------------------------------------------------------- |
+| **Intel Core i9-11900K**  | 8C / 16T        | [~29,069](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i9-11900K)                               | 125     | 251             | UHD 750 | **~$220 – $300**                                              |
+| **Intel Core i9-11900KF** | 8C / 16T        | [~29,069](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i9-11900KF)                              | 125     | 251             | None    | **~$200 – $280**                                              |
+| **Intel Core i7-11700K**  | 8C / 16T        | [~24,438](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i7-11700K)                               | 125     | 251             | UHD 750 | **~$150 – $220**                                              |
+| **Intel Core i7-11700KF** | 8C / 16T        | [~24,438](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i7-11700KF)                              | 125     | 251             | None    | **~$140 – $200**                                              |
+| **Intel Core i5-11600K**  | 6C / 12T        | [~20,461](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i5-11600K)                               | 125     | 224             | UHD 750 | **~$100 – $150**                                              |
+| **Intel Core i5-11600KF** | 6C / 12T        | [~20,461](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i5-11600KF)                              | 125     | 224             | None    | **~$90 – $140**                                               |
+| **Intel Core i5-11400**   | 6C / 12T        | [~18,810](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i5-11400)                                | 65      | 154             | UHD 750 | **~$80 – $120**                                               |
+| **Intel Core i5-11400F**  | 6C / 12T        | [~18,810](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i5-11400F)                               | 65      | 154             | None    | **~$70 – $110**                                               |
+| **Intel Core i7-11700T**  | 8C / 16T        | [~17,461](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i7-11700T)                               | 35      | 115             | UHD 750 | **~$130 – $180** (Low-power, good for homelab)               |
+
+</details>
+
+<details>
+<summary><b>10th Gen - Comet Lake Desktop:</b></summary>
+
+| Model                     | Cores / Threads | Passmark CPU Bench                                                                                     | TDP (W) | Turbo Power (W) | iGPU    | Avg Used eBay.com Price (US)                                  |
+| ------------------------- | --------------- | ------------------------------------------------------------------------------------------------------ | ------- | --------------- | ------- | ------------------------------------------------------------- |
+| **Intel Core i9-10900K**  | 10C / 20T       | [~22,837](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i9-10900K)                               | 125     | 250             | UHD 630 | **~$200 – $280**                                              |
+| **Intel Core i9-10900KF** | 10C / 20T       | [~22,837](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i9-10900KF)                              | 125     | 250             | None    | **~$180 – $260**                                              |
+| **Intel Core i7-10700K**  | 8C / 16T        | [~17,558](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i7-10700K)                               | 125     | 229             | UHD 630 | **~$130 – $190**                                              |
+| **Intel Core i7-10700KF** | 8C / 16T        | [~17,558](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i7-10700KF)                              | 125     | 229             | None    | **~$120 – $180**                                              |
+| **Intel Core i5-10600K**  | 6C / 12T        | [~14,216](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i5-10600K)                               | 125     | 182             | UHD 630 | **~$90 – $130**                                               |
+| **Intel Core i5-10600KF** | 6C / 12T        | [~14,216](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i5-10600KF)                              | 125     | 182             | None    | **~$80 – $120**                                               |
+| **Intel Core i5-10400**   | 6C / 12T        | [~12,377](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i5-10400)                                | 65      | 134             | UHD 630 | **~$70 – $100**                                               |
+| **Intel Core i5-10400F**  | 6C / 12T        | [~12,377](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i5-10400F)                               | 65      | 134             | None    | **~$60 – $90**                                                |
+| **Intel Core i3-10100**   | 4C / 8T         | [~8,960](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i3-10100)                                 | 65      | 90              | UHD 630 | **~$50 – $70**                                                |
+| **Intel Core i3-10100F**  | 4C / 8T         | [~8,960](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i3-10100F)                                | 65      | 90              | None    | **~$40 – $60**                                                |
+
+</details>
+
+<details>
+<summary><b>9th Gen - Coffee Lake Refresh Desktop:</b></summary>
+
+| Model                     | Cores / Threads | Passmark CPU Bench                                                                                     | TDP (W) | Turbo Power (W) | iGPU    | Avg Used eBay.com Price (US)                                  |
+| ------------------------- | --------------- | ------------------------------------------------------------------------------------------------------ | ------- | --------------- | ------- | ------------------------------------------------------------- |
+| **Intel Core i9-9900K**   | 8C / 16T        | [~18,307](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i9-9900K)                                | 95      | 210             | UHD 630 | **~$180 – $250**                                              |
+| **Intel Core i9-9900KF**  | 8C / 16T        | [~18,307](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i9-9900KF)                               | 95      | 210             | None    | **~$160 – $230**                                              |
+| **Intel Core i7-9700K**   | 8C / 8T         | [~17,398](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i7-9700K)                                | 95      | 210             | UHD 630 | **~$120 – $180**                                              |
+| **Intel Core i7-9700KF**  | 8C / 8T         | [~17,398](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i7-9700KF)                               | 95      | 210             | None    | **~$110 – $170**                                              |
+| **Intel Core i5-9600K**   | 6C / 6T         | [~13,257](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i5-9600K)                                | 95      | 170             | UHD 630 | **~$70 – $110**                                               |
+| **Intel Core i5-9600KF**  | 6C / 6T         | [~13,257](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i5-9600KF)                               | 95      | 170             | None    | **~$60 – $100**                                               |
+| **Intel Core i5-9400**    | 6C / 6T         | [~11,064](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i5-9400)                                 | 65      | 140             | UHD 630 | **~$50 – $80**                                                |
+| **Intel Core i5-9400F**   | 6C / 6T         | [~11,064](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i5-9400F)                                | 65      | 140             | None    | **~$45 – $75**                                                |
+| **Intel Core i3-9100**    | 4C / 4T         | [~7,526](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i3-9100)                                  | 65      | 110             | UHD 630 | **~$35 – $55**                                                |
+| **Intel Core i3-9100F**   | 4C / 4T         | [~7,526](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i3-9100F)                                 | 65      | 110             | None    | **~$30 – $50**                                                |
+
+</details>
+
+<details>
+<summary><b>8th Gen - Coffee Lake Desktop:</b></summary>
+
+| Model                     | Cores / Threads | Passmark CPU Bench                                                                                     | TDP (W) | Turbo Power (W) | iGPU    | Avg Used eBay.com Price (US)                                  |
+| ------------------------- | --------------- | ------------------------------------------------------------------------------------------------------ | ------- | --------------- | ------- | ------------------------------------------------------------- |
+| **Intel Core i7-8700K**   | 6C / 12T        | [~15,970](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i7-8700K)                                | 95      | 190             | UHD 630 | **~$100 – $150**                                              |
+| **Intel Core i7-8700**    | 6C / 12T        | [~14,610](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i7-8700)                                 | 65      | 170             | UHD 630 | **~$90 – $140**                                               |
+| **Intel Core i5-8600K**   | 6C / 6T         | [~12,793](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i5-8600K)                                | 95      | 170             | UHD 630 | **~$60 – $90**                                                |
+| **Intel Core i5-8400**    | 6C / 6T         | [~11,192](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i5-8400)                                 | 65      | 145             | UHD 630 | **~$50 – $80**                                                |
+| **Intel Core i3-8100**    | 4C / 4T         | [~7,134](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i3-8100)                                  | 65      | 110             | UHD 630 | **~$35 – $55**                                                |
+
+</details>
+
+<details>
+<summary><b>7th Gen - Kaby Lake Desktop:</b></summary>
+
+| Model                     | Cores / Threads | Passmark CPU Bench                                                                                     | TDP (W) | Turbo Power (W) | iGPU    | Avg Used eBay.com Price (US)                                  |
+| ------------------------- | --------------- | ------------------------------------------------------------------------------------------------------ | ------- | --------------- | ------- | ------------------------------------------------------------- |
+| **Intel Core i7-7700K**   | 4C / 8T         | [~12,321](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i7-7700K)                                | 91      | 165             | HD 630  | **~$80 – $120**                                               |
+| **Intel Core i7-7700**    | 4C / 8T         | [~10,883](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i7-7700)                                 | 65      | 150             | HD 630  | **~$70 – $110**                                               |
+| **Intel Core i5-7600K**   | 4C / 4T         | [~9,130](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i5-7600K)                                 | 91      | 150             | HD 630  | **~$50 – $80**                                                |
+| **Intel Core i5-7500**    | 4C / 4T         | [~7,985](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i5-7500)                                  | 65      | 140             | HD 630  | **~$40 – $70**                                                |
+| **Intel Core i3-7100**    | 2C / 4T         | [~5,052](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i3-7100)                                  | 51      | 90              | HD 630  | **~$25 – $40**                                                |
+
+</details>
+
+<details>
+<summary><b>6th Gen - Skylake Desktop:</b></summary>
+
+| Model                     | Cores / Threads | Passmark CPU Bench                                                                                     | TDP (W) | Turbo Power (W) | iGPU    | Avg Used eBay.com Price (US)                                  |
+| ------------------------- | --------------- | ------------------------------------------------------------------------------------------------------ | ------- | --------------- | ------- | ------------------------------------------------------------- |
+| **Intel Core i7-6700K**   | 4C / 8T         | [~10,994](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i7-6700K)                                | 91      | 165             | HD 530  | **~$60 – $100**                                               |
+| **Intel Core i7-6700**    | 4C / 8T         | [~9,851](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i7-6700)                                  | 65      | 150             | HD 530  | **~$50 – $80**                                                |
+| **Intel Core i5-6600K**   | 4C / 4T         | [~8,077](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i5-6600K)                                 | 95      | 150             | None    | **~$40 – $70**                                                |
+| **Intel Core i5-6500**    | 4C / 4T         | [~7,342](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i5-6500)                                  | 65      | 135             | HD 530  | **~$35 – $60**                                                |
+| **Intel Core i3-6100**    | 2C / 4T         | [~4,634](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i3-6100)                                  | 51      | 85              | HD 530  | **~$20 – $35**                                                |
+</details>
+
+## Intel Destkop/Workstation X-series CPUs: 
+
+<details>
+<summary><b>10th Gen - Cascade Lake-X (HEDT):</b></summary>
+
+| Model                     | Cores / Threads | Passmark CPU Bench                                                                                     | TDP (W) | Turbo Power (W) | iGPU    | Avg Used eBay.com Price (US)                                  |
+| ------------------------- | --------------- | ------------------------------------------------------------------------------------------------------ | ------- | --------------- | ------- | ------------------------------------------------------------- |
+| **Intel Core i9-10980XE** | 18C / 36T       | [~32,784](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i9-10980XE)                             | 165     | 190             | None    | **~$450 – $650**                                              |
+| **Intel Core i9-10940X**  | 14C / 28T       | [~27,907](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i9-10940X)                              | 165     | 190             | None    | **~$300 – $400**                                              |
+| **Intel Core i9-10920X**  | 12C / 24T       | [~26,076](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i9-10920X)                              | 165     | 190             | None    | **~$250 – $330**                                              |
+| **Intel Core i9-10900X**  | 10C / 20T       | [~22,472](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i9-10900X)                              | 165     | 190             | None    | **~$200 – $280**                                              |
+
+</details>
+
+<details>
+<summary><b>9th Gen - Skylake-X Refresh (HEDT):</b></summary>
+
+| Model                     | Cores / Threads | Passmark CPU Bench                                                                                     | TDP (W) | Turbo Power (W) | iGPU    | Avg Used eBay.com Price (US)                                  |
+| ------------------------- | --------------- | ------------------------------------------------------------------------------------------------------ | ------- | --------------- | ------- | ------------------------------------------------------------- |
+| **Intel Core i9-9980XE**  | 18C / 36T       | [~32,341](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i9-9980XE)                              | 165     | 190             | None    | **~$400 – $600**                                              |
+| **Intel Core i9-9960X**   | 16C / 32T       | [~29,882](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i9-9960X)                               | 165     | 190             | None    | **~$300 – $420**                                              |
+| **Intel Core i9-9940X**   | 14C / 28T       | [~27,183](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i9-9940X)                               | 165     | 190             | None    | **~$250 – $350**                                              |
+| **Intel Core i9-9920X**   | 12C / 24T       | [~24,567](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i9-9920X)                               | 165     | 190             | None    | **~$200 – $280**                                              |
+| **Intel Core i9-9900X**   | 10C / 20T       | [~21,853](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i9-9900X)                               | 165     | 190             | None    | **~$150 – $220**                                              |
+| **Intel Core i7-9800X**   | 8C / 16T        | [~18,036](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i7-9800X)                               | 165     | 190             | None    | **~$100 – $150**                                              |
+
+</details>
+
+<details>
+<summary><b>7th & 8th Gen - Skylake-X / Kaby Lake-X (HEDT):</b></summary>
+
+| Model                     | Cores / Threads | Passmark CPU Bench                                                                                     | TDP (W) | Turbo Power (W) | iGPU    | Avg Used eBay.com Price (US)                                  |
+| ------------------------- | --------------- | ------------------------------------------------------------------------------------------------------ | ------- | --------------- | ------- | ------------------------------------------------------------- |
+| **Intel Core i9-7980XE**  | 18C / 36T       | [~31,947](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i9-7980XE)                              | 165     | 190             | None    | **~$350 – $500**                                              |
+| **Intel Core i9-7960X**   | 16C / 32T       | [~28,862](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i9-7960X)                               | 165     | 190             | None    | **~$250 – $350**                                              |
+| **Intel Core i9-7940X**   | 14C / 28T       | [~26,401](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i9-7940X)                               | 165     | 190             | None    | **~$220 – $300**                                              |
+| **Intel Core i9-7920X**   | 12C / 24T       | [~22,991](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i9-7920X)                               | 140     | 165             | None    | **~$180 – $250**                                              |
+| **Intel Core i9-7900X**   | 10C / 20T       | [~21,092](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i9-7900X)                               | 140     | 165             | None    | **~$150 – $220**                                              |
+| **Intel Core i7-7820X**   | 8C / 16T        | [~17,227](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i7-7820X)                               | 140     | 165             | None    | **~$120 – $170**                                              |
+| **Intel Core i7-7800X**   | 6C / 12T        | [~12,882](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i7-7800X)                               | 140     | 165             | None    | **~$80 – $120**                                               |
+
+</details>
+
+## Intel XEON Server/Workstation CPUs: 
+
+<details>
+<summary><b>Granite Rapids-WS (Upcoming Xeon W-600 Series)</b></summary>
+
+| Model                     | Cores / Threads | Passmark CPU Bench                                                                                     | TDP (W) | Turbo Power (W) | L3 Cache | Avg Used eBay.com Price (US)                                  |
+| ------------------------- | --------------- | ------------------------------------------------------------------------------------------------------ | ------- | --------------- | -------- | ------------------------------------------------------------- |
+| **Intel Xeon 698X**       | 86C / 172T      | [Not yet available]                                                                                    | 350     | ~500            | 336 MB   | **Not yet available** (Engineering sample)                    |
+| **Intel Xeon 696X**       | 64C / 128T      | [~112,888](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Xeon+696X)                                  | 350     | ~450-500        | 336 MB   | **Not yet available** (Engineering sample)                    |
+| **Intel Xeon 678X**       | TBD             | [Not yet available]                                                                                    | 350     | TBD             | 192 MB   | **Not yet available** (Engineering sample)                    |
+| **Intel Xeon 676X**       | TBD             | [Not yet available]                                                                                    | 350     | TBD             | 144 MB   | **Not yet available** (Engineering sample)                    |
+| **Intel Xeon 674X**       | TBD             | [Not yet available]                                                                                    | 350     | TBD             | 144 MB   | **Not yet available** (Engineering sample)                    |
+| **Intel Xeon 658X**       | TBD             | [Not yet available]                                                                                    | 350     | TBD             | 144 MB   | **Not yet available** (Engineering sample)                    |
+| **Intel Xeon 656**        | TBD             | [Not yet available]                                                                                    | TBD     | TBD             | 72 MB    | **Not yet available** (Engineering sample)                    |
+| **Intel Xeon 654**        | 18C / 36T       | [~61,351](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Xeon+654)                                    | TBD     | TBD             | 72 MB    | **Not yet available** (Expected ~$1300 new)                   |
+| **Intel Xeon 638**        | TBD             | [Not yet available]                                                                                    | TBD     | TBD             | 72 MB    | **Not yet available** (Engineering sample)                    |
+| **Intel Xeon 636**        | TBD             | [Not yet available]                                                                                    | TBD     | TBD             | 48 MB    | **Not yet available** (Engineering sample)                    |
+| **Intel Xeon 634**        | TBD             | [Not yet available]                                                                                    | TBD     | TBD             | 48 MB    | **Not yet available** (Engineering sample)                    |
+
+</details>
+
+<details>
+<summary><b>Sapphire Rapids-WS (Xeon W-3400) - Socket 4677</b></summary>
+
+| Model                     | Cores / Threads | Passmark CPU Bench                                                                                     | TDP (W) | Turbo Power (W) | L3 Cache | Avg Used eBay.com Price (US)                                  |
+| ------------------------- | --------------- | ------------------------------------------------------------------------------------------------------ | ------- | --------------- | -------- | ------------------------------------------------------------- |
+| **Intel Xeon w9-3495X**   | 56C / 112T      | [~96,443](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Xeon+w9-3495X)                               | 350     | 420             | 105 MB   | **~$4,500 – $6,000**                                          |
+| **Intel Xeon w9-3475X**   | 36C / 72T       | [~74,000](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Xeon+w9-3475X)                               | 300     | 360             | 82.5 MB  | **~$3,200 – $4,200**                                          |
+| **Intel Xeon w7-3465X**   | 28C / 56T       | [~55,297](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Xeon+w7-3465X)                               | 300     | 360             | 75 MB    | **~$2,800 – $3,500**                                          |
+| **Intel Xeon w7-3455**    | 24C / 48T       | [~48,000](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Xeon+w7-3455)                                | 270     | 324             | 67.5 MB  | **~$2,200 – $2,900**                                          |
+| **Intel Xeon w7-3445**    | 20C / 40T       | [~42,000](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Xeon+w7-3445)                                | 270     | 324             | 52.5 MB  | **~$1,800 – $2,400**                                          |
+| **Intel Xeon w5-3435X**   | 16C / 32T       | [~35,000](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Xeon+w5-3435X)                               | 270     | 324             | 45 MB    | **~$1,400 – $1,900**                                          |
+| **Intel Xeon w5-3425**    | 12C / 24T       | [~28,000](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Xeon+w5-3425)                                | 270     | 324             | 30 MB    | **~$1,100 – $1,500**                                          |
+
+</details>
+
+<details>
+<summary><b>Sapphire Rapids-WS (Xeon W-2400) - Socket 4677</b></summary>
+
+| Model                     | Cores / Threads | Passmark CPU Bench                                                                                     | TDP (W) | Turbo Power (W) | L3 Cache | Avg Used eBay.com Price (US)                                  |
+| ------------------------- | --------------- | ------------------------------------------------------------------------------------------------------ | ------- | --------------- | -------- | ------------------------------------------------------------- |
+| **Intel Xeon w7-2495X**   | 24C / 48T       | [~45,000](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Xeon+w7-2495X)                               | 225     | 270             | 45 MB    | **~$2,100 – $2,700**                                          |
+| **Intel Xeon w7-2475X**   | 20C / 40T       | [~39,000](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Xeon+w7-2475X)                               | 225     | 270             | 37.5 MB  | **~$1,800 – $2,300**                                          |
+| **Intel Xeon w5-2465X**   | 16C / 32T       | [~33,000](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Xeon+w5-2465X)                               | 200     | 240             | 33.75 MB | **~$1,400 – $1,900**                                          |
+| **Intel Xeon w5-2455X**   | 12C / 24T       | [~27,000](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Xeon+w5-2455X)                               | 200     | 240             | 30 MB    | **~$1,100 – $1,500**                                          |
+| **Intel Xeon w5-2445**    | 10C / 20T       | [~23,000](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Xeon+w5-2445)                                | 175     | 210             | 26.25 MB | **~$900 – $1,200**                                            |
+| **Intel Xeon w3-2435**    | 8C / 16T        | [~19,000](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Xeon+w3-2435)                                | 165     | 198             | 22.5 MB  | **~$700 – $950**                                              |
+| **Intel Xeon w3-2423**    | 6C / 12T        | [~14,500](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Xeon+w3-2423)                                | 120     | 144             | 15 MB    | **~$350 – $500**                                              |
+
+</details>
+
+<details>
+<summary><b>Xeon Platinum (3rd & 4th Gen Scalable)</b></summary>
+
+| Model                     | Cores / Threads | Passmark CPU Bench                                                                                     | TDP (W) | Socket  | L3 Cache | Avg Used eBay.com Price (US)                                  |
+| ------------------------- | --------------- | ------------------------------------------------------------------------------------------------------ | ------- | ------- | -------- | ------------------------------------------------------------- |
+| **Xeon Platinum 8376H**   | 28C / 56T       | [~38,000](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Xeon+Platinum+8376H)                         | 205     | LGA4189 | 38.5 MB  | **~$6,000 – $6,500**                                          |
+| **Xeon Gold 6544Y**       | 16C / 32T       | [~29,000](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Xeon+Gold+6544Y)                             | 270     | LGA4677 | 45 MB    | **~$3,400 – $3,800**                                          |
+
+</details>
+
+<details>
+<summary><b>Xeon E5 v4 (Broadwell-EP) - LGA2011-3</b></summary>
+
+| Model                     | Cores / Threads | Passmark CPU Bench                                                                                     | TDP (W) | Base / Turbo   | L3 Cache | Avg Used eBay.com Price (US)                                  |
+| ------------------------- | --------------- | ------------------------------------------------------------------------------------------------------ | ------- | -------------- | -------- | ------------------------------------------------------------- |
+| **Xeon E5-2699 v4**       | 22C / 44T       | [~26,598](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Xeon+E5-2699+v4)                             | 145     | 2.2 / 3.6 GHz  | 55 MB    | **~$350 – $500**                                              |
+| **Xeon E5-2698 v4**       | 20C / 40T       | [~24,717](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Xeon+E5-2698+v4)                             | 135     | 2.2 / 3.6 GHz  | 50 MB    | **~$300 – $450**                                              |
+| **Xeon E5-2697A v4**      | 16C / 32T       | [~21,675](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Xeon+E5-2697A+v4)                            | 145     | 2.6 / 3.6 GHz  | 40 MB    | **~$250 – $350**                                              |
+| **Xeon E5-2680 v4**       | 14C / 28T       | [~19,142](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Xeon+E5-2680+v4)                             | 120     | 2.4 / 3.3 GHz  | 35 MB    | **~$180 – $260**                                              |
+| **Xeon E5-2660 v4**       | 14C / 28T       | [~18,500](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Xeon+E5-2660+v4)                             | 105     | 2.0 / 3.2 GHz  | 35 MB    | **~$150 – $220**                                              |
+| **Xeon E5-2650L v4**      | 14C / 28T       | [~17,800](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Xeon+E5-2650L+v4)                            | 65      | 1.7 / 2.9 GHz  | 35 MB    | **~$140 – $200** (Low-power)                                  |
+| **Xeon E5-2637 v4**       | 4C / 8T         | [~8,500](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Xeon+E5-2637+v4)                              | 135     | 3.5 / 3.7 GHz  | 15 MB    | **~$40 – $70**                                                |
+| **Xeon E5-2623 v4**       | 4C / 8T         | [~7,800](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Xeon+E5-2623+v4)                              | 85      | 2.6 / 3.2 GHz  | 10 MB    | **~$35 – $60**                                                |
+
+</details>
+
+<details>
+<summary><b>Xeon E5 v1 (Sandy Bridge-EP) - LGA2011</b></summary>
+
+| Model                     | Cores / Threads | Passmark CPU Bench                                                                                     | TDP (W) | Base / Turbo   | L3 Cache | Avg Used eBay.com Price (US)                                  |
+| ------------------------- | --------------- | ------------------------------------------------------------------------------------------------------ | ------- | -------------- | -------- | ------------------------------------------------------------- |
+| **Xeon E5-2690**          | 8C / 16T        | [~13,634](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Xeon+E5-2690)                                | 135     | 2.9 / 3.8 GHz  | 20 MB    | **~$35 – $50**                                                |
+| **Xeon E5-2680**          | 8C / 16T        | [~13,059](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Xeon+E5-2680)                                | 130     | 2.7 / 3.5 GHz  | 20 MB    | **~$30 – $45**                                                |
+| **Xeon E5-2670**          | 8C / 16T        | [~12,258](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Xeon+E5-2670)                                | 115     | 2.6 / 3.3 GHz  | 20 MB    | **~$25 – $40** (Classic homelab favorite)                     |
+| **Xeon E5-2665**          | 8C / 16T        | [~11,894](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Xeon+E5-2665)                                | 115     | 2.4 / 3.1 GHz  | 20 MB    | **~$25 – $35**                                                |
+| **Xeon E5-2660**          | 8C / 16T        | [~10,852](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Xeon+E5-2660)                                | 95      | 2.2 / 3.0 GHz  | 20 MB    | **~$20 – $30**                                                |
+| **Xeon E5-2650**          | 8C / 16T        | [~10,215](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Xeon+E5-2650)                                | 95      | 2.0 / 2.8 GHz  | 20 MB    | **~$18 – $25**                                                |
+| **Xeon E5-2643**          | 4C / 8T         | [~5,210](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Xeon+E5-2643)                                 | 130     | 3.3 / 3.5 GHz  | 10 MB    | **~$15 – $25**                                    |
+| **Xeon E5-2620**          | 6C / 12T        | [~7,344](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Xeon+E5-2620)                                 | 95      | 2.0 / 2.5 GHz  | 15 MB    | **~$15 – $20**                                                |
+
+</details>
+
+<details>
+<summary><b>Xeon E5 v2 (Ivy Bridge-EP) - LGA2011</b></summary>
+
+| Model                     | Cores / Threads | Passmark CPU Bench                                                                                     | TDP (W) | Base / Turbo   | L3 Cache | Avg Used eBay.com Price (US)                                  |
+| ------------------------- | --------------- | ------------------------------------------------------------------------------------------------------ | ------- | -------------- | -------- | ------------------------------------------------------------- |
+| **Xeon E5-2697 v2**       | 12C / 24T       | [~22,852](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Xeon+E5-2697+v2)                             | 130     | 2.7 / 3.5 GHz  | 30 MB    | **~$70 – $100**                                   |
+| **Xeon E5-2695 v2**       | 12C / 24T       | [~22,021](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Xeon+E5-2695+v2)                             | 115     | 2.4 / 3.2 GHz  | 30 MB    | **~$60 – $85**                                                |
+| **Xeon E5-2690 v2**       | 10C / 20T       | [~19,550](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Xeon+E5-2690+v2)                             | 130     | 3.0 / 3.6 GHz  | 25 MB    | **~$50 – $75**                                                |
+| **Xeon E5-2680 v2**       | 10C / 20T       | [~19,134](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Xeon+E5-2680+v2)                             | 115     | 2.8 / 3.6 GHz  | 25 MB    | **~$45 – $65**                                                |
+| **Xeon E5-2670 v2**       | 10C / 20T       | [~17,967](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Xeon+E5-2670+v2)                             | 115     | 2.5 / 3.3 GHz  | 25 MB    | **~$40 – $55**                                                |
+| **Xeon E5-2667 v2**       | 8C / 16T        | [~15,818](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Xeon+E5-2667+v2)                             | 130     | 3.3 / 4.0 GHz  | 25 MB    | **~$35 – $50** (High clock, great for gaming)                 |
+| **Xeon E5-2650 v2**       | 8C / 16T        | [~14,734](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Xeon+E5-2650+v2)                             | 95      | 2.6 / 3.4 GHz  | 20 MB    | **~$30 – $45**                                                |
+| **Xeon E5-2640 v2**       | 8C / 16T        | [~13,421](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Xeon+E5-2640+v2)                             | 95      | 2.0 / 2.5 GHz  | 20 MB    | **~$25 – $35**                                                |
+| **Xeon E5-2630 v2**       | 6C / 12T        | [~9,971](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Xeon+E5-2630+v2)                              | 80      | 2.6 / 3.1 GHz  | 15 MB    | **~$20 – $30**                                                |
+| **Xeon E5-2620 v2**       | 6C / 12T        | [~9,275](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Xeon+E5-2620+v2)                              | 80      | 2.1 / 2.6 GHz  | 15 MB    | **~$18 – $25**                                                |
+| **Xeon E5-2609 v2**       | 4C / 4T         | [~6,844](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Xeon+E5-2609+v2)                              | 80      | 2.5 GHz (no turbo) | 10 MB | **~$10 – $15**                                    |
+
+</details>
+
+<details>
+<summary><b>Xeon E5 v3 (Haswell-EP) - LGA2011-3</b></summary>
+
+| Model                     | Cores / Threads | Passmark CPU Bench                                                                                     | TDP (W) | Base / Turbo   | L3 Cache | Avg Used eBay.com Price (US)                                  |
+| ------------------------- | --------------- | ------------------------------------------------------------------------------------------------------ | ------- | -------------- | -------- | ------------------------------------------------------------- |
+| **Xeon E5-2699 v3**       | 18C / 36T       | [~28,781](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Xeon+E5-2699+v3)                             | 145     | 2.3 / 3.6 GHz  | 45 MB    | **~$150 – $220**                                              |
+| **Xeon E5-2698 v3**       | 16C / 32T       | [~27,186](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Xeon+E5-2698+v3)                             | 135     | 2.3 / 3.6 GHz  | 40 MB    | **~$130 – $180**                                              |
+| **Xeon E5-2697 v3**       | 14C / 28T       | [~24,773](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Xeon+E5-2697+v3)                             | 145     | 2.6 / 3.6 GHz  | 35 MB    | **~$110 – $160**                                              |
+| **Xeon E5-2690 v3**       | 12C / 24T       | [~22,426](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Xeon+E5-2690+v3)                             | 135     | 2.6 / 3.5 GHz  | 30 MB    | **~$90 – $130**                                               |
+| **Xeon E5-2683 v3**       | 14C / 28T       | [~23,541](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Xeon+E5-2683+v3)                             | 120     | 2.0 / 3.0 GHz  | 35 MB    | **~$80 – $120** (Great multi-thread value)                    |
+| **Xeon E5-2680 v3**       | 12C / 24T       | [~21,502](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Xeon+E5-2680+v3)                             | 120     | 2.5 / 3.3 GHz  | 30 MB    | **~$70 – $100**                                               |
+| **Xeon E5-2670 v3**       | 12C / 24T       | [~20,433](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Xeon+E5-2670+v3)                             | 120     | 2.3 / 3.1 GHz  | 30 MB    | **~$60 – $85**                                                |
+| **Xeon E5-2667 v3**       | 8C / 16T        | [~16,989](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Xeon+E5-2667+v3)                             | 135     | 3.2 / 3.6 GHz  | 20 MB    | **~$50 – $75** (High clock)                                   |
+| **Xeon E5-2650 v3**       | 10C / 20T       | [~17,620](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Xeon+E5-2650+v3)                             | 105     | 2.3 / 3.0 GHz  | 25 MB    | **~$45 – $65**                                                |
+| **Xeon E5-2640 v3**       | 8C / 16T        | [~14,588](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Xeon+E5-2640+v3)                             | 90      | 2.6 / 3.4 GHz  | 20 MB    | **~$35 – $50**                                                |
+| **Xeon E5-2630 v3**       | 8C / 16T        | [~13,645](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Xeon+E5-2630+v3)                             | 85      | 2.4 / 3.2 GHz  | 20 MB    | **~$30 – $40**                                                |
+| **Xeon E5-2620 v3**       | 6C / 12T        | [~7,790](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Xeon+E5-2620+v3)                              | 85      | 2.4 / 3.2 GHz  | 15 MB    | **~$20 – $30**                                   |
+| **Xeon E5-4640 v3**       | 12C / 24T       | [~10,372](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Xeon+E5-4640+v3)                             | 105     | 1.9 / 2.6 GHz  | 30 MB    | **~$40 – $60** (Quad-socket capable)             |
+
+</details>
+
+<details>
+<summary><b>Xeon E3-1200 Series (Sandy Bridge to Haswell) - LGA1155/LGA1150</b></summary>
+
+| Model                     | Cores / Threads | Passmark CPU Bench                                                                                     | TDP (W) | Base / Turbo   | L3 Cache | Socket  | Avg Used eBay.com Price (US)                                  |
+| ------------------------- | --------------- | ------------------------------------------------------------------------------------------------------ | ------- | -------------- | -------- | ------- | ------------------------------------------------------------- |
+| **Xeon E3-1290 v2**       | 4C / 8T         | [~9,935](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Xeon+E3-1290+v2)                              | 87      | 3.7 / 4.1 GHz  | 8 MB     | LGA1155 | **~$50 – $70**                                                |
+| **Xeon E3-1280 v2**       | 4C / 8T         | [~9,651](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Xeon+E3-1280+v2)                              | 69      | 3.6 / 4.0 GHz  | 8 MB     | LGA1155 | **~$45 – $60**                                                |
+| **Xeon E3-1270 v2**       | 4C / 8T         | [~9,359](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Xeon+E3-1270+v2)                              | 69      | 3.5 / 3.9 GHz  | 8 MB     | LGA1155 | **~$40 – $55**                                                |
+| **Xeon E3-1230 v2**       | 4C / 8T         | [~8,951](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Xeon+E3-1230+v2)                              | 69      | 3.3 / 3.7 GHz  | 8 MB     | LGA1155 | **~$30 – $45**                                   |
+| **Xeon E3-1220 v2**       | 4C / 4T         | [~6,750](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Xeon+E3-1220+v2)                              | 69      | 3.1 / 3.5 GHz  | 8 MB     | LGA1155 | **~$20 – $30**                                   |
+| **Xeon E3-1280 v3**       | 4C / 8T         | [~10,752](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Xeon+E3-1280+v3)                             | 82      | 3.6 / 4.0 GHz  | 8 MB     | LGA1150 | **~$50 – $70**                                                |
+| **Xeon E3-1270 v3**       | 4C / 8T         | [~10,516](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Xeon+E3-1270+v3)                             | 80      | 3.5 / 3.9 GHz  | 8 MB     | LGA1150 | **~$45 – $60**                                                |
+| **Xeon E3-1240 v3**       | 4C / 8T         | [~10,165](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Xeon+E3-1240+v3)                             | 80      | 3.4 / 3.8 GHz  | 8 MB     | LGA1150 | **~$40 – $55**                                                |
+| **Xeon E3-1230 v3**       | 4C / 8T         | [~9,989](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Xeon+E3-1230+v3)                              | 80      | 3.3 / 3.7 GHz  | 8 MB     | LGA1150 | **~$35 – $50**                                                |
+| **Xeon E3-1220 v3**       | 4C / 4T         | [~7,425](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Xeon+E3-1220+v3)                              | 80      | 3.1 / 3.5 GHz  | 8 MB     | LGA1150 | **~$20 – $30**                                                |
+
+</details>
+
+## Intel Laptop CPUs:
+
+<details>
+<summary><b>14th Gen - Raptor Lake Refresh / Arrow Lake Mobile:</b></summary>
+
+| Model                     | Cores / Threads | Passmark CPU Bench                                                                                     | TDP (W) | Base / Turbo      | iGPU             | Avg Used eBay.com Price (US)                                  |
+| ------------------------- | --------------- | ------------------------------------------------------------------------------------------------------ | ------- | ----------------- | ---------------- | ------------------------------------------------------------- |
+| **Intel Core i9-14900HX** | 24C / 32T       | [~43,427 - 45,250](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i9-14900HX)                     | 55-157  | 2.4 / 5.8 GHz     | UHD Graphics     | **~$450 – $600**                                              |
+| **Intel Core i7-14700HX** | 20C / 28T       | [~36,643](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i7-14700HX)                              | 55-157  | 2.3 / 5.5 GHz     | UHD Graphics     | **~$350 – $480**                                              |
+| **Intel Core Ultra 7 155H**| 16C / 22T      | [~29,831](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+Ultra+7+155H)                           | 28-115  | 1.4 / 4.8 GHz     | Arc Graphics     | **~$400 – $550** (Meteor Lake)                                |
+| **Intel Core Ultra 5 235HX**| 14C / 14T     | [~40,122](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+Ultra+5+235HX)                           | 55-160  | 2.5 / 5.1 GHz     | Arc Graphics     | **Not yet available** (Arrow Lake-HX)                         |
+| **Intel Core i5-14600HX** | 14C / 20T       | [~32,000](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i5-14600HX)                              | 55-157  | 2.3 / 5.2 GHz     | UHD Graphics     | **~$250 – $350**                                              |
+
+</details>
+
+<details>
+<summary><b>13th Gen - Raptor Lake Mobile:</b></summary>
+
+| Model                     | Cores / Threads | Passmark CPU Bench                                                                                     | TDP (W) | Base / Turbo      | iGPU             | Avg Used eBay.com Price (US)                                  |
+| ------------------------- | --------------- | ------------------------------------------------------------------------------------------------------ | ------- | ----------------- | ---------------- | ------------------------------------------------------------- |
+| **Intel Core i9-13980HX** | 24C / 32T       | [~51,837 - 54,483](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i9-13980HX)                     | 55-157  | 2.2 / 5.6 GHz     | UHD Graphics     | **~$500 – $650**                                              |
+| **Intel Core i9-13950HX** | 24C / 32T       | [~41,634](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i9-13950HX)                              | 55-157  | 2.2 / 5.5 GHz     | UHD Graphics     | **~$450 – $600**                                              |
+| **Intel Core i9-13900HX** | 24C / 32T       | [~51,739](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i9-13900HX)                              | 55-157  | 2.2 / 5.4 GHz     | UHD Graphics     | **~$400 – $550**                                              |
+| **Intel Core i7-13850HX** | 20C / 28T       | [~38,073](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i7-13850HX)                              | 55-157  | 2.1 / 5.3 GHz     | UHD Graphics     | **~$350 – $480**                                              |
+| **Intel Core i7-13700HX** | 16C / 24T       | [~32,985](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i7-13700HX)                              | 55-157  | 2.1 / 5.0 GHz     | UHD Graphics     | **~$300 – $420**                                              |
+| **Intel Core i7-13700H**  | 14C / 20T       | [~27,160](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i7-13700H)                               | 45-115  | 2.4 / 5.0 GHz     | Iris Xe Graphics | **~$250 – $350**                                              |
+| **Intel Core i5-13600HX** | 14C / 20T       | [~28,078](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i5-13600HX)                              | 55-157  | 2.6 / 5.0 GHz     | UHD Graphics     | **~$220 – $300**                                              |
+| **Intel Core i5-13500H**  | 12C / 16T       | [~22,790](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i5-13500H)                               | 45-95   | 2.6 / 4.7 GHz     | Iris Xe Graphics | **~$180 – $250**                                              |
+| **Intel Core i5-13420H**  | 8C / 12T        | [~18,500](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i5-13420H)                               | 45-95   | 2.1 / 4.6 GHz     | UHD Graphics     | **~$150 – $200**                                              |
+| **Intel Core i3-13100H**  | 4C / 8T         | [~12,500](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i3-13100H)                               | 45-95   | 2.5 / 4.5 GHz     | UHD Graphics     | **~$100 – $150**                                              |
+
+</details>
+
+<details>
+<summary><b>12th Gen - Alder Lake Mobile:</b></summary>
+
+| Model                     | Cores / Threads | Passmark CPU Bench                                                                                     | TDP (W) | Base / Turbo      | iGPU             | Avg Used eBay.com Price (US)                                  |
+| ------------------------- | --------------- | ------------------------------------------------------------------------------------------------------ | ------- | ----------------- | ---------------- | ------------------------------------------------------------- |
+| **Intel Core i9-12950HX** | 16C / 24T       | [~33,651](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i9-12950HX)                              | 55-157  | 2.3 / 5.0 GHz     | UHD Graphics     | **~$300 – $400**                                              |
+| **Intel Core i9-12900H**  | 14C / 20T       | [~26,800](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i9-12900H)                               | 45-115  | 2.5 / 5.0 GHz     | Iris Xe Graphics | **~$250 – $350**                                              |
+| **Intel Core i7-12850HX** | 16C / 24T       | [~35,000](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i7-12850HX)                              | 55-157  | 2.1 / 4.8 GHz     | UHD Graphics     | **~$250 – $350**                                              |
+| **Intel Core i7-12800H**  | 14C / 20T       | [~28,000](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i7-12800H)                               | 45-115  | 2.4 / 4.8 GHz     | Iris Xe Graphics | **~$200 – $280**                                              |
+| **Intel Core i7-12700H**  | 14C / 20T       | [~24,894](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i7-12700H)                               | 45-115  | 2.3 / 4.7 GHz     | Iris Xe Graphics | **~$180 – $250**                                              |
+| **Intel Core i5-12600H**  | 12C / 16T       | [~22,000](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i5-12600H)                               | 45-95   | 2.7 / 4.5 GHz     | Iris Xe Graphics | **~$150 – $200**                                              |
+| **Intel Core i5-12500H**  | 12C / 16T       | [~21,625](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i5-12500H)                               | 45-95   | 2.5 / 4.5 GHz     | Iris Xe Graphics | **~$130 – $180**                                              |
+| **Intel Core i5-12450H**  | 8C / 12T        | [~15,643](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i5-12450H)                               | 45-95   | 2.0 / 4.4 GHz     | UHD Graphics     | **~$110 – $150**                                              |
+| **Intel Core i3-1220P**   | 10C / 12T       | [~14,500](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i3-1220P)                                | 28-64   | 1.5 / 4.4 GHz     | UHD Graphics     | **~$80 – $120**                                               |
+| **Intel Core i3-1215U**   | 6C / 8T         | [~9,500](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i3-1215U)                                 | 15-55   | 1.2 / 4.4 GHz     | UHD Graphics     | **~$50 – $80**                                                |
+
+</details>
+
+<details>
+<summary><b>11th Gen - Tiger Lake / Rocket Lake Mobile:</b></summary>
+
+| Model                     | Cores / Threads | Passmark CPU Bench                                                                                     | TDP (W) | Base / Turbo      | iGPU             | Avg Used eBay.com Price (US)                                  |
+| ------------------------- | --------------- | ------------------------------------------------------------------------------------------------------ | ------- | ----------------- | ---------------- | ------------------------------------------------------------- |
+| **Intel Core i9-11980HK** | 8C / 16T        | [~22,781](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i9-11980HK)                              | 45-65   | 2.6 / 5.0 GHz     | UHD Graphics     | **~$300 – $400**                                              |
+| **Intel Core i9-11900H**  | 8C / 16T        | [~21,963](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i9-11900H)                               | 45-65   | 2.5 / 4.9 GHz     | UHD Graphics     | **~$250 – $350**                                              |
+| **Intel Core i7-11850H**  | 8C / 16T        | [~20,911](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i7-11850H)                               | 45-65   | 2.5 / 4.8 GHz     | UHD Graphics     | **~$200 – $280**                                              |
+| **Intel Core i7-11800H**  | 8C / 16T        | [~20,254](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i7-11800H)                               | 45-65   | 2.3 / 4.6 GHz     | UHD Graphics     | **~$180 – $250**                                              |
+| **Intel Core i5-11400H**  | 6C / 12T        | [~15,261](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i5-11400H)                               | 45-65   | 2.7 / 4.5 GHz     | UHD Graphics     | **~$120 – $170**                                              |
+| **Intel Core i5-11300H**  | 4C / 8T         | [~10,629](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i5-11300H)                               | 28-35   | 3.1 / 4.4 GHz     | Iris Xe Graphics | **~$90 – $130**                                               |
+| **Intel Core i7-1165G7**  | 4C / 8T         | [~9,947](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i7-1165G7)                                | 12-28   | 2.8 / 4.7 GHz     | Iris Xe Graphics | **~$100 – $150** (Ultrabook)                                  |
+| **Intel Core i5-1135G7**  | 4C / 8T         | [~8,493](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i5-1135G7)                                | 12-28   | 2.4 / 4.2 GHz     | Iris Xe Graphics | **~$70 – $110**                                               |
+| **Intel Core i3-1115G4**  | 2C / 4T         | [~4,709](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i3-1115G4)                                | 12-28   | 3.0 / 4.1 GHz     | UHD Graphics     | **~$40 – $60**                                                |
+
+</details>
+
+<details>
+<summary><b>10th Gen - Comet Lake / Ice Lake Mobile:</b></summary>
+
+| Model                     | Cores / Threads | Passmark CPU Bench                                                                                     | TDP (W) | Base / Turbo      | iGPU             | Avg Used eBay.com Price (US)                                  |
+| ------------------------- | --------------- | ------------------------------------------------------------------------------------------------------ | ------- | ----------------- | ---------------- | ------------------------------------------------------------- |
+| **Intel Core i9-10980HK** | 8C / 16T        | [~17,773](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i9-10980HK)                              | 45-65   | 2.4 / 5.3 GHz     | UHD Graphics     | **~$250 – $350**                                              |
+| **Intel Core i7-10870H**  | 8C / 16T        | [~16,155](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i7-10870H)                               | 45      | 2.2 / 5.0 GHz     | UHD Graphics     | **~$150 – $220**                                              |
+| **Intel Core i7-10750H**  | 6C / 12T        | [~13,496](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i7-10750H)                               | 45      | 2.6 / 5.0 GHz     | UHD Graphics     | **~$120 – $180**                                              |
+| **Intel Core i5-10400H**  | 4C / 8T         | [~8,759](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i5-10400H)                                | 45      | 2.6 / 4.6 GHz     | UHD Graphics     | **~$80 – $120**                                               |
+| **Intel Core i5-10300H**  | 4C / 8T         | [~8,045](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i5-10300H)                                | 45      | 2.5 / 4.5 GHz     | UHD Graphics     | **~$60 – $90**                                                |
+| **Intel Core i7-1065G7**  | 4C / 8T         | [~7,764](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i7-1065G7)                                | 15-25   | 1.3 / 3.9 GHz     | Iris Plus        | **~$70 – $100** (Ice Lake)                                    |
+| **Intel Core i5-1035G1**  | 4C / 8T         | [~6,721](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i5-1035G1)                                | 15-25   | 1.0 / 3.6 GHz     | UHD Graphics     | **~$50 – $75**                                                |
+| **Intel Core i3-1005G1**  | 2C / 4T         | [~3,805](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i3-1005G1)                                | 15-25   | 1.2 / 3.4 GHz     | UHD Graphics     | **~$30 – $45**                                                |
+
+</details>
+
+<details>
+<summary><b>9th Gen - Coffee Lake Refresh Mobile:</b></summary>
+
+| Model                     | Cores / Threads | Passmark CPU Bench                                                                                     | TDP (W) | Base / Turbo      | iGPU             | Avg Used eBay.com Price (US)                                  |
+| ------------------------- | --------------- | ------------------------------------------------------------------------------------------------------ | ------- | ----------------- | ---------------- | ------------------------------------------------------------- |
+| **Intel Core i9-9980HK**  | 8C / 16T        | [~16,135](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i9-9980HK)                               | 45      | 2.4 / 5.0 GHz     | UHD 630          | **~$200 – $280**                                              |
+| **Intel Core i7-9850H**   | 6C / 12T        | [~12,469](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i7-9850H)                                | 45      | 2.6 / 4.6 GHz     | UHD 630          | **~$120 – $170**                                              |
+| **Intel Core i7-9750H**   | 6C / 12T        | [~12,043](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i7-9750H)                                | 45      | 2.6 / 4.5 GHz     | UHD 630          | **~$100 – $150**                                              |
+| **Intel Core i5-9400H**   | 4C / 8T         | [~8,053](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i5-9400H)                                 | 45      | 2.5 / 4.3 GHz     | UHD 630          | **~$60 – $90**                                                |
+| **Intel Core i5-9300H**   | 4C / 8T         | [~7,365](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i5-9300H)                                 | 45      | 2.4 / 4.1 GHz     | UHD 630          | **~$50 – $75**                                                |
+| **Intel Core i7-8565U**   | 4C / 8T         | [~7,346](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i7-8565U)                                 | 15      | 1.8 / 4.6 GHz     | UHD 620          | **~$50 – $80** (Ultrabook)                                    |
+| **Intel Core i5-8265U**   | 4C / 8T         | [~6,442](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i5-8265U)                                 | 15      | 1.6 / 3.9 GHz     | UHD 620          | **~$40 – $60**                                                |
+| **Intel Core i3-8145U**   | 2C / 4T         | [~3,528](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i3-8145U)                                 | 15      | 2.1 / 3.9 GHz     | UHD 620          | **~$25 – $35**                                                |
+
+</details>
+
+<details>
+<summary><b>8th Gen - Coffee Lake / Whiskey Lake Mobile:</b></summary>
+
+| Model                     | Cores / Threads | Passmark CPU Bench                                                                                     | TDP (W) | Base / Turbo      | iGPU             | Avg Used eBay.com Price (US)                                  |
+| ------------------------- | --------------- | ------------------------------------------------------------------------------------------------------ | ------- | ----------------- | ---------------- | ------------------------------------------------------------- |
+| **Intel Core i7-8850H**   | 6C / 12T        | [~12,332](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i7-8850H)                                | 45      | 2.6 / 4.3 GHz     | UHD 630          | **~$70 – $100**                                               |
+| **Intel Core i7-8750H**   | 6C / 12T        | [~11,691](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i7-8750H)                                | 45      | 2.2 / 4.1 GHz     | UHD 630          | **~$60 – $90**                                                |
+| **Intel Core i5-8400H**   | 4C / 8T         | [~7,723](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i5-8400H)                                 | 45      | 2.5 / 4.2 GHz     | UHD 630          | **~$45 – $65**                                                |
+| **Intel Core i5-8300H**   | 4C / 8T         | [~7,156](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i5-8300H)                                 | 45      | 2.3 / 4.0 GHz     | UHD 630          | **~$40 – $55**                                                |
+| **Intel Core i7-8650U**   | 4C / 8T         | [~6,927](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i7-8650U)                                 | 15      | 1.9 / 4.2 GHz     | UHD 620          | **~$40 – $60** (Ultrabook)                                    |
+| **Intel Core i7-8550U**   | 4C / 8T         | [~6,446](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i7-8550U)                                 | 15      | 1.8 / 4.0 GHz     | UHD 620          | **~$35 – $50**                                                |
+| **Intel Core i5-8350U**   | 4C / 8T         | [~5,990](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i5-8350U)                                 | 15      | 1.7 / 3.6 GHz     | UHD 620          | **~$30 – $45**                                                |
+| **Intel Core i5-8250U**   | 4C / 8T         | [~5,757](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i5-8250U)                                 | 15      | 1.6 / 3.4 GHz     | UHD 620          | **~$25 – $40**                                                |
+
+</details>
+
+<details>
+<summary><b>7th Gen - Kaby Lake Mobile:</b></summary>
+
+| Model                     | Cores / Threads | Passmark CPU Bench                                                                                     | TDP (W) | Base / Turbo      | iGPU             | Avg Used eBay.com Price (US)                                  |
+| ------------------------- | --------------- | ------------------------------------------------------------------------------------------------------ | ------- | ----------------- | ---------------- | ------------------------------------------------------------- |
+| **Intel Core i7-7920HQ**  | 4C / 8T         | [~8,630](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i7-7920HQ)                                | 45      | 3.1 / 4.1 GHz     | HD 630           | **~$60 – $90**                                                |
+| **Intel Core i7-7820HQ**  | 4C / 8T         | [~8,365](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i7-7820HQ)                                | 45      | 2.9 / 3.9 GHz     | HD 630           | **~$50 – $75**                                                |
+| **Intel Core i7-7700HQ**  | 4C / 8T         | [~8,103](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i7-7700HQ)                                | 45      | 2.8 / 3.8 GHz     | HD 630           | **~$45 – $65**                                                |
+| **Intel Core i5-7440HQ**  | 4C / 4T         | [~5,756](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i5-7440HQ)                                | 45      | 2.8 / 3.8 GHz     | HD 630           | **~$30 – $45**                                                |
+| **Intel Core i5-7300HQ**  | 4C / 4T         | [~5,526](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i5-7300HQ)                                | 45      | 2.5 / 3.5 GHz     | HD 630           | **~$25 – $40**                                                |
+| **Intel Core i7-7660U**   | 2C / 4T         | [~5,042](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i7-7660U)                                 | 15      | 2.5 / 4.0 GHz     | Iris Plus 640    | **~$30 – $45** (Ultrabook)                                    |
+| **Intel Core i7-7600U**   | 2C / 4T         | [~4,486](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i7-7600U)                                 | 15      | 2.8 / 3.9 GHz     | HD 620           | **~$25 – $40**                                                |
+| **Intel Core i5-7300U**   | 2C / 4T         | [~3,976](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i5-7300U)                                 | 15      | 2.6 / 3.5 GHz     | HD 620           | **~$20 – $30**                                                |
+| **Intel Core i3-7100U**   | 2C / 4T         | [~3,174](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i3-7100U)                                 | 15      | 2.4 GHz (no turbo)| HD 620           | **~$15 – $25**                                                |
+
+</details>
+
+<details>
+<summary><b>6th Gen - Skylake Mobile:</b></summary>
+
+| Model                     | Cores / Threads | Passmark CPU Bench                                                                                     | TDP (W) | Base / Turbo      | iGPU             | Avg Used eBay.com Price (US)                                  |
+| ------------------------- | --------------- | ------------------------------------------------------------------------------------------------------ | ------- | ----------------- | ---------------- | ------------------------------------------------------------- |
+| **Intel Core i7-6920HQ**  | 4C / 8T         | [~7,825](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i7-6920HQ)                                | 45      | 2.9 / 3.8 GHz     | HD 530           | **~$40 – $60**                                                |
+| **Intel Core i7-6820HQ**  | 4C / 8T         | [~7,469](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i7-6820HQ)                                | 45      | 2.7 / 3.6 GHz     | HD 530           | **~$35 – $50**                                                |
+| **Intel Core i7-6700HQ**  | 4C / 8T         | [~7,093](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i7-6700HQ)                                | 45      | 2.6 / 3.5 GHz     | HD 530           | **~$30 – $45**                                                |
+| **Intel Core i5-6440HQ**  | 4C / 4T         | [~5,245](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i5-6440HQ)                                | 45      | 2.6 / 3.5 GHz     | HD 530           | **~$20 – $30**                                                |
+| **Intel Core i5-6300HQ**  | 4C / 4T         | [~5,023](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i5-6300HQ)                                | 45      | 2.3 / 3.2 GHz     | HD 530           | **~$18 – $25**                                                |
+| **Intel Core i7-6600U**   | 2C / 4T         | [~3,913](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i7-6600U)                                 | 15      | 2.6 / 3.4 GHz     | HD 520           | **~$20 – $30** (Ultrabook)                                    |
+| **Intel Core i7-6500U**   | 2C / 4T         | [~3,776](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i7-6500U)                                 | 15      | 2.5 / 3.1 GHz     | HD 520           | **~$18 – $25**                                                |
+| **Intel Core i5-6300U**   | 2C / 4T         | [~3,215](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i5-6300U)                                 | 15      | 2.4 / 3.0 GHz     | HD 520           | **~$15 – $22**                                                |
+| **Intel Core i5-6200U**   | 2C / 4T         | [~3,045](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i5-6200U)                                 | 15      | 2.3 / 2.8 GHz     | HD 520           | **~$12 – $18**                                                |
+| **Intel Core i3-6100U**   | 2C / 4T         | [~2,632](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i3-6100U)                                 | 15      | 2.3 GHz (no turbo)| HD 520           | **~$10 – $15**                                                |
+
+</details>
 </details>
 
 <details>
 <summary><b>AMD:</b></summary>
+
+## AMD Desktop CPUs: 
+
+<details>
+<summary><b>Ryzen 9000 Series (Granite Ridge) - AM5</b></summary>
+
+| Model                     | Cores / Threads | Passmark CPU Bench                                                                                     | TDP (W) | Base / Turbo      | iGPU             | Avg Used eBay.com Price (US)                                  |
+| ------------------------- | --------------- | ------------------------------------------------------------------------------------------------------ | ------- | ----------------- | ---------------- | ------------------------------------------------------------- |
+| **AMD Ryzen 9 9950X**     | 16C / 32T       | [~66,021](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+9+9950X&id=5931)                          | 170     | 4.3 / 5.7 GHz     | Radeon Graphics  | **~$550 – $650**                                              |
+| **AMD Ryzen 9 9900X**     | 12C / 24T       | [~49,392](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+9+9900X&id=5944)                          | 120     | 4.4 / 5.6 GHz     | Radeon Graphics  | **~$380 – $450**                                              |
+| **AMD Ryzen 7 9700X**     | 8C / 16T        | [~32,643](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+7+9700X&id=5945)                          | 65      | 3.8 / 5.5 GHz     | Radeon Graphics  | **~$280 – $350**                                              |
+| **AMD Ryzen 5 9600X**     | 6C / 12T        | [~30,032](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+5+9600X&id=6199)                          | 65      | 3.9 / 5.4 GHz     | Radeon Graphics  | **~$180 – $230**                                              |
+
+</details>
+
+<details>
+<summary><b>Ryzen 7000 Series (Raphael) - AM5</b></summary>
+
+| Model                     | Cores / Threads | Passmark CPU Bench                                                                                     | TDP (W) | Base / Turbo      | iGPU             | Avg Used eBay.com Price (US)                                  |
+| ------------------------- | --------------- | ------------------------------------------------------------------------------------------------------ | ------- | ----------------- | ---------------- | ------------------------------------------------------------- |
+| **AMD Ryzen 9 7950X**     | 16C / 32T       | [~62,457](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+9+7950X&id=5200)                          | 170     | 4.5 / 5.7 GHz     | Radeon Graphics  | **~$450 – $550**                                              |
+| **AMD Ryzen 9 7950X3D**   | 16C / 32T       | [~62,595](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+9+7950X3D&id=5664)                        | 120     | 4.2 / 5.7 GHz     | Radeon Graphics  | **~$500 – $600**                                              |
+| **AMD Ryzen 9 7900X**     | 12C / 24T       | [~48,233](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+9+7900X&id=5205)                          | 170     | 4.7 / 5.6 GHz     | Radeon Graphics  | **~$320 – $400**                                              |
+| **AMD Ryzen 9 7900X3D**   | 12C / 24T       | [~49,019](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+9+7900X3D&id=5663)                        | 120     | 4.4 / 5.6 GHz     | Radeon Graphics  | **~$380 – $450**                                              |
+| **AMD Ryzen 7 7800X3D**   | 8C / 16T        | [~35,047](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+7+7800X3D&id=5661)                        | 120     | 4.2 / 5.0 GHz     | Radeon Graphics  | **~$350 – $420** (Excellent for gaming)                       |
+| **AMD Ryzen 7 7700X**     | 8C / 16T        | [~35,170](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+7+7700X&id=5202)                          | 105     | 4.5 / 5.4 GHz     | Radeon Graphics  | **~$220 – $280**                                              |
+| **AMD Ryzen 7 7700**      | 8C / 16T        | [~31,821](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+7+7700&id=5458)                           | 65      | 3.8 / 5.3 GHz     | Radeon Graphics  | **~$200 – $260**                                              |
+| **AMD Ryzen 5 7600X**     | 6C / 12T        | [~24,952](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+5+7600X&id=5198)                          | 105     | 4.7 / 5.3 GHz     | Radeon Graphics  | **~$150 – $200**                                              |
+| **AMD Ryzen 5 7600**      | 6C / 12T        | [~23,587](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+5+7600&id=5461)                           | 65      | 3.8 / 5.1 GHz     | Radeon Graphics  | **~$140 – $190**                                              |
+| **AMD Ryzen 5 7500F**     | 6C / 12T        | [~22,850](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+5+7500F&id=6154)                          | 65      | 3.7 / 5.0 GHz     | None             | **~$120 – $160**                                              |
+
+</details>
+
+<details>
+<summary><b>Ryzen 5000 Series (Vermeer) - AM4</b></summary>
+
+| Model                     | Cores / Threads | Passmark CPU Bench                                                                                     | TDP (W) | Base / Turbo      | iGPU             | Avg Used eBay.com Price (US)                                  |
+| ------------------------- | --------------- | ------------------------------------------------------------------------------------------------------ | ------- | ----------------- | ---------------- | ------------------------------------------------------------- |
+| **AMD Ryzen 9 5950X**     | 16C / 32T       | [~45,564](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+9+5950X&id=3873)                          | 105     | 3.4 / 4.9 GHz     | None             | **~$300 – $380**                                              |
+| **AMD Ryzen 9 5900X**     | 12C / 24T       | [~39,196](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+9+5900X&id=3870)                          | 105     | 3.7 / 4.8 GHz     | None             | **~$220 – $280**                                              |
+| **AMD Ryzen 9 5900**      | 12C / 24T       | [~35,328](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+9+5900&id=5521)                           | 65      | 3.0 / 4.7 GHz     | None             | **~$200 – $260**                                              |
+| **AMD Ryzen 7 5800X3D**   | 8C / 16T        | [~31,596](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+7+5800X3D&id=5505)                        | 105     | 3.4 / 4.5 GHz     | None             | **~$250 – $320** (Excellent for gaming)                       |
+| **AMD Ryzen 7 5800X**     | 8C / 16T        | [~27,736](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+7+5800X&id=3869)                          | 105     | 3.8 / 4.7 GHz     | None             | **~$160 – $220**                                              |
+| **AMD Ryzen 7 5700X**     | 8C / 16T        | [~25,954](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+7+5700X&id=5465)                          | 65      | 3.4 / 4.6 GHz     | None             | **~$140 – $190**                                              |
+| **AMD Ryzen 7 5700G**     | 8C / 16T        | [~23,991](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+7+5700G&id=4642)                          | 65      | 3.8 / 4.6 GHz     | Radeon Vega 8    | **~$150 – $200** (APU - good iGPU)                            |
+| **AMD Ryzen 5 5600X**     | 6C / 12T        | [~21,544](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+5+5600X&id=3868)                          | 65      | 3.7 / 4.6 GHz     | None             | **~$100 – $140**                                              |
+| **AMD Ryzen 5 5600**      | 6C / 12T        | [~21,249](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+5+5600&id=4763)                           | 65      | 3.5 / 4.4 GHz     | None             | **~$90 – $130**                                               |
+| **AMD Ryzen 5 5500**      | 6C / 12T        | [~18,498](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+5+5500&id=5453)                           | 65      | 3.6 / 4.2 GHz     | None             | **~$70 – $100**                                               |
+| **AMD Ryzen 3 5300G**     | 4C / 8T         | [~12,931](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+3+5300G&id=5507)                          | 65      | 4.0 / 4.2 GHz     | Radeon Vega 6    | **~$60 – $85**                                                |
+
+</details>
+
+<details>
+<summary><b>Ryzen 3000 Series (Matisse) - AM4</b></summary>
+
+| Model                     | Cores / Threads | Passmark CPU Bench                                                                                     | TDP (W) | Base / Turbo      | iGPU             | Avg Used eBay.com Price (US)                                  |
+| ------------------------- | --------------- | ------------------------------------------------------------------------------------------------------ | ------- | ----------------- | ---------------- | ------------------------------------------------------------- |
+| **AMD Ryzen 9 3950X**     | 16C / 32T       | [~34,559](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+9+3950X&id=3482)                          | 105     | 3.5 / 4.7 GHz     | None             | **~$250 – $320**                                              |
+| **AMD Ryzen 9 3900X**     | 12C / 24T       | [~29,755](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+9+3900X&id=3460)                          | 105     | 3.8 / 4.6 GHz     | None             | **~$180 – $240**                                              |
+| **AMD Ryzen 9 3900XT**    | 12C / 24T       | [~30,636](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+9+3900XT&id=3865)                         | 105     | 3.8 / 4.7 GHz     | None             | **~$190 – $250**                                              |
+| **AMD Ryzen 7 3800X**     | 8C / 16T        | [~21,682](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+7+3800X&id=3467)                          | 105     | 3.9 / 4.5 GHz     | None             | **~$120 – $160**                                              |
+| **AMD Ryzen 7 3800XT**    | 8C / 16T        | [~22,348](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+7+3800XT&id=3864)                         | 105     | 3.9 / 4.7 GHz     | None             | **~$130 – $170**                                              |
+| **AMD Ryzen 7 3700X**     | 8C / 16T        | [~20,735](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+7+3700X&id=3469)                          | 65      | 3.6 / 4.4 GHz     | None             | **~$100 – $140**                                              |
+| **AMD Ryzen 5 3600X**     | 6C / 12T        | [~17,601](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+5+3600X&id=3484)                          | 95      | 3.8 / 4.4 GHz     | None             | **~$70 – $100**                                               |
+| **AMD Ryzen 5 3600**      | 6C / 12T        | [~17,060](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+5+3600&id=3475)                           | 65      | 3.6 / 4.2 GHz     | None             | **~$60 – $85**                                                |
+| **AMD Ryzen 5 3500X**     | 6C / 6T         | [~13,476](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+5+3500X&id=3693)                          | 65      | 3.6 / 4.1 GHz     | None             | **~$50 – $70**                                                |
+| **AMD Ryzen 3 3300X**     | 4C / 8T         | [~10,342](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+3+3300X&id=3653)                          | 65      | 3.8 / 4.3 GHz     | None             | **~$40 – $55**                                                |
+| **AMD Ryzen 3 3100**      | 4C / 8T         | [~9,303](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+3+3100&id=3654)                            | 65      | 3.6 / 3.9 GHz     | None             | **~$35 – $50**                                                |
+
+</details>
+
+<details>
+<summary><b>Ryzen 2000 Series (Pinnacle Ridge) - AM4</b></summary>
+
+| Model                     | Cores / Threads | Passmark CPU Bench                                                                                     | TDP (W) | Base / Turbo      | iGPU             | Avg Used eBay.com Price (US)                                  |
+| ------------------------- | --------------- | ------------------------------------------------------------------------------------------------------ | ------- | ----------------- | ---------------- | ------------------------------------------------------------- |
+| **AMD Ryzen 7 2700X**     | 8C / 16T        | [~16,438](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+7+2700X&id=3240)                          | 105     | 3.7 / 4.3 GHz     | None             | **~$80 – $120**                                               |
+| **AMD Ryzen 7 2700**      | 8C / 16T        | [~14,722](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+7+2700&id=3241)                           | 65      | 3.2 / 4.1 GHz     | None             | **~$70 – $100**                                               |
+| **AMD Ryzen 5 2600X**     | 6C / 12T        | [~13,493](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+5+2600X&id=3244)                          | 95      | 3.6 / 4.2 GHz     | None             | **~$50 – $75**                                                |
+| **AMD Ryzen 5 2600**      | 6C / 12T        | [~12,465](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+5+2600&id=3245)                           | 65      | 3.4 / 3.9 GHz     | None             | **~$40 – $60**                                                |
+| **AMD Ryzen 5 2400G**     | 4C / 8T         | [~9,114](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+5+2400G&id=3163)                           | 65      | 3.6 / 3.9 GHz     | Radeon Vega 11   | **~$50 – $75** (APU - good iGPU)                              |
+| **AMD Ryzen 3 2300X**     | 4C / 4T         | [~7,442](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+3+2300X&id=3337)                           | 65      | 3.5 / 4.0 GHz     | None             | **~$25 – $40**                                                |
+| **AMD Ryzen 3 2200G**     | 4C / 4T         | [~6,285](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+3+2200G&id=3160)                           | 65      | 3.5 / 3.7 GHz     | Radeon Vega 8    | **~$30 – $45** (APU)                                          |
+
+</details>
+
+<details>
+<summary><b>Ryzen 1000 Series (Summit Ridge) - AM4</b></summary>
+
+| Model                     | Cores / Threads | Passmark CPU Bench                                                                                     | TDP (W) | Base / Turbo      | iGPU             | Avg Used eBay.com Price (US)                                  |
+| ------------------------- | --------------- | ------------------------------------------------------------------------------------------------------ | ------- | ----------------- | ---------------- | ------------------------------------------------------------- |
+| **AMD Ryzen 7 1800X**     | 8C / 16T        | [~14,406](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+7+1800X&id=2947)                          | 95      | 3.6 / 4.0 GHz     | None             | **~$60 – $90**                                                |
+| **AMD Ryzen 7 1700X**     | 8C / 16T        | [~13,684](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+7+1700X&id=2948)                          | 95      | 3.4 / 3.8 GHz     | None             | **~$50 – $75**                                                |
+| **AMD Ryzen 7 1700**      | 8C / 16T        | [~13,020](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+7+1700&id=2949)                           | 65      | 3.0 / 3.7 GHz     | None             | **~$45 – $65**                                                |
+| **AMD Ryzen 5 1600X**     | 6C / 12T        | [~11,189](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+5+1600X&id=2955)                          | 95      | 3.6 / 4.0 GHz     | None             | **~$35 – $50**                                                |
+| **AMD Ryzen 5 1600**      | 6C / 12T        | [~10,428](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+5+1600&id=2954)                           | 65      | 3.2 / 3.6 GHz     | None             | **~$30 – $45**                                                |
+| **AMD Ryzen 5 1500X**     | 4C / 8T         | [~8,514](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+5+1500X&id=2957)                           | 65      | 3.5 / 3.7 GHz     | None             | **~$25 – $35**                                                |
+| **AMD Ryzen 5 1400**      | 4C / 8T         | [~7,413](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+5+1400&id=2958)                            | 65      | 3.2 / 3.4 GHz     | None             | **~$20 – $30**                                                |
+| **AMD Ryzen 3 1300X**     | 4C / 4T         | [~6,142](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+3+1300X&id=2960)                           | 65      | 3.5 / 3.7 GHz     | None             | **~$18 – $25**                                                |
+| **AMD Ryzen 3 1200**      | 4C / 4T         | [~5,466](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+3+1200&id=2961)                            | 65      | 3.1 / 3.4 GHz     | None             | **~$15 – $22**                                                |
+
+</details>
+
+<details>
+<summary><b>AMD FX Series (Bulldozer / Piledriver) - AM3+</b></summary>
+
+| Model                     | Cores / Threads | Passmark CPU Bench                                                                                     | TDP (W) | Base / Turbo      | iGPU             | Avg Used eBay.com Price (US)                                  |
+| ------------------------- | --------------- | ------------------------------------------------------------------------------------------------------ | ------- | ----------------- | ---------------- | ------------------------------------------------------------- |
+| **AMD FX-9590**           | 8C / 8T         | [~8,486](https://www.cpubenchmark.net/cpu.php?cpu=AMD+FX-9590+Eight-Core)                              | 220     | 4.7 / 5.0 GHz     | None             | **~$40 – $60**                                                |
+| **AMD FX-9370**           | 8C / 8T         | [~7,879](https://www.cpubenchmark.net/cpu.php?cpu=AMD+FX-9370+Eight-Core)                              | 220     | 4.4 / 4.7 GHz     | None             | **~$35 – $50**                                                |
+| **AMD FX-8350**           | 8C / 8T         | [~6,942](https://www.cpubenchmark.net/cpu.php?cpu=AMD+FX-8350+Eight-Core)                              | 125     | 4.0 / 4.2 GHz     | None             | **~$25 – $40**                                                |
+| **AMD FX-8320**           | 8C / 8T         | [~6,582](https://www.cpubenchmark.net/cpu.php?cpu=AMD+FX-8320+Eight-Core)                              | 125     | 3.5 / 4.0 GHz     | None             | **~$20 – $30**                                                |
+| **AMD FX-8300**           | 8C / 8T         | [~6,554](https://www.cpubenchmark.net/cpu.php?cpu=AMD+FX-8300+Eight-Core)                              | 95      | 3.3 / 4.2 GHz     | None             | **~$18 – $25**                                                |
+| **AMD FX-6350**           | 6C / 6T         | [~5,799](https://www.cpubenchmark.net/cpu.php?cpu=AMD+FX-6350+Six-Core)                                | 125     | 3.9 / 4.2 GHz     | None             | **~$15 – $22**                                                |
+| **AMD FX-6300**           | 6C / 6T         | [~5,195](https://www.cpubenchmark.net/cpu.php?cpu=AMD+FX-6300+Six-Core)                                | 95      | 3.5 / 4.1 GHz     | None             | **~$12 – $18**                                                |
+| **AMD FX-4350**           | 4C / 4T         | [~4,098](https://www.cpubenchmark.net/cpu.php?cpu=AMD+FX-4350+Quad-Core)                               | 125     | 4.2 / 4.3 GHz     | None             | **~$10 – $15**                                                |
+| **AMD FX-4300**           | 4C / 4T         | [~3,745](https://www.cpubenchmark.net/cpu.php?cpu=AMD+FX-4300+Quad-Core)                               | 95      | 3.8 / 4.0 GHz     | None             | **~$8 – $12**                                                 |
+
+</details>
+
+<details>
+<summary><b>AMD Phenom II Series (K10) - AM3</b></summary>
+
+| Model                     | Cores / Threads | Passmark CPU Bench                                                                                     | TDP (W) | Base Clock        | iGPU             | Avg Used eBay.com Price (US)                                  |
+| ------------------------- | --------------- | ------------------------------------------------------------------------------------------------------ | ------- | ----------------- | ---------------- | ------------------------------------------------------------- |
+| **AMD Phenom II X6 1100T**| 6C / 6T         | [~4,761](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Phenom+II+X6+1100T)                              | 125     | 3.3 GHz           | None             | **~$20 – $30**                                                |
+| **AMD Phenom II X6 1090T**| 6C / 6T         | [~4,534](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Phenom+II+X6+1090T)                              | 125     | 3.2 GHz           | None             | **~$18 – $25**                                                |
+| **AMD Phenom II X6 1075T**| 6C / 6T         | [~4,171](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Phenom+II+X6+1075T)                              | 125     | 3.0 GHz           | None             | **~$15 – $22**                                                |
+| **AMD Phenom II X4 980**  | 4C / 4T         | [~3,636](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Phenom+II+X4+980)                                | 125     | 3.7 GHz           | None             | **~$12 – $18**                                                |
+| **AMD Phenom II X4 970**  | 4C / 4T         | [~3,311](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Phenom+II+X4+970)                                | 125     | 3.5 GHz           | None             | **~$10 – $15**                                                |
+| **AMD Phenom II X4 965**  | 4C / 4T         | [~3,186](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Phenom+II+X4+965)                                | 125     | 3.4 GHz           | None             | **~$8 – $12**                                                 |
+| **AMD Phenom II X4 955**  | 4C / 4T         | [~3,005](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Phenom+II+X4+955)                                | 125     | 3.2 GHz           | None             | **~$7 – $10**                                                 |
+| **AMD Phenom II X4 945**  | 4C / 4T         | [~2,877](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Phenom+II+X4+945)                                | 95      | 3.0 GHz           | None             | **~$6 – $9**                                                  |
+| **AMD Phenom II X3 740**  | 3C / 3T         | [~2,088](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Phenom+II+X3+740)                                | 95      | 3.0 GHz           | None             | **~$5 – $8**                                                  |
+| **AMD Phenom II X2 565**  | 2C / 2T         | [~1,500](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Phenom+II+X2+565) (est.)                         | 80      | 3.4 GHz           | None             | **~$4 – $6**                                                  |
+
+</details>
+
+## AMD Server / Workstation CPUs:
+
+<details>
+<summary><b>EPYC 9004 Series (Genoa / Bergamo) - SP5</b></summary>
+
+| Model                     | Cores / Threads | Passmark CPU Bench                                                                                     | TDP (W) | Base / Turbo      | Socket | L3 Cache | Avg Used eBay.com Price (US)                                  |
+| ------------------------- | --------------- | ------------------------------------------------------------------------------------------------------ | ------- | ----------------- | ------ | -------- | ------------------------------------------------------------- |
+| **Dual AMD EPYC 9754**    | 256C / 512T     | [~116,049](https://www.cpubenchmark.net/cpu.php?cpu=Dual+AMD+EPYC+9754&id=6115)                        | 720     | 2.25 / 3.1 GHz    | SP5    | 768 MB   | **~$12,000 – $15,000**                                        |
+| **Dual AMD EPYC 9654**    | 192C / 384T     | [~102,265](https://www.cpubenchmark.net/cpu.php?cpu=Dual+AMD+EPYC+9654&id=5969)                        | 720     | 2.4 / 3.7 GHz     | SP5    | 768 MB   | **~$10,000 – $13,000**                                        |
+| **AMD EPYC 9754**         | 128C / 256T     | [~94,745](https://www.cpubenchmark.net/cpu.php?cpu=AMD+EPYC+9754&id=6113)                              | 360     | 2.25 / 3.1 GHz    | SP5    | 384 MB   | **~$6,500 – $8,500**                                          |
+| **Dual AMD EPYC 9R14**    | 192C / 192T     | [~93,994](https://www.cpubenchmark.net/cpu.php?cpu=Dual+AMD+EPYC+9R14&id=6038)                         | 720     | 2.6 / 3.7 GHz     | SP5    | 768 MB   | **~$9,500 – $12,000**                                         |
+| **Dual AMD EPYC 9554**    | 128C / 256T     | [~109,242](https://www.cpubenchmark.net/cpu.php?cpu=Dual+AMD+EPYC+9554&id=5935)                        | 720     | 3.1 / 3.75 GHz    | SP5    | 512 MB   | **~$8,500 – $11,000**                                         |
+| **AMD EPYC 9654**         | 96C / 192T      | [~124,119](https://www.cpubenchmark.net/cpu.php?cpu=AMD+EPYC+9654&id=5488)                             | 360     | 2.4 / 3.7 GHz     | SP5    | 384 MB   | **~$5,500 – $7,500**                                          |
+| **AMD EPYC 9554**         | 64C / 128T      | [~74,473](https://www.cpubenchmark.net/cpu.php?cpu=AMD+EPYC+9554&id=5476)                              | 360     | 3.1 / 3.75 GHz    | SP5    | 256 MB   | **~$3,800 – $5,000**                                          |
+| **AMD EPYC 9534**         | 64C / 128T      | [~65,204](https://www.cpubenchmark.net/cpu.php?cpu=AMD+EPYC+9534&id=5675)                              | 280     | 2.45 / 3.7 GHz    | SP5    | 256 MB   | **~$3,200 – $4,200**                                          |
+| **AMD EPYC 9374F**        | 32C / 64T       | [~48,320](https://www.cpubenchmark.net/cpu.php?cpu=AMD+EPYC+9374F&id=5475)                             | 320     | 3.85 / 4.1 GHz    | SP5    | 256 MB   | **~$2,500 – $3,200**                                          |
+| **AMD EPYC 9354**         | 32C / 64T       | [~46,562](https://www.cpubenchmark.net/cpu.php?cpu=AMD+EPYC+9354&id=5487)                              | 280     | 3.25 / 3.8 GHz    | SP5    | 256 MB   | **~$2,000 – $2,700**                                          |
+| **AMD EPYC 9254**         | 24C / 48T       | [~35,810](https://www.cpubenchmark.net/cpu.php?cpu=AMD+EPYC+9254&id=5486)                              | 200     | 2.9 / 4.15 GHz    | SP5    | 128 MB   | **~$1,400 – $1,900**                                          |
+| **AMD EPYC 9174F**        | 16C / 32T       | [~32,009](https://www.cpubenchmark.net/cpu.php?cpu=AMD+EPYC+9174F&id=5485)                             | 320     | 4.1 / 4.4 GHz     | SP5    | 256 MB   | **~$1,500 – $2,000**                                          |
+| **AMD EPYC 9124**         | 16C / 32T       | [~27,077](https://www.cpubenchmark.net/cpu.php?cpu=AMD+EPYC+9124&id=5489)                              | 200     | 3.0 / 3.7 GHz     | SP5    | 64 MB    | **~$800 – $1,200**                                            |
+
+</details>
+
+<details>
+<summary><b>EPYC 7003 Series (Milan) - SP3</b></summary>
+
+| Model                     | Cores / Threads | Passmark CPU Bench                                                                                     | TDP (W) | Base / Turbo      | Socket | L3 Cache | Avg Used eBay.com Price (US)                                  |
+| ------------------------- | --------------- | ------------------------------------------------------------------------------------------------------ | ------- | ----------------- | ------ | -------- | ------------------------------------------------------------- |
+| **Dual AMD EPYC 7R13**    | 96C / 192T      | [~70,382](https://www.cpubenchmark.net/cpu.php?cpu=Dual+AMD+EPYC+7R13&id=5500)                         | 450     | 2.65 / 3.3 GHz    | SP3    | 192 MB   | **~$4,500 – $6,000**                                          |
+| **AMD EPYC 7763**         | 64C / 128T      | [~58,955](https://www.cpubenchmark.net/cpu.php?cpu=AMD+EPYC+7763&id=4448)                              | 280     | 2.45 / 3.5 GHz    | SP3    | 256 MB   | **~$2,500 – $3,500**                                          |
+| **AMD EPYC 7713**         | 64C / 128T      | [~54,805](https://www.cpubenchmark.net/cpu.php?cpu=AMD+EPYC+7713&id=4454)                              | 225     | 2.0 / 3.675 GHz   | SP3    | 256 MB   | **~$2,200 – $3,000**                                          |
+| **AMD EPYC 75F3**         | 32C / 64T       | [~44,618](https://www.cpubenchmark.net/cpu.php?cpu=AMD+EPYC+75F3&id=4449)                              | 280     | 2.95 / 4.0 GHz    | SP3    | 256 MB   | **~$1,800 – $2,400**                                          |
+| **AMD EPYC 7543**         | 32C / 64T       | [~42,490](https://www.cpubenchmark.net/cpu.php?cpu=AMD+EPYC+7543&id=4444)                              | 225     | 2.8 / 3.7 GHz     | SP3    | 256 MB   | **~$1,500 – $2,000**                                          |
+| **AMD EPYC 7513**         | 32C / 64T       | [~40,168](https://www.cpubenchmark.net/cpu.php?cpu=AMD+EPYC+7513&id=4455)                              | 200     | 2.6 / 3.65 GHz    | SP3    | 128 MB   | **~$1,200 – $1,700**                                          |
+| **AMD EPYC 7443**         | 24C / 48T       | [~33,442](https://www.cpubenchmark.net/cpu.php?cpu=AMD+EPYC+7443&id=4456)                              | 200     | 2.85 / 4.0 GHz    | SP3    | 128 MB   | **~$900 – $1,300**                                            |
+| **AMD EPYC 7413**         | 24C / 48T       | [~31,661](https://www.cpubenchmark.net/cpu.php?cpu=AMD+EPYC+7413&id=4457)                              | 180     | 2.65 / 3.6 GHz    | SP3    | 128 MB   | **~$800 – $1,100**                                            |
+| **AMD EPYC 7343**         | 16C / 32T       | [~25,775](https://www.cpubenchmark.net/cpu.php?cpu=AMD+EPYC+7343&id=4458)                              | 190     | 3.2 / 3.9 GHz     | SP3    | 128 MB   | **~$600 – $900**                                              |
+| **AMD EPYC 7313**         | 16C / 32T       | [~24,439](https://www.cpubenchmark.net/cpu.php?cpu=AMD+EPYC+7313&id=4452)                              | 155     | 3.0 / 3.7 GHz     | SP3    | 128 MB   | **~$500 – $750**                                              |
+| **AMD EPYC 7R13**         | 48C / 96T       | [Not available on Passmark]                                                                             | 225     | 2.65 GHz          | SP3    | 48 MB    | **~$1,500 – $2,200**                                          |
+
+</details>
+
+<details>
+<summary><b>EPYC 7002 Series (Rome) - SP3</b></summary>
+
+| Model                     | Cores / Threads | Passmark CPU Bench                                                                                     | TDP (W) | Base / Turbo      | Socket | L3 Cache | Avg Used eBay.com Price (US)                                  |
+| ------------------------- | --------------- | ------------------------------------------------------------------------------------------------------ | ------- | ----------------- | ------ | -------- | ------------------------------------------------------------- |
+| **AMD EPYC 7H12**         | 64C / 128T      | [~51,187](https://www.cpubenchmark.net/cpu.php?cpu=AMD+EPYC+7H12&id=3666)                              | 280     | 2.6 / 3.3 GHz     | SP3    | 256 MB   | **~$1,800 – $2,500**                                          |
+| **AMD EPYC 7742**         | 64C / 128T      | [~49,760](https://www.cpubenchmark.net/cpu.php?cpu=AMD+EPYC+7742&id=3509)                              | 225     | 2.25 / 3.4 GHz    | SP3    | 256 MB   | **~$1,500 – $2,200**                                          |
+| **AMD EPYC 7702**         | 64C / 128T      | [~47,150](https://www.cpubenchmark.net/cpu.php?cpu=AMD+EPYC+7702&id=3512)                              | 200     | 2.0 / 3.35 GHz    | SP3    | 256 MB   | **~$1,300 – $1,900**                                          |
+| **AMD EPYC 7F72**         | 24C / 48T       | [~28,421](https://www.cpubenchmark.net/cpu.php?cpu=AMD+EPYC+7F72&id=3841)                              | 240     | 3.2 / 3.7 GHz     | SP3    | 192 MB   | **~$700 – $1,000**                                            |
+| **AMD EPYC 7502**         | 32C / 64T       | [~28,117](https://www.cpubenchmark.net/cpu.php?cpu=AMD+EPYC+7502&id=3511)                              | 180     | 2.5 / 3.35 GHz    | SP3    | 128 MB   | **~$600 – $900**                                              |
+| **AMD EPYC 7452**         | 32C / 64T       | [~26,340](https://www.cpubenchmark.net/cpu.php?cpu=AMD+EPYC+7452&id=3508)                              | 155     | 2.35 / 3.35 GHz   | SP3    | 128 MB   | **~$500 – $750**                                              |
+| **AMD EPYC 7402**         | 24C / 48T       | [~22,753](https://www.cpubenchmark.net/cpu.php?cpu=AMD+EPYC+7402&id=3514)                              | 180     | 2.8 / 3.35 GHz    | SP3    | 128 MB   | **~$400 – $600**                                              |
+| **AMD EPYC 7302**         | 16C / 32T       | [~18,511](https://www.cpubenchmark.net/cpu.php?cpu=AMD+EPYC+7302&id=3510)                              | 155     | 3.0 / 3.3 GHz     | SP3    | 128 MB   | **~$250 – $400**                                              |
+| **AMD EPYC 7282**         | 16C / 32T       | [~17,826](https://www.cpubenchmark.net/cpu.php?cpu=AMD+EPYC+7282&id=3507)                              | 120     | 2.8 / 3.2 GHz     | SP3    | 64 MB    | **~$200 – $300**                                              |
+| **AMD EPYC 7262**         | 8C / 16T        | [~13,875](https://www.cpubenchmark.net/cpu.php?cpu=AMD+EPYC+7262&id=3506)                              | 155     | 3.2 / 3.4 GHz     | SP3    | 128 MB   | **~$150 – $220**                                              |
+
+</details>
+
+<details>
+<summary><b>EPYC 7001 Series (Naples) - SP3</b></summary>
+
+| Model                     | Cores / Threads | Passmark CPU Bench                                                                                     | TDP (W) | Base / Turbo      | Socket | L3 Cache | Avg Used eBay.com Price (US)                                  |
+| ------------------------- | --------------- | ------------------------------------------------------------------------------------------------------ | ------- | ----------------- | ------ | -------- | ------------------------------------------------------------- |
+| **Dual AMD EPYC 7601**    | 64C / 128T      | [~37,945](https://www.cpubenchmark.net/cpu.php?cpu=Dual+AMD+EPYC+7601&id=3203)                         | 360     | 2.2 / 2.7 GHz     | SP3    | 128 MB   | **~$500 – $700**                                              |
+| **AMD EPYC 7601**         | 32C / 64T       | [~22,676](https://www.cpubenchmark.net/cpu.php?cpu=AMD+EPYC+7601&id=3132)                              | 180     | 2.2 / 2.7 GHz     | SP3    | 64 MB    | **~$250 – $350**                                              |
+| **Dual AMD EPYC 7551**    | 64C / 128T      | [~32,069](https://www.cpubenchmark.net/cpu.php?cpu=Dual+AMD+EPYC+7551&id=3134)                         | 360     | 2.0 / 2.55 GHz    | SP3    | 128 MB   | **~$400 – $550**                                              |
+| **AMD EPYC 7551**         | 32C / 64T       | [~19,868](https://www.cpubenchmark.net/cpu.php?cpu=AMD+EPYC+7551&id=3127)                              | 180     | 2.0 / 2.55 GHz    | SP3    | 64 MB    | **~$200 – $280**                                              |
+| **Dual AMD EPYC 7501**    | 64C / 128T      | [~31,487](https://www.cpubenchmark.net/cpu.php?cpu=Dual+AMD+EPYC+7501&id=3133)                         | 340     | 2.0 / 2.6 GHz     | SP3    | 128 MB   | **~$350 – $500**                                              |
+| **AMD EPYC 7501**         | 32C / 64T       | [~19,313](https://www.cpubenchmark.net/cpu.php?cpu=AMD+EPYC+7501&id=3129)                              | 170     | 2.0 / 2.6 GHz     | SP3    | 64 MB    | **~$180 – $250**                                              |
+| **Dual AMD EPYC 7401**    | 48C / 96T       | [~55,293](https://www.cpubenchmark.net/cpu.php?cpu=Dual+AMD+EPYC+7401&id=3136)                         | 340     | 2.0 / 3.0 GHz     | SP3    | 128 MB   | **~$300 – $400**                                              |
+| **AMD EPYC 7401**         | 24C / 48T       | [~17,263](https://www.cpubenchmark.net/cpu.php?cpu=AMD+EPYC+7401&id=3130)                              | 170     | 2.0 / 3.0 GHz     | SP3    | 64 MB    | **~$150 – $200**                                              |
+| **AMD EPYC 7371**         | 16C / 32T       | [~28,345](https://www.cpubenchmark.net/cpu.php?cpu=AMD+EPYC+7371&id=3324)                              | 200     | 3.1 / 3.8 GHz     | SP3    | 64 MB    | **~$180 – $250** (High clock)                                 |
+| **AMD EPYC 7281**         | 16C / 32T       | [~14,439](https://www.cpubenchmark.net/cpu.php?cpu=AMD+EPYC+7281&id=3131)                              | 155     | 2.1 / 2.7 GHz     | SP3    | 32 MB    | **~$100 – $150**                                              |
+| **AMD EPYC 7251**         | 8C / 16T        | [~8,126](https://www.cpubenchmark.net/cpu.php?cpu=AMD+EPYC+7251&id=3128)                               | 120     | 2.1 / 2.9 GHz     | SP3    | 32 MB    | **~$60 – $90**                                                |
+
+</details>
+
+<details>
+<summary><b>Opteron 6300 Series (Warsaw / Abu Dhabi) - G34</b></summary>
+
+| Model                     | Cores / Threads | Passmark CPU Bench                                                                                     | TDP (W) | Base / Turbo      | Socket | L3 Cache | Avg Used eBay.com Price (US)                                  |
+| ------------------------- | --------------- | ------------------------------------------------------------------------------------------------------ | ------- | ----------------- | ------ | -------- | ------------------------------------------------------------- |
+| **AMD Opteron 6386 SE**   | 16C / 16T       | [~8,112](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Opteron+6386+SE)                                 | 140     | 2.8 / 3.5 GHz     | G34    | 16 MB    | **~$30 – $45**                                                |
+| **AMD Opteron 6378**      | 16C / 16T       | [~7,437](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Opteron+6378)                                    | 115     | 2.4 / 3.3 GHz     | G34    | 16 MB    | **~$25 – $35**                                                |
+| **AMD Opteron 6376**      | 16C / 16T       | [~7,240](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Opteron+6376)                                    | 115     | 2.3 / 3.2 GHz     | G34    | 16 MB    | **~$20 – $30**                                                |
+| **AMD Opteron 6344**      | 12C / 12T       | [~6,012](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Opteron+6344)                                    | 115     | 2.6 / 3.2 GHz     | G34    | 16 MB    | **~$15 – $25**                                                |
+| **AMD Opteron 6338P**     | 12C / 12T       | [~5,277](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Opteron+6338P)                                   | 99      | 2.3 / 2.8 GHz     | G34    | 8 MB     | **~$12 – $20** (Low-power)                                    |
+| **AMD Opteron 6328**      | 8C / 8T         | [~4,546](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Opteron+6328)                                    | 115     | 3.2 / 3.8 GHz     | G34    | 16 MB    | **~$10 – $15**                                                |
+| **AMD Opteron 6320**      | 8C / 8T         | [~3,974](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Opteron+6320)                                    | 115     | 2.8 / 3.3 GHz     | G34    | 16 MB    | **~$8 – $12**                                                 |
+
+</details>
+
+<details>
+<summary><b>Opteron 6200 Series (Interlagos) - G34</b></summary>
+
+| Model                     | Cores / Threads | Passmark CPU Bench                                                                                     | TDP (W) | Base / Turbo      | Socket | L3 Cache | Avg Used eBay.com Price (US)                                  |
+| ------------------------- | --------------- | ------------------------------------------------------------------------------------------------------ | ------- | ----------------- | ------ | -------- | ------------------------------------------------------------- |
+| **AMD Opteron 6282 SE**   | 16C / 16T       | [~7,324](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Opteron+6282+SE)                                 | 140     | 2.6 / 3.0 GHz     | G34    | 16 MB    | **~$25 – $35**                                                |
+| **AMD Opteron 6276**      | 16C / 16T       | [~6,578](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Opteron+6276)                                    | 115     | 2.3 / 3.2 GHz     | G34    | 16 MB    | **~$18 – $25**                                                |
+| **AMD Opteron 6238**      | 12C / 12T       | [~5,243](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Opteron+6238)                                    | 115     | 2.6 / 3.2 GHz     | G34    | 16 MB    | **~$12 – $18**                                                |
+| **AMD Opteron 6212**      | 8C / 8T         | [~4,012](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Opteron+6212)                                    | 115     | 2.6 / 3.2 GHz     | G34    | 16 MB    | **~$8 – $12**                                                 |
+
+</details>
+
+<details>
+<summary><b>Opteron 6100 Series (Magny-Cours) - G34</b></summary>
+
+| Model                     | Cores / Threads | Passmark CPU Bench                                                                                     | TDP (W) | Base Clock        | Socket | L3 Cache | Avg Used eBay.com Price (US)                                  |
+| ------------------------- | --------------- | ------------------------------------------------------------------------------------------------------ | ------- | ----------------- | ------ | -------- | ------------------------------------------------------------- |
+| **AMD Opteron 6176 SE**   | 12C / 12T       | [~5,402](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Opteron+6176+SE)                                 | 140     | 2.3 GHz           | G34    | 12 MB    | **~$20 – $30**                                                |
+| **AMD Opteron 6174**      | 12C / 12T       | [~5,188](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Opteron+6174)                                    | 115     | 2.2 GHz           | G34    | 12 MB    | **~$15 – $25**                                                |
+| **AMD Opteron 6168**      | 12C / 12T       | [~4,879](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Opteron+6168)                                    | 115     | 1.9 GHz           | G34    | 12 MB    | **~$12 – $18**                                                |
+| **AMD Opteron 6136**      | 8C / 8T         | [~3,976](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Opteron+6136)                                    | 115     | 2.4 GHz           | G34    | 12 MB    | **~$8 – $12**                                                 |
+| **AMD Opteron 6128**      | 8C / 8T         | [~3,512](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Opteron+6128)                                    | 115     | 2.0 GHz           | G34    | 12 MB    | **~$6 – $10**                                                 |
+| **AMD Opteron 6164 HE**   | 12C / 12T       | [~4,712](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Opteron+6164+HE)                                 | 65      | 1.7 GHz           | G34    | 12 MB    | **~$15 – $22** (Low-power)                                    |
+| **AMD Opteron 6128 HE**   | 8C / 8T         | [~3,315](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Opteron+6128+HE)                                 | 65      | 2.0 GHz           | G34    | 12 MB    | **~$8 – $12** (Low-power)                                     |
+
+</details>
+
+## AMD Laptop CPUs:
+
+<details>
+<summary><b>Ryzen AI Max Series (Strix Halo) - 2025</b></summary>
+
+| Model                     | Cores / Threads | Passmark CPU Bench                                                                                     | TDP (W) | Base / Turbo      | iGPU             | Avg Used eBay.com Price (US)                                  |
+| ------------------------- | --------------- | ------------------------------------------------------------------------------------------------------ | ------- | ----------------- | ---------------- | ------------------------------------------------------------- |
+| **AMD Ryzen AI Max+ 395** | 16C / 32T       | [~55,040](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+AI+Max+395)                               | 55      | 3.0 / 5.1 GHz     | Radeon 8060S     | **Not yet available** (New release)                           |
+| **AMD Ryzen AI Max+ PRO 395**| 16C / 32T     | [~51,788](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+AI+Max+PRO+395)                           | 55      | 3.0 / 5.1 GHz     | Radeon 8060S     | **Not yet available** (New release)                           |
+| **AMD Ryzen AI Max 390**  | 12C / 24T       | [~42,070](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+AI+Max+390)                               | 55      | 3.2 / 5.0 GHz     | Radeon 8050S     | **Not yet available** (New release)                           |
+| **AMD Ryzen AI Max PRO 390**| 12C / 24T     | [~43,237](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+AI+Max+PRO+390)                           | 55      | 3.2 / 5.0 GHz     | Radeon 8050S     | **Not yet available** (New release)                           |
+| **AMD Ryzen AI Max 385**  | 8C / 16T        | [~32,622](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+AI+Max+385)                               | 55      | 3.6 / 5.0 GHz     | Radeon 8050S     | **Not yet available** (New release)                           |
+| **AMD Ryzen AI Max PRO 385**| 8C / 16T      | [~31,508](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+AI+Max+PRO+385)                           | 55      | 3.6 / 5.0 GHz     | Radeon 8050S     | **Not yet available** (New release)                           |
+| **AMD Ryzen AI Max PRO 380**| 6C / 12T      | [~24,431](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+AI+Max+PRO+380)                           | 55      | 3.6 / 4.9 GHz     | Radeon 8040S     | **Not yet available** (New release)                           |
+
+</details>
+
+<details>
+<summary><b>Ryzen AI 300 Series (Strix Point / Krackan Point) - 2024-2025</b></summary>
+
+| Model                     | Cores / Threads | Passmark CPU Bench                                                                                     | TDP (W) | Base / Turbo      | iGPU             | Avg Used eBay.com Price (US)                                  |
+| ------------------------- | --------------- | ------------------------------------------------------------------------------------------------------ | ------- | ----------------- | ---------------- | ------------------------------------------------------------- |
+| **AMD Ryzen AI 9 HX 370** | 12C / 24T       | [~35,109](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+AI+9+HX+370)                              | 28      | 2.0 / 5.1 GHz     | Radeon 890M      | **~$500 – $650**                                              |
+| **AMD Ryzen AI 9 HX 375** | 12C / 24T       | [~34,764](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+AI+9+HX+375)                              | 28      | 2.0 / 5.1 GHz     | Radeon 890M      | **~$520 – $680**                                              |
+| **AMD Ryzen AI 9 HX PRO 370**| 12C / 24T     | [~32,904](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+AI+9+HX+PRO+370)                          | 28      | 2.0 / 5.1 GHz     | Radeon 890M      | **~$550 – $700** (Enterprise)                                 |
+| **AMD Ryzen AI 9 HX PRO 375**| 12C / 24T     | [~33,537](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+AI+9+HX+PRO+375)                          | 28      | 2.0 / 5.1 GHz     | Radeon 890M      | **~$560 – $720** (Enterprise)                                 |
+| **AMD Ryzen AI 9 365**    | 10C / 20T       | [~30,304](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+AI+9+365)                                 | 28      | 2.0 / 5.0 GHz     | Radeon 880M      | **~$400 – $520**                                              |
+| **AMD Ryzen AI 7 PRO 360**| 8C / 16T        | [~22,106](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+AI+7+PRO+360)                             | 28      | 2.0 / 5.0 GHz     | Radeon 880M      | **~$350 – $450** (Enterprise)                                 |
+| **AMD Ryzen AI 7 350**    | 8C / 16T        | [~24,930](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+AI+7+350)                                 | 28      | 2.0 / 5.0 GHz     | Radeon 860M      | **~$300 – $400**                                              |
+| **AMD Ryzen AI 7 PRO 350**| 8C / 16T        | [~24,062](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+AI+7+PRO+350)                             | 28      | 2.0 / 5.0 GHz     | Radeon 860M      | **~$320 – $420** (Enterprise)                                 |
+| **AMD Ryzen AI 5 340**    | 6C / 12T        | [~19,659](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+AI+5+340)                                 | 28      | 2.0 / 4.8 GHz     | Radeon 840M      | **~$250 – $330**                                              |
+| **AMD Ryzen AI 5 PRO 340**| 6C / 12T        | [~19,422](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+AI+5+PRO+340)                             | 28      | 2.0 / 4.8 GHz     | Radeon 840M      | **~$260 – $350** (Enterprise)                                 |
+| **AMD Ryzen AI 5 330**    | 4C / 8T         | [~12,955](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+AI+5+330)                                 | 28      | 2.0 / 4.5 GHz     | Radeon 820M      | **~$200 – $270**                                              |
+
+</details>
+
+<details>
+<summary><b>Ryzen 7040 Series (Phoenix) - 2023</b></summary>
+
+| Model                     | Cores / Threads | Passmark CPU Bench                                                                                     | TDP (W) | Base / Turbo      | iGPU             | Avg Used eBay.com Price (US)                                  |
+| ------------------------- | --------------- | ------------------------------------------------------------------------------------------------------ | ------- | ----------------- | ---------------- | ------------------------------------------------------------- |
+| **AMD Ryzen 9 7945HX**    | 16C / 32T       | [~54,191](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+9+7945HX&id=5232)                          | 55-75   | 2.5 / 5.4 GHz     | Radeon 610M      | **~$450 – $600**                                              |
+| **AMD Ryzen 9 7940HS**    | 8C / 16T        | [~32,000](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+9+7940HS)                                 | 35-54   | 4.0 / 5.2 GHz     | Radeon 780M      | **~$350 – $480**                                              |
+| **AMD Ryzen 7 7840HS**    | 8C / 16T        | [~28,500](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+7+7840HS)                                 | 35-54   | 3.8 / 5.1 GHz     | Radeon 780M      | **~$300 – $420**                                              |
+| **AMD Ryzen 7 7840U**     | 8C / 16T        | [~24,000](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+7+7840U)                                  | 15-28   | 3.3 / 5.1 GHz     | Radeon 780M      | **~$280 – $380**                                              |
+| **AMD Ryzen 5 7640HS**    | 6C / 12T        | [~22,000](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+5+7640HS)                                 | 35-54   | 4.3 / 5.0 GHz     | Radeon 760M      | **~$220 – $300**                                              |
+| **AMD Ryzen 5 7640U**     | 6C / 12T        | [~19,000](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+5+7640U)                                  | 15-28   | 3.5 / 4.9 GHz     | Radeon 760M      | **~$200 – $270**                                              |
+| **AMD Ryzen 3 7440U**     | 4C / 8T         | [~14,000](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+3+7440U)                                  | 15-28   | 3.0 / 4.7 GHz     | Radeon 740M      | **~$150 – $200**                                              |
+
+</details>
+
+<details>
+<summary><b>Ryzen 7035 Series (Rembrandt-R) - 2023</b></summary>
+
+| Model                     | Cores / Threads | Passmark CPU Bench                                                                                     | TDP (W) | Base / Turbo      | iGPU             | Avg Used eBay.com Price (US)                                  |
+| ------------------------- | --------------- | ------------------------------------------------------------------------------------------------------ | ------- | ----------------- | ---------------- | ------------------------------------------------------------- |
+| **AMD Ryzen 9 6980HX**    | 8C / 16T        | [~26,000](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+9+6980HX)                                 | 45+     | 3.3 / 5.0 GHz     | Radeon 680M      | **~$350 – $450**                                              |
+| **AMD Ryzen 9 6980HS**    | 8C / 16T        | [~25,000](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+9+6980HS)                                 | 35      | 3.3 / 5.0 GHz     | Radeon 680M      | **~$320 – $420**                                              |
+| **AMD Ryzen 7 7735HS**    | 8C / 16T        | [~22,000](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+7+7735HS)                                 | 35-54   | 3.2 / 4.75 GHz    | Radeon 680M      | **~$250 – $340**                                              |
+| **AMD Ryzen 7 7735U**     | 8C / 16T        | [~20,000](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+7+7735U)                                  | 15-28   | 2.7 / 4.75 GHz    | Radeon 680M      | **~$230 – $320**                                              |
+| **AMD Ryzen 5 7535HS**    | 6C / 12T        | [~17,000](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+5+7535HS)                                 | 35-54   | 3.3 / 4.55 GHz    | Radeon 660M      | **~$180 – $250**                                              |
+| **AMD Ryzen 5 7535U**     | 6C / 12T        | [~15,500](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+5+7535U)                                  | 15-28   | 2.9 / 4.55 GHz    | Radeon 660M      | **~$160 – $220**                                              |
+
+</details>
+
+<details>
+<summary><b>Ryzen 6000 Series (Rembrandt) - 2022</b></summary>
+
+| Model                     | Cores / Threads | Passmark CPU Bench                                                                                     | TDP (W) | Base / Turbo      | iGPU             | Avg Used eBay.com Price (US)                                  |
+| ------------------------- | --------------- | ------------------------------------------------------------------------------------------------------ | ------- | ----------------- | ---------------- | ------------------------------------------------------------- |
+| **AMD Ryzen 9 6980HX**    | 8C / 16T        | [~25,800](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+9+6980HX)                                 | 45+     | 3.3 / 5.0 GHz     | Radeon 680M      | **~$300 – $400**                                              |
+| **AMD Ryzen 9 6900HX**    | 8C / 16T        | [~24,500](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+9+6900HX)                                 | 45+     | 3.3 / 4.9 GHz     | Radeon 680M      | **~$280 – $370**                                              |
+| **AMD Ryzen 9 6900HS**    | 8C / 16T        | [~23,800](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+9+6900HS)                                 | 35      | 3.3 / 4.9 GHz     | Radeon 680M      | **~$260 – $350**                                              |
+| **AMD Ryzen 7 6800H**     | 8C / 16T        | [~21,500](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+7+6800H)                                  | 45      | 3.2 / 4.7 GHz     | Radeon 680M      | **~$220 – $300**                                              |
+| **AMD Ryzen 7 6800U**     | 8C / 16T        | [~19,500](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+7+6800U)                                  | 15-28   | 2.7 / 4.7 GHz     | Radeon 680M      | **~$200 – $280**                                              |
+| **AMD Ryzen 5 6600H**     | 6C / 12T        | [~16,800](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+5+6600H)                                  | 45      | 3.3 / 4.5 GHz     | Radeon 660M      | **~$160 – $220**                                              |
+| **AMD Ryzen 5 6600U**     | 6C / 12T        | [~15,200](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+5+6600U)                                  | 15-28   | 2.9 / 4.5 GHz     | Radeon 660M      | **~$140 – $200**                                              |
+
+</details>
+
+<details>
+<summary><b>Ryzen 5000 Series (Cezanne / Barcelo) - 2021-2022</b></summary>
+
+| Model                     | Cores / Threads | Passmark CPU Bench                                                                                     | TDP (W) | Base / Turbo      | iGPU             | Avg Used eBay.com Price (US)                                  |
+| ------------------------- | --------------- | ------------------------------------------------------------------------------------------------------ | ------- | ----------------- | ---------------- | ------------------------------------------------------------- |
+| **AMD Ryzen 9 5980HX**    | 8C / 16T        | [~22,500](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+9+5980HX)                                 | 45+     | 3.3 / 4.8 GHz     | Radeon Vega 8    | **~$250 – $350**                                              |
+| **AMD Ryzen 9 5980HS**    | 8C / 16T        | [~21,800](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+9+5980HS)                                 | 35      | 3.0 / 4.8 GHz     | Radeon Vega 8    | **~$230 – $320**                                              |
+| **AMD Ryzen 9 5900HX**    | 8C / 16T        | [~21,000](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+9+5900HX)                                 | 45+     | 3.3 / 4.6 GHz     | Radeon Vega 8    | **~$220 – $300**                                              |
+| **AMD Ryzen 7 5800H**     | 8C / 16T        | [~19,500](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+7+5800H)                                  | 45      | 3.2 / 4.4 GHz     | Radeon Vega 8    | **~$180 – $250**                                              |
+| **AMD Ryzen 7 5825U**     | 8C / 16T        | [~17,985](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+7+5825U)                                  | 15      | 2.0 / 4.5 GHz     | Radeon Vega 8    | **~$160 – $220**                                              |
+| **AMD Ryzen 5 5600H**     | 6C / 12T        | [~15,500](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+5+5600H)                                  | 45      | 3.3 / 4.2 GHz     | Radeon Vega 7    | **~$130 – $180**                                              |
+| **AMD Ryzen 5 5625U**     | 6C / 12T        | [~14,648](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+5+5625U)                                  | 15      | 2.3 / 4.3 GHz     | Radeon Vega 7    | **~$120 – $160**                                              |
+| **AMD Ryzen 3 5425U**     | 4C / 8T         | [~10,500](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+3+5425U)                                  | 15      | 2.7 / 4.1 GHz     | Radeon Vega 6    | **~$80 – $110**                                               |
+
+</details>
+
+<details>
+<summary><b>Ryzen 4000 Series (Renoir) - 2020</b></summary>
+
+| Model                     | Cores / Threads | Passmark CPU Bench                                                                                     | TDP (W) | Base / Turbo      | iGPU             | Avg Used eBay.com Price (US)                                  |
+| ------------------------- | --------------- | ------------------------------------------------------------------------------------------------------ | ------- | ----------------- | ---------------- | ------------------------------------------------------------- |
+| **AMD Ryzen 9 4900H**     | 8C / 16T        | [~19,500](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+9+4900H)                                  | 45      | 3.3 / 4.4 GHz     | Radeon Vega 8    | **~$200 – $280**                                              |
+| **AMD Ryzen 9 4900HS**    | 8C / 16T        | [~19,000](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+9+4900HS)                                 | 35      | 3.0 / 4.3 GHz     | Radeon Vega 8    | **~$190 – $260**                                              |
+| **AMD Ryzen 7 4800H**     | 8C / 16T        | [~17,500](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+7+4800H)                                  | 45      | 2.9 / 4.2 GHz     | Radeon Vega 7    | **~$150 – $200**                                              |
+| **AMD Ryzen 7 4800U**     | 8C / 16T        | [~16,800](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+7+4800U)                                  | 15      | 1.8 / 4.2 GHz     | Radeon Vega 8    | **~$140 – $190**                                              |
+| **AMD Ryzen 5 4600H**     | 6C / 12T        | [~13,500](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+5+4600H)                                  | 45      | 3.0 / 4.0 GHz     | Radeon Vega 6    | **~$100 – $140**                                              |
+| **AMD Ryzen 5 4600U**     | 6C / 12T        | [~12,800](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+5+4600U)                                  | 15      | 2.1 / 4.0 GHz     | Radeon Vega 6    | **~$90 – $130**                                               |
+| **AMD Ryzen 3 4300U**     | 4C / 4T         | [~7,500](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+3+4300U)                                   | 15      | 2.7 / 3.7 GHz     | Radeon Vega 5    | **~$50 – $80**                                                |
+
+</details>
+
+<details>
+<summary><b>Ryzen 3000 Series (Picasso / Dali) - 2019-2020</b></summary>
+
+| Model                     | Cores / Threads | Passmark CPU Bench                                                                                     | TDP (W) | Base / Turbo      | iGPU             | Avg Used eBay.com Price (US)                                  |
+| ------------------------- | --------------- | ------------------------------------------------------------------------------------------------------ | ------- | ----------------- | ---------------- | ------------------------------------------------------------- |
+| **AMD Ryzen 7 3780U**     | 4C / 8T         | [~8,500](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+7+3780U)                                   | 15      | 2.3 / 4.0 GHz     | Radeon Vega 11   | **~$80 – $120**                                               |
+| **AMD Ryzen 7 3750H**     | 4C / 8T         | [~8,200](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+7+3750H)                                   | 35      | 2.3 / 4.0 GHz     | Radeon Vega 10   | **~$70 – $100**                                               |
+| **AMD Ryzen 7 3700U**     | 4C / 8T         | [~7,800](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+7+3700U)                                   | 15      | 2.3 / 4.0 GHz     | Radeon Vega 10   | **~$60 – $90**                                                |
+| **AMD Ryzen 5 3580U**     | 4C / 8T         | [~7,200](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+5+3580U)                                   | 15      | 2.1 / 3.7 GHz     | Radeon Vega 9    | **~$55 – $80**                                                |
+| **AMD Ryzen 5 3550H**     | 4C / 8T         | [~6,800](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+5+3550H)                                   | 35      | 2.1 / 3.7 GHz     | Radeon Vega 8    | **~$50 – $75**                                                |
+| **AMD Ryzen 5 3500U**     | 4C / 8T         | [~6,500](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+5+3500U)                                   | 15      | 2.1 / 3.7 GHz     | Radeon Vega 8    | **~$45 – $65**                                                |
+| **AMD Ryzen 3 3300U**     | 4C / 4T         | [~5,684](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+3+3300U)                                   | 15      | 2.1 / 3.5 GHz     | Radeon Vega 6    | **~$35 – $50**                                                |
+| **AMD Ryzen 3 3200U**     | 2C / 4T         | [~3,800](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+3+3200U)                                   | 15      | 2.6 / 3.5 GHz     | Radeon Vega 3    | **~$25 – $40**                                                |
+
+</details>
+
+<details>
+<summary><b>Ryzen 2000 Series (Raven Ridge) - 2018</b></summary>
+
+| Model                     | Cores / Threads | Passmark CPU Bench                                                                                     | TDP (W) | Base / Turbo      | iGPU             | Avg Used eBay.com Price (US)                                  |
+| ------------------------- | --------------- | ------------------------------------------------------------------------------------------------------ | ------- | ----------------- | ---------------- | ------------------------------------------------------------- |
+| **AMD Ryzen 7 2800H**     | 4C / 8T         | [~7,800](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+7+2800H)                                   | 35-45   | 3.3 / 3.8 GHz     | Radeon Vega 11   | **~$60 – $90**                                                |
+| **AMD Ryzen 7 2700U**     | 4C / 8T         | [~7,200](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+7+2700U)                                   | 15      | 2.2 / 3.8 GHz     | Radeon Vega 10   | **~$50 – $80**                                                |
+| **AMD Ryzen 5 2600H**     | 4C / 8T         | [~6,500](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+5+2600H)                                   | 35-45   | 3.2 / 3.6 GHz     | Radeon Vega 8    | **~$45 – $70**                                                |
+| **AMD Ryzen 5 2500U**     | 4C / 8T         | [~6,200](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+5+2500U)                                   | 15      | 2.0 / 3.6 GHz     | Radeon Vega 8    | **~$40 – $60**                                                |
+| **AMD Ryzen 3 2300U**     | 4C / 4T         | [~5,000](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+3+2300U)                                   | 15      | 2.0 / 3.4 GHz     | Radeon Vega 6    | **~$30 – $45**                                                |
+| **AMD Ryzen 3 2200U**     | 2C / 4T         | [~3,386](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+3+2200U)                                   | 15      | 2.5 / 3.4 GHz     | Radeon Vega 3    | **~$20 – $30**                                                |
+
+</details>
+
+<details>
+<summary><b>AMD FX Series (Excavator / Carrizo) - 2015-2016</b></summary>
+
+| Model                     | Cores / Threads | Passmark CPU Bench                                                                                     | TDP (W) | Base / Turbo      | iGPU             | Avg Used eBay.com Price (US)                                  |
+| ------------------------- | --------------- | ------------------------------------------------------------------------------------------------------ | ------- | ----------------- | ---------------- | ------------------------------------------------------------- |
+| **AMD FX-9830P**          | 4C / 4T         | [~3,399](https://www.cpubenchmark.net/cpu.php?cpu=AMD+FX-9830P)                                        | 35-45   | 3.0 / 3.7 GHz     | Radeon R7        | **~$25 – $40**                                                |
+| **AMD FX-9800P**          | 4C / 4T         | [~3,000](https://www.cpubenchmark.net/cpu.php?cpu=AMD+FX-9800P)                                        | 15      | 2.7 / 3.6 GHz     | Radeon R7        | **~$20 – $30**                                                |
+| **AMD FX-8800P**          | 4C / 4T         | [~3,200](https://www.cpubenchmark.net/cpu.php?cpu=AMD+FX-8800P)                                        | 15-35   | 2.1 / 3.4 GHz     | Radeon R7        | **~$18 – $25**                                                |
+| **AMD FX-7500**           | 4C / 4T         | [~2,800](https://www.cpubenchmark.net/cpu.php?cpu=AMD+FX-7500)                                         | 15-35   | 2.1 / 3.3 GHz     | Radeon R7        | **~$15 – $22**                                                |
+
+</details>
+
+<details>
+<summary><b>AMD A-Series (Richland / Kaveri / Carrizo) - 2013-2015</b></summary>
+
+| Model                     | Cores / Threads | Passmark CPU Bench                                                                                     | TDP (W) | Base / Turbo      | iGPU             | Avg Used eBay.com Price (US)                                  |
+| ------------------------- | --------------- | ------------------------------------------------------------------------------------------------------ | ------- | ----------------- | ---------------- | ------------------------------------------------------------- |
+| **AMD A10-8700P**         | 4C / 4T         | [~3,000](https://www.cpubenchmark.net/cpu.php?cpu=AMD+A10-8700P)                                       | 15      | 1.8 / 3.2 GHz     | Radeon R6        | **~$15 – $25**                                                |
+| **AMD A10-7400P**         | 4C / 4T         | [~2,700](https://www.cpubenchmark.net/cpu.php?cpu=AMD+A10-7400P)                                       | 35      | 2.5 / 3.4 GHz     | Radeon R6        | **~$12 – $20**                                                |
+| **AMD A10-5750M**         | 4C / 4T         | [~2,800](https://www.cpubenchmark.net/cpu.php?cpu=AMD+A10-5750M)                                       | 35      | 2.5 / 3.5 GHz     | Radeon HD 8650G  | **~$10 – $15**                                                |
+| **AMD A10-5745M**         | 4C / 4T         | [~2,753](https://www.cpubenchmark.net/cpu.php?cpu=AMD+A10-5745M)                                       | 25      | 2.1 / 2.9 GHz     | Radeon HD 8610G  | **~$8 – $12**                                                 |
+| **AMD A8-5550M**          | 4C / 4T         | [~2,500](https://www.cpubenchmark.net/cpu.php?cpu=AMD+A8-5550M)                                        | 35      | 2.1 / 3.1 GHz     | Radeon HD 8550G  | **~$7 – $10**                                                 |
+| **AMD A6-5350M**          | 2C / 2T         | [~1,400](https://www.cpubenchmark.net/cpu.php?cpu=AMD+A6-5350M)                                        | 35      | 2.9 / 3.5 GHz     | Radeon HD 8450G  | **~$5 – $8**                                                  |
+
+</details>
+
+<details>
+<summary><b>AMD Phenom II / Turion (Champlain) - 2010-2011</b></summary>
+
+| Model                     | Cores / Threads | Passmark CPU Bench                                                                                     | TDP (W) | Base Clock        | iGPU             | Avg Used eBay.com Price (US)                                  |
+| ------------------------- | --------------- | ------------------------------------------------------------------------------------------------------ | ------- | ----------------- | ---------------- | ------------------------------------------------------------- |
+| **AMD Phenom II X4 N970** | 4C / 4T         | [~2,200](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Phenom+II+X4+N970) (est.)                        | 35      | 2.2 GHz           | None             | **~$10 – $15**                                                |
+| **AMD Phenom II X4 N950** | 4C / 4T         | [~2,100](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Phenom+II+X4+N950) (est.)                        | 35      | 2.1 GHz           | None             | **~$8 – $12**                                                 |
+| **AMD Phenom II X3 N870** | 3C / 3T         | [~1,700](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Phenom+II+X3+N870) (est.)                        | 35      | 2.3 GHz           | None             | **~$6 – $10**                                                 |
+| **AMD Phenom II X2 X640 BE**| 2C / 2T       | [~1,165](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Phenom+II+X640+BE)                               | 45      | 3.2 GHz           | None             | **~$5 – $8**                                                  |
+| **AMD Turion II Ultra 2.5GHz**| 2C / 2T     | [~1,000](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Turion+II+Ultra) (est.)                          | 35      | 2.5 GHz           | None             | **~$4 – $6**                                                  |
+
+</details>
+  
 </details>
 
 ### Disable Turbo Boost!
@@ -1973,8 +2858,8 @@ i often found myself looking up these details when comparing GPUs to try to find
   
 ### Suggested OS:
 
-[Proxmox](https://www.proxmox.com/en/) - For virtualization, self-hosting and all around general usage. it can even be used for gaming and other high performance tasks such as AI within VMs/Containers. 
-<br>[QubesOS](https://www.qubes-os.org/) - For heightened Security / Pirvacy and a compartmented OS on a single PC via the Xen hypervisor base. features some very interesting methods for security and is worth checking out if ou value security / privacy as your top priority. 
+#1 [Proxmox](https://www.proxmox.com/en/) - For virtualization, self-hosting and all around general usage. it can even be used for gaming and other high performance tasks such as AI within VMs/Containers. 
+<br>[QubesOS](https://www.qubes-os.org/) - For heightened Security / Pirvacy and a compartmented OS on a single PC via the Xen hypervisor base. features some very interesting methods for security and is worth checking out if you value security / privacy as your top priority. 
 
 ### Proxmox related content:
 Additional Resources:
