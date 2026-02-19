@@ -33,13 +33,26 @@ HomeLab CheatSheet &amp; AwesomeList
 - [Enterprise SATA/SAS HDDs](#enterprise-satasas-hdds)
       - BackBlaze Hard Drive Failure Data By Year
          - Data summary
-    - [SSD/Nvme Drives](#ssdnvme-drives)
-    - [Enterprise NVMe / M.2 Drives with Endurance](#enterprise-nvme--m2-drives-with-endurance)
-    - [Consumer NVMe / M.2 Drives](#consumer-nvme--m2-drives)
-    - [Consumer vs. Enterprise Price Comparison](#consumer-vs-enterprise-price-comparison)
+    - SSD/Nvme Drives
+    - Enterprise NVMe / M.2 Drives with Endurance
+    - Consumer NVMe / M.2 Drives
+    - Consumer vs. Enterprise Price Comparison
     
 - [CPU](#cpu)
-    - [CPU backdoor modules](#CPU-backdoor-modules)
+    - Intel CPUs
+    - AMD CPUs
+ - [Disable Turbo Boost](#disable-turbo-boost)
+    - Turbo Boost – Power, Heat & How to Disable It
+    - Disabling Turbo Boost in BIOS (Recommended Method)
+    - Steps
+    - Disabling Turbo Boost on Linux
+    - Method A — Using rc.local
+    - Method B — Using intel-noturbo
+    - Disabling Turbo Boost on Windows
+    - When Should You Disable Turbo
+    - Turbo OFF is useful for
+    - Power & Temperature Impact
+ - [CPU backdoor modules](#CPU-backdoor-modules)
       - Intel Management Engine (ME)
         - Notable documented vulnerabilities / advisories
         - Neutralization / mitigation options (community + vendor)
@@ -55,41 +68,30 @@ HomeLab CheatSheet &amp; AwesomeList
         - AMD PSP
         - ARM TrustZone / TEEs
       - Selected authoritative sources
-    - Vendors & Projects Offering Open Firmware / Reduced Proprietary Firmware Hardware
+  - Vendors & Projects Offering Open Firmware / Reduced Proprietary Firmware Hardware
       - Community Open Firmware Projects
       - Vendors & Distributions Shipping Open Firmware
       - Additional Hardware & Architecture Notes
-      
-    - [Disable Turbo Boost](#disable-turbo-boost)
-
-- [Turbo Boost – Power, Heat & How to Disable It](#turbo-boost--power-heat--how-to-disable-it)
-  - [Disabling Turbo Boost in BIOS (Recommended Method)](#1-disabling-turbo-boost-in-bios-recommended-method)
-    - [Steps](#steps)
-  - [Disabling Turbo Boost on Linux](#2-disabling-turbo-boost-on-linux)
-    - [Method A — Using rc.local](#method-a--using-rclocal)
-    - [Method B — Using intel-noturbo](#method-b--using-intel-noturbo)
-  - [Disabling Turbo Boost on Windows](#3-disabling-turbo-boost-on-windows)
-  - [When Should You Disable Turbo](#when-should-you-disable-turbo)
-    - [Turbo OFF is useful for](#turbo-off-is-useful-for)
-  - [Power & Temperature Impact](#power--temperature-impact)
   
  - [GPU](#gpu)
     - [GPU Models to compare them side by side](#gpu-models-to-compare-them-side-by-side)
-    - [Intel GPU Master Table](#intel-gpu-master-table)
-    - [NVIDIA RTX 10 Series (Pascal)](#nvidia-rtx-10-series-pascal)
-    - [NVIDIA GTX 16 Series (Turing)](#nvidia-gtx-16-series-turing)
-    - [NVIDIA RTX 20 Series (Turing)](#nvidia-rtx-20-series-turing)
-    - [NVIDIA RTX 30 Series (Ampere)](#nvidia-rtx-30-series-ampere)
-    - [NVIDIA RTX 40 Series (Ada Lovelace)](#nvidia-rtx-40-series-ada-lovelace)
-    - [NVIDIA RTX 50 Series (Blackwell)](#nvidia-rtx-50-series-blackwell)
-    - [NVIDIA Quadro / Professional GPUs](#nvidia-quadro--professional-gpus)
-    - [NVIDIA RTX A-Series (Professional GPUs)](#nvidia-rtx-a-series-professional-gpus)
-    - [NVIDIA Tesla Series](#nvidia-tesla-series)
-    - [AMD Radeon RX 5000 Series (RDNA1)](#amd-radeon-rx-5000-series-rdna1)
-    - [AMD Radeon RX 6000 Series (RDNA2)](#amd-radeon-rx-6000-series-rdna2)
-    - [AMD Radeon RX 7000 Series (RDNA3)](#amd-radeon-rx-7000-series-rdna3)
-    - [AMD Radeon RX 9000 Series (RDNA4)](#amd-radeon-rx-9000-series-rdna4)
-    - [AMD Pro/Compute GPUs](#amd-procompute-gpus)
+  - Intel GPUs
+  - Nvidia GPUS
+    - NVIDIA RTX 10 Series (Pascal)
+    - NVIDIA GTX 16 Series (Turing)
+    - NVIDIA RTX 20 Series (Turing)
+    - NVIDIA RTX 30 Series (Ampere)
+    - NVIDIA RTX 40 Series (Ada Lovelace)
+    - NVIDIA RTX 50 Series (Blackwell)
+    - NVIDIA Quadro / Professional GPUs
+    - NVIDIA RTX A-Series (Professional GPUs)
+    - NVIDIA Tesla Series
+  - AMD GPUs
+    - AMD Radeon RX 5000 Series (RDNA1)
+    - AMD Radeon RX 6000 Series (RDNA2)
+    - AMD Radeon RX 7000 Series (RDNA3)
+    - AMD Radeon RX 9000 Series (RDNA4)
+    - AMD Pro/Compute GPUs
 
   - [Suggested OS](#suggested-os)
     - [Proxmox related content](#proxmox-related-content)
@@ -172,6 +174,9 @@ These devices are small, powerful, and make perfect all-in-one mini servers for 
 
 Other mini PCs and SFF PCs can be worthwhile, but personally, I find the Lenovo Tiny PCs to be the most optimal, cost-effective options for home labs and other small-scale setups.
 
+<details>
+<summary><b>Lenovo Tiny PC Comparison Table:</b></summary>
+  
 | Model                                                                                                                                                             | CPU                                                                                                                                                                                                                                                                                                  | Cores / Threads    | Passmark CPU Bench                                                                                                                                                   | RAM Max | Drives / NVMe Slots | PCIe Slot              | iGPU          | Quick Sync | Idle Power* | Power (TDP) | Year | Best Use Case                                      | **Avg Used eBay.com Price (≈)**                                                                                           |
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- | ------------------- | ---------------------- | ------------- | ---------- | ----------- | ----------- | ---- | -------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
 | **ThinkCentre M715q Gen2**                                                                                                                                        | [Ryzen 5 2400GE](https://www.hacktiny.com/wp-content/uploads/2019/09/M920x-Tiny.pdf)                                                                                                                                                                                                                 | 4C / 8T            | [7192](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+5+2400GE)                                                                                                  | 32GB    | 1x 2.5" / 1x M.2    | None                   | Vega 11       | N/A        | ~7–10W      | 35W         | 2018 | Budget NAS, light Proxmox                          | **~$80 – $140** – common used M715q listings on eBay.com include Ryzen 5 / Ryzen Pro units around this range.  |
@@ -187,11 +192,12 @@ Other mini PCs and SFF PCs can be worthwhile, but personally, I find the Lenovo 
  https://www.ebay.com/shop/m715q?_nkw=m715q "M715q | eBay"
  <br> https://www.ebay.com/itm/167813873476 "Lenovo ThinkStation P350 Tiny Core i5 11500T 1.50GHz 16.0GB DDR4 512GB M.2 PC | eBay"
 </details>
+</details>
 
+<hr>
 
-
-
-### SFF Suggestion
+<details>
+<summary><b>SFF Suggestion</b></summary>
 
 One of the most cost effective SFF PCs for price vs hardware potential
 <br><b>HP z240 SFF</b>
@@ -212,8 +218,12 @@ One of the most cost effective SFF PCs for price vs hardware potential
 <br><a href="https://tachytelic.net/2021/12/dell-optiplex-7020-nvme-ssd/" target="_blank">Bios Mod - Install and boot from an NVMe SSD on a Dell OptiPlex 9020, 7020 or 3020</a>
 <br> i have tested this on a Dell Optiplex 3020 and can verify it works if done properly. 
 </details>
+</details>
 
-### NIC:
+<hr>
+
+<details>
+<summary><b>NIC:</b></summary>
 
 <br>
 <a href="https://www.digikey.com/htmldatasheets/production/2068431/0/0/1/intel-ethernet-server-adapter-i350-brief.html" target="_blank">Intel I350</a> (Quad-Port 1GbE)
@@ -307,10 +317,12 @@ Clones may:
 <br> https://forum.proxmox.com/threads/how-to-configure-mellanox-connectx-3-cards-for-sriov-and-vfs.121927/ "How-to: configure Mellanox ConnectX-3 cards for SRIOV ..."
 <br> https://forum.proxmox.com/threads/sr-iov-not-working-for-intel-i350-t4.83026/ "SR-IOV Not working for Intel i350-T4 | Proxmox Support Forum"
 </details>
+</details>
 
 <hr>
 
-### SAS / HBA cards:
+<details>
+<summary><b>SAS / HBA cards:</b></summary>
 
 <a href="https://docs.broadcom.com/doc/12353333" target="_blank">LSI / Inspur 9211-8i</a> (Flashed to IT Mode)
 
@@ -445,11 +457,15 @@ All LSI cards run warm.
 • Mixed HDD + SSD → 9207-8i is safer  
 • SSD-heavy / modern build → 9300-8i or SAS3008-based card  
 • Double check you buy a model with IT mode firmware for homelab use. 
+</details>
 
 <hr>
 
 ### Enterprise SATA/SAS HDDs:
 
+<details>
+<summary><b>Enterprise HDD comparison table:</b></summary>
+  
 | **Drive Model**                                 | **Form Factor** | **Interface**   | **Capacity Options**              | **Workload Rating (TB/yr)** | **Watts (Idle/Active)**   | **Avg Used eBay.com Price (≈)**                                                                                                                                                                                          |
 | ----------------------------------------------- | --------------- | --------------- | --------------------------------- | --------------------------- | ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | **HGST Ultrastar He10 / HC310**                 | 3.5"            | SATA / SAS 12Gb | 10TB                              | 550 TB/yr                   | ~5.8W / ~9.5W             | **~$90 – $240** – used 10TB HGST Ultrastar He10/SAS/SATA enterprise HDDs commonly sell around ~$90–$240 USD on eBay.com depending on condition and interface. (e.g., ~$95 sold listing; ~$138–$255+ active).  |
@@ -470,21 +486,12 @@ All LSI cards run warm.
 | **Seagate Exos 10E2400 (2.4TB)**                | 2.5"            | SAS 12Gb/s      | 600GB, 900GB, 1.2TB, 1.8TB, 2.4TB | 550 TB/yr                   | 3.8W / 6.9W               | **~$30 – $120** – Used 2.5" SAS enterprise drives (e.g., ~600GB–2.4TB) on eBay.com generally fall in the ~$30–$120 range.                                                                                     |
 | **Western Digital Ultrastar 10K600**            | 2.5"            | SAS 12Gb/s      | 600GB, 900GB, 1.2TB               | 550 TB/yr                   | 3.6W / 6.5W               | **~$30 – $120** – Smaller SAS enterprise HDDs (10K RPM) used on eBay.com often list around ~$30–$120 USD depending on capacity.                                                                               |
 
-<details>
-<summary>links:</summary>
-
- https://www.ebay.com/itm/257100620905?hash=item3bdc642469%3Ag%3AUl8AAeSwM6BotJcQ&itmmeta=01K4SSDQY8QT5N5JHGJY356CD3&itmprp=enc%3AAQAKAAAA4MHg7L1Zz0LA5DYYmRTS30lnm1OX9xbE1yK%2FDB1WTBH4x%2BuJB8YX32Rdw5Ql%2BB3M3%2BRIY6q6tkv2ROAxTPOYO49p7uzdhTJURAgZwf5GEBgpcuAuZj0aKwBaqmIuLluc5FaFoP3r9sX%2Bn0kGGV6xPXCaY81gfc00Fqd9CaDb8gtI296okYHV3uT%2FopXrSvB0LEvMP2Ood4yHb4efwfWaE9IQW28BzCvsM8OpeO17uqteajkWKm0iKSEwUTsOZWvTm4%2FxNrEmZzIBDT%2Fry7o3SalRKXZGbyvodgwyTelpvRos%7Ctkp%3ABk9SR6T_trmmZg "Western digital HGST Ultrastar He10 10TB Enterprise HDD ..."
-<br> https://www.ebay.com/b/HGST-Internal-Hard-Disk-Drives-10-TB-Storage-Capacity/56083/bn_71160838 "HGST Internal Hard Disk Drives 10 TB Storage Capacity for sale | eBay"
-<br> https://www.ebay.com/shop/16tb-hard-drive?_nkw=16tb+hard+drive "16TB Hard Drive"
-<br> https://www.ebay.com/sch/i.html?_nkw=18tb+hard+drive "18TB Hard Drive"
-<br> https://www.ebay.com/p/12062799086 "Internal Hard Disk Drives for Sale - eBay"
-
-</details>
-
 NOTES: in my opinion, HGST have the Lowest failure rates along side Western Digital. 
 <br> Seagate / Toshiba models tend to have higher failure rates depending on models. but they are often cheaper, sometimes by a fair amount. 
 <br> Seagates depending on the model can be the worst drives to purchase, so unless you want to research the specific model you are buying, you probably want HGST/WD. 
 <br> Samsung HDDs also have fairly high failure rates. SSDs are good but HDDs are hit and miss. 
+</details>
+
 <details>
 <summary><b>BackBlaze Hard Drive Failure Data By Year</b></summary>
 
@@ -717,11 +724,13 @@ This summary is based strictly on the 2022, 2023, and 2024 AFR data provided abo
 
 </details>
 </details>
+
 <hr>
 
 ### SSD/Nvme Drives:
 
-# Enterprise NVMe / M.2 Drives with Endurance
+<details>
+<summary><b>Enterprise NVMe / M.2 Drives with Endurance</b></summary>
 
 | **Drive Model**                              | **Form Factor**  | **Interface** | **Endurance (TBW/PBW)**     | **Watts (Idle/Active)** | **Avg Used eBay.com Price (≈)**                                                    |
 | -------------------------------------------- | ---------------- | ------------- | --------------------------- | ----------------------- | ---------------------------------------------------------------------------------- |
@@ -740,29 +749,19 @@ This summary is based strictly on the 2022, 2023, and 2024 AFR data provided abo
 <summary>links:</summary>
 
  https://www.reddit.com/r/DataHoarder/comments/1nferxo/i_finally_got_my_grail_intel_optane_p5800x_16t/ "I finally got my grail. Intel Optane P5800X 1.6T. This is gonna be a family heirloom"
-<br> https://il.ebay.com/b/Intel-PCI-Express-Solid-State-Drives/175669/bn_25407512 "Intel PCI Express Solid State Drives for sale | eBay"
-<br> https://www.ebay.com/itm/236331332040 "compatible Intel/HP OPTANE SSD 9 OPTANE 905P ... - eBay"
-<br> https://www.ebay.com/itm/396371709317 "USED-Intel Optane 905P Series 960GB PCIe3.0 NVMe ..."
-
+</details>
 </details>
 
-# Consumer NVMe / M.2 Drives
+<details>
+<summary><b>Consumer NVMe / M.2 Drives</b></summary>
+  
 | **Drive Model**         | **Form Factor** | **Interface** | **Endurance (TBW)** | **Quality**              | **Avg Used eBay.com Price (≈)**                                                                   |
 | ----------------------- | --------------- | ------------- | ------------------- | ------------------------ | ------------------------------------------------------------------------------------------------- |
 | **Crucial P3 1TB**      | M.2 2280        | PCIe 3.0 x4   | 220 TB              | Cheap QLC Consumer       | **~$25 – $50** (pre-owned listings range from ~$20–$95)                                |
 | **Samsung 980 1TB**     | M.2 2280        | PCIe 3.0 x4   | 600 TB              | Normal TLC Consumer      | **~$70 – $110** (used prices commonly ~$80–$120 on eBay)                               |
 | **Samsung 980 Pro 1TB** | M.2 2280        | PCIe 4.0 x4   | 600 TB              | Modern TLC Prosumer      | **~$110 – $140** (used avg visible ~ $125)                                             |
 | **Samsung 970 Pro 1TB** | M.2 2280        | PCIe 3.0 x4   | 1,200 TB            | End-of-Life MLC Prosumer | **~$180 – $260** (older enterprise SSD, used listings less frequent but often ~$200+)  |
-
-<details>
-<summary>links:</summary>
-
- https://www.ebay.com/shop/crucial-p3?_nkw=crucial+p3 "Crucial P3"
-<br> https://www.ebay.com/b/Samsung-1-TB-PCI-Express-Solid-State-Drives/175669/bn_77238159 "Samsung 1 TB PCI Express Solid State Drives for sale | eBay"
-
 </details>
-
----
 
 ## Consumer vs. Enterprise Price Comparison
 
@@ -773,294 +772,6 @@ Enterprise drives are designed to handle much higher workloads and offer greater
 ### CPU: 
 
 <br> section in progress / to be updated
-
-### CPU backdoor modules 
-
-Modern CPU platforms embed *trusted subsystems* that run outside the control of the main OS. The most widely discussed components are:
-
-- **Intel Management Engine (ME)** — a proprietary microcontroller inside Intel chipsets with deep hardware privileges and (in some configs) network access via AMT.  
-- **AMD Platform Security Processor (PSP)** — AMD’s ARM-based co-processor that implements secure boot and platform security.  
-- **ARM TrustZone / Trusted Execution Environments (TEEs)** — hardware partitioning widely used on ARM SoCs to create a Secure World for sensitive code.
-
-These subsystems are closed-source and run below the OS, so researchers treat them as high-value attack surfaces. This report sticks to documented facts (CVE entries, vendor security advisories, academic and industry research) and includes links to the original sources.
-
----
-
-## 🧩 1) Intel Management Engine (ME)
-
-### What it is
-The **Intel Management Engine (ME)** (sometimes referred to in parts as CSME/CSME firmware) is a separate microcontroller and firmware stack embedded in Intel chipsets. It performs platform management and security-related functions and is active whenever the system receives power. For details and security advisories see Intel’s product security center.
-
-- Intel security advisories and firmware updates: [Intel Product Security Center](https://www.intel.com/content/www/us/en/security-center/default.html)
-
-### Notable documented vulnerabilities / advisories
-Intel regularly publishes advisories for ME/CSME/AMT vulnerabilities. A few concrete, publicly documented advisories / CVEs:
-
-- **INTEL-SA-01315 (Feb 2026)** — Intel published chipset/CSME/AMT advisories describing denial-of-service and information-disclosure issues and issued firmware updates.  
-  [Intel INTEL-SA-01315 advisory](https://www.intel.com/content/www/us/en/security-center/advisory/intel-sa-01315.html)
-
-- **INTEL-SA-00783 (2023 / revised 2024)** — chipset/CSME advisory listing multiple issues; use this page to check affected platform lists and mitigation steps.  
-  [Intel INTEL-SA-00783 advisory](https://www.intel.com/content/www/us/en/security-center/advisory/intel-sa-00783.html)
-
-- **INTEL-SA-00295 / CVE-2020-0594** — example AMT/ISM IPv6 out-of-bounds read issue allowing unauthenticated denial of service or information disclosure.  
-  [Intel INTEL-SA-00295 advisory (includes CVE list)](https://www.intel.com/content/www/us/en/security-center/advisory/intel-sa-00295.html)  
-  [NVD: CVE-2020-0594](https://nvd.nist.gov/vuln/detail/CVE-2020-0594)
-
-- Historical AMT/ME CVEs (e.g., **CVE-2017-5712**) show remote exploitation of AMT/ME components when reachable.  
-  [NVD: CVE-2017-5712](https://nvd.nist.gov/vuln/detail/CVE-2017-5712)
-
-**What these mean:** some ME/AMT/CSME CVEs can be triggered remotely (network) and operate outside the OS, which is why ME is treated as a serious platform risk when vulnerable firmware is present.
-
-### Neutralization / mitigation options (community + vendor)
-- **Firmware updates from OEMs** are the primary official mitigation; apply vendor firmware. See Intel advisories linked above.  
-- **me_cleaner** — community tool for *partial de-blobbing / neutralization* of Intel ME firmware images (reduces runtime functionality and attack surface). Use with caution; flashing modified firmware can brick devices.  
-  [me_cleaner (GitHub)](https://github.com/corna/me_cleaner)
-
-- **Vendor approaches:** some privacy-focused vendors and open-firmware initiatives attempt to neutralize or minimize ME at runtime (examples below). Behavior and support vary by model and Intel generation — no universal full-removal method exists for modern chips.
-
----
-
-## 🧠 2) AMD Platform Security Processor (PSP) / AMD Secure Processor
-
-### What it is
-**AMD PSP (Secure Processor / ASP)** is an ARM Cortex-A5 (or similar) core integrated on AMD CPUs that runs a closed firmware stack (sometimes called ASP / Secure OS). PSP handles secure boot, measured boot functions, cryptographic services, and sometimes virtualization/security features.
-
-- AMD product security and firmware bulletins: [AMD Product Security](https://www.amd.com/en/resources/product-security.html)
-
-### Documented vulnerabilities and research
-AMD publishes security bulletins covering PSP and related firmware issues. Representative examples:
-
-- **AMD-SB-5001 (Feb 2024)** — lists PSP-related CVEs such as **CVE-2020-12930** and **CVE-2020-12931** involving improper parameter handling in PSP drivers/kernels.  
-  [AMD-SB-5001 (PSP bulletin)](https://www.amd.com/en/resources/product-security/bulletin/amd-sb-5001.html)
-
-- **AMD-SB-5002 (Aug 2024)** — additional embedded processor firmware advisories and mitigation guidance.  
-  [AMD-SB-5002 (bulletin)](https://www.amd.com/en/resources/product-security/bulletin/amd-sb-5002.html)
-
-- **CVE-2022-23820 / CVE-2022-23821** — high-severity firmware / SMM kernel issues affecting AMD client platforms (SMRAM/SPI ROM access and SMM buffer validation issues). See the NVD and AMD bulletin references for technical details and vendor mitigation guidance.  
-  [NVD: CVE-2022-23820](https://nvd.nist.gov/vuln/detail/CVE-2022-23820)  
-  [NVD: CVE-2022-23821](https://nvd.nist.gov/vuln/detail/CVE-2022-23821)
-
-**What these mean:** PSP vulnerabilities commonly require local or privileged access to exploit, but they show that trusted firmware can contain exploitable issues with severe platform-level impact.
-
-### Reverse-engineering / tools
-- **PSPTool / PSPReverse** — community tools for extracting and analyzing AMD PSP firmware blobs (useful for research, not for casual disabling).  
-  [PSPTool (GitHub)](https://github.com/PSPReverse/PSPTool)  
-- Research papers demonstrate hardware fault injection and other attacks on AMD secure subsystems (e.g., fault injection research). Example: "One Glitch to Rule Them All" supplemental materials.  
-  [amd-sp-glitch (GitHub)](https://github.com/PSPReverse/amd-sp-glitch)
-
-### Neutralization / mitigation
-- AMD firmware is signed and required for platform initialization; there is **no widely-used neutralizer** like me_cleaner for PSP. Firmware updates from OEMs / AMD and secure BIOS settings are the main mitigations.
-
----
-
-## 🛡 3) ARM TrustZone & Trusted Execution Environments (TEE)
-
-### What TrustZone provides
-ARM **TrustZone** is an architectural extension that divides CPU execution into a **Secure World** and **Normal World**, enabling a Trusted Execution Environment (TEE) for secure operations (key storage, secure boot, payment, DRM). TrustZone is not a single closed firmware blob like ME/PSP; it is hardware with vendor-supplied Secure World firmware stacks (many of which are proprietary).
-
-- ARM TrustZone technical overview: [Arm: TrustZone for Cortex-A](https://developer.arm.com/architectures/security-architectures/trustzone)
-
-### Real research showing TEE risks
-- **Google Project Zero — "Trust Issues: Exploiting TrustZone TEEs"** — in-depth analysis and exploits against real TrustZone TEEs (QSEE/Kinibi), demonstrating how TEE OSes lag in mitigations and how real attack chains were constructed.  
-  [Project Zero: Trust Issues: Exploiting TrustZone TEEs](https://projectzero.google/2017/07/trust-issues-exploiting-trustzone-tees.html)
-
-- Academic/systematic reviews of TrustZone/TEE security show many practical attack vectors (TA revocation gaps, memory corruption, lack of modern mitigations).  
-  [SoK: Understanding Security Vulnerabilities in TrustZone TEEs (paper)](https://syssec.dpss.inesc-id.pt/papers/cerdeira-sp20.pdf)
-
-**What these mean:** TrustZone hardware is neutral or beneficial by design, but TEE firmware/Trusted Apps frequently contain exploitable problems because many implementations are closed and lack hardening.
-
----
-
-## ⚔ Cross-Technology Comparison (high level)
-
-| Property | Intel ME / CSME | AMD PSP / ASP | ARM TrustZone (TEE) |
-|---|---:|---:|---:|
-| Runs below OS? | Yes | Yes | Yes (when Secure World active) |
-| Independent network access | Yes (AMT / out-of-band on vPro) | No (not by default) | No (TEE doesn't usually manage NIC) |
-| Firmware open? | No (proprietary) | No (proprietary) | TEE OS often proprietary; hardware spec public |
-| Typical exploit vector | Network + local | Local / privileged | Local / privileged / side-channel |
-| Neutralization available? | Partial (me_cleaner, vendor efforts) | Not generally | Not applicable (hardware feature) |
-
----
-
-## 🧰 Tools, Mitigations & Privacy-focused Vendors
-
-### Intel ME
-- **me_cleaner (GitHub)** — tool to strip/neutralize ME firmware regions. *Use with extreme caution; flashing modified firmware can brick devices.*  
-  https://github.com/corna/me_cleaner
-
-- [Remove_IntelME_FPT](https://github.com/mostav02/Remove_IntelME_FPT) - A guide for disabling Intel Management Engine using FPT on PCH SPI 
-
-- **Intel security advisories / vendor firmware updates** — official mitigation is vendor firmware; check OEM download pages and Intel advisories listed above.  
-  https://www.intel.com/content/www/us/en/security-center/default.html
-
-- **Vendor examples (partial neutralization / open firmware):**  
-  - **Purism** — explains ME neutralization on Librem laptops (historical practices vary by model).  
-    https://puri.sm/learn/intel-me/  
-  - **System76** — documents Open Firmware and ME state handling for supported models.  
-    https://support.system76.com/articles/intel-me/
-
-### AMD PSP
-- **AMD product security bulletins** and OEM firmware updates are the primary mitigation path. There is **no official/popular neutralizer** equivalent to me_cleaner for PSP at time of writing.  
-  https://www.amd.com/en/resources/product-security.html
-
-- **PSPTool (GitHub)** — firmware analysis / extraction tool for researchers.  
-  https://github.com/PSPReverse/PSPTool
-
-### ARM TrustZone / TEEs
-- Use **open, auditable TEE implementations** where possible (examples: OP-TEE) and apply vendor security updates.  
-  https://www.op-tee.org/
-
----
-
-<details><summary>Selected authoritative sources (examples, read these for technical depth)</summary>
-
-- Intel Security Advisories (ME/CSME/AMT):  
-  https://www.intel.com/content/www/us/en/security-center/default.html
-
-- INTEL-SA-01315 advisory (Feb 2026):  
-  https://www.intel.com/content/www/us/en/security-center/advisory/intel-sa-01315.html
-
-- INTEL-SA-00783 advisory (2023 / updated 2024):  
-  https://www.intel.com/content/www/us/en/security-center/advisory/intel-sa-00783.html
-
-- Intel advisory example (INTEL-SA-00295; includes CVE-2020-0594):  
-  https://www.intel.com/content/www/us/en/security-center/advisory/intel-sa-00295.html  
-  NVD entry for **CVE-2020-0594**: https://nvd.nist.gov/vuln/detail/CVE-2020-0594
-
-- me_cleaner (community tool):  
-  https://github.com/corna/me_cleaner
-
-- AMD Security Bulletins (PSP & embedded processors):  
-  https://www.amd.com/en/resources/product-security.html  
-  AMD-SB-5001: https://www.amd.com/en/resources/product-security/bulletin/amd-sb-5001.html  
-  AMD-SB-5002: https://www.amd.com/en/resources/product-security/bulletin/amd-sb-5002.html
-
-- NVD entries (examples):  
-  CVE-2017-5712 (Intel AMT): https://nvd.nist.gov/vuln/detail/CVE-2017-5712  
-  CVE-2022-23820: https://nvd.nist.gov/vuln/detail/CVE-2022-23820  
-  CVE-2022-23821: https://nvd.nist.gov/vuln/detail/CVE-2022-23821
-
-- Project Zero research on TrustZone TEEs:  
-  https://projectzero.google/2017/07/trust-issues-exploiting-trustzone-tees.html
-
-- Academic/systematic survey of TEE vulnerabilities:  
-  https://syssec.dpss.inesc-id.pt/papers/cerdeira-sp20.pdf
-</details>
-
---- 
- 
-## 🛠️ Vendors & Projects Offering Open Firmware / Reduced Proprietary Firmware Hardware
-
-Many smaller vendors, open-firmware projects, and hardware suppliers offer machines that ship with or support **open firmware (coreboot / Libreboot / Dasharo)** — reducing reliance on proprietary BIOS/UEFI and allowing greater control over platform firmware. These vary from full laptops to embedded boards and network appliances.
-
-> ⚠️ **Caution:** Support for open firmware and neutralization of proprietary subsystems (e.g., Intel ME) varies by model and vendor. Check specific product documentation before purchasing.
-
----
-
-### 🧠 Community Open Firmware Projects
-
-#### **Libreboot**
-Libreboot is a fully libre distribution of coreboot designed to replace proprietary BIOS/UEFI firmware on select compatible systems. You can also purchase machines with Libreboot pre-installed from associated vendors.  
-👉 https://libreboot.org **(Libreboot main site)** 
-
-### 🛠 **Coreboot & Related Firmware Projects**
-
-**coreboot** (formerly LinuxBIOS) is a free and open-source firmware platform that replaces traditional BIOS/UEFI. It is used by many community and vendor projects, including Libreboot, Dasharo, and more:
-
-- **Dasharo** — a coreboot-based firmware distribution with emphasis on security, stability, and transparency, often used on laptops from community vendors. 
-- **Heads** — a coreboot-compatible boot firmware project focusing on secure boot, measured boot, and tamper detection, often paired with a TPM to verify firmware integrity. 
-- **MrChromebox Firmware** — community-maintained firmware images for Chromebooks that leverage coreboot/EDK2 to support non-ChromeOS operating systems.
-- **Skulls** — user-friendly coreboot images for ThinkPad laptops. 
-
-👉 https://www.coreboot.org **(coreboot official project page)**
-
-These projects make it easier for users to **install and use open firmware** on supported systems, increasing transparency and reducing proprietary code in the boot process.
-
-### 📌 **LinuxBoot – Firmware as a Linux Stack**
-
-**LinuxBoot** is another free software firmware project that replaces key parts of UEFI firmware with a Linux kernel and userland tools:
-
-- It runs on top of early firmware (PEI, coreboot, or U-Boot) and boots Linux directly.  
-- LinuxBoot is already supported on some server platforms and open compute boards.  
-👉 https://linuxboot.org **(LinuxBoot project)**
-
-This approach treats the firmware stack more like a small Linux environment rather than a proprietary UEFI runtime, enabling deep customization.
-
-### 📌 **Community Firmware Innovation on Older Platforms**
-
-Some independent community projects are pushing open firmware even further on older hardware where firmware signature protections don’t block modification:
-
-- The **15h.org project** is developing open-source firmware updates for older AMD Bulldozer/Piledriver platforms, enabling *fully open firmware operation* without modern signature restrictions.  
-👉 Search “15h.org firmware support for AMD” (reported project supporting older boards)
-
-These efforts help demonstrate what *fully open firmware ecosystems* can look like when hardware security restrictions are not enforced.
-
----
-
-### 🖥️ Vendors & Distributions Shipping Open Firmware
-
-The following vendors are either referenced directly by coreboot project documentation or widely acknowledged in open firmware communities as shipping systems with coreboot/Dasharo firmware:
-
-#### **Nitrokey**
-Nitrokey refurbishes laptops and sells devices with **coreboot + Dasharo firmware** and often includes open boot firmware with measured/verified boot options.  
-👉 https://shop.nitrokey.com **(Nitrokey hardware & coreboot)**
-
-#### **NovaCustom**
-NovaCustom sells configurable laptops shipped with **Dasharo-based coreboot firmware**, maintained by 3mdeb, with support for Linux and Windows.  
-👉 https://novacustom.com **(NovaCustom laptops)**
-
-#### **Protectli**
-Protectli offers Vault network appliances and small PCs with the option of **coreboot firmware**, or flashing via open tools, often jointly maintained with 3mdeb (Dasharo).  
-👉 https://protectli.com/coreboot/ **(Protectli coreboot info)**
-
-#### **Star Labs**
-Star Labs sells Linux-focused laptops that are available with **coreboot firmware** and include options such as disabling the Intel Management Engine via NVRAM tools.  
-👉 https://starlabs.systems **(Star Labs laptops)**
-
-#### **PC Engines**
-PC Engines produces embedded hardware (e.g., APU boards) that ship with **coreboot firmware** and are upstream supported through community channels.  
-👉 https://pcengines.ch **(PC Engines)**
-
-#### **Purism**
-Purism sells Librem laptops designed for open source and privacy, with **coreboot firmware and ME neutralization** as part of their security strategy.  
-👉 https://puri.sm/learn/intel-me/ **(Purism ME/firmware info)**
-
----
-
-## 📌 Summary Table
-
-| Vendor / Project | Firmware Type | Notes |
-|------------------|---------------|-------|
-| **Nitrokey** | coreboot / Dasharo | Refurbished open firmware hardware |
-| **NovaCustom** | coreboot / Dasharo | Custom laptops with open firmware |
-| **Protectli** | coreboot / Dasharo | Vault network appliances with coreboot |
-| **Star Labs** | coreboot | Linux laptops with open firmware |
-| **PC Engines** | coreboot | Embedded boards with open firmware |
-| **Purism** | coreboot + ME neutralization | Privacy-focused open firmware laptops |
-| **Libreboot Project** | Libreboot | Fully libre firmware distribution |
-
----
-
-## 📄 Notes & Considerations
-
-- Not all models from the same vendor are open firmware by default — some require **user flashing** of coreboot/Libreboot. 
-- On many modern Intel platforms, **Intel Boot Guard** may prevent flashing alternative firmware unless hardware-specific de-guarding is used (a technical process).   
-- Some vendors work with firmware integrators like **3mdeb** to provide improved firmware quality and security features (measured boot, verified boot). 
-
----
-
-## 📌 Additional Hardware & Architecture Notes
-
-### 💡 RISC-V and Non-x86 Architectures
-
-For users seeking **hardware with minimal proprietary subsystems**, RISC-V is an emerging alternative:
-
-- It is a **completely open instruction set architecture**, enabling hardware and firmware designs that are fully open from top to bottom.  
-- Projects like **Raptor Computing Systems** offer POWER9-based hardware that eschews Intel/AMD proprietary backplanes in favor of open firmware designs and auditability.  
-- RISC-V boards (e.g., SiFive) and ecosystem products are growing, providing future paths toward hardware transparency.
-
-Community discussion on RISC-V and alternatives often highlights the lack of opaque controllers like ME/PSP on open architectures.
 
 ---
 
@@ -2010,7 +1721,8 @@ Community discussion on RISC-V and alternatives often highlights the lack of opa
   
 </details>
 
-### Disable Turbo Boost!
+<details>
+  <summary><b>Disable Turbo Boost!</b></summary>
 
 # Turbo Boost – Power, Heat & How to Disable It
 
@@ -2211,6 +1923,298 @@ Actual results depend on CPU generation and cooling.
 | Pentium Gold G6500T, Pentium Gold G6400T, Celeron 5900T            | 35                | 42                | 28                |
 
 <br> Note: As you can see, this can result in up to 3.5x brief spikes in watt usage, which also drastically increases temps.
+</details>
+</details>
+
+<details>
+<summary><b>CPU backdoor modules</b></summary> 
+
+Modern CPU platforms embed *trusted subsystems* that run outside the control of the main OS. The most widely discussed components are:
+
+- **Intel Management Engine (ME)** — a proprietary microcontroller inside Intel chipsets with deep hardware privileges and (in some configs) network access via AMT.  
+- **AMD Platform Security Processor (PSP)** — AMD’s ARM-based co-processor that implements secure boot and platform security.  
+- **ARM TrustZone / Trusted Execution Environments (TEEs)** — hardware partitioning widely used on ARM SoCs to create a Secure World for sensitive code.
+
+These subsystems are closed-source and run below the OS, so researchers treat them as high-value attack surfaces. This report sticks to documented facts (CVE entries, vendor security advisories, academic and industry research) and includes links to the original sources.
+
+---
+
+## 🧩 1) Intel Management Engine (ME)
+
+### What it is
+The **Intel Management Engine (ME)** (sometimes referred to in parts as CSME/CSME firmware) is a separate microcontroller and firmware stack embedded in Intel chipsets. It performs platform management and security-related functions and is active whenever the system receives power. For details and security advisories see Intel’s product security center.
+
+- Intel security advisories and firmware updates: [Intel Product Security Center](https://www.intel.com/content/www/us/en/security-center/default.html)
+
+### Notable documented vulnerabilities / advisories
+Intel regularly publishes advisories for ME/CSME/AMT vulnerabilities. A few concrete, publicly documented advisories / CVEs:
+
+- **INTEL-SA-01315 (Feb 2026)** — Intel published chipset/CSME/AMT advisories describing denial-of-service and information-disclosure issues and issued firmware updates.  
+  [Intel INTEL-SA-01315 advisory](https://www.intel.com/content/www/us/en/security-center/advisory/intel-sa-01315.html)
+
+- **INTEL-SA-00783 (2023 / revised 2024)** — chipset/CSME advisory listing multiple issues; use this page to check affected platform lists and mitigation steps.  
+  [Intel INTEL-SA-00783 advisory](https://www.intel.com/content/www/us/en/security-center/advisory/intel-sa-00783.html)
+
+- **INTEL-SA-00295 / CVE-2020-0594** — example AMT/ISM IPv6 out-of-bounds read issue allowing unauthenticated denial of service or information disclosure.  
+  [Intel INTEL-SA-00295 advisory (includes CVE list)](https://www.intel.com/content/www/us/en/security-center/advisory/intel-sa-00295.html)  
+  [NVD: CVE-2020-0594](https://nvd.nist.gov/vuln/detail/CVE-2020-0594)
+
+- Historical AMT/ME CVEs (e.g., **CVE-2017-5712**) show remote exploitation of AMT/ME components when reachable.  
+  [NVD: CVE-2017-5712](https://nvd.nist.gov/vuln/detail/CVE-2017-5712)
+
+**What these mean:** some ME/AMT/CSME CVEs can be triggered remotely (network) and operate outside the OS, which is why ME is treated as a serious platform risk when vulnerable firmware is present.
+
+### Neutralization / mitigation options (community + vendor)
+- **Firmware updates from OEMs** are the primary official mitigation; apply vendor firmware. See Intel advisories linked above.  
+- **me_cleaner** — community tool for *partial de-blobbing / neutralization* of Intel ME firmware images (reduces runtime functionality and attack surface). Use with caution; flashing modified firmware can brick devices.  
+  [me_cleaner (GitHub)](https://github.com/corna/me_cleaner)
+
+- **Vendor approaches:** some privacy-focused vendors and open-firmware initiatives attempt to neutralize or minimize ME at runtime (examples below). Behavior and support vary by model and Intel generation — no universal full-removal method exists for modern chips.
+
+---
+
+## 🧠 2) AMD Platform Security Processor (PSP) / AMD Secure Processor
+
+### What it is
+**AMD PSP (Secure Processor / ASP)** is an ARM Cortex-A5 (or similar) core integrated on AMD CPUs that runs a closed firmware stack (sometimes called ASP / Secure OS). PSP handles secure boot, measured boot functions, cryptographic services, and sometimes virtualization/security features.
+
+- AMD product security and firmware bulletins: [AMD Product Security](https://www.amd.com/en/resources/product-security.html)
+
+### Documented vulnerabilities and research
+AMD publishes security bulletins covering PSP and related firmware issues. Representative examples:
+
+- **AMD-SB-5001 (Feb 2024)** — lists PSP-related CVEs such as **CVE-2020-12930** and **CVE-2020-12931** involving improper parameter handling in PSP drivers/kernels.  
+  [AMD-SB-5001 (PSP bulletin)](https://www.amd.com/en/resources/product-security/bulletin/amd-sb-5001.html)
+
+- **AMD-SB-5002 (Aug 2024)** — additional embedded processor firmware advisories and mitigation guidance.  
+  [AMD-SB-5002 (bulletin)](https://www.amd.com/en/resources/product-security/bulletin/amd-sb-5002.html)
+
+- **CVE-2022-23820 / CVE-2022-23821** — high-severity firmware / SMM kernel issues affecting AMD client platforms (SMRAM/SPI ROM access and SMM buffer validation issues). See the NVD and AMD bulletin references for technical details and vendor mitigation guidance.  
+  [NVD: CVE-2022-23820](https://nvd.nist.gov/vuln/detail/CVE-2022-23820)  
+  [NVD: CVE-2022-23821](https://nvd.nist.gov/vuln/detail/CVE-2022-23821)
+
+**What these mean:** PSP vulnerabilities commonly require local or privileged access to exploit, but they show that trusted firmware can contain exploitable issues with severe platform-level impact.
+
+### Reverse-engineering / tools
+- **PSPTool / PSPReverse** — community tools for extracting and analyzing AMD PSP firmware blobs (useful for research, not for casual disabling).  
+  [PSPTool (GitHub)](https://github.com/PSPReverse/PSPTool)  
+- Research papers demonstrate hardware fault injection and other attacks on AMD secure subsystems (e.g., fault injection research). Example: "One Glitch to Rule Them All" supplemental materials.  
+  [amd-sp-glitch (GitHub)](https://github.com/PSPReverse/amd-sp-glitch)
+
+### Neutralization / mitigation
+- AMD firmware is signed and required for platform initialization; there is **no widely-used neutralizer** like me_cleaner for PSP. Firmware updates from OEMs / AMD and secure BIOS settings are the main mitigations.
+
+---
+
+## 🛡 3) ARM TrustZone & Trusted Execution Environments (TEE)
+
+### What TrustZone provides
+ARM **TrustZone** is an architectural extension that divides CPU execution into a **Secure World** and **Normal World**, enabling a Trusted Execution Environment (TEE) for secure operations (key storage, secure boot, payment, DRM). TrustZone is not a single closed firmware blob like ME/PSP; it is hardware with vendor-supplied Secure World firmware stacks (many of which are proprietary).
+
+- ARM TrustZone technical overview: [Arm: TrustZone for Cortex-A](https://developer.arm.com/architectures/security-architectures/trustzone)
+
+### Real research showing TEE risks
+- **Google Project Zero — "Trust Issues: Exploiting TrustZone TEEs"** — in-depth analysis and exploits against real TrustZone TEEs (QSEE/Kinibi), demonstrating how TEE OSes lag in mitigations and how real attack chains were constructed.  
+  [Project Zero: Trust Issues: Exploiting TrustZone TEEs](https://projectzero.google/2017/07/trust-issues-exploiting-trustzone-tees.html)
+
+- Academic/systematic reviews of TrustZone/TEE security show many practical attack vectors (TA revocation gaps, memory corruption, lack of modern mitigations).  
+  [SoK: Understanding Security Vulnerabilities in TrustZone TEEs (paper)](https://syssec.dpss.inesc-id.pt/papers/cerdeira-sp20.pdf)
+
+**What these mean:** TrustZone hardware is neutral or beneficial by design, but TEE firmware/Trusted Apps frequently contain exploitable problems because many implementations are closed and lack hardening.
+
+---
+
+## ⚔ Cross-Technology Comparison (high level)
+
+| Property | Intel ME / CSME | AMD PSP / ASP | ARM TrustZone (TEE) |
+|---|---:|---:|---:|
+| Runs below OS? | Yes | Yes | Yes (when Secure World active) |
+| Independent network access | Yes (AMT / out-of-band on vPro) | No (not by default) | No (TEE doesn't usually manage NIC) |
+| Firmware open? | No (proprietary) | No (proprietary) | TEE OS often proprietary; hardware spec public |
+| Typical exploit vector | Network + local | Local / privileged | Local / privileged / side-channel |
+| Neutralization available? | Partial (me_cleaner, vendor efforts) | Not generally | Not applicable (hardware feature) |
+
+---
+
+## 🧰 Tools, Mitigations & Privacy-focused Vendors
+
+### Intel ME
+- **me_cleaner (GitHub)** — tool to strip/neutralize ME firmware regions. *Use with extreme caution; flashing modified firmware can brick devices.*  
+  https://github.com/corna/me_cleaner
+
+- [Remove_IntelME_FPT](https://github.com/mostav02/Remove_IntelME_FPT) - A guide for disabling Intel Management Engine using FPT on PCH SPI 
+
+- **Intel security advisories / vendor firmware updates** — official mitigation is vendor firmware; check OEM download pages and Intel advisories listed above.  
+  https://www.intel.com/content/www/us/en/security-center/default.html
+
+- **Vendor examples (partial neutralization / open firmware):**  
+  - **Purism** — explains ME neutralization on Librem laptops (historical practices vary by model).  
+    https://puri.sm/learn/intel-me/  
+  - **System76** — documents Open Firmware and ME state handling for supported models.  
+    https://support.system76.com/articles/intel-me/
+
+### AMD PSP
+- **AMD product security bulletins** and OEM firmware updates are the primary mitigation path. There is **no official/popular neutralizer** equivalent to me_cleaner for PSP at time of writing.  
+  https://www.amd.com/en/resources/product-security.html
+
+- **PSPTool (GitHub)** — firmware analysis / extraction tool for researchers.  
+  https://github.com/PSPReverse/PSPTool
+
+### ARM TrustZone / TEEs
+- Use **open, auditable TEE implementations** where possible (examples: OP-TEE) and apply vendor security updates.  
+  https://www.op-tee.org/
+
+---
+
+<details><summary>Selected authoritative sources (examples, read these for technical depth)</summary>
+
+- Intel Security Advisories (ME/CSME/AMT):  
+  https://www.intel.com/content/www/us/en/security-center/default.html
+
+- INTEL-SA-01315 advisory (Feb 2026):  
+  https://www.intel.com/content/www/us/en/security-center/advisory/intel-sa-01315.html
+
+- INTEL-SA-00783 advisory (2023 / updated 2024):  
+  https://www.intel.com/content/www/us/en/security-center/advisory/intel-sa-00783.html
+
+- Intel advisory example (INTEL-SA-00295; includes CVE-2020-0594):  
+  https://www.intel.com/content/www/us/en/security-center/advisory/intel-sa-00295.html  
+  NVD entry for **CVE-2020-0594**: https://nvd.nist.gov/vuln/detail/CVE-2020-0594
+
+- me_cleaner (community tool):  
+  https://github.com/corna/me_cleaner
+
+- AMD Security Bulletins (PSP & embedded processors):  
+  https://www.amd.com/en/resources/product-security.html  
+  AMD-SB-5001: https://www.amd.com/en/resources/product-security/bulletin/amd-sb-5001.html  
+  AMD-SB-5002: https://www.amd.com/en/resources/product-security/bulletin/amd-sb-5002.html
+
+- NVD entries (examples):  
+  CVE-2017-5712 (Intel AMT): https://nvd.nist.gov/vuln/detail/CVE-2017-5712  
+  CVE-2022-23820: https://nvd.nist.gov/vuln/detail/CVE-2022-23820  
+  CVE-2022-23821: https://nvd.nist.gov/vuln/detail/CVE-2022-23821
+
+- Project Zero research on TrustZone TEEs:  
+  https://projectzero.google/2017/07/trust-issues-exploiting-trustzone-tees.html
+
+- Academic/systematic survey of TEE vulnerabilities:  
+  https://syssec.dpss.inesc-id.pt/papers/cerdeira-sp20.pdf
+</details>
+
+--- 
+ 
+## 🛠️ Vendors & Projects Offering Open Firmware / Reduced Proprietary Firmware Hardware
+
+Many smaller vendors, open-firmware projects, and hardware suppliers offer machines that ship with or support **open firmware (coreboot / Libreboot / Dasharo)** — reducing reliance on proprietary BIOS/UEFI and allowing greater control over platform firmware. These vary from full laptops to embedded boards and network appliances.
+
+> ⚠️ **Caution:** Support for open firmware and neutralization of proprietary subsystems (e.g., Intel ME) varies by model and vendor. Check specific product documentation before purchasing.
+
+---
+
+### 🧠 Community Open Firmware Projects
+
+#### **Libreboot**
+Libreboot is a fully libre distribution of coreboot designed to replace proprietary BIOS/UEFI firmware on select compatible systems. You can also purchase machines with Libreboot pre-installed from associated vendors.  
+👉 https://libreboot.org **(Libreboot main site)** 
+
+### 🛠 **Coreboot & Related Firmware Projects**
+
+**coreboot** (formerly LinuxBIOS) is a free and open-source firmware platform that replaces traditional BIOS/UEFI. It is used by many community and vendor projects, including Libreboot, Dasharo, and more:
+
+- **Dasharo** — a coreboot-based firmware distribution with emphasis on security, stability, and transparency, often used on laptops from community vendors. 
+- **Heads** — a coreboot-compatible boot firmware project focusing on secure boot, measured boot, and tamper detection, often paired with a TPM to verify firmware integrity. 
+- **MrChromebox Firmware** — community-maintained firmware images for Chromebooks that leverage coreboot/EDK2 to support non-ChromeOS operating systems.
+- **Skulls** — user-friendly coreboot images for ThinkPad laptops. 
+
+👉 https://www.coreboot.org **(coreboot official project page)**
+
+These projects make it easier for users to **install and use open firmware** on supported systems, increasing transparency and reducing proprietary code in the boot process.
+
+### 📌 **LinuxBoot – Firmware as a Linux Stack**
+
+**LinuxBoot** is another free software firmware project that replaces key parts of UEFI firmware with a Linux kernel and userland tools:
+
+- It runs on top of early firmware (PEI, coreboot, or U-Boot) and boots Linux directly.  
+- LinuxBoot is already supported on some server platforms and open compute boards.  
+👉 https://linuxboot.org **(LinuxBoot project)**
+
+This approach treats the firmware stack more like a small Linux environment rather than a proprietary UEFI runtime, enabling deep customization.
+
+### 📌 **Community Firmware Innovation on Older Platforms**
+
+Some independent community projects are pushing open firmware even further on older hardware where firmware signature protections don’t block modification:
+
+- The **15h.org project** is developing open-source firmware updates for older AMD Bulldozer/Piledriver platforms, enabling *fully open firmware operation* without modern signature restrictions.  
+👉 Search “15h.org firmware support for AMD” (reported project supporting older boards)
+
+These efforts help demonstrate what *fully open firmware ecosystems* can look like when hardware security restrictions are not enforced.
+
+---
+
+### 🖥️ Vendors & Distributions Shipping Open Firmware
+
+The following vendors are either referenced directly by coreboot project documentation or widely acknowledged in open firmware communities as shipping systems with coreboot/Dasharo firmware:
+
+#### **Nitrokey**
+Nitrokey refurbishes laptops and sells devices with **coreboot + Dasharo firmware** and often includes open boot firmware with measured/verified boot options.  
+👉 https://shop.nitrokey.com **(Nitrokey hardware & coreboot)**
+
+#### **NovaCustom**
+NovaCustom sells configurable laptops shipped with **Dasharo-based coreboot firmware**, maintained by 3mdeb, with support for Linux and Windows.  
+👉 https://novacustom.com **(NovaCustom laptops)**
+
+#### **Protectli**
+Protectli offers Vault network appliances and small PCs with the option of **coreboot firmware**, or flashing via open tools, often jointly maintained with 3mdeb (Dasharo).  
+👉 https://protectli.com/coreboot/ **(Protectli coreboot info)**
+
+#### **Star Labs**
+Star Labs sells Linux-focused laptops that are available with **coreboot firmware** and include options such as disabling the Intel Management Engine via NVRAM tools.  
+👉 https://starlabs.systems **(Star Labs laptops)**
+
+#### **PC Engines**
+PC Engines produces embedded hardware (e.g., APU boards) that ship with **coreboot firmware** and are upstream supported through community channels.  
+👉 https://pcengines.ch **(PC Engines)**
+
+#### **Purism**
+Purism sells Librem laptops designed for open source and privacy, with **coreboot firmware and ME neutralization** as part of their security strategy.  
+👉 https://puri.sm/learn/intel-me/ **(Purism ME/firmware info)**
+
+---
+
+## 📌 Summary Table
+
+| Vendor / Project | Firmware Type | Notes |
+|------------------|---------------|-------|
+| **Nitrokey** | coreboot / Dasharo | Refurbished open firmware hardware |
+| **NovaCustom** | coreboot / Dasharo | Custom laptops with open firmware |
+| **Protectli** | coreboot / Dasharo | Vault network appliances with coreboot |
+| **Star Labs** | coreboot | Linux laptops with open firmware |
+| **PC Engines** | coreboot | Embedded boards with open firmware |
+| **Purism** | coreboot + ME neutralization | Privacy-focused open firmware laptops |
+| **Libreboot Project** | Libreboot | Fully libre firmware distribution |
+
+---
+
+## 📄 Notes & Considerations
+
+- Not all models from the same vendor are open firmware by default — some require **user flashing** of coreboot/Libreboot. 
+- On many modern Intel platforms, **Intel Boot Guard** may prevent flashing alternative firmware unless hardware-specific de-guarding is used (a technical process).   
+- Some vendors work with firmware integrators like **3mdeb** to provide improved firmware quality and security features (measured boot, verified boot). 
+
+---
+
+## 📌 Additional Hardware & Architecture Notes
+
+### 💡 RISC-V and Non-x86 Architectures
+
+For users seeking **hardware with minimal proprietary subsystems**, RISC-V is an emerging alternative:
+
+- It is a **completely open instruction set architecture**, enabling hardware and firmware designs that are fully open from top to bottom.  
+- Projects like **Raptor Computing Systems** offer POWER9-based hardware that eschews Intel/AMD proprietary backplanes in favor of open firmware designs and auditability.  
+- RISC-V boards (e.g., SiFive) and ecosystem products are growing, providing future paths toward hardware transparency.
+
+Community discussion on RISC-V and alternatives often highlights the lack of opaque controllers like ME/PSP on open architectures.
+
 </details>
 
 <hr>
@@ -2459,7 +2463,8 @@ For anyone experimenting with AMD GPUs + vGPU workflows, community experience is
 i often found myself looking up these details when comparing GPUs to try to find the best option for the price, so i added a table here of most GPUs for quick reference comparisons. 
 <br>NOTE: Idle est. may not be accurate, different configurations vary widely. 
 
-## Intel GPU Master Table
+<details>
+<summary><b>Intel GPUs</b></summary>
 
 | **Model**                                                                        | **VRAM**   | **FP32**     | **FP16**     | **TDP** | **Est. Idle** | **Bandwidth** | **Virtualization** | **Avg Used eBay.com Price (≈)**                         |
 | -------------------------------------------------------------------------------- | ---------- | ------------ | ------------ | ------- | ------------- | ------------- | ------------------ | ------------------------------------------------------- |
@@ -2475,13 +2480,10 @@ i often found myself looking up these details when comparing GPUs to try to find
 | [**Intel Arc Pro B50**](https://www.techpowerup.com/gpu-specs/arc-pro-b50.c4345) | 16GB GDDR6 | 10.65 TFLOPS | 21.30 TFLOPS | 70W    | 7–15W        | 224 GB/s      | ✅ SR-IOV           | **~$350 – $450** (limited used)              |
 | [**Intel Arc Pro B60**](https://www.techpowerup.com/gpu-specs/arc-pro-b60.c4350) | 24GB GDDR6 | 12.29 TFLOPS | 24.58 TFLOPS | 200W   | 15–30W       | 456 GB/s      | ✅ SR-IOV           | **~$500 – $800** (very limited)              |
 
-<details>
-<summary>links:</summary>
-
- https://cr.ebay.com/b/Intel-Computer-Graphics-Cards/27386/bn_7113457456 "Intel Computer Graphics Cards for sale - eBay"
-<br> https://www.ebay.com/shop/intel-a310?_nkw=intel+a310 "Intel A310 | eBay"
-
 </details>
+
+<details>
+<summary><b>Nvidia GPUs:</b></summary>
 
 | **Older Nvidia Cards**                               | **CUDA** | **VRAM**        | **FP32**      | **TDP** | **Virtualization** | **Avg Used eBay US ≈** |
 |-----------------------------------------------|---------:|----------------:|---------------:|--------:|-------------------:|------------------------:|
@@ -2538,17 +2540,6 @@ i often found myself looking up these details when comparing GPUs to try to find
 | [**NVIDIA TITAN X (Pascal)**](https://www.techpowerup.com/gpu-specs/titan-x-pascal.c2863) | 3584 | 12 GB GDDR5X | ~11.0 TF | ~11.0 TF | 250W | ~10W | ✅ Unlock | **~$120 – $200** |
 
 <br> Note: Pascal Series Cards are FP32 **ONLY** so AI performance is not great, this includes the p4, p40 and quadro gen pascal cards. 
-<details>
-<summary>links:</summary>
-
- https://www.ebay.com/shop/nvidia-geforce-gtx-1050-ti?_nkw=nvidia+geforce+gtx+1050+ti "Nvidia Geforce GTX 1050 Ti"
-<br> https://www.reddit.com/r/HardwareSwapUK/comments/158gf0l "[BG] GTX 1060 3GB/10 Series GPU [H] £40"
-<br> https://www.reddit.com/r/hardwareswap/comments/1hegwse "[USA-IL] [H] MSI GTX 1080 DUKE 8GB, MSI GTX 1060 GAMING X 6GB, EVGA GTX 1050 Ti SSC GAMING 4GB [W] Cash or PayPal"
-<br> https://www.reddit.com/r/PcBuild/comments/1h43499 "Used gtx graphics cards prices"
-<br> https://www.reddit.com/r/nvidia/comments/hz23nr "Is 250$ a good price for a barely used GTX 1070 Ti?"
-<br> https://www.ebay.com/b/NVIDIA-GeForce-GTX-1080-Ti-NVIDIA-Computer-Graphics-Cards/27386/bn_7116464572 "NVIDIA GeForce GTX 1080 Ti - eBay"
-
-</details>
 
 ## NVIDIA GTX 16 Series (Turing)
 
@@ -2575,14 +2566,6 @@ i often found myself looking up these details when comparing GPUs to try to find
 | [**RTX 2080 Ti**](https://www.techpowerup.com/gpu-specs/geforce-rtx-2080-ti.c3305)       | 4352     | 11 GB GDDR6 | 13.4 TF  | 13.4 TF  | 250W   | ~11W    | ✅ Unlock           | **~$300 – $380**  |
 | [**NVIDIA TITAN RTX**](https://www.techpowerup.com/gpu-specs/titan-rtx.c3311) | 4608 | 24 GB GDDR6 | 16.3 TF | 32.6 TF | 280W | ~12W | ✅ Unlock | **~$600 – $800** |
 
-<details>
-<summary>links:</summary>
-
- https://www.tomshardware.com/news/gpus-historical-ebay-pricing/8 "March 2023 eBay GPU Prices - eBay Historical GPU Prices 2023: November 2023 Update - Page 8 | Tom's Hardware"
-
-</details>
-
-
 
 ## NVIDIA RTX 30 Series (Ampere)
 | **Model**                                                                               | **VRAM** | **FP32**     | **FP16**     | **TDP** | **Est. Idle** | **Bandwidth** | **Virtualization** | **Avg Used eBay.com Price (≈)**                                             |
@@ -2593,16 +2576,6 @@ i often found myself looking up these details when comparing GPUs to try to find
 | [**RTX 3080**](https://www.techpowerup.com/gpu-specs/geforce-rtx-3080.c3621)            | 10 GB    | 29.77 TFLOPS | 29.77 TFLOPS | 320W   | ~9–15W       | 760 GB/s      | ❌                  | **~$320 – $500** (used prices reported ~$320–$500)        |
 | [**RTX 3080 Ti**](https://www.techpowerup.com/gpu-specs/geforce-rtx-3080-ti.c3735)      | 12 GB    | 34.10 TFLOPS | 34.10 TFLOPS | 350W   | ~12–16W      | 912 GB/s      | ❌                  | **~$450 – $650+** (reports ~$450+)                 |
 | [**RTX 3090**](https://www.techpowerup.com/gpu-specs/geforce-rtx-3090.c3622)            | 24 GB    | 35.58 TFLOPS | 35.58 TFLOPS | 350W   | ~15–20W      | 936 GB/s      | ❌                  | **~$600 – $800+** (pricing trend ~$600+)             |
-
-<details>
-<summary>links:</summary>
-
- https://www.ebay.com/shop/used-3060?_nkw=used+3060 "Used 3060 | eBay"
-<br> https://www.reddit.com/r/pcmasterrace/comments/1npm2x7 "Just got a Xfx Mercury 9070 XT for $500..did I steal this? Lol"
-<br> https://www.reddit.com/r/buildapc/comments/1ha9m61 "Ebay RTX3080 and 3090's going for under or at 200?? (Pricing all over the place)"
-
-</details>
-
 
 
 ## NVIDIA RTX 40 Series (Ada Lovelace)
@@ -2618,15 +2591,6 @@ i often found myself looking up these details when comparing GPUs to try to find
 | [**RTX 4080**](https://www.techpowerup.com/gpu-specs/geforce-rtx-4080.c3888)                  | 9728     | 16 GB GDDR6X 256-bit | 48.7 TF  | 48.7 TF  | 320W   | ~13W    | ❌                  | **~$700 – $1,000+** (used listings vary widely)           |
 | [**RTX 4090**](https://www.techpowerup.com/gpu-specs/geforce-rtx-4090.c3889)                  | 16384    | 24 GB GDDR6X 384-bit | 82.6 TF  | 82.6 TF  | 450W   | ~16W    | ❌                  | **~$1,400 – $2,000+** (many used listings in this range)  |
 
-<details>
-<summary>links:</summary>
-
- https://www.ebay.com/shop/nvidia-geforce-rtx-4060?_nkw=nvidia+geforce+rtx+4060 "Nvidia Geforce Rtx 4060"
-<br> https://www.ebay.com/shop/used-4060?_nkw=used+4060 "Used 4060"
-<br> https://www.ebay.com/shop/rtx-4090?_nkw=rtx+4090 "Rtx 4090"
-
-</details>
-
 
 ## NVIDIA RTX 50 Series (Blackwell)
 
@@ -2637,15 +2601,6 @@ i often found myself looking up these details when comparing GPUs to try to find
 | [**RTX 5070**](https://www.techpowerup.com/gpu-specs/geforce-rtx-5070.c4218) | 6144     | 12 GB GDDR7 256-bit | 30.87 TFLOPS | 30.87 TFLOPS | 250W   | ~14W    | ❌                  | **~$500 – $600** (used eBay listings show ~$550 for RTX 5070)                                                      |
 | [**RTX 5080**](https://www.techpowerup.com/gpu-specs/geforce-rtx-5080.c4190) | 10752    | 16 GB GDDR7 256-bit | 56.28 TFLOPS | 56.28 TFLOPS | 360W   | ~15W    | ❌                  | **~$800 – $1,200+** (used availability limited; high pricing trends)                                               |
 | [**RTX 5090**](https://www.techpowerup.com/gpu-specs/geforce-rtx-5090.c4189) | 21760    | 32 GB GDDR7 512-bit | 104.8 TFLOPS | 104.8 TFLOPS | 575W   | ~20W    | ❌                  | **~$2,300 – $4,500+** (eBay listings show high priced flagship cards; scalpers reported significantly above MSRP)  |
-
-<details>
-<summary>links:</summary>
-
- https://www.ebay.com/itm/257040138024 "MSI SHADOW GeForce RTX 5050 8GB GDDR6 PCI ..."
-<br> https://www.ebay.com/t/Nvidia-Geforce/27386/bn_7023364009 "Best Nvidia Geforce"
-
-</details>
-
 
 
 ## NVIDIA Quadro / Professional GPUs
@@ -2679,16 +2634,6 @@ i often found myself looking up these details when comparing GPUs to try to find
 | [Quadro RTX 5000](https://www.techpowerup.com/gpu-specs/quadro-rtx-5000.c3308)            | 16 GB GDDR6 | 22.30 TFLOPS | 11.15 TFLOPS   | 230W | ~15–20W (est.)         | 448 GB/s‡    | ✅                  | **~$449 - $600** |
 | [Quadro RTX 4000](https://www.techpowerup.com/gpu-specs/quadro-rtx-4000.c3336)            | 8 GB GDDR6  | 14.24 TFLOPS | 7.119 TFLOPS   | 160W | ~12–18W (est.)         | 448 GB/s‡    | ✅                  | **~$180 - $220** |
 
-<details>
-<summary>links:</summary>
-
- https://www.ebay.com/shop/nvidia-quadro-p5000-16gb?_nkw=nvidia+quadro+p5000+16gb "Nvidia Quadro P5000 16GB"
-<br> https://www.ebay.com/itm/357770011779 "NVIDIA Quadro P6000 24GB Graphic Card 699-5G611-0500-210 | eBay"
-<br> https://cl.ebay.com/b/NVIDIA-NVIDIA-Quadro-NVIDIA-Computer-Graphics-Cards/27386/bn_110676354 "NVIDIA NVIDIA Quadro NVIDIA Computer Graphics Cards for sale | eBay"
-<br> https://www.ebay.com/b/NVIDIA-NVIDIA-Computer-Graphics-Cards-NVIDIA-Quadro-6000/27386/bn_7116917630 "NVIDIA NVIDIA Computer Graphics Cards NVIDIA Quadro 6000 for sale - eBay"
-
-</details>
-
 
 ## NVIDIA RTX A-Series (Professional GPUs)
 
@@ -2703,15 +2648,6 @@ i often found myself looking up these details when comparing GPUs to try to find
 
 <br>NOTE: Nvidia dropped the quadro name after turing now they are RTX A-series. 
 
-<details>
-<summary>links:</summary>
-
- https://www.ebay.com/shop/a2000-12gb?_nkw=a2000+12gb "A2000 12GB | eBay"
-<br> https://www.ebay.com/shop/quadro-rtx-a4500?_nkw=quadro+rtx+a4500 "Quadro Rtx A4500"
-<br> https://www.ebay.com/shop/nvidia-rtx-a5000?_nkw=nvidia+rtx+a5000 "Nvidia Rtx A5000"
-<br> https://www.ebay.com/itm/187325705020 "NVIDIA RTX A6000 48GB GDDR6 GPU - Pro Workstation, AI, Rendering, ECC | eBay"
-
-</details>
 
 ## NVIDIA Tesla Series
 
@@ -2732,16 +2668,10 @@ i often found myself looking up these details when comparing GPUs to try to find
 | --------------------------------------------------------------------------------------------- | ---------- | ------------------ | ------------------ | ------------------ | ---------------- | ------- | ------------------------ | ------------- | ------------------ | ------------------------------------------------------------------------------------------------------------------ |
 | [Tesla A100 40GB](https://www.techpowerup.com/gpu-specs/a100-pcie-40-gb.c3623)    | 40 GB HBM2e | 311.84 TFLOPS | 155.92 TFLOPs | 77.97 TFLOPS | 19.49 TFLOPS  | 250W | ~25–30W | 1,555 GB/s | ✅ | **~$4,000 – $9,000** |
 | [Tesla A100 80GB](https://www.techpowerup.com/gpu-specs/a100-pcie-80-gb.c3821)    | 80 GB HBM2e | 311.84 TFLOPS | 155.92 TFLOPs | 77.97 TFLOPS | 19.49 TFLOPS | 300W | ~25–30W | 1,935 GB/s | ✅ | **~$8,500 – $18,500+** |
-
-
-<details>
-<summary>links:</summary>
-
- https://www.ebay.com/shop/nvidia-tesla-p4?_nkw=nvidia+tesla+p4 "Nvidia Tesla P4"
-<br> https://www.ebay.com/shop/tesla-p40-24gb?_nkw=tesla+p40+24gb "Tesla P40 24GB"
-
 </details>
 
+<details>
+<summary><b>AMD GPUs:</b></summary>
 
 ## AMD Radeon RX 5000 Series (RDNA1)
 
@@ -2754,14 +2684,6 @@ i often found myself looking up these details when comparing GPUs to try to find
 | [**Radeon RX 5700**](https://www.techpowerup.com/gpu-specs/radeon-rx-5700.c3437)                | 8GB GDDR6 256-bit | 7.95 TFLOPS | 15.90 TFLOPS | 180W    | ~10–15W            | 448 GB/s      | ❌                  | **~$140 – $180** – eBay.com used RX 5700 marketplace listings often around ~$150+.                                                     |
 | [**Radeon RX 5700 XT**](https://www.techpowerup.com/gpu-specs/radeon-rx-5700-xt.c3339)          | 8GB GDDR6 256-bit | 9.75 TFLOPS | 19.50 TFLOPS | 225W    | ~12–18W            | 448 GB/s      | ❌                  | **~$140 – $200** – RX 5700 XT used cards commonly list around $145-$180+ on eBay.com.                                                  |
 
-<details>
-<summary>links:</summary>
-
- https://www.ebay.com/shop/rx-5500-xt?_nkw=rx+5500+xt "RX 5500 XT"
-<br> https://www.ebay.com/shop/amd-radeon-rx-5600-xt?_nkw=amd+radeon+rx+5600+xt "AMD Radeon RX 5600 XT"
-<br> https://www.ebay.com/shop/rx-5700-xt?_nkw=rx+5700+xt "RX 5700 XT"
-
-</details>
 
 ## AMD Radeon RX 6000 Series (RDNA2)
 
@@ -2779,18 +2701,6 @@ i often found myself looking up these details when comparing GPUs to try to find
 | [Radeon RX 6900 XT](https://www.techpowerup.com/gpu-specs/radeon-rx-6900-xt.c3693) | 16GB GDDR6 256-bit | 23.04 TFLOPS | 46.08 TFLOPS | 300W    | ~18–28W            | 512 GB/s      | ❌                  | **~$400 – $600+** – used listings for RX 6900 XT often show **~$400–$600+ USD** on eBay.com.                                                                 |
 | [Radeon RX 6950 XT](https://www.techpowerup.com/gpu-specs/radeon-rx-6950-xt.c3897) | 16GB GDDR6 256-bit | 23.65 TFLOPS | 47.30 TFLOPS | 335W    | ~18–30W            | 576 GB/s      | ❌                  | **~$450 – $650+** – used RX 6950 XT listings commonly around **$450–$650 USD** on eBay.com.                                                                  |
 
-<details>
-<summary>links:</summary>
-
- https://www.ebay.com/shop/amd-6500-xt?_nkw=amd+6500+xt "Amd 6500 XT"
-<br> https://www.ebay.com/itm/357569961453 "ASRock Radeon RX 6600 8GB GDDR6 Graphics Card Black, Used | eBay"
-<br> https://www.ebay.com/shop/rx-660-xt?_nkw=rx+660+xt "RX 660 XT"
-<br> https://www.ebay.com/shop/radeon-xt?_nkw=radeon+xt "Radeon XT | eBay"
-<br> https://www.ebay.com/shop/amd-radeon-rx-6800-xt?_nkw=amd+radeon+rx+6800+xt "AMD Radeon RX 6800 XT"
-<br> https://www.ebay.com/shop/amd-radeon-rx-6950-xt?_nkw=amd+radeon+rx+6950+xt "AMD Radeon RX 6950 XT | eBay"
-
-</details>
-
 
 ## AMD Radeon RX 7000 Series (RDNA3)
 
@@ -2804,18 +2714,6 @@ i often found myself looking up these details when comparing GPUs to try to find
 | [Radeon RX 7900 XT](https://www.techpowerup.com/gpu-specs/radeon-rx-7900-xt.c3912)   | 20GB GDDR6 320-bit | 51.48 TFLOPS | 102.96 TFLOPS | 300W    | ~20–30W            | 800 GB/s      | ❌                  | **~$600 – $800+** – Pre-owned listings often show around **$600–$800+ USD** on eBay.com.                                           |
 | [Radeon RX 7900 XTX](https://www.techpowerup.com/gpu-specs/radeon-rx-7900-xtx.c3941) | 24GB GDDR6 384-bit | 61.39 TFLOPS | 122.78 TFLOPS | 355W    | ~20–35W*           | 960 GB/s      | ❌                  | **~$690 – $1,300+** – Used reference editions have been listed near **$690 USD**, while higher-end OC units approach **$1,300+**.  |
 
-<details>
-<summary>links:</summary>
-
- https://www.ebay.com/itm/389341971269 "AMD Radeon RX 7600 | eBay"
-<br> https://www.ebay.com/itm/177496579703 "AMD Radeon RX 7600 XT 16GB – With Box, Tested & Working | eBay"
-<br> https://www.ebay.com/shop/7700-xt?_nkw=7700+xt "7700 XT"
-<br> https://www.ebay.com/shop/7800-xt-graphics-card?_nkw=7800+xt+graphics+card "7800 XT Graphics Card"
-<br> https://www.ebay.com/shop/radeon-rx-7900-xt?_nkw=radeon+rx+7900+xt "Radeon RX 7900 XT"
-<br> https://www.ebay.com/itm/389470601371 "AMD Radeon RX 7900 XTX 24GB Reference Edition Graphics Card | eBay"
-
-</details>
-
 
 ## AMD Radeon RX 9000 Series (RDNA4)
 
@@ -2826,15 +2724,6 @@ i often found myself looking up these details when comparing GPUs to try to find
 | [AMD Radeon RX 9060 XT 16GB](https://www.techpowerup.com/gpu-specs/radeon-rx-9060-xt-16-gb.c4293) | 16GB GDDR6 | 51.3 TFLOPS     | 25.6 TFLOPS      | 160W     | ~12–18W                  | 320 GB/s      | ❌                  | **~$360 – $550** – eBay.com used listings for 9060 XT 16GB show examples around **~$425–$480 USD** (pre-owned); higher end reflects condition/brand.                                 |
 | [AMD Radeon RX 9070](https://www.techpowerup.com/gpu-specs/radeon-rx-9070.c4250)                  | 16GB GDDR6 | 72.25 TFLOPS    | 36.13 TFLOPS     | 220W     | ~18–28W                  | ~640–896 GB/s | ❌                  | **~$450 – $650+** – similar RX 9070 eBay.com used listings and comparative search results suggest typical used prices around **$500+ USD**.                                          |
 | [AMD Radeon RX 9070 XT](https://www.techpowerup.com/gpu-specs/radeon-rx-9070-xt.c4229)            | 16GB GDDR6 | 97.32 TFLOPS    | 48.66 TFLOPS     | 260–304W | ~20–30W                  | 640 GB/s+     | ❌                  | **~$600 – $800+** – eBay.com has *used/pre-owned* RX 9070 XT listings (e.g., PowerColor ~**$699 USD**) with a broad range depending on condition.                                    |
-<details>
-<summary>links:</summary>
-
- https://www.ebay.com/shop/amd-rx-9070-xt?_nkw=amd+rx+9070+xt "Amd RX 9070 XT"
-<br> https://www.ebay.com/itm/406557591590 "Gigabyte Radeon RX 9060 xt 8GB GDDR6X Graphics Card GV- ..."
-<br> https://www.ebay.com/p/6085827196 "SAPPHIRE PULSE AMD Radeon RX 9060 XT Gaming OC 16GB ..."
-<br> https://www.ebay.com/b/SAPPHIRE-AMD-Computer-Graphics-Cards/27386/bn_7113421085 "SAPPHIRE AMD Computer Graphics Cards for sale"
-
-</details>
 
 
 ## AMD Pro/Compute GPUs
@@ -2842,11 +2731,6 @@ i often found myself looking up these details when comparing GPUs to try to find
 | **GPU**         | **VRAM**  | **FP16 (half)** | **FP32 (float)** | **TDP** | **Idle Power (typical)** | **Bandwidth** | **Virtualization** | **Avg Used eBay.com Price (≈)**            |
 | ----------------------------- | --------- | --------------- | ---------------- | ------- | ------------------------ | ------------- | ------------------ | ----------------------------------------- |
 | [Radeon Instinct MI25](https://www.techpowerup.com/gpu-specs/radeon-instinct-mi25.c2983) | 16GB HBM2 | 24.58 TFLOPS | 12.29 TFLOPS | 300W | ~30–40W | 436.2 GB/s | 🟡 | **~$90 – $180**  |
-
-<details>
-<summary>links:</summary>
-
- https://www.ebay.com/p/17070539862 "AMD Radeon Instinct MI25 16GB HBM2 GPU AI HPC Accelerator Card 102D0513300 for sale online | eBay"
 
 </details>
 
