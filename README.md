@@ -21,6 +21,10 @@ HomeLab CheatSheet &amp; AwesomeList
 
 # Table of Contents
 - [HomeLab](#homelab)
+  - Before we begin: The Learning Path
+  - Beyond Privacy: Resilience
+  - Evaluating Software
+  - The Hidden Costs of Convenience
   - [Optimal Minimal Setup Device: Lenovo Tiny PCs](#optimal-minimal-setup-device-lenovo-tiny-pcs)
     - [Hardware Configuration Options](#hardware-configuration-options)
     - [Popular Uses for the PCIe Slot](#popular-uses-for-the-pcie-slot)
@@ -130,6 +134,488 @@ HomeLab CheatSheet &amp; AwesomeList
   - [Virus Scanners](#virus-scanners)
 
 <br>
+<br>
+<details><summary><b>Before we begin: The Learning Path</b></summary>
+
+Homelabbing is not just a hobby, it’s an education. To build and maintain your own digital infrastructure, you must acquire a body of knowledge, develop reasoning skills, and eventually share your expertise with others. This journey mirrors the classical *trivium*: a three‑stage process of learning that has produced independent thinkers for centuries. Understanding this path will help you navigate your own growth, from the first time you plug in a Raspberry Pi to the moment you help a friend troubleshoot their own server.
+
+---
+
+## Stage One: Grammar — The Foundations
+
+In the classical model, the first stage is **grammar**, the gathering of raw materials. Young students memorized facts, vocabulary, and rules without yet understanding their deeper connections. This stage corresponds to the “poll‑parrot” phase described by Dorothy L. Sayers, where learning by heart is easy and even pleasurable.
+
+In your homelab journey, the grammar stage is about:
+
+- Learning the **vocabulary** of hardware: CPU generations, RAM types, storage interfaces (SATA, NVMe, SAS), network speeds.
+- Understanding **basic operations**: installing an operating system, navigating the command line, editing configuration files.
+- Memorizing **common commands**: `ls`, `cd`, `grep`, `systemctl`, `docker run`.
+- Building a mental catalog of **available tools**: Proxmox, TrueNAS, pfSense, Jellyfin, Audiobookshelf.
+
+At this stage, you follow tutorials blindly. You copy commands without fully grasping why they work. You might install a service because someone else recommended it, and you accept that certain settings are “best practices.” This is not a weakness, it is the necessary foundation. As Sayers noted, “it is a great mistake to suppose that a child cannot readily enjoy and remember things that are beyond his power to analyze.” The same holds for the novice homelabber.
+
+**Recommended activities for the grammar stage:**
+
+- Follow step‑by‑step guides (like those in this repository) to set up your first server.
+- Keep a notebook (digital or physical) of commands and configurations that worked.
+- Join forums and observe / absorb the language of the community before contributing.
+
+---
+
+## Stage Two: Dialectic — The Art of Questioning
+
+The second stage, **dialectic** (or logic), is where you begin to connect the dots. Sayers called this the “pert” age, a time of contradiction, argument, and a hunger to understand why things are the way they are. In the classical curriculum, dialectic trained students to detect fallacies, construct arguments, and reason from first principles.
+
+For the homelabber, this stage involves:
+
+- **Troubleshooting** when things break. Why did the container stop? Why is the network slow? What do those log messages mean?
+- **Understanding trade‑offs**: Why choose ZFS over EXT4? Why put a service in a Docker container instead of a VM? Why use Alpine Linux instead of Ubuntu?
+- **Designing with intent**: Instead of following a tutorial, you begin to plan your own network topology, considering security, redundancy, and future growth.
+- **Questioning received wisdom**: Is that “best practice” really best for your situation? What assumptions underlie the guide you followed?
+
+This is where you move from being a consumer of knowledge to an active participant in your own learning. You start to see patterns: many Linux problems are solved by checking permissions and logs; many network issues trace back to DNS or firewall rules. You develop mental models that let you predict outcomes and diagnose failures without reaching for Google every time.
+
+**Recommended activities for the dialectic stage:**
+
+- Break things intentionally and fix them. Set up a test environment where failure is safe.
+- Write down your reasoning when you make a design decision. Later, revisit it—was your logic sound?
+- Participate in discussions on forums or chat groups, explaining your solutions to others.
+- Read error messages carefully and learn to interpret them.
+
+---
+
+## Stage Three: Rhetoric — The Art of Expression
+
+The final stage of the trivium is **rhetoric**, the ability to express ideas persuasively and elegantly. In classical education, this was the goal of the entire process: to produce a person who could not only think clearly but also communicate effectively. Sayers associated this stage with the “poetic” age, where creativity and synthesis flourish.
+
+In homelabbing, rhetoric manifests as:
+
+- **Documenting your setup** so others can learn from it. This might be a blog post, a GitHub repository, or even just a well‑organized README.
+- **Contributing to open‑source projects**: reporting bugs, submitting patches, or translating documentation.
+- **Teaching** friends, family, or online communities. Answering questions on forums, creating video tutorials, or giving a talk at a local meetup.
+- **Designing elegant solutions** that are not only functional but also maintainable and aesthetically pleasing. This might mean automating deployments with Ansible, writing clean configuration files, or building a custom dashboard.
+
+Rhetoric is the stage where your knowledge becomes a gift to others. It completes the learning loop: you internalized the grammar, wrestled with the logic, and now you can pass on what you’ve learned helping newcomers begin their own journey.
+
+**Recommended activities for the rhetoric stage:**
+
+- Write a detailed explanation of a project you completed, including the problems you faced and how you solved them.
+- Share your configuration files (with secrets redacted) on GitHub.
+- Answer questions on platforms like Reddit’s r/homelab or the Proxmox community forum.
+- Mentor someone who is just starting out.
+
+---
+
+## The Spiral of Learning
+
+The trivium is not a one‑time progression; it is a spiral. As you encounter new technologies, you will return to the grammar stage, learning new vocabulary, new commands, new hardware. Then you will apply dialectic to understand and troubleshoot, and eventually you will reach a point where you can teach others. Each cycle deepens your mastery.
+
+This is the true purpose of a homelab: not just to run services, but to cultivate your own mind. In an age of manufactured consent and centralized platforms, self‑hosting is an act of intellectual independence. It keeps alive the tools of learning that Sayers feared we had lost. By following this path, you become not only a better sysadmin but a more thoughtful, capable human being.
+
+---
+
+*This section is meant to be a living document—add your own insights and references as you discover them. The homelab is not just a collection of hardware; it’s a statement about how you choose to live in the digital world.*
+</details>
+
+<details><summary><b>Beyond Privacy: Resilience</b></summary>
+
+Privacy is often the first reason people discover self‑hosting. The desire to keep your data out of the hands of corporations and advertisers is a powerful motivator. But once you begin down this path, you quickly realize that privacy is only the beginning. What you are truly building is *resilience*, the ability to withstand disruption, adapt to change, and maintain control over your digital life regardless of external circumstances.
+
+Resilience is not just about protecting secrets. It is about ensuring that your systems continue to function when the services you rely on disappear, when networks go down, when laws change, or when the platforms you once trusted reveal themselves to be unreliable or actively hostile.
+
+---
+
+## The Fragility of Centralized Services
+
+Centralized platforms offer convenience, but they also create single points of failure. When Facebook suffered a major outage in 2021, billions of people lost access to communication, business contacts, and even entry to physical locations that required Facebook login.[1] When Google decides to “sunset” a product, years of user data and workflow integrations vanish overnight.[2] When a platform changes its terms of service or content moderation policies, entire communities can be displaced or silenced.
+
+Self‑hosting distributes this risk. Your services run on your hardware, under your control. If a cloud provider goes down, your local server keeps running. If a social media platform bans a user you follow, your own federated instance can still reach them. If a corporation decides to monetize user data in a new way, your data is not part of that transaction.
+
+This is not about paranoia—it is about recognizing the structural fragility of centralized systems and choosing to build something more robust.
+
+1. Isaac, Mike, and Kellen Browning. “Facebook, Instagram, WhatsApp Outage: Services Restored After Nearly Six Hours.” *The New York Times*, Oct. 4, 2021. [https://www.nytimes.com/2021/10/04/technology/facebook-down.html](https://www.nytimes.com/2021/10/04/technology/facebook-down.html)
+
+2. “Google’s Graveyard.” Killed by Google. [https://killedbygoogle.com/](https://killedbygoogle.com/)
+
+---
+
+## Infrastructure Independence
+
+True resilience begins with infrastructure independence. This means:
+
+- **Power autonomy**: Solar panels, battery backups, and low‑power hardware (like the Lenovo Tiny PCs recommended in this guide) can keep your services running during grid outages. Fuller’s vision of a world running on “daily income of Sun energy” is not just a utopian dream, it is a practical strategy for resilience.
+
+- **Network diversity**: Multiple internet connections (fiber, cable, LTE fallback) and mesh networking can maintain connectivity when one path fails. Tools like pfSense or OPNsense allow you to bond connections and fail over automatically.
+
+- **Hardware redundancy**: Spare drives, a cold spare server, or even a Raspberry Pi that can take over critical functions in an emergency. The ZFS file system, with its self‑healing capabilities, ensures that data corruption is detected and repaired before it spreads.[1]
+
+- **Geographic distribution**: For the truly dedicated, running services at a friend’s house or a remote location ensures that a local disaster (fire, flood, theft) does not destroy everything.
+
+Each layer of independence adds to your ability to weather storms—literal and metaphorical.
+
+1. “ZFS: The Last Word in File Systems.” OpenZFS Documentation. [https://openzfs.github.io/openzfs-docs/](https://openzfs.github.io/openzfs-docs/)
+
+---
+
+## Data Sovereignty and Longevity
+
+Commercial platforms are not designed for long‑term data preservation. They are designed to maximize engagement and ad revenue. Features come and go. Old posts are buried. Accounts are deleted after periods of inactivity. The platform’s interests are not your interests.
+
+When you self‑host, you take responsibility for your own data longevity. This means:
+
+- **Choosing open formats**: Plain text, Markdown, SQLite, and other well‑documented formats ensure that your data remains readable decades from now, regardless of what software is fashionable.
+
+- **Regular backups**: The 3‑2‑1 rule (three copies, two media types, one off‑site) is not just for enterprises. Automated backups to a remote server or a friend’s house protect against hardware failure and ransomware.
+
+- **Planned obsolescence resistance**: When you control the software, you can keep running it as long as it meets your needs. You are not forced to upgrade because a vendor discontinued support. If you eventually migrate, you control the timeline and the process.
+
+This is the digital equivalent of storing grain for the winter. It is work, but it buys freedom from the next harvest’s uncertainty.
+
+---
+
+## Social Resilience: Community Beyond Platforms
+
+When Twitter changed hands in 2022, many users suddenly found themselves uncertain about the platform’s future. Would it remain stable? Would moderation policies shift? Would their communities scatter?
+
+Federated platforms like Mastodon (for microblogging) and Matrix (for chat) (or better yet Simplex Chat (see why users are leaving matrix below with link #[2]) ), offer an alternative. They are built on protocols, not corporate promises. You can host your own instance, and your users can still communicate with users on other instances. If one instance shuts down, the network remains intact.
+
+Self‑hosting extends this principle to every aspect of online life. A personal Nextcloud (or CryptPad) instance replaces Google Drive. Jellyfin replaces Netflix. Audiobookshelf replaces Audible. Bitwarden (Or KeePassXC) replaces a password manager’s cloud. Each of these tools not only protects your privacy but ensures that your access to your own data does not depend on a company’s continued existence.
+
+1. Conger, Kate, and Ryan Mac. “Twitter’s Chaotic First Week Under Elon Musk.” *The New York Times*, Nov. 4, 2022. [https://www.nytimes.com/2022/11/04/technology/twitter-elon-musk-chaos.html](https://www.nytimes.com/2022/11/04/technology/twitter-elon-musk-chaos.html)
+
+2. [Why We Abandoned Matrix: The Dark Truth About User Security and Safety](https://forum.hackliberty.org/t/why-we-abandoned-matrix-the-dark-truth-about-user-security-and-safety/224)
+
+---
+
+## Cognitive Resilience: Escaping the Algorithm
+
+Perhaps the most insidious fragility of modern platforms is cognitive. Algorithms are optimized to keep you engaged, not to keep you informed or fulfilled. They amplify outrage, feed confirmation bias, and create filter bubbles that distort your perception of reality.[1] The “Dead Internet Theory” suggests that much of what you encounter online may not even be human—bots and AI generating content to manipulate discourse.[2]
+
+When you self‑host, you reclaim your attention. RSS feeds let you curate your own news stream. Self‑hosted recommendation engines (like Tubearchivist for YouTube content) can suggest videos based on your own viewing history, not a corporate profit model. Your media server plays what you choose, when you choose, without autoplaying something designed to keep you on the couch.
+
+This is cognitive resilience: the ability to think clearly without algorithmic manipulation.
+
+1. Pariser, Eli. *The Filter Bubble: What the Internet Is Hiding from You*. Penguin Press, 2011.
+
+2. IlluminatiPirate. “Dead Internet Theory: Most of the Internet is Fake.” Agora Road, 2021. [https://forum.agoraroad.com/index.php?threads/dead-internet-theory-most-of-the-internet-is-fake.3011/](https://forum.agoraroad.com/index.php?threads/dead-internet-theory-most-of-the-internet-is-fake.3011/)
+
+---
+
+## The Ethical Dimension
+
+Resilience also has an ethical component. Centralized platforms have been used to facilitate human trafficking, child exploitation, and other crimes. A 2021 report found that Facebook was the primary recruitment tool for sex traffickers in the United States.[1] Courts have recognized that platforms can be held liable when they knowingly benefit from such exploitation.[2]
+
+By self‑hosting, you avoid supporting a system that profits from—or fails to prevent—these abuses. You also gain the ability to create safe, private spaces for communities that might otherwise be vulnerable to harassment or exploitation on mainstream platforms.
+
+1. De Chant, Tim. “Facebook is a hub of sex trafficking recruitment in the US, report says.” Ars Technica, June 10, 2021. [https://arstechnica.com/tech-policy/2021/06/facebook-is-a-hub-of-sex-trafficking-recruitment-in-the-us-report-says/](https://arstechnica.com/tech-policy/2021/06/facebook-is-a-hub-of-sex-trafficking-recruitment-in-the-us-report-says/)
+
+2. Cipriano, Andrea. “Facebook Liable for Human Trafficking Connections: Court Ruling.” The Crime Report, June 28, 2021. [Archived at https://web.archive.org/web/20240810163040/https://thecrimereport.org/2021/06/28/facebook-liable-for-human-trafficking-connections-court-ruling/](https://web.archive.org/web/20240810163040/https://thecrimereport.org/2021/06/28/facebook-liable-for-human-trafficking-connections-court-ruling/)
+
+---
+
+## Resilience as a Mindset
+
+Ultimately, resilience is a mindset. It is the recognition that the digital world is not stable, that the services you rely on today may not exist tomorrow, and that the only reliable insurance is your own skill and preparation. This is why the homelab community values documentation, sharing, and mentorship. We are not just building servers; we are building a culture of mutual aid and technical competence.
+
+The tools and techniques in this guide are not ends in themselves. They are means to an end: a digital life that can withstand shocks, adapt to change, and remain under your control. In Fuller’s terms, you are moving from being a passive consumer of the “Grunch” to an active participant in your own destiny.
+
+---
+
+*This section is meant to be a living document—add your own insights and references as you discover them. The homelab is not just a collection of hardware; it’s a statement about how you choose to live in the digital world.*
+</details>
+
+<details><summary><b>Evaluating Software</b></summary>
+
+Every tool you add to your homelab is a commitment. It will consume disk space, memory, and CPU cycles. It may open network ports, introduce dependencies, and create new avenues for attack. It might be abandoned by its developers, forcing you to migrate years of accumulated data. Choosing software wisely is therefore one of the most important skills you can develop.
+
+This section provides a framework for evaluating software, not just technically, but philosophically. The goal is to help you select tools that align with your values, respect your resources, and remain useful for the long term.
+
+---
+
+## Activity and Maintenance
+
+The first question to ask about any piece of software is simple: *Is it alive?*
+
+A dead project is not necessarily useless—many mature tools work perfectly for years without updates. But you should know what you are getting into. An abandoned project may have unpatched security vulnerabilities, may not work with newer operating systems, and may leave you stranded when you finally need to migrate.
+
+Signs of a healthy project:
+
+- **Recent commits**: Code changes in the last month or two.
+- **Active issue tracker**: Maintainers responding to bug reports and feature requests.
+- **Regular releases**: Not necessarily frequent, but predictable.
+- **Community**: A forum, chat room, or subreddit where users help each other.
+- **Documentation**: Clear, up‑to‑date guides for installation and configuration.
+
+Signs of a dying or dead project:
+
+- **No commits in over a year**.
+- **Pull requests ignored or piled up**.
+- **Critical bugs unaddressed**.
+- **Website down or documentation missing**.
+
+This does not mean you should automatically reject old software. The UNIX philosophy values simplicity and stability; many command‑line tools from the 1970s are still the best choice for their tasks. But for complex applications like web services, an active upstream is essential for security and compatibility.
+
+---
+
+## Licensing and Philosophy
+
+Software licensing is not just a legal formality, it reflects the values of the developers and the long‑term viability of the project.
+
+**Open source** (OSI‑approved) licenses grant you the freedom to inspect, modify, and redistribute the code. This is the foundation of the self‑hosting community. When you run open source software, you are not dependent on a single vendor. If the project dies, you can fork it. If you find a bug, you can fix it yourself or pay someone to do so.
+
+**Copyleft** licenses (like the GPL) go further, requiring that derivative works also be open source. This ensures that improvements benefit everyone, not just a corporation that builds on community work.
+
+**Permissive** licenses (MIT, BSD, Apache) allow proprietary forks. This can lead to situations where a company takes open source code, adds value, and keeps the improvements closed—but it also maximizes adoption and contribution from corporate users.
+
+**Source‑available** licenses (like the Commons Clause or various “fair source” licenses) allow you to see the code but not use it for certain purposes (often commercial). These are controversial in the open source community and may signal a project that is trying to have it both ways—soliciting community contributions while reserving the right to compete against them.[1]
+
+**Proprietary** software should generally be avoided in a homelab unless there is no viable alternative. You cannot audit it, you cannot fix it, and you are at the mercy of the vendor’s business decisions. When the vendor goes out of business or changes its pricing model, you lose.
+
+1.  “The Anatomy of a Source‑Available License.” OSI, 2021. [https://opensource.org/node/1090](https://opensource.org/node/1090)
+
+---
+
+## Dependencies and Footprint
+
+Modern software development often prioritizes developer convenience over user efficiency. The result is the “software bloat” phenomenon described in the Stack Overflow article: apps that are exponentially larger than their predecessors without providing corresponding value.[1]
+
+When evaluating a tool, consider:
+
+- **Language and runtime**: Is it written in a compiled language like C, Go, or Rust? Those produce small, self‑contained binaries. Or does it require a heavy runtime like Python, Node.js, or the JVM? That may be acceptable, but you should understand the cost.
+
+- **Dependencies**: How many libraries does it pull in? Each dependency is a potential source of bugs, security issues, and maintenance headaches. Tools that “vendor” their dependencies (include them in the repository) are often more stable than those that rely on a constantly shifting ecosystem.
+
+- **Base image size**: For Docker containers, check the image size on Docker Hub. A 1GB container for a simple web app is a red flag. Alpine‑based images are often much smaller and more secure.
+
+- **Resource usage at idle**: A service that sits in the background should not consume gigabytes of RAM or peg a CPU core. Tools like `htop`, `docker stats`, or `btm` can help you measure.
+
+The homelab community values efficiency. Running lean software means you can do more with less hardware, save on electricity, and reduce heat and noise. It also means your services are more likely to run well on older or low‑power hardware, increasing your options for resilient deployment.
+
+1. Lyman, Isaac. “Is software getting worse?” Stack Overflow Blog, Dec. 25, 2023. [https://stackoverflow.blog/2023/12/25/is-software-getting-worse/](https://stackoverflow.blog/2023/12/25/is-software-getting-worse/)
+
+---
+
+## Security Posture
+
+Security is not a binary property—it is a practice. When evaluating software, look for signs that the developers take security seriously.
+
+- **How are vulnerabilities handled?** Is there a security policy? A place to report issues confidentially? Do they publish security advisories?
+- **Do they follow the principle of least privilege?** Does the software need to run as root, or can it be confined to a user with minimal permissions?
+- **Are there known vulnerabilities?** Check the project’s issue tracker and sites like CVE Details or Snyk. A history of unpatched critical issues is a warning sign.
+
+Remember that security is also your responsibility. Even the most secure software can be misconfigured. The difference is that with open source, you have the ability to audit and fix problems yourself.
+
+---
+
+## Configuration and Maintenance Burden
+
+A tool that is powerful but requires constant manual intervention may not be the right choice for a long‑term homelab. Consider:
+
+- **How is it configured?** YAML, JSON, TOML, a web UI? Is the configuration well‑documented? Can it be stored in version control?
+- **How is it updated?** Does it support automatic updates? Can you update via package manager, Docker pull, or git pull? A manual process that requires re‑entering configuration is error‑prone.
+- **Does it require a database?** SQLite is lightweight and self‑contained; PostgreSQL or MySQL add complexity but offer better performance for multi‑user scenarios.
+- **Does it require external services?** Some “self‑hosted” tools still phone home to a vendor‑controlled server for certain features. That may violate your privacy goals.
+
+The ideal tool is one you can install, configure, and then mostly forget—until you need to use it.
+
+---
+
+## Community and Support
+
+Even the best‑documented software will eventually puzzle you. A strong community can make the difference between a quick fix and hours of frustration.
+
+- **Forums, chat rooms, or subreddits** where users help each other.
+- **Response time to issues** on GitHub or GitLab.
+- **Quality of documentation**: README, wiki, example configurations.
+- **Third‑party tutorials and blog posts** about the software.
+
+A vibrant community is also a hedge against abandonment. If the original maintainers move on, someone else may pick up the torch.
+
+---
+
+## Alignment with Your Values
+
+Finally, consider whether the software aligns with the values discussed in the “Why Self‑Host” and “Resilience” sections.
+
+- **Does it respect user privacy?** Does it include telemetry that sends data home? Can that be disabled?
+- **Is it developed by a corporation with conflicting incentives?** A tool from a company that also offers a hosted version may gradually become less useful for self‑hosters as the company prioritizes its paid product.
+- **Does it encourage lock‑in?** Does it use proprietary data formats? Can you export your data easily?
+- **Is it part of a healthy ecosystem?** Tools that interoperate with others (like those supporting standard protocols—CalDAV, CardDAV, RSS, ActivityPub) give you flexibility to mix and match.
+
+---
+
+## Putting It All Together
+
+No tool is perfect. The goal is to make informed trade‑offs. A slightly heavier tool with a friendly community may be a better choice than a minimal one with no support. The key is to evaluate consciously rather than installing the first thing you find.
+
+Over time, you will develop your own criteria and preferences. The homelab community thrives on sharing not just configurations but experiences—what worked, what didn’t, and why. By contributing your own evaluations, you help others make better choices and strengthen the ecosystem for everyone.
+
+</details>
+
+<details><summary><b>The Hidden Costs of Convenience</b></summary>
+
+Convenience is seductive. The ability to sign up a server in seconds, to store files in someone else’s data center, to let algorithms curate your entertainment, these are genuine advances. They have lowered the barrier to entry for countless people and enabled forms of collaboration that were impossible a generation ago.
+
+But convenience is not free. Every service you outsource, every platform you rely on, every default you accept carries a price. Some of these costs are obvious: subscription fees, bandwidth overages, hardware upgrades. Others are hidden—subtracted from your privacy, your autonomy, your attention, and ultimately your resilience.
+
+Understanding these hidden costs is essential to making informed choices about when to embrace convenience and when to resist it.
+
+---
+
+## The Price of “Free”
+
+The most deceptive cost is attached to services that appear to cost nothing. Social media platforms, search engines, email providers, and cloud storage services that do not charge money are not charities—they are businesses whose product is you.
+
+When you use a “free” service, you pay with:
+
+- **Your data**: Every click, every search, every pause on a video is recorded, analyzed, and used to build a profile of your interests, habits, relationships, and vulnerabilities. These profiles are sold to advertisers, data brokers, and political campaigns. The 2018 Facebook–Cambridge Analytica scandal was not an aberration; it was a revelation of the normal operation of the industry [1]
+
+- **Your attention**: Platforms are engineered to maximize engagement, not to serve your needs. Infinite scroll, autoplay, notification spam—these are not bugs; they are features designed to keep you on the site longer, exposing you to more ads. The result is a generation struggling with attention deficits and digital exhaustion. [2]
+
+- **Your autonomy**: Algorithms determine what you see and what you don’t. They shape your perception of the world, your political views, your purchasing decisions. You are no longer a user; you are a subject of a behavioral modification system.
+
+The “free” model is a transfer of wealth and power from the many to the few. It is the digital equivalent of the ancient land grants that Buckminster Fuller described—a mechanism for concentrating control under the guise of progress.[3]
+
+1. Isaak, Jim, and Mina J. Hanna. “User Data Privacy: Facebook, Cambridge Analytica, and Privacy Protection.” *IEEE Computer* 51, no. 8 (2018): 56–59.
+
+2. Newport, Cal. *Digital Minimalism*. Portfolio, 2019.
+
+3. Fuller, R. Buckminster. *Grunch of Giants*. St. Martin’s Press, 1983.
+
+---
+
+## Surveillance as Infrastructure
+
+The surveillance economy is not limited to obvious advertising platforms. It has become infrastructure. Windows 10 and 11 include telemetry that reports your activities to Microsoft.[1] Google’s “digital ID” initiatives aim to make your identity itself a trackable asset.[2] Smart home devices listen for wake words and sometimes more.[3] Modern cars record your location, speed, and even conversations.[4]
+
+This is not conspiracy theory; it is documented practice. A 2023 investigation found that automakers shared driving data with insurers, who used it to raise rates.[5] Ring doorbell cameras have been accessed by employees and shared with law enforcement without warrants.[6] The devices you buy are often not truly yours.
+
+Self‑hosting is a way to reclaim ownership. When you run your own services on your own hardware, you decide what data is collected and who can access it. This does not require paranoia, it requires awareness of the hidden costs built into every “connected” device.
+
+1. “Windows 11 and Windows 10 telemetry.” Microsoft Learn. [https://learn.microsoft.com/en-us/windows/privacy/configure-windows-diagnostic-data-in-your-organization](https://learn.microsoft.com/en-us/windows/privacy/configure-windows-diagnostic-data-in-your-organization)
+
+2. Sing, Evie Kim. “Google expands digital ID capabilities across the U.K. and US, adds new privacy features.” Identity Week, Apr. 30, 2025. [Archived at https://web.archive.org/web/20250503134929/https://identityweek.net/google-expands-digital-id-capabilities-across-the-u-k-and-us-adds-new-privacy-features/](https://web.archive.org/web/20250503134929/https://identityweek.net/google-expands-digital-id-capabilities-across-the-u-k-and-us-adds-new-privacy-features/)
+
+3. “Smart Speaker Data Collection.” Consumer Reports, 2021. [https://www.consumerreports.org/privacy/smart-speaker-data-collection/](https://www.consumerreports.org/privacy/smart-speaker-data-collection/)
+
+4. “Cars Are Becoming Data Collection Machines.” *Wired*, 2023. [https://www.wired.com/story/cars-data-collection-privacy/](https://www.wired.com/story/cars-data-collection-privacy/)
+
+5. “How car data is used to raise insurance rates.” *The Markup*, 2023. [https://themarkup.org/privacy/2023/05/10/how-car-data-is-used-to-raise-insurance-rates](https://themarkup.org/privacy/2023/05/10/how-car-data-is-used-to-raise-insurance-rates)
+
+6. “Amazon’s Ring Doorbell Camera Has a Long History of Privacy Issues.” *Vice*, 2021. [https://www.vice.com/en/article/amazons-ring-doorbell-camera-has-a-long-history-of-privacy-issues/](https://www.vice.com/en/article/amazons-ring-doorbell-camera-has-a-long-history-of-privacy-issues/)
+---
+
+## The Cost of Lock‑In
+
+Another hidden cost is dependency. When you store your files in a proprietary cloud service, you become dependent on that company’s continued existence, pricing policies, and feature decisions. When you use a platform like Twitter or Facebook to build a community, that community can be severed by a single policy change.
+
+This is not hypothetical. Google has killed over 200 products, many of which had loyal users who lost years of accumulated data.[1] When Twitter changed hands in 2022, the API changes that followed broke countless third‑party apps and automated workflows.[2] When a platform decides to ban a user or remove content, there is often no appeal.
+
+Lock‑in also limits your future choices. If you want to leave a platform, you face a migration cost—exporting data, notifying contacts, rebuilding integrations. That cost is by design. It keeps you captive.
+
+Self‑hosting eliminates lock‑in. Your data is stored in open formats. Your community can communicate via federated protocols that no single entity controls. If you want to move to different software, you can—because you own the infrastructure.
+
+1. “Google’s Graveyard.” Killed by Google. [https://killedbygoogle.com/](https://killedbygoogle.com/)
+
+2. “Twitter’s API changes break third‑party apps.” *TechCrunch*, 2023. [https://techcrunch.com/2023/02/02/twitter-api-third-party-apps/](https://techcrunch.com/2023/02/02/twitter-api-third-party-apps/)
+
+---
+
+## The Cognitive Cost
+
+The most personal hidden cost is cognitive. Platforms are designed to capture and hold your attention. They exploit psychological vulnerabilities: the fear of missing out, the desire for social validation, the pleasure of novelty. The result is a fragmented mind, unable to focus on deep work or sustained thought.
+
+Nicholas Carr, in *The Shallows*, argued that the internet is reshaping our brains—reducing our capacity for deep reading and contemplation in favor of rapid, shallow processing.[1] The “Dead Internet Theory” suggests that much of what we encounter online may not even be human, further eroding trust in our own perceptions.[2]
+
+When you self‑host, you can design your own information environment. RSS feeds let you curate news without algorithmic amplification. Self‑hosted media servers play what you choose, not what an algorithm predicts will keep you watching. Your chat system connects you to real people, not engagement‑optimized bots.
+
+This is cognitive sovereignty: the ability to think clearly in a world designed to distract you.
+
+1. Carr, Nicholas. *The Shallows: What the Internet Is Doing to Our Brains*. W.W. Norton, 2010.
+
+2. IlluminatiPirate. “Dead Internet Theory: Most of the Internet is Fake.” Agora Road, 2021. [https://forum.agoraroad.com/index.php?threads/dead-internet-theory-most-of-the-internet-is-fake.3011/](https://forum.agoraroad.com/index.php?threads/dead-internet-theory-most-of-the-internet-is-fake.3011/)
+
+---
+
+## The Environmental Cost
+
+The final hidden cost is perhaps the most physical: the toll that our devices take on the planet. This is not just about electricity consumption, it is about mountains of electronic waste, rivers poisoned by mining operations, and communities stripped of clean water so that we can have the latest smartphone.
+
+### Planned Obsolescence: Designed to Die
+
+The term "planned obsolescence" was coined in the United States in the late 1920s, a business strategy of designing products with a limited useful life so they become obsolete, unfashionable, or non-functional after a certain period.[10] As one literature review notes, "creating goods with a limited lifetime led to increased consumption. It was a business strategy to create mass consumption, which the country needed in a time of economic crisis."[10]
+
+There are multiple forms this takes:
+
+- **Technological obsolescence**: Products become outdated because newer versions offer improved performance.
+- **Psychological obsolescence**: Fashion and marketing trigger the desire to buy newer versions, regardless of need.
+- **Systemic obsolescence**: Companies discontinue maintenance services or spare parts, making functional products unusable.
+- **Breakdown obsolescence**: Products are deliberately designed with components that will fail after a predetermined number of cycles.[10]
+
+The 2020 Apple "batterygate" case is a textbook example. Apple issued a software update that intentionally slowed down older iPhones, allegedly to frustrate consumers into discarding their existing phones and purchasing new ones rather than simply replacing the battery.[6] The company agreed to pay up to $500 million to settle the consumer fraud lawsuit.[6]
+
+### The Software Axe: Forced Obsolescence
+
+Increasingly, obsolescence is enforced through software rather than hardware failure. When Microsoft announced it was ending support for Windows 10 in October 2025, environmental and cybersecurity experts immediately raised alarms.[1] About 40 percent of all Windows users—hundreds of millions of devices—do not meet the technical requirements for Windows 11.[1][8]
+
+According to one analysis, up to 240 million perfectly functional devices will inevitably end up in landfills because Microsoft will no longer provide security updates.[1][8] Right to Repair Europe warned that this move could generate over 700 million kilograms of e-waste as users are forced to upgrade or replace hardware.[4] The coalition noted that around 400 million devices remain unable to upgrade to Windows 11, leaving users facing limited choices: replace devices, pay for extended services, switch to open-source systems, or continue with unsupported and insecure software.[4]
+
+This is not an isolated case. The Harvard Law Review notes that "software-dependent products now range from laptops and smartwatches to thermostats, medical equipment, toys and home appliances—all at risk of being rendered obsolete when manufacturers withdraw updates or stop providing security patches."[6] Right to Repair Europe warns that "software obsolescence undermines circularity strategies while driving environmental harm and unnecessary costs for consumers."[4]
+
+### The Mining Footprint
+
+Every discarded device must be replaced. And every new device requires raw materials—mined, refined, and processed at enormous environmental cost.
+
+Nearly sixty million tons of electronic waste is discarded annually, much of it produced by planned obsolescence.[6] Electronic waste contains toxic materials such as lead, mercury, cadmium, and brominated flame retardants that leach into the surrounding environment, poisoning water supplies and wildlife.[6] As of 2019, electronic waste represented approximately sixty-two billion dollars' worth of tangible raw materials (such as gold and other scarce metals) that have been intentionally rendered useless.[6] Only about twenty percent of electronic waste is recycled; the remaining eighty percent ends up in landfills and other waste repositories.[6]
+
+Lithium—critical for the batteries powering our portable devices—has its own devastating footprint. In Bolivia's Salar de Uyuni, the world's largest lithium deposit, mining operations create wastewater with arsenic levels nearly 50 parts per million in evaporation ponds—about 1,400 times higher than ecologically acceptable by U.S. Environmental Protection Agency standards.[9] Research also shows that long-term mining of lithium brines in other salt pans in Chile can cause groundwater levels to decline and land to subside.[9]
+
+In Brazil's Jequitinhonha Valley, home to up to 85% of the country's known lithium deposits, communities report a different reality. At Sigma Lithium's Greentech plant, residents experience seismic waves from explosions at least twice a day, along with atmospheric pollution, water shortages, and increased community tensions.[5] The company's daily water license from the Jequitinhonha River (3.6 million liters) strains the already semi-arid region, equivalent to the amount consumed by 24,000 people.[5] Residents can no longer use river water because it causes itching, and now depend on water tanks that the company refills monthly. water so heavily chlorinated that the smell is overwhelming, and often runs out before the month is over.[5]
+
+In Zimbabwe's Goromonzi and Buhera districts, where lithium mining companies siphon water from underground aquifers, local communities face a dual threat: dwindling water resources and escalating health issues.[7] Experts note that excessive water usage by lithium mines can deplete and contaminate local water sources, creating conditions favorable for water-borne diseases like diarrhoea, malaria, and Chagas.[7] Children are particularly vulnerable, with families struggling to access clean water for drinking, cooking, and washing.[7]
+
+### The Self-Reliance Alternative
+
+When you extend the life of your hardware by running open-source operating systems like Linux Mint, you directly reduce demand for new devices. Linux Mint was specifically designed for Windows users and requires only 2GB of RAM and 20GB of disk space to operate—well within the capabilities of hardware being discarded.[1][8]
+
+Josiah Hester, a Georgia Tech researcher who studies computing and sustainability, puts it simply: "So much perfectly good hardware is obsolesced by force, when users are more than willing to give it a second life."[1][8]
+
+Self-hosting is not a complete solution to the environmental crisis of technology. But it is a form of resistance against a system designed to turn your devices into timed paper weights, your water into corporate profit, and your community into a sacrifice zone for the next upgrade cycle.
+
+---
+
+## References
+
+1. Georgia Institute of Technology. “Microsoft Removing Support for Windows 10 Could Increase E-Waste, Cybersecurity Threats.” Oct. 22, 2025. [https://www.cc.gatech.edu/news/microsoft-removing-support-windows-10-could-increase-e-waste-cybersecurity-threats](https://www.cc.gatech.edu/news/microsoft-removing-support-windows-10-could-increase-e-waste-cybersecurity-threats)
+
+2. Williams, Gordon D.Z., et al. “The Water Quality Impacts of Legacy Hard-Rock Lithium Mining and Processing.” *Environmental Science & Technology* 59, no. 49 (Dec. 1, 2025): 26492-26505. [https://www.eurekalert.org/news-releases/1115919](https://www.eurekalert.org/news-releases/1115919)
+
+4. “Software support cut-offs will cause 'e-waste tsunami'.” letsrecycle.com, Oct. 13, 2025. [https://www.letsrecycle.com/news/right-to-repair-warns-of-e-waste-tsunami-from-software-support-cut-offs/](https://www.letsrecycle.com/news/right-to-repair-warns-of-e-waste-tsunami-from-software-support-cut-offs/)
+
+5. “In Brazil's Jequitinhonha valley, communities share how to reduce lithium mining impacts.” Mongabay, Apr. 29, 2025. [https://news.mongabay.com/2025/04/in-brazils-lithium-valley-communities-share-how-to-reduce-mining-impacts/](https://news.mongabay.com/2025/04/in-brazils-lithium-valley-communities-share-how-to-reduce-mining-impacts/)
+
+6. “Waste, Property, and Useless Things.” *Harvard Law Review*, Vol. 138, Issue 5, March 2025. [https://harvardlawreview.org/print/vol-138/waste-property-and-useless-things/](https://harvardlawreview.org/print/vol-138/waste-property-and-useless-things/)
+
+7. “Water woes: How mining is depleting health in Zimbabwe's rural communities.” NewsDay Zimbabwe, Oct. 20, 2025. [https://www.newsday.co.zw/local-news/article/200047471/water-woes-how-mining-is-depleting-health-in-zimbabwes-rural-communities](https://www.newsday.co.zw/local-news/article/200047471/water-woes-how-mining-is-depleting-health-in-zimbabwes-rural-communities)
+
+8. Georgia Institute of Technology. “Microsoft Removing Support for Windows 10 Could Increase E-Waste, Cybersecurity Threats.” College of Computing, Oct. 21, 2025. [https://www.cc.gatech.edu/news/microsoft-removing-support-windows-10-could-increase-e-waste-cybersecurity-threats](https://www.cc.gatech.edu/news/microsoft-removing-support-windows-10-could-increase-e-waste-cybersecurity-threats)
+
+9. “Examining the environmental effects of mining the world's largest lithium deposit.” IOM3, Apr. 29, 2025. [https://www.iom3.org/resource/examining-the-environmental-effects-of-mining-the-world-s-largest-lithium-deposit.html](https://www.iom3.org/resource/examining-the-environmental-effects-of-mining-the-world-s-largest-lithium-deposit.html)
+
+10. Rivera, Julio L., and Amrine Lallmahomed. “Environmental implications of planned obsolescence and product lifetime: a literature review.” *International Journal of Sustainable Engineering* 9 (2016): 119-129. [https://www.tandfonline.com/doi/full/10.1080/19397038.2015.1099757](https://www.tandfonline.com/doi/full/10.1080/19397038.2015.1099757)
+
+---
+
+## Conclusion: Conscious Choice
+
+The point of examining these hidden costs is not to reject convenience altogether. Cloud services have genuine advantages: redundancy, scalability, geographic distribution. For many purposes, they are the right tool.
+
+But the choice should be conscious. When you use a “free” service, know what you are paying with. When you store data in the cloud, have a backup plan. When you rely on a platform, understand that it may not always be there.
+
+Self‑hosting is not about purity. It is about options. By maintaining your own infrastructure, you ensure that convenience does not become dependency. You retain the ability to choose—and that is the most valuable convenience of all.
+
+</details>
+
 <br><b>Hardware:</b>
 <br>Recommended Devices:
 
@@ -2906,6 +3392,87 @@ These drivers are experimental and may not be stable. There is a risk of data co
 <hr>
 
 ### SelfHosted:
+
+<details><summary><b>Why Self-Host: A Philosophy</b></summary>
+
+Self-hosting isn’t just a technical exercise—it’s a deliberate choice to reclaim agency in a world where digital infrastructure increasingly dictates how we live, learn, and connect. This section explores the philosophical underpinnings of running your own services, drawing on decades of critical thought about education, technology, and power. The goal is to help you understand *why* self-hosting matters beyond the practical benefits of privacy and control.
+
+---
+
+## The Tools of Learning (and Unlearning)
+
+In 1947, Dorothy L. Sayers delivered a prescient lecture at Oxford titled “The Lost Tools of Learning.” She argued that modern education had abandoned the medieval *trivium*, grammar, dialectic, and rhetoric, which taught students *how* to think rather than merely *what* to think. The result, she warned, was a population easily swayed by propaganda, unable to distinguish fact from opinion, and incapable of independent reasoning. ( Sayers, Dorothy L. “The Lost Tools of Learning.” Oxford, 1947. [Reprinted in *The Lost Tools of Learning* (Methuen, 1948).])
+
+Sayers’ critique resonates today. The internet, once hailed as a democratizing force, has become a battleground for attention, where algorithms shape our beliefs and platforms monetize our confusion. Self-hosting is a way to reclaim the tools of learning: you decide what software to run, what data to keep, and what communities to engage with. It’s an exercise in **grammar** (knowing your hardware and software), **dialectic** (understanding network architecture and security trade‑offs), and **rhetoric** (sharing your setup and knowledge with others). In essence, self-hosting is a practical return to the trivium.
+
+---
+
+## The Dead Internet: A Cautionary Tale
+
+A growing body of internet folklore—often called the “Dead Internet Theory”—suggests that much of what we encounter online is not human-generated at all. Posts, comments, even entire news articles may be produced by bots or AI, designed to manipulate discourse and manufacture consent. While the theory remains speculative, its core observation is undeniable: automated accounts flood social media, astroturf campaigns shape political narratives, and search results are gamed by SEO spam.
+
+When you self-host, you step out of this hall of mirrors. Your file server, your chat system, your media stream—these are real interactions with real data, untouched by algorithmic curation. You no longer need to wonder whether the comment praising a product is a bot or the article you’re reading was written by a language model. Self-hosting restores a sense of authenticity to your digital life.
+
+IlluminatiPirate. “Dead Internet Theory: Most of the Internet is Fake.” Agora Road, 2021. [Archived at https://forum.agoraroad.com/index.php?threads/dead-internet-theory-most-of-the-internet-is-fake.3011/](https://forum.agoraroad.com/index.php?threads/dead-internet-theory-most-of-the-internet-is-fake.3011/)
+---
+
+## The Architecture of Control
+
+R. Buckminster Fuller, in his 1983 book *Grunch of Giants*, described the rise of supranational corporations as an invisible “gross universe cash heist”—a system designed to concentrate wealth and power by exploiting humanity’s ignorance of its own technological potential. Fuller argued that the real wealth of the world is not money but *know-how*, and that corporations had monopolized that know‑how for their own benefit.
+
+Fuller’s analysis extends naturally to the internet. A handful of companies control the platforms we use daily, the data we generate, and the algorithms that decide what we see. They have the know‑how—and the incentive—to shape our behavior for profit. Self-hosting is a way to reclaim that know‑how, to build your own small corner of the network using open tools and shared knowledge. It’s a practical act of decentralization, a counterweight to the Grunch.
+
+ Fuller, R. Buckminster. *Grunch of Giants*. St. Martin’s Press, 1983.
+
+---
+
+## Surveillance and Censorship: The Evidence
+
+Government and corporate overreach are not theoretical. In 2024, DARPA launched the [TRACTOR program](https://www.darpa.mil/program/translating-all-c-to-rust) to automatically translate legacy C code into Rust, citing memory‑safety vulnerabilities as a national security concern.[1] While the goal is laudable, it also illustrates how deeply the state invests in controlling the software that underpins critical infrastructure. Meanwhile, platforms like YouTube have explicitly called for governments to pass laws enabling more aggressive censorship of “harmful” content,[2] and Google has been caught demoting search results for sites that discuss Islamic terrorism.[3]
+
+These examples show that centralized platforms are not neutral conduits; they are active participants in shaping discourse. When you host your own services, you insulate yourself from arbitrary content moderation and surveillance. Your data stays on your hardware, accessible only to those you trust.
+
+1. Lemos, Robert. “DARPA Aims to Ditch C Code, Move to Rust.” Dark Reading, Aug. 13, 2024. [https://www.darkreading.com/application-security/darpa-aims-to-ditch-c-code-move-to-rust](https://www.darkreading.com/application-security/darpa-aims-to-ditch-c-code-move-to-rust)
+
+2. Nolan, Lucas. “Google Speech Code: YouTube CEO Susan Wojcicki Calls on Governments to Censor the Internet.” Breitbart, Feb. 16, 2022. [Archived at https://web.archive.org/web/20240810192332/https://www.breitbart.com/tech/2022/02/16/google-speech-code-youtube-ceo-susan-wojcicki-calls-on-governments-to-censor-the-internet/](https://web.archive.org/web/20240810192332/https://www.breitbart.com/tech/2022/02/16/google-speech-code-youtube-ceo-susan-wojcicki-calls-on-governments-to-censor-the-internet/)
+
+3. Greenfield, Daniel. “Google Warns Freedom Center to Censor Mentions of Islamic Terror.” FrontPage Magazine, Mar. 29, 2024. [https://www.frontpagemag.com/google-warns-freedom-center-to-censor-mentions-of-islamic-terror/](https://www.frontpagemag.com/google-warns-freedom-center-to-censor-mentions-of-islamic-terror/)
+ 
+---
+
+## Ethical Responsibility
+
+Beyond personal benefit, self-hosting carries an ethical dimension. Centralized platforms have been used to facilitate human trafficking, child exploitation, and other crimes. A 2021 report found that Facebook was the primary recruitment tool for sex traffickers in the United States, with 59% of online recruitment occurring on the platform.[1] Lawsuits have forced courts to recognize that platforms can be held liable when they knowingly benefit from such exploitation.[2]
+
+By running your own services, you avoid supporting a system that profits from—or at least fails to adequately prevent—these abuses. You also gain the ability to create safe, private spaces for communities that might otherwise be vulnerable to harassment or exploitation on mainstream platforms.
+
+1. De Chant, Tim. “Facebook is a hub of sex trafficking recruitment in the US, report says.” Ars Technica, June 10, 2021. [https://arstechnica.com/tech-policy/2021/06/facebook-is-a-hub-of-sex-trafficking-recruitment-in-the-us-report-says/](https://arstechnica.com/tech-policy/2021/06/facebook-is-a-hub-of-sex-trafficking-recruitment-in-the-us-report-says/)
+
+2. Cipriano, Andrea. “Facebook Liable for Human Trafficking Connections: Court Ruling.” The Crime Report, June 28, 2021. [Archived at https://web.archive.org/web/20240810163040/https://thecrimereport.org/2021/06/28/facebook-liable-for-human-trafficking-connections-court-ruling/](https://web.archive.org/web/20240810163040/https://thecrimereport.org/2021/06/28/facebook-liable-for-human-trafficking-connections-court-ruling/)
+
+---
+
+## The Problem of Software Bloat
+
+Modern software is often far larger and slower than necessary. As Isaac Lyman noted in a Stack Overflow blog post, “apps *are* slower than they used to be. And exponentially larger without a corresponding increase in value.” The reasons are complex: market pressure to add features, the expectation that software should be free (leading to ad‑supported models that consume resources), and the sheer convenience of using bloated frameworks.
+
+Self-hosting lets you choose lean, well‑crafted software. The homelab community values efficiency—witness the popularity of Alpine Linux, minimalist Docker images, and lightweight services like Audiobookshelf or Jellyfin. By running your own stack, you reject the “more is better” mentality and embrace software that respects your hardware and your time.
+
+Lyman, Isaac. “Is software getting worse?” Stack Overflow Blog, Dec. 25, 2023. [https://stackoverflow.blog/2023/12/25/is-software-getting-worse/](https://stackoverflow.blog/2023/12/25/is-software-getting-worse/)
+
+---
+
+## Conclusion: A Modern Trivium
+
+Self-hosting is not merely a technical hobby; it is a way of thinking and living. It requires you to learn the **grammar** of your system—the hardware specs, the configuration files, the network topology. It demands **dialectic**—the ability to troubleshoot, to reason about security, to weigh trade‑offs. And it invites **rhetoric**—the sharing of your knowledge through documentation, forums, and open‑source contributions.
+
+In an age of manufactured consent, algorithmic manipulation, and corporate surveillance, self-hosting is an act of resistance. It is a declaration that you will not be a passive consumer of digital services, but an active participant in building the kind of internet you want to inhabit.
+
+---
+
+*This section is meant to be a living document—add your own insights and references as you discover them. The homelab is not just a collection of hardware; it’s a statement about how you choose to live in the digital world.*
+</details>
+
 - [Awesome-Selfhosted](https://github.com/awesome-selfhosted/awesome-selfhosted).
 
 ### Audiobooks & Podcasts:
