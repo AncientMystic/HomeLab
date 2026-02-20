@@ -582,10 +582,6 @@ Josiah Hester, a Georgia Tech researcher who studies computing and sustainabilit
 
 Self-hosting is not a complete solution to the environmental crisis of technology. But it is a form of resistance against a system designed to turn your devices into timed paper weights, your water into corporate profit, and your community into a sacrifice zone for the next upgrade cycle.
 
----
-
-## References
-
 1. Georgia Institute of Technology. “Microsoft Removing Support for Windows 10 Could Increase E-Waste, Cybersecurity Threats.” Oct. 22, 2025. [https://www.cc.gatech.edu/news/microsoft-removing-support-windows-10-could-increase-e-waste-cybersecurity-threats](https://www.cc.gatech.edu/news/microsoft-removing-support-windows-10-could-increase-e-waste-cybersecurity-threats)
 
 2. Williams, Gordon D.Z., et al. “The Water Quality Impacts of Legacy Hard-Rock Lithium Mining and Processing.” *Environmental Science & Technology* 59, no. 49 (Dec. 1, 2025): 26492-26505. [https://www.eurekalert.org/news-releases/1115919](https://www.eurekalert.org/news-releases/1115919)
