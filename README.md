@@ -3226,22 +3226,24 @@ i often found myself looking up these details when comparing GPUs to try to find
   <img width="800" src="https://github.com/AncientMystic/HomeLab/blob/main/img/OS-Banner.png"></p>
   
 ### Suggested OS:
-
 #1 [Proxmox](https://www.proxmox.com/en/) - For virtualization, self-hosting and all around general usage. it can even be used for gaming and other high performance tasks such as AI within VMs/Containers. 
 <br>
 <br>[QubesOS](https://www.qubes-os.org/) - For heightened Security / Pirvacy and a compartmented OS on a single PC via the Xen hypervisor base. features some very interesting methods for security and is worth checking out if you value security / privacy as your top priority. 
 
 ### Proxmox related content:
-<br> [Proxmox Forums](https://forum.proxmox.com/)
+[Proxmox Forums](https://forum.proxmox.com/)
 ## Additional Resources:
-<br> [Proxmox VE Helper scripts](https://community-scripts.github.io/ProxmoxVE/) - Hundreds of scripts to quickly setup a wide range of projects on proxmox.
+[Proxmox VE Helper scripts](https://community-scripts.github.io/ProxmoxVE/) - Hundreds of scripts to quickly setup a wide range of projects on proxmox.
 <br> [ProxMenux](https://github.com/MacRimi/ProxMenux) - Seperate Dashboard / CLI menu with more information & management options handy for proxmox management.
 
 ## VMs:
-<br> [OSX-KVM](https://github.com/kholia/OSX-KVM)
+[OSX-KVM](https://github.com/kholia/OSX-KVM)
 
 ## Tutorials:
-GPU related: 
+[XDA - A beginner's guide to setting up Proxmox](https://www.xda-developers.com/proxmox-guide/)
+<br> [Proxmox Beginner Tutorial: How to set up your first virtual machine on a secondary hard disk.](https://forum.proxmox.com/threads/proxmox-beginner-tutorial-how-to-set-up-your-first-virtual-machine-on-a-secondary-hard-disk.59559/)
+<br>
+<br> GPU related: 
 <br> [Simultaneous Intel GVT-G and Nvidia PCIe GPU Passthrough in Proxmox](https://kaanlabs.com/simultaneous-intel-gvt-g-and-nvidia-pcie-gpu-passthrough-in-proxmox/)
 <br> nvidia:
 <br> [Jellyfin LXC with Nvidia GPU transcoding and network storage](https://forum.proxmox.com/threads/jellyfin-lxc-with-nvidia-gpu-transcoding-and-network-storage.138873/)
@@ -3250,25 +3252,31 @@ GPU related:
 <br> [[Guide] Jellyfin + remote network shares + HW transcoding with Intel's QSV + unprivileged LXC](https://forum.proxmox.com/threads/guide-jellyfin-remote-network-shares-hw-transcoding-with-intels-qsv-unprivileged-lxc.142639/)
 
 ## General info/helpful:
-<br> [XDA - I tried gaming on a VM hosted on a Proxmox server – here’s how it went](https://www.xda-developers.com/gaming-on-a-proxmox-vm/)
+[XDA - I tried gaming on a VM hosted on a Proxmox server – here’s how it went](https://www.xda-developers.com/gaming-on-a-proxmox-vm/)
 <br> [XDA - Running Proxmox VMs with GPU passthrough is much easier than it used to be](https://www.xda-developers.com/running-proxmox-vms-with-gpu-passthrough-is-much-easier/)
 <br> [Windows Gaming VM on Proxmox: Performance Optimization in MSFS 2020](https://forum.level1techs.com/t/windows-gaming-vm-on-proxmox-performance-optimization-in-msfs-2020/187683)
 
 ### Qubes Related content: 
-Additional Resources
-<br> 
+Additional Resources:
 <br>
+## Tutorials: 
+[Qubes OS installation guide](https://doc.qubes-os.org/en/latest/user/downloading-installing-upgrading/installation-guide.html)
+<br> [XDA - Qubes OS is the perfect operating system for security-conscious users](https://www.xda-developers.com/qubes-os-guide/)
+<br> [QubesOS setup & configuration](https://github.com/0x4v0c4d0/qubes) - Instructions, scripts and files for installing and configuring QubesOS (including VPN and Crpto wallet suggestions.)
+<br> Disposables:
+<br> [How to use disposables](https://doc.qubes-os.org/en/latest/user/how-to-guides/how-to-use-disposables.html) - A disposable is a stateless qube, it does not save data for the next boot. These qubes can serve various uses cases that require a pristine environment
 
 ## Other OS related: 
-<br> ## Windows: 
-<br> # Windows Ansible Playbook - AME Playbooks: [AME Wizard](https://amelabs.net/) **NOTE: if you ever need to uninstall a playbook, you'll need to reinstall Windows.**
+ <b>Windows:</b>
+<br> Windows Ansible Playbook - AME Playbooks: [AME Wizard](https://amelabs.net/) **NOTE: if you ever need to uninstall a playbook, you'll need to reinstall Windows.**
 <br> [windows-playbooks](https://github.com/stravos97/windows-playbooks) - Windows setup and configuration via Ansible. 
 <br> [AtlasOS](https://atlasos.net/) - [AtlasOS - Github](https://github.com/Atlas-OS/Atlas) - An open and lightweight modification to Windows, designed to optimize performance, privacy and usability. 
 <br> [ReviOS Playbook](https://github.com/meetrevision/playbook) - A lightweight, stable, and performance-focused customized version of Windows that enhances privacy and compatibility 
 <br> [Redress Server PlayBook - Windows server 2022](https://github.com/redress-server/playbook) - 
 <br> [RapidOS](https://github.com/rapid-community/RapidOS) -  RapidOS is a powerful modification for Windows 10/11 that radically transforms the OS through deep customization, while maintaining rock-solid stability through the AME Beta playbook system. 
-<br> [Rapid](https://github.com/Rapid-OS/Rapid) - A tailor-made modification of Windows designed for maximize Gaming performance and latencies. 
-## Group Policy: 
+<br> [Rapid](https://github.com/Rapid-OS/Rapid) - A tailor-made modification of Windows designed for maximize Gaming performance and latencies.
+<br>
+<br> <b>Windows Group Policy:</b> 
 <br> [Group Policy settings to improve privacy/security](https://discuss.privacyguides.net/t/group-policy-settings-to-improve-privacy-security/27339)
 <br> [30 Critical Group Policy Settings to Secure & Optimize Windows](https://www.pctips.com/group-policy-settings/) - 
 <br> [Privacy and security baseline for personal Windows 10 and Windows 11](https://github.com/troennes/private-secure-windows) - 
