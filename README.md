@@ -3228,15 +3228,57 @@ i often found myself looking up these details when comparing GPUs to try to find
 ### Suggested OS:
 
 #1 [Proxmox](https://www.proxmox.com/en/) - For virtualization, self-hosting and all around general usage. it can even be used for gaming and other high performance tasks such as AI within VMs/Containers. 
+<br>
 <br>[QubesOS](https://www.qubes-os.org/) - For heightened Security / Pirvacy and a compartmented OS on a single PC via the Xen hypervisor base. features some very interesting methods for security and is worth checking out if you value security / privacy as your top priority. 
 
 ### Proxmox related content:
-Additional Resources:
-<br><a href="https://community-scripts.github.io/ProxmoxVE/" target="_blank">Proxmox VE Helper scripts</a> - Hundreds of scripts to quickly setup a wide range of projects on proxmox.
-<br><a href="https://github.com/MacRimi/ProxMenux" target="_blank">ProxMenux</a> - Seperate Dashboard / CLI menu with more information & management options handy for proxmox management.
-<br>VMs:
-<br><a href="https://github.com/kholia/OSX-KVM" target="_blank">OSX-KVM</a> - Mac OSX (multiple versions to choose from) On Proxmox. 
+<br> [Proxmox Forums](https://forum.proxmox.com/)
+## Additional Resources:
+<br> [Proxmox VE Helper scripts](https://community-scripts.github.io/ProxmoxVE/) - Hundreds of scripts to quickly setup a wide range of projects on proxmox.
+<br> [ProxMenux](https://github.com/MacRimi/ProxMenux) - Seperate Dashboard / CLI menu with more information & management options handy for proxmox management.
 
+## VMs:
+<br> [OSX-KVM](https://github.com/kholia/OSX-KVM)
+
+## Tutorials:
+GPU related: 
+<br> [Simultaneous Intel GVT-G and Nvidia PCIe GPU Passthrough in Proxmox](https://kaanlabs.com/simultaneous-intel-gvt-g-and-nvidia-pcie-gpu-passthrough-in-proxmox/)
+<br> nvidia:
+<br> [Jellyfin LXC with Nvidia GPU transcoding and network storage](https://forum.proxmox.com/threads/jellyfin-lxc-with-nvidia-gpu-transcoding-and-network-storage.138873/)
+<br> intel:
+<br> [Enable Mediated Intel iGPU (GVT-g) for VM's in Proxmox (with Plex)](https://www.reddit.com/r/homelab/comments/jyudnn/enable_mediated_intel_igpu_gvtg_for_vms_in/)
+<br> [[Guide] Jellyfin + remote network shares + HW transcoding with Intel's QSV + unprivileged LXC](https://forum.proxmox.com/threads/guide-jellyfin-remote-network-shares-hw-transcoding-with-intels-qsv-unprivileged-lxc.142639/)
+
+## General info/helpful:
+<br> [XDA - I tried gaming on a VM hosted on a Proxmox server – here’s how it went](https://www.xda-developers.com/gaming-on-a-proxmox-vm/)
+<br> [XDA - Running Proxmox VMs with GPU passthrough is much easier than it used to be](https://www.xda-developers.com/running-proxmox-vms-with-gpu-passthrough-is-much-easier/)
+<br> [Windows Gaming VM on Proxmox: Performance Optimization in MSFS 2020](https://forum.level1techs.com/t/windows-gaming-vm-on-proxmox-performance-optimization-in-msfs-2020/187683)
+
+### Qubes Related content: 
+Additional Resources
+<br> 
+<br>
+
+## Other OS related: 
+<br> ## Windows: 
+<br> # Windows Ansible Playbook - AME Playbooks: [AME Wizard](https://amelabs.net/) **NOTE: if you ever need to uninstall a playbook, you'll need to reinstall Windows.**
+<br> [windows-playbooks](https://github.com/stravos97/windows-playbooks) - Windows setup and configuration via Ansible. 
+<br> [AtlasOS](https://atlasos.net/) - [AtlasOS - Github](https://github.com/Atlas-OS/Atlas) - An open and lightweight modification to Windows, designed to optimize performance, privacy and usability. 
+<br> [ReviOS Playbook](https://github.com/meetrevision/playbook) - A lightweight, stable, and performance-focused customized version of Windows that enhances privacy and compatibility 
+<br> [Redress Server PlayBook - Windows server 2022](https://github.com/redress-server/playbook) - 
+<br> [RapidOS](https://github.com/rapid-community/RapidOS) -  RapidOS is a powerful modification for Windows 10/11 that radically transforms the OS through deep customization, while maintaining rock-solid stability through the AME Beta playbook system. 
+<br> [Rapid](https://github.com/Rapid-OS/Rapid) - A tailor-made modification of Windows designed for maximize Gaming performance and latencies. 
+## Group Policy: 
+<br> [Group Policy settings to improve privacy/security](https://discuss.privacyguides.net/t/group-policy-settings-to-improve-privacy-security/27339)
+<br> [30 Critical Group Policy Settings to Secure & Optimize Windows](https://www.pctips.com/group-policy-settings/) - 
+<br> [Privacy and security baseline for personal Windows 10 and Windows 11](https://github.com/troennes/private-secure-windows) - 
+<br> [Windows On Reins](https://github.com/gordonbay/Windows-On-Reins) - Wor is a Powershell script to harden, debloat, optimize, enhance privacy, avoid fingerprinting and improve performance on Windows 10 and 11. 
+<br> [ PC-Optimization-Hub](https://github.com/BoringBoredom/PC-Optimization-Hub) - collection of various resources devoted to performance and input lag optimization 
+
+<hr>
+<p align="center">
+  <img width="800" src="https://github.com/AncientMystic/HomeLab/blob/main/img/Filesystem-Banner.png"></p>
+  
 ### Filesystems:
 
 ### [XFS vs EXT4: Which Linux File System Is Better?](https://blog.purestorage.com/purely-educational/xfs-vs-ext4-which-linux-file-system-is-better/)  
@@ -3296,6 +3338,14 @@ In testing, I ran a Ubuntu VM with BTRFS and compressed roughly 5.5GB of OS file
 
 All these filesystems (XFS, ZFS, and BTRFS) can be utilized on **Proxmox**, a homelab virtualization server platform.
 
+## Helpful links: 
+ZFS:
+<br> [ZFS Guide for starters and advanced users. Concepts, pool config, tuning, troubleshooting](https://forum.level1techs.com/t/zfs-guide-for-starters-and-advanced-users-concepts-pool-config-tuning-troubleshooting/196035)
+<br> [Solaris 10: ZFS Evil Tuning Guide](https://www.solaris-cookbook.eu/solaris/solaris-10-zfs-evil-tuning-guide/)
+<br> [ZFS - how to use a file as a ZIL](https://shkspr.mobi/blog/2023/04/zfs-how-to-use-a-file-as-a-zil/) 
+<br> [OpenZFS Summit highlights Fast Dedup and RAIDZ Expansion](https://www.truenas.com/community/threads/openzfs-summit-highlights-fast-dedup-and-raidz-expansion.113468/)
+<br> [Fast Dedup, tested and reviewed](https://discourse.practicalzfs.com/t/fast-dedup-tested-and-reviewed/1907)
+<br> [Fast Dedup Review Guide](https://github.com/openzfs/zfs/discussions/15896)
 <hr>
 
 ## Useful Software:
@@ -3491,6 +3541,82 @@ In an age of manufactured consent, algorithmic manipulation, and corporate surve
 - TTS: [Kokoro FastAPI](https://github.com/remsky/Kokoro-FastAPI) - A Text-to-Speech service built with FastAPI, allowing fast and efficient text-to-speech conversion using AI models.
 - DeepResearch: [Local Deep Research](https://github.com/LearningCircuit/local-deep-research) - Local Deep Research achieves ~95% on SimpleQA benchmark (tested with GPT-4.1-mini). Supports local and cloud LLMs (Ollama, Google, Anthropic, ...). Searches 10+ sources - arXiv, PubMed, web, and your private documents. Everything Local & Encrypted. 
 
+### Additional AI Resources: 
+ Text: 
+<br> [UGI/Uncensored General Intelligence Leaderboard](https://dontplantoend-ugi-leaderboard.hf.space/) - Measures a model's knowledge of sensitive topics and its ability to follow instructions when faced with controversial prompts.
+
+<details><summary>UGI Scoring:</summary>
+UGI is the combination of:
+
+    Knowledge of sensitive information:
+        Hazardous: Knowledge of topics that LLMs probably shouldn't assist with.
+        Entertainment: Knowledge of adult or controversial entertainment and media.
+        SocPol: Knowledge of sensitive socio-political topics.
+    W/10 👍 (Willingness/10): How far a model can be pushed before it refuses to answer or deviates from instructions.
+        W/10-Direct: Measures if the model directly refuses to respond to certain prompts.
+        W/10-Adherence: Measures if a model deviates from instructions, which can be a form of refusal or a lack of instruction following capabilities.
+
+A model with a high UGI, but low W/10 for example may be able to help provide you with an significant amount of accurate information on sensitive topics, but will see it as educational and will refuse to form the information into something against its values.
+
+<details><summary>NatInt 💡: Natural Intelligence</summary>
+
+Measures a model's general knowledge and reasoning capabilities across a range of standard and specialized domains.
+NatInt is the combination of:
+
+    Textbook: Measures knowledge of standard, factual information like history, statistics, math, and logic.
+    Pop Culture: Knowledge of specific details from things like video games, movies, music, and internet culture.
+    World Model: Tasks that test a model's understanding of real-world properties and patterns.
+        Cooking (% Error): Predicts needed ingredient amounts for recipes.
+        GeoGuesser (km Error): Identifies a location based on a description of its surroundings.
+        Weight (% Error): Estimates the weight of various objects based on their description.
+        Music (Error): Predicts a song's musical attributes (like bpm and loudness) based on its lyrics.
+        Show Recommendation Score: A model's ability to predict what rating out of ten a person will rate a TV show based on their previous ratings.
+            Show Rec MAE: The mean absolute error between the model's predicted ratings and the user's true ratings.
+            Show Rec Correlation: Measures how well the model's predictions trend with the user's true ratings.
+            Show Rec Std Dev Error: The absolute difference between the spread of the model's predictions and the spread of the true ratings.
+</details>
+
+<details><summary>Writing ✍️</summary>
+
+A score of a model's writing ability, factoring in intelligence, writing style, amount of repetition, and adherence to requested output length. The score attempts to match the average person's preferences. Optimal values are displayed in parentheses in the column headers for the metrics used in the formula (e.g., 'Readability Grade (~5.5)'). These values were estimated using human feedback through model preference.
+
+Models that are not able to consistently produce writing responses due to irreparable repetition issues, broken outputs, or constant refusals are not given a writing score.
+Writing Metrics
+
+    NSFW/Dark Lean: Measures the tonal direction a model takes when doing creative writing, from SFW to explicit (NSFW) and from lighthearted to violent/tragic (Dark). NOTE: A high or low number does not mean it is high or low quality. These two metrics solely measure frequency.
+    Stylistic Metrics:
+        Readability Grade: The estimated US school grade level needed to understand the text.
+        Verb/Noun Ratio: The ratio of action words (verbs) to naming words (nouns).
+        Adj&Adv %: The percentage of descriptive words (adjectives and adverbs) out of total words.
+        Dialogue %: The percentage of sentences in the model's response that is dialogue when writing stories.
+    Repetition Metrics:
+        Lexical Stuckness: Measures if the model gets 'stuck' using a limited vocabulary in parts of its writing.
+        Originality: Measures how unique a model's writing outputs are by comparing the word usage and themes used across different writing prompts.
+        Semantic Redundancy: Detects when the same concept is expressed multiple times with different wording.
+    Length Adherence:
+        Length Error %: The average percentage difference between a user-requested word count and the generated word count.
+        Exceeded %: The percentage of times the model responds with more words than requested.
+    Style Adherence: How closely the model is able to match the writing style of a given example.
+</details>
+
+<details><summary>Political Lean 📋</summary>
+Political Metrics
+
+    Political Lean 📋: Measures a model's political alignment based on its responses to the 12axes test. The Political Lean metric uses a simplified version with the Assimilationist-Multiculturalist, Average(Collectivize-Privatize & Planned-LaissezFaire), and Progressive-Traditional axes. The score ranges from -100% (Left) to 100% (Right).
+    12axes Ideology: The closest matching political ideology from the 12axes test.
+    Aggregate Scores:
+        Govt: Higher = State authority, Lower = Individual liberty
+        Dipl: Higher = Global outlook, Lower = National interests
+        Econ: Higher = Economic equality, Lower = Market freedom
+        Scty: Higher = Progressive values, Lower = Traditional values
+  </details>
+</details>
+
+### Cloud 
+[☁️ Cosmos](https://github.com/azukaar/cosmos-server) - Secure and Easy Selfhosted Home Server. Take control of your data and privacy without sacrificing security and stability (Authentication, anti-DDOS, anti-bot) 
+<br> [CryptPad](https://cryptpad.org/) - Open Source E2EE Collaborative office suite
+<br> [NextCloud](https://nextcloud.com/install/) - Self-Hosted Cloud 
+
 ### Media Streaming:
 
 - [Jellyfin](https://jellyfin.org/) - An open-source media server for managing and streaming your media content to various devices.
@@ -3509,7 +3635,8 @@ In an age of manufactured consent, algorithmic manipulation, and corporate surve
 ### Media Conversion:
 
 - [Tdarr](https://home.tdarr.io/) - A distributed media transcoding system designed to automate and optimize the conversion of your media collection, running on your own server.
-
+  - [Tdarr Instructions on how to setup tdarr automatic hardware AV1 transcoding with the intel Arc gpus such as the a380.](https://github.com/returnhappy/tdarr_intel_arc_av1)
+  
 ### Metasearch Engines:
 
 - [SearXNG](https://github.com/searxng/searxng) - SearXNG is a free internet metasearch engine which aggregates results from various search services and databases. Users are neither tracked nor profiled.
