@@ -3258,7 +3258,10 @@ i often found myself looking up these details when comparing GPUs to try to find
 
 ### Qubes Related content: 
 Additional Resources:
-<br>
+<br> [Qubes - Community Guides](https://forum.qubes-os.org/c/guides/14) - a List of Guides directly from the QubesOS Community.
+<br> [Qubes network server](https://github.com/Rudd-O/qubes-network-server) - Turn your Qubes OS machine into a network server 
+<br> [saltstack configs](https://github.com/unman/shaker) - This let's you declaratively manage your whole system.
+<br> [Ansible plugins for QubesOS](https://github.com/QubesOS/qubes-ansible) - Ansible module and connection plugin for Qubes OS 
 ## Tutorials: 
 [Qubes OS installation guide](https://doc.qubes-os.org/en/latest/user/downloading-installing-upgrading/installation-guide.html)
 <br> [XDA - Qubes OS is the perfect operating system for security-conscious users](https://www.xda-developers.com/qubes-os-guide/)
