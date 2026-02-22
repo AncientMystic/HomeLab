@@ -1209,7 +1209,7 @@ This summary is based strictly on the 2022, 2023, and 2024 AFR data provided abo
 
 <details><summary><b>HDD Longevity</b></summary>
 
-Consider this guide your manual. WEneed to take care of our hardware, we should not see it as disposable. i for example have a 1.5TB WD Green drive that is almost 20 years old now, it has been used the most of any drive i have as my tmp drive, torrent drive, etc, this drive has been rewritten more times than i can remember and it still works. i have only lost roughly 2 out of 20+ of my large storage drives. this guide will detail how you to can get the most of of your HDDs. 
+Consider this guide your manual. We need to take care of our hardware, we should not see it as disposable. i for example have a 1.5TB WD Green drive that is almost 20 years old now, it has been used the most of any drive i have, as my tmp drive, torrent drive, etc, this drive has been rewritten more times than i can remember and it still works. i have only lost roughly 2 out of 20+ of my large storage drives. this guide will detail how you can get the most of of your HDDs. 
 
 ### **The Longevity Engineer's Guide to Hard Drive Survival**
 
