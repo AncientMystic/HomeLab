@@ -4,6 +4,13 @@
 # HomeLab
 HomeLab CheatSheet &amp; AwesomeList
 <br> Created for the [HomeLab Group](https://smp6.simplex.im/g#P45YjyWy-__e3p3OqoRvU_4sjcSorUz0v8hCtWEPRtk) on Simplex Chat [![Simplex Chat](https://avatars.githubusercontent.com/u/59927747?s=48&v=4)](https://simplex.chat/)
+
+<hr>
+
+Help support more informative and helpful content with XMR/Monero: 45TftvPzdTNaye3AyftsHLd9p9mHqCLqNcTrbo8TmAMzYr4HmeebKZUMt5WNbmXjxe2p1L5kvQniVdvjuhewmQuKLN6Rmzd
+
+<hr> 
+
 <br>
 <br> The goal of this repo is to become your map to help you navigate the HomeLabbing experience. 
 <br> This page will be updated randomly with new information, so stay tuned. (contributions welcome!)
@@ -11,6 +18,7 @@ HomeLab CheatSheet &amp; AwesomeList
 <br> Note: many of the hardware suggestions here are mostly the best items in their class for the lowest prices. 
 <br> Hardware tables have average used prices from ebay.com as of 2/17/2026 
 <br>
+
 <br>ToDo: 
 - Update table of contents... :white_check_mark:
 - Add CPU Tables :white_check_mark:
