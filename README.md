@@ -17,6 +17,7 @@ Help support more informative and helpful content with XMR/Monero: 45TftvPzdTNay
 <br>
 <br> Note: many of the hardware suggestions here are mostly the best items in their class for the lowest prices. 
 <br> Hardware tables have average used prices from ebay.com as of 2/17/2026 
+<br> ⚠️ Price snapshot disclaimer (9/10/2026): eBay prices move fast (Blackwell launch, GDDR7 shortage, tariffs). Example: 5060 Ti 16GB $429 MSRP -> ~$549 street 04/2026, Tesla T4 used $300-500 (not $750), L4 $3000 is new not used. Always check *sold* listings (not listed) before buying.
 <br>
 
 <br>ToDo: 
@@ -650,7 +651,7 @@ Lenovo Tiny PCs offer various hardware configurations, such as:
 
 - **Idle Power Consumption**: as low as 5-7W (depending on configuration)
 - **CPU TDP**: Medium to Medium-High performance with 35W TDP CPUs
-- **RAM Support**: 32GB to 128GB (depends on model, 2 slots)
+- **RAM Support**: 32GB (M715q Gen2 / M720q / M920q / M920x - 2x16GB DDR4) to 64GB (P330 / P340 / P350 - 2x32GB DDR4) for the DDR4 models listed below. 128GB (2x64GB DDR5 CSODIMM) is only possible on newer DDR5 Tinys like the ThinkStation P3 Tiny Gen 2 (Core Ultra Series 2 / Q870) - not on these 7 DDR4 models, as no 64GB DDR4 SODIMM exists (max 32GB/stick).
 - **Mini PCIe Slots**: For WiFi + Bluetooth cards
 - **USB Ports**: 4-6 USB 3+ ports in newer models
 
@@ -667,21 +668,35 @@ Other mini PCs and SFF PCs can be worthwhile, but personally, I find the Lenovo 
 <details>
 <summary><b>Lenovo Tiny PC Comparison Table:</b></summary>
   
-| Model                                                                                                                                                             | CPU                                                                                                                                                                                                                                                                                                  | Cores / Threads    | Passmark CPU Bench                                                                                                                                                   | RAM Max | Drives / NVMe Slots | PCIe Slot              | iGPU          | Quick Sync | Idle Power* | Power (TDP) | Year | Best Use Case                                      | **Avg Used eBay.com Price (≈)**                                                                                           |
+| Model                                                                                                                                                             | CPU                                                                                                                                                                                                                                                                                                  | Cores / Threads    | Passmark CPU Bench                                                                                                                                                   | RAM Max | Drives / NVMe Slots | PCIe Slot              | iGPU          | Quick Sync | Idle Power* | Power (TDP) | Year | Best Use Case                                      | **Avg Used eBay.com Price (USD)**                                                                                           |
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- | ------------------- | ---------------------- | ------------- | ---------- | ----------- | ----------- | ---- | -------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
-| **ThinkCentre M715q Gen2**                                                                                                                                        | [Ryzen 5 2400GE](https://www.hacktiny.com/wp-content/uploads/2019/09/M920x-Tiny.pdf)                                                                                                                                                                                                                 | 4C / 8T            | [7192](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+5+2400GE)                                                                                                  | 32GB    | 1x 2.5" / 1x M.2    | None                   | Vega 11       | N/A        | ~7–10W      | 35W         | 2018 | Budget NAS, light Proxmox                          | **~$80 – $140** – common used M715q listings on eBay.com include Ryzen 5 / Ryzen Pro units around this range.  |
+| **ThinkCentre M715q Gen2**                                                                                                                                        | [Ryzen 5 2400GE](https://psref.lenovo.com/syspool/Sys/PDF/ThinkCentre/ThinkCentre_M715_Tiny_2nd_Gen/ThinkCentre_M715_Tiny_2nd_Gen_Spec.PDF)                                                                                                                                                       | 4C / 8T            | [7192](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+5+2400GE)                                                                                                  | 32GB    | 1x 2.5" / 1x M.2    | None                   | Vega 11       | N/A        | ~7–10W      | 35W         | 2018 | Budget NAS, light Proxmox                          | **~$80 – $140** – common used M715q listings on eBay.com include Ryzen 5 / Ryzen Pro units around this range.  |
 | **ThinkCentre M720Q**                                                                                                                                             | [i5-8400T](https://www.intel.com/content/www/us/en/products/sku/129940/intel-core-i58400t-processor-9m-cache-up-to-3-30-ghz/specifications.html) / [i7-8700T](https://www.intel.com/content/www/us/en/products/sku/129948/intel-core-i78700t-processor-12m-cache-up-to-4-00-ghz/specifications.html) | 6C / 6T – 6C / 12T | [7419](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i5-8400T+%40+1.70GHz) / [10225](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i7-8700T+%40+2.40GHz) | 32GB    | 1x 2.5" / 1x M.2    | 1x PCIe 3.0 x8 (riser) | Intel UHD 630 | Gen8     | ~8–12W      | 35W         | 2018 | NAS, Network appliance, media server, Proxmox host | **~$120 – $200** – based on midspec ThinkCentre Tiny used listings (i5/i7 options).                            |
 | **ThinkCentre M920q**                                                                                                                                             | [i5-8400T](https://www.intel.com/content/www/us/en/products/sku/129940/intel-core-i58400t-processor-9m-cache-up-to-3-30-ghz/specifications.html) / [i7-8700T](https://www.intel.com/content/www/us/en/products/sku/129948/intel-core-i78700t-processor-12m-cache-up-to-4-00-ghz/specifications.html) | 6C / 6T – 6C / 12T | [7419](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i5-8400T+%40+1.70GHz) / [10225](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i7-8700T+%40+2.40GHz) | 32GB    | 1x 2.5" / 1x M.2    | 1x PCIe 3.0 x8 (riser) | Intel UHD 630 | Gen8     | ~8–12W      | 35W         | 2018 | Same as M720Q + vPro enterprise features           | **~$140 – $230** – slightly higher than M720Q used listings.                                                   |
 | **[ThinkCentre M920x](https://www.hacktiny.com/wp-content/uploads/2019/09/M920x-Tiny.pdf)**                                                                       | [i5-9400T](https://www.intel.com/content/www/us/en/products/sku/134893/intel-core-i59400t-processor-9m-cache-up-to-3-40-ghz/specifications.html) / [i7-9700T](https://www.intel.com/content/www/us/en/products/sku/191048/intel-core-i79700t-processor-12m-cache-up-to-4-30-ghz/specifications.html) | 6C / 6T – 8C / 8T  | [8148](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i5-9400T+%40+1.80GHz) / [10553](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i7-9700T+%40+2.00GHz) | 32GB    | 2x M.2              | 1x PCIe 3.0 x8         | Intel UHD 630 | Gen9     | ~9–13W      | 35W         | 2019 | Dual NVMe NAS, serious homelab                     | **~$180 – $300** – typical for M920x used units with 2x NVMe capability.                                       |
 | **[ThinkCentre P330](https://thinkstation-specs.com/wp-content/uploads/2019/09/P330-Tiny-Lenovo-ThinkStation.pdf)**                                               | [i5-9400T](https://www.intel.com/content/www/us/en/products/sku/134893/intel-core-i59400t-processor-9m-cache-up-to-3-40-ghz/specifications.html) / [i7-9700T](https://www.intel.com/content/www/us/en/products/sku/191048/intel-core-i79700t-processor-12m-cache-up-to-4-30-ghz/specifications.html) | 6C / 6T – 8C / 8T  | [8148](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i5-9400T+%40+1.80GHz) / [10553](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i7-9700T+%40+2.00GHz) | 64GB    | 2x M.2              | 1x PCIe 3.0 x8         | Intel UHD 630 | Gen9     | ~9–13W      | 35W         | 2019 | Best 9th gen Tiny for virtualization               | **~$220 – $350** – eBay listings for P330 Tiny machines cluster around this bracket.                           |
 | **[ThinkCentre P340](https://www.lenovo.com/content/dam/lenovo/pcsd/north-america/en/solutions/workstations/datasheets/na-datasheet-thinkstation-p340-tiny.pdf)** | [i5-9400T](https://www.intel.com/content/www/us/en/products/sku/134893/intel-core-i59400t-processor-9m-cache-up-to-3-40-ghz/specifications.html) / [i7-9700T](https://www.intel.com/content/www/us/en/products/sku/191048/intel-core-i79700t-processor-12m-cache-up-to-4-30-ghz/specifications.html) | 6C / 6T – 8C / 8T  | [8148](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i5-9400T+%40+1.80GHz) / [10553](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i7-9700T+%40+2.00GHz) | 64GB    | 2x M.2              | 1x PCIe 3.0 x8         | Intel UHD 630 | Gen9     | ~8–11W      | 35W         | 2020 | Improved efficiency, better thermals               | **~$250 – $400** – typical used pricing for P340 Tiny models.                                                  |
-| **[ThinkCentre P350](https://news.lenovo.com/wp-content/uploads/2021/07/ThinkStationP350TinyDatasheet-Final.pdf)**                                                | [i7-11700T](https://www.intel.com/content/www/us/en/products/sku/212251/intel-core-i711700t-processor-16m-cache-up-to-4-60-ghz/specifications.html)                                                                                                                                                  | 8C / 16T           | [15363](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i7-11700T+%40+1.40GHz)                                                                                   | 64GB    | 2x M.2              | 1x PCIe 4.0 capable    | Intel UHD 750 | Gen11      | ~7–10W      | 35W         | 2021 | Best for Plex, heavy VM host                       | **~$350 – $550+** – eBay.com used/refurbished listings for P350 Tiny (e.g., i5 and i7 units ~US $375–$400+).   |
+| **[ThinkCentre P350](https://news.lenovo.com/wp-content/uploads/2021/07/ThinkStationP350TinyDatasheet-Final.pdf)**                                                | [i7-11700T](https://www.intel.com/content/www/us/en/products/sku/212251/intel-core-i711700t-processor-16m-cache-up-to-4-60-ghz/specifications.html)                                                                                                                                                  | 8C / 16T           | [15363](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i7-11700T+%40+1.40GHz)                                                                                   | 64GB    | 2x M.2              | 1x PCIe 3.0 x8 (Gen3 only, even with 11th gen CPU)    | Intel UHD 750 | Gen11      | ~7–10W      | 35W         | 2021 | Best for Plex, heavy VM host                       | **~$350 – $550+** – eBay.com used/refurbished listings for P350 Tiny (e.g., i5 and i7 units ~US $375–$400+).   |
 
 <details>
 <summary>links:</summary>
  https://www.ebay.com/shop/m715q?_nkw=m715q "M715q | eBay"
  <br> https://www.ebay.com/itm/167813873476 "Lenovo ThinkStation P350 Tiny Core i5 11500T 1.50GHz 16.0GB DDR4 512GB M.2 PC | eBay"
 </details>
+</details>
+
+<details>
+<summary><b>Low-Power Alternative: N100 / N305 Mini-PCs</b></summary>
+
+| Model | Cores / Threads | Passmark | TDP | iGPU | RAM | NIC | Avg Used Price |
+| ----- | --------------- | -------- | --- | ---- | --- | --- | -------------- |
+| **Intel N100 (Alder Lake-N)** | 4C / 4T | [~5,500](https://www.cpubenchmark.net/cpu.php?cpu=Intel+N100) | 6W (25W burst) | 24EU UHD | 1x DDR4/DDR5 SODIMM (single-channel) | 1-2x 2.5GbE i226-V / RTL8125 | **~$150 – $250 barebone** |
+| **Intel N305 (Alder Lake-N)** | 8C / 8T | [~10,500](https://www.cpubenchmark.net/cpu.php?cpu=Intel+N305) | 15W | 32EU UHD | 1x DDR5 SODIMM | 2x 2.5GbE i226-V | **~$250 – $400 barebone** |
+
+- N100: 3-4x 4K HDR -> 1080p Jellyfin transcodes at 10-15W wall, AV1 decode only (no encode), prefer DDR5-4800, 1x NVMe + limited SATA, no ECC.
+- N305: 5-7x transcodes + arr stack, 32EU, 15W, same single-channel limit.
+- NIC: prefer i226-V over i225-V (early stepping bug) and over RTL8125 (needs r8125 DKMS, USB disconnects). i226-V needs EEE disabled (`ethtool --set-eee eth0 eee off`), NVM 2.22+, kernel 6.8+. Avoid USB NICs for router/Ceph. Counterfeit AliExpress i226 common.
+
 </details>
 
 <hr>
@@ -692,7 +707,7 @@ Other mini PCs and SFF PCs can be worthwhile, but personally, I find the Lenovo 
 One of the most cost effective SFF PCs for price vs hardware potential
 <br><b>HP z240 SFF</b>
 <p align="left"><img width="300" src="https://i.pcmag.com/imagery/reviews/02pEw0PoQLzntoO4LnGl1jE-1.fit_lim.size_740x416.v_1569469958.jpg"></p>
-  <br> typically features an i7-6700 with 4x DDR4 ram slots and 64GB support. Plus it has 2x3.5 1x2.5 Hard drive slots, 1xNVME m.2 slot and 2xPci-e slots, as far as expansion options go for a SFF PC this one has a lot of options.
+  <br> typically features an i7-6700 with 4x DDR4 ram slots and 64GB support. Plus it has 2x3.5in Hard drive slots, 1xNVME m.2 slot (PCIe Gen3 x4, up to 80mm) and 4x PCIe slots (1x x16 + 1x x4 in x16 mechanical + 2x x1, all low-profile half-length) - as far as expansion options go for a SFF PC this one has a lot of options.
   <br>
   <br> issues i have experienced: 
   <ul><li> takes some work to get 64GB ram to boot properly doesn't seem to like ram in the wrong order </li>
@@ -701,13 +716,23 @@ One of the most cost effective SFF PCs for price vs hardware potential
 
 | Model                                                                                                                 | CPU                                                                                                                                           | Passmark CPU Bench                                                              | RAM Max | Drives/NVMe Slots         | PCIe Slot   | iGPU          | Power (TDP) | Best Use Case                              | Rating | **Avg Used eBay Price (USD)** |
 | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------- | ------------------------- | ----------- | ------------- | ----------- | ------------------------------------------ | ------ | ----------------------------- |
-| [HP z240 SFF](https://www.pcmag.com/reviews/hp-z240-sff-workstation?test_uuid=04IpBmWGZleS0I0J3epvMrC&test_variant=A) | [i7-6700](https://www.intel.com/content/www/us/en/products/sku/88196/intel-core-i76700-processor-8m-cache-up-to-4-00-ghz/specifications.html) | [8037](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i7-6700+%40+3.40GHz) | 64GB    | 1x 2.5” + 2x 3.5” + 1xM.2 | 2x PCIe x16 | Intel HD 530  | ~65W        | Proxmox host, AI/ML, multi-GPU dev         | 7.5/10 | **$90 – $160**                |
+| [HP z240 SFF](https://www.pcmag.com/reviews/hp-z240-sff-workstation?test_uuid=04IpBmWGZleS0I0J3epvMrC&test_variant=A) | [i7-6700](https://www.intel.com/content/www/us/en/products/sku/88196/intel-core-i76700-processor-8m-cache-up-to-4-00-ghz/specifications.html) | [8037](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i7-6700+%40+3.40GHz) | 64GB    | 1x 2.5” + 2x 3.5” + 1xM.2 | 1x PCIe x16 + 1x PCIe x4 (x16 mech) + 2x PCIe x1 | Intel HD 530  | ~65W        | Proxmox host, AI/ML, multi-GPU dev         | 7.5/10 | **$90 – $160**                |
 | [Dell Optiplex 3020](https://www.hardware-corner.net/desktop-models/Dell-OptiPlex-3020-SFF/)                          | [i3-4150](https://www.intel.com/content/www/us/en/products/sku/77486/intel-core-i34150-processor-3m-cache-3-50-ghz/specifications.html)       | [3400](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i3-4150+%40+3.50GHz) | 16GB    | 1x 3.5”                   | 1x PCIe x16 | Intel HD 4400 | ~54W        | light server, media server, backup server. | 4.5/10 | **$40 – $90**                 |
 
 
 <br><a href="https://tachytelic.net/2021/12/dell-optiplex-7020-nvme-ssd/" target="_blank">Bios Mod - Install and boot from an NVMe SSD on a Dell OptiPlex 9020, 7020 or 3020</a>
 <br> i have tested this on a Dell Optiplex 3020 and can verify it works if done properly. 
 </details>
+
+<hr>
+
+<details>
+<summary><b>RAM / ECC + Power Protection (UPS / NUT):</b></summary>
+
+- ECC UDIMM (Ryzen AM5 / Intel W680, 2ch, 128GB max) vs RDIMM (EPYC / Xeon Scalable / Threadripper Pro, 6-12ch, TBs). DDR5 UDIMM/RDIMM differently keyed, not interchangeable. DDR5 on-die ECC is not side-band ECC. AM5 needs ASRock Rack-class board + `edac-util` validation, W680 needs ECC-capable CPU.
+- How much: 16GB minimum Proxmox, 32GB comfortable + ZFS ARC, 64GB+ for VMs + AI. Run `memtest86` on used kits. Tiny 2-slot limits vs SFF 4-slot.
+- UPS: 80+ PSU + watt-meter, APC/CyberPower VA sizing (600VA mini-PC, 1500VA multi-drive), NUT `MODE=netserver` + `usbhid-ups` on Proxmox host (not LXC), `upsd` on 3493 for TrueNAS netclient, `pollinterval=10-15`, test `upsdrvctl start / upsc`, graceful shutdown ordering.
+
 </details>
 
 <hr>
@@ -736,15 +761,15 @@ The Intel I350 (commonly the I350-T4 variant) is one of the most popular server-
 
 <hr>
 
-<b>Virtualization Features:</b>
+<b>Virtualization Features (I350-specific notes):</b>
 
-• <b>SR-IOV</b> (Single Root I/O Virtualization)  
 • VLAN tagging offload  
 • Checksum offloading  
 • Interrupt moderation  
 • PXE boot support  
+• <b>SR-IOV — hardware-capable but rarely usable in practice</b>
 
-SR-IOV allows you to assign virtual functions of the NIC directly to VMs, reducing overhead and improving network performance in virtualized environments.
+> ⚠️ Correction: The I350 chipset does list SR-IOV in Intel's spec, but most OEM/retail I350-T2/T4 cards ship with firmware that hides/disables VFs, and Proxmox users report mixed/failed VF creation ([Proxmox Support Forum](https://forum.proxmox.com/threads/sr-iov-not-working-for-intel-i350-t4.83026/)). Do NOT buy an I350 specifically for SR-IOV. If you need SR-IOV on Proxmox, use Intel X520-DA2, X710, E810, or Mellanox ConnectX-4/5 (see table below).
 
 If you are not running VMs or advanced networking, a simpler Intel NIC (like I210/I211) may be sufficient.
 
@@ -777,7 +802,7 @@ Signs of genuine cards:
 Clones may:
 • Have unstable drivers  
 • Fail under load  
-• Not support SR-IOV properly 
+• Lack proper EEPROM/firmware (which also breaks what little SR-IOV chance exists — but even genuine I350s rarely do SR-IOV in Proxmox, see note above) 
 
 ## Network Cards 
 
@@ -946,7 +971,20 @@ All LSI cards run warm.
 • Budget HDD-only array → 9211-8i is still unbeatable value  
 • Mixed HDD + SSD → 9207-8i is safer  
 • SSD-heavy / modern build → 9300-8i or SAS3008-based card  
-• Double check you buy a model with IT mode firmware for homelab use. 
+• Double check you buy a model with IT mode firmware for homelab use.
+
+<hr>
+
+<details>
+<summary><b>HBA Flashing + SAS Sector + Shucked Notes:</b></summary>
+
+- Flashing: sas2flash (9211/9207) P20 IT mode, sas3flash (9300) P16 IT mode. UEFI shell preferred over DOS. Mismatch P20 BIOS + P16 firmware bricks. Backup SBR first.
+- 9300-16i: add 40mm fan + heatsink, runs 90C+ passive in SFF, throttles and drops drives.
+- Dell H310 / H310 Mini Mono: cover SMBus pins B5/B6 with Kapton tape for consumer boards, otherwise blocks boot.
+- SAS pulls: NetApp/EMC 520-byte sector unusable until `sg_format --format --size=512 /dev/sdX`. Check `smartctl -a` Power_On_Hours + Grown Defects, reject high-defect drives.
+- Shucked WD Elements/MyBook: 3.3V pin causes power-cycle dead, fix with Kapton tape on pin 3 or Molex-SATA adapter. Avoid SMR (WD Red non-Plus, Seagate ST8000DM004 Barracuda). Detect via `fio` sustained write drop + `smartctl` Trim support. Use CMR only for ZFS/RAID.
+
+</details>
 </details>
 
 <hr>
@@ -956,7 +994,7 @@ All LSI cards run warm.
 <details>
 <summary><b>Enterprise HDD comparison table:</b></summary>
   
-| **Drive Model**                                 | **Form Factor** | **Interface**   | **Capacity Options**              | **Workload Rating (TB/yr)** | **Watts (Idle/Active)**   | **Avg Used eBay.com Price (≈)**                                                                                                                                                                                          |
+| **Drive Model**                                 | **Form Factor** | **Interface**   | **Capacity Options**              | **Workload Rating (TB/yr)** | **Watts (Idle/Active)**   | **Avg Used eBay.com Price (USD)**                                                                                                                                                                                          |
 | ----------------------------------------------- | --------------- | --------------- | --------------------------------- | --------------------------- | ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | **HGST Ultrastar He10 / HC310**                 | 3.5"            | SATA / SAS 12Gb | 10TB                              | 550 TB/yr                   | ~5.8W / ~9.5W             | **~$90 – $240** – used 10TB HGST Ultrastar He10/SAS/SATA enterprise HDDs commonly sell around ~$90–$240 USD on eBay.com depending on condition and interface. (e.g., ~$95 sold listing; ~$138–$255+ active).  |
 | **HGST Ultrastar He12 / HC320**                 | 3.5"            | SATA / SAS 12Gb | 12TB                              | 550 TB/yr                   | ~6.0W / ~9.8W             | **~$100 – $270+** – 12TB enterprise HGST/SAS drives often trade in this bracket on eBay.com, with prices influenced by condition and seller. (estimated from 10TB / similar listings).                        |
@@ -966,7 +1004,7 @@ All LSI cards run warm.
 | **WD Ultrastar DC HC500 (HGST Legacy)**         | 3.5"            | SATA / SAS 12Gb | 8TB, 10TB                         | 550 TB/yr                   | ~5.6W / ~9.2W             | **~$70 – $220** – Used WD/HGST 8–10TB enterprise drives on US eBay.com commonly fall in this range depending on capacity and condition.                                                                       |
 | **WD Ultrastar DC HC550**                       | 3.5"            | SATA / SAS 12Gb | 14TB, 16TB, 18TB                  | 550 TB/yr                   | ~5.8W / ~9.5W             | **~$120 – $330+** – Enterprise DC HC550 drives often list around ~$120–$330+ on eBay.com based on large capacity used listings.                                                                               |
 | **WD Ultrastar DC HC560**                       | 3.5"            | SATA / SAS 12Gb | 20TB, 22TB                        | 550 TB/yr                   | ~6.0W / ~9.8W             | **~$200 – $380+** – Larger 20–22TB enterprise WD DC HC560 used drives generally trade in this approximate price bracket on US eBay.com.                                                                    |
-| **WD Ultrastar DC SA620 (SATA SSD/HDD Hybrid)** | 2.5"            | SATA 6Gb/s      | 960GB — 7.68TB                    | *N/A (SSHD)*                | ~2.9W / ~5.5W             | **~$40 – $150** – Used SATA hybrid drives (SSHD) of similar capacities on eBay.com often list in the ~$40–$150 USD range.                                                                                     |
+| **WD Ultrastar DC SA620 (SATA SSD — NOT an HDD/hybrid)** | 2.5" | SATA 6Gb/s SSD | 400GB — 7.68TB | 0.8 DWPD / ~2700 TBW @ 3.84TB (≈ 1 DWPD models also exist as SA630) | ~2.5W / ~5W | **~$40 – $150** – Used enterprise SATA SSDs of similar capacities on eBay.com often list in the ~$40–$150 USD range. **Note:** SA620 is a TLC SATA SSD (no moving parts), not an SSHD hybrid — do not use HDD workload (TB/yr) ratings for it; compare TBW/DWPD instead. |
 | **WD Gold Enterprise HDDs**                     | 3.5"            | SATA 6Gb/s      | 1TB — 18TB                        | 550 TB/yr                   | 5W — 10W (varies by size) | **~$50 – $330+** – Used WD Gold HDD enterprise drives vary by capacity: smaller (~1–4TB) often ~$50–$120, larger (~12–18TB) near ~$200–$330+ on eBay.com.                                                     |
 | **Seagate Exos X18**                            | 3.5"            | SATA 6Gb/s      | 10TB, 12TB, 14TB, 16TB, 18TB      | 550 TB/yr                   | 5.3W / 9.4W               | **~$120 – $340+** – Used Seagate Exos X18 enterprise drives typically appear around ~$120–$340+ USD on eBay.com depending on capacity and condition.                                                          |
 | **Seagate Exos X20**                            | 3.5"            | SATA 6Gb/s      | 16TB, 18TB, 20TB                  | 550 TB/yr                   | 5.4W / 9.4W               | **~$180 – $400+** – Larger Exos X20 drives on eBay.com often trade for roughly ~$180–$400+ used, varying by model and health.                                                                                 |
@@ -1245,10 +1283,10 @@ Every time the drive parks its read/write heads, it ticks off one "load cycle" f
 There are two main ways to stop the "parking madness," and they work best in tandem:
 
 - **Method A: The Nuclear Option (Modify the `idle3` timer)**
-    - **Target:** Western Digital drives that use the "IntelliPark" feature.
+    - **Target:** ONLY old WD Green EADS/EARS (2010-11 era) with 8-sec IntelliPark bug. DO NOT use on modern helium drives (Red Plus/Pro, Ultrastar HC5xx) - WD states idle timer is not configurable and misuse can brick drives.
     - **The Tool:** Western Digital's own **`wdidle3.exe`** (a DOS utility) or the Linux equivalent `idle3-tools` .
     - **The Command (Conceptual):** You boot into a DOS environment or use the Linux tool to change the timer. The goal is to set it to a much higher value or disable it entirely.
-        - `wdidle3.exe /D` – This **disables** the automatic head parking. The heads will now only park when the drive is fully powered down. This is the ideal state for longevity .
+        - `wdidle3.exe /D` – This **disables** the automatic head parking. The heads will now only park when the drive is fully powered down. This is the ideal state for longevity on *supported old Greens only*.
 
 - **Method B: The OS-Level Command (Disable Advanced Power Management)**
     - **Target:** Most drives, including Seagate and others, that respond to the Advanced Power Management (APM) feature.
@@ -1259,7 +1297,7 @@ There are two main ways to stop the "parking madness," and they work best in tan
 
 - **Bonus: Set a Sensible Standby Timer (Optional)**
     - Even with APM disabled, you might want the drive to spin down after a very long period of inactivity (like hours) to save a bit of wear on the spindle motor. This is **not** the same as head-parking.
-    - Use `hdparm -S 241 /dev/sdX` to set a standby timeout. The value `241` corresponds to about 30 minutes. Multiply the value by 5 to get the number of seconds until standby . A value of `0` disables the standby timer.
+    - Use `hdparm -S 241 /dev/sdX` to set a standby timeout. The value `241` corresponds to about 30 minutes (values 1-240 = x5 seconds, 241-251 = (value-240)x30min, 0=disabled). A value of `0` disables the standby timer.
 
 **To make this permanent on Linux, you must add the `hdparm` command to a startup script (like `/etc/rc.local`) so it runs every time the system boots.**
 
@@ -1267,7 +1305,7 @@ There are two main ways to stop the "parking madness," and they work best in tan
 
 A stable environment is non-negotiable for long lifespan.
 
-- **Temperature is the #1 Enemy:** An HDD's failure rate is directly tied to heat.
+- **Temperature is the #1 Enemy:** An HDD's failure rate is directly tied to heat. From decades of working with drives: temp extremes, shock/vibration, and head parking are the number one killers of drives.
     - The "sweet spot" for maximum longevity is an average operating temperature of **no more than 40°C** .
     - For every **5°C increase above 40°C**, the failure rate can increase by **30%** . Running a drive at 55°C more than doubles its chance of failure.
     - **Action:** Ensure your case has excellent, continuous airflow over the drive. Monitor temperatures with tools like `smartctl` or CrystalDiskInfo.
@@ -1306,14 +1344,14 @@ By following this guide, you're not just hoping for longevity, you're engineerin
 <details>
 <summary><b>Enterprise NVMe / M.2 Drives with Endurance</b></summary>
 
-| **Drive Model**                              | **Form Factor**  | **Interface** | **Endurance (TBW/PBW)**     | **Watts (Idle/Active)** | **Avg Used eBay.com Price (≈)**                                                    |
+| **Drive Model**                              | **Form Factor**  | **Interface** | **Endurance (TBW/PBW)**     | **Watts (Idle/Active)** | **Avg Used eBay.com Price (USD)**                                                    |
 | -------------------------------------------- | ---------------- | ------------- | --------------------------- | ----------------------- | ---------------------------------------------------------------------------------- |
 | **Intel Optane M10 (16GB)**                  | M.2 2280         | PCIe 3.0 x2   | 365 TBW                     | 0.08W/2W                | **~$5 – $15** (small Optane modules frequently listed cheap)          |
-| **Intel Optane M10 (32GB)**                  | M.2 2280         | PCIe 3.0 x2   | 182.5 TBW                   | 1W/3.5W                 | **~$20 – $35** (new/used available)                                     |
-| **Intel Optane SSD 905P (480GB)**            | M.2/U.2/HHHL     | PCIe 3.0 x4   | 17.52 PB                    | 6W/16.4W                | **~$350 – $450** (used 480GB approx)                                    |
+| **Intel Optane M10 (32GB)**                  | M.2 2280         | PCIe 3.0 x2   | 365 TBW                     | 1W/3.5W                 | **~$20 – $35** (new/used available)                                     |
+| **Intel Optane SSD 905P (480GB)**            | M.2/U.2/HHHL     | PCIe 3.0 x4   | 8.76 PB                     | 6W/16.4W                | **~$350 – $450** (used 480GB approx)                                    |
 | **Intel Optane SSD 905P (960GB)**            | U.2/HHHL         | PCIe 3.0 x4   | 17.52 PB                    | 6W/16.4W                | **~$600 – $900** (used 960GB listings)                                  |
-| **Samsung PM9A3 (960GB, 1920GB, 3840GB)**    | M.2 22110        | PCIe 4.0 x4   | 1.7 PBW / 3.5 PBW / 7.0 PBW | 3.5W/8W Avg             | **N/A** (rare to no used eBay listings)                                            |
-| **Seagate Nytro 5000 (1.6TB, 3.2TB, 6.4TB)** | M.2 22110        | PCIe 3.0 x4   | 3.2 PBW                     | 9W Avg/12.5W Max        | **N/A** (rare to no eBay used data)                                                |
+| **Samsung PM9A3 (960GB, 1920GB, 3840GB)**    | U.2 / E1.S / M.2 22110 (not M.2-only) | PCIe 4.0 x4   | 1.7 PBW / 3.5 PBW / 7.0 PBW | 3.5W/8W Avg             | **N/A** (rare to no used eBay listings)                                            |
+| **Seagate Nytro 5000 (1.6TB, 3.2TB, 6.4TB)** | 2.5in + M.2 22110 (family-dependent: 5550/5350 are 2.5in U.2/U.3, 4350 is M.2 2280) | PCIe 3.0 x4   | 3.2 PBW                     | 9W Avg/12.5W Max        | **N/A** (rare to no eBay used data)                                                |
 | **Intel DC P5800X (400GB,800GB,1.6TB)**      | U.2              | PCIe 4.0 x4   | 73–292 PBW                  | 4.2W/18W                | **~$900 – $1,200+** (varies hugely; some reports of ~$1,200-$2,000+)  |
 | **ADATA XPG SX8200 Pro (256GB–2TB)**         | M.2 2280         | PCIe 3.0 x4   | 160–640 TBW                 | 0.05W/1.9W/4.1W Max     | **~$70 – $110** (rough average for 1TB) *(typical eBay used SSD pricing)*          |
 | **Intel DC P3700 400GB**                     | PCIe Add-in Card | PCIe 3.0 x4   | 7.3 PBW                     | 4W/9W/12W               | **~$50 – $90** (used PCIe P3700 cards) *(typical older enterprise SSD prices)*     |
@@ -1329,7 +1367,7 @@ By following this guide, you're not just hoping for longevity, you're engineerin
 <details>
 <summary><b>Consumer NVMe / M.2 Drives</b></summary>
   
-| **Drive Model**         | **Form Factor** | **Interface** | **Endurance (TBW)** | **Quality**              | **Avg Used eBay.com Price (≈)**                                                                   |
+| **Drive Model**         | **Form Factor** | **Interface** | **Endurance (TBW)** | **Quality**              | **Avg Used eBay.com Price (USD)**                                                                   |
 | ----------------------- | --------------- | ------------- | ------------------- | ------------------------ | ------------------------------------------------------------------------------------------------- |
 | **Crucial P3 1TB**      | M.2 2280        | PCIe 3.0 x4   | 220 TB              | Cheap QLC Consumer       | **~$25 – $50** (pre-owned listings range from ~$20–$95)                                |
 | **Samsung 980 1TB**     | M.2 2280        | PCIe 3.0 x4   | 600 TB              | Normal TLC Consumer      | **~$70 – $110** (used prices commonly ~$80–$120 on eBay)                               |
@@ -1356,6 +1394,17 @@ Enterprise drives are designed to handle much higher workloads and offer greater
 <summary><b>Intel:</b></summary>
   
 ## Intel Desktop CPUs:
+
+<details>
+<summary><b>Core Ultra 200S Series (Arrow Lake-S) - LGA1851</b></summary>
+
+| Model                     | Cores / Threads | Passmark CPU Bench                                                                                     | TDP (W) | Turbo Power (W) | iGPU    | Avg Used eBay.com Price (US)                                  |
+| ------------------------- | --------------- | ------------------------------------------------------------------------------------------------------ | ------- | --------------- | ------- | ------------------------------------------------------------- |
+| **Intel Core Ultra 9 285K** | 24C / 24T     | [~67,200](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+Ultra+9+285K)                            | 125     | 250             | Arc Graphics | **~$450 – $550**                                         |
+| **Intel Core Ultra 7 265K** | 20C / 20T     | [~40,000](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+Ultra+7+265K)                            | 125     | 250             | Arc Graphics | **~$300 – $380**                                         |
+| **Intel Core Ultra 5 245K** | 14C / 14T     | [~30,000](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+Ultra+5+245K)                            | 125     | 159             | Arc Graphics | **~$200 – $260**                                         |
+
+</details>
 
 <details>
 <summary><b>14th Gen - Raptor Lake Refresh Desktop:</b></summary>
@@ -1504,12 +1553,24 @@ Enterprise drives are designed to handle much higher workloads and offer greater
 | ------------------------- | --------------- | ------------------------------------------------------------------------------------------------------ | ------- | --------------- | ------- | ------------------------------------------------------------- |
 | **Intel Core i7-6700K**   | 4C / 8T         | [~10,994](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i7-6700K)                                | 91      | 165             | HD 530  | **~$60 – $100**                                               |
 | **Intel Core i7-6700**    | 4C / 8T         | [~9,851](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i7-6700)                                  | 65      | 150             | HD 530  | **~$50 – $80**                                                |
-| **Intel Core i5-6600K**   | 4C / 4T         | [~8,077](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i5-6600K)                                 | 95      | 150             | None    | **~$40 – $70**                                                |
+| **Intel Core i5-6600K**   | 4C / 4T         | [~8,077](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i5-6600K)                                 | 95      | 150             | HD 530  | **~$40 – $70**                                                |
 | **Intel Core i5-6500**    | 4C / 4T         | [~7,342](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i5-6500)                                  | 65      | 135             | HD 530  | **~$35 – $60**                                                |
 | **Intel Core i3-6100**    | 2C / 4T         | [~4,634](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i3-6100)                                  | 51      | 85              | HD 530  | **~$20 – $35**                                                |
 </details>
 
-## Intel Destkop/Workstation X-series CPUs: 
+<details>
+<summary><b>5th / 4th Gen - Broadwell / Haswell Desktop:</b></summary>
+
+| Model                     | Cores / Threads | Passmark CPU Bench                                                                                     | TDP (W) | Turbo Power (W) | iGPU    | Avg Used eBay.com Price (US)                                  |
+| ------------------------- | --------------- | ------------------------------------------------------------------------------------------------------ | ------- | --------------- | ------- | ------------------------------------------------------------- |
+| **Intel Core i7-5775C**   | 4C / 8T         | [~8,500](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i7-5775C)                                 | 65      | 90              | Iris Pro 6200 | **~$80 – $120**                                          |
+| **Intel Core i7-4790K**   | 4C / 8T         | [~8,200](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i7-4790K)                                 | 88      | 120             | HD 4600 | **~$50 – $80**                                               |
+| **Intel Core i7-4770**    | 4C / 8T         | [~7,200](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i7-4770)                                  | 84      | 110             | HD 4600 | **~$30 – $50**                                               |
+| **Intel Core i5-4590**    | 4C / 4T         | [~5,200](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i5-4590)                                  | 84      | 100             | HD 4600 | **~$20 – $35**                                               |
+
+</details>
+
+## Intel Desktop/Workstation X-series CPUs: 
 
 <details>
 <summary><b>10th Gen - Cascade Lake-X (HEDT):</b></summary>
@@ -1604,6 +1665,31 @@ Enterprise drives are designed to handle much higher workloads and offer greater
 </details>
 
 <details>
+<summary><b>Xeon W-2100 / W-2200 Series (LGA2066)</b></summary>
+
+| Model                     | Cores / Threads | Passmark CPU Bench                                                                                     | TDP (W) | Turbo Power (W) | L3 Cache | Avg Used eBay.com Price (US)                                  |
+| ------------------------- | --------------- | ------------------------------------------------------------------------------------------------------ | ------- | --------------- | -------- | ------------------------------------------------------------- |
+| **Intel Xeon W-2295**     | 18C / 36T       | [~28,000](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Xeon+W-2295)                                  | 165     | 190             | 24.75 MB | **~$400 – $600**                                              |
+| **Intel Xeon W-2275**     | 14C / 28T       | [~24,000](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Xeon+W-2275)                                  | 165     | 190             | 19.25 MB | **~$300 – $450**                                              |
+| **Intel Xeon W-2255**     | 10C / 20T       | [~20,000](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Xeon+W-2255)                                  | 165     | 190             | 19.25 MB | **~$200 – $300**                                              |
+| **Intel Xeon W-2145**     | 8C / 16T        | [~16,500](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Xeon+W-2145)                                  | 140     | 165             | 11 MB    | **~$120 – $180**                                              |
+
+</details>
+
+<details>
+<summary><b>Xeon Scalable 1st/2nd Gen (Skylake-SP / Cascade Lake) - LGA3647</b></summary>
+
+| Model                     | Cores / Threads | Passmark CPU Bench                                                                                     | TDP (W) | Socket  | L3 Cache | Avg Used eBay.com Price (US)                                  |
+| ------------------------- | --------------- | ------------------------------------------------------------------------------------------------------ | ------- | ------- | -------- | ------------------------------------------------------------- |
+| **Xeon Platinum 8280**    | 28C / 56T       | [~38,000](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Xeon+Platinum+8280)                           | 205     | LGA3647 | 38.5 MB  | **~$400 – $600**                                              |
+| **Xeon Gold 6248R**       | 24C / 48T       | [~32,000](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Xeon+Gold+6248R)                              | 205     | LGA3647 | 35.75 MB | **~$200 – $350**                                              |
+| **Xeon Gold 5218**        | 16C / 32T       | [~22,000](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Xeon+Gold+5218)                               | 125     | LGA3647 | 22 MB    | **~$100 – $180**                                              |
+| **Xeon Silver 4216**      | 16C / 32T       | [~20,000](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Xeon+Silver+4216)                             | 100     | LGA3647 | 22 MB    | **~$70 – $120**                                               |
+| **Xeon Bronze 3204**      | 6C / 6T         | [~6,500](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Xeon+Bronze+3204)                              | 85      | LGA3647 | 8.25 MB  | **~$30 – $50**                                                |
+
+</details>
+
+<details>
 <summary><b>Xeon Platinum (3rd & 4th Gen Scalable)</b></summary>
 
 | Model                     | Cores / Threads | Passmark CPU Bench                                                                                     | TDP (W) | Socket  | L3 Cache | Avg Used eBay.com Price (US)                                  |
@@ -1680,8 +1766,8 @@ Enterprise drives are designed to handle much higher workloads and offer greater
 | **Xeon E5-2650 v3**       | 10C / 20T       | [~17,620](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Xeon+E5-2650+v3)                             | 105     | 2.3 / 3.0 GHz  | 25 MB    | **~$45 – $65**                                                |
 | **Xeon E5-2640 v3**       | 8C / 16T        | [~14,588](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Xeon+E5-2640+v3)                             | 90      | 2.6 / 3.4 GHz  | 20 MB    | **~$35 – $50**                                                |
 | **Xeon E5-2630 v3**       | 8C / 16T        | [~13,645](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Xeon+E5-2630+v3)                             | 85      | 2.4 / 3.2 GHz  | 20 MB    | **~$30 – $40**                                                |
-| **Xeon E5-2620 v3**       | 6C / 12T        | [~7,790](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Xeon+E5-2620+v3)                              | 85      | 2.4 / 3.2 GHz  | 15 MB    | **~$20 – $30**                                   |
-| **Xeon E5-4640 v3**       | 12C / 24T       | [~10,372](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Xeon+E5-4640+v3)                             | 105     | 1.9 / 2.6 GHz  | 30 MB    | **~$40 – $60** (Quad-socket capable)             |
+| **Xeon E5-2620 v3**       | 6C / 12T        | [~11,500](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Xeon+E5-2620+v3)                              | 85      | 2.4 / 3.2 GHz  | 15 MB    | **~$20 – $30**                                   |
+| **Xeon E5-4640 v3**       | 12C / 24T       | [~15,500](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Xeon+E5-4640+v3)                             | 105     | 1.9 / 2.6 GHz  | 30 MB    | **~$40 – $60** (Quad-socket capable)             |
 
 </details>
 
@@ -1700,6 +1786,19 @@ Enterprise drives are designed to handle much higher workloads and offer greater
 | **Xeon E3-1240 v3**       | 4C / 8T         | [~10,165](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Xeon+E3-1240+v3)                             | 80      | 3.4 / 3.8 GHz  | 8 MB     | LGA1150 | **~$40 – $55**                                                |
 | **Xeon E3-1230 v3**       | 4C / 8T         | [~9,989](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Xeon+E3-1230+v3)                              | 80      | 3.3 / 3.7 GHz  | 8 MB     | LGA1150 | **~$35 – $50**                                                |
 | **Xeon E3-1220 v3**       | 4C / 4T         | [~7,425](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Xeon+E3-1220+v3)                              | 80      | 3.1 / 3.5 GHz  | 8 MB     | LGA1150 | **~$20 – $30**                                                |
+
+</details>
+
+<details>
+<summary><b>Xeon E-2300 / E-2400 Series (Entry Server) - LGA1200 / LGA1700</b></summary>
+
+| Model                     | Cores / Threads | Passmark CPU Bench                                                                                     | TDP (W) | Base / Turbo      | L3 Cache | Socket  | Avg Used eBay.com Price (US)                                  |
+| ------------------------- | --------------- | ------------------------------------------------------------------------------------------------------ | ------- | ----------------- | -------- | ------- | ------------------------------------------------------------- |
+| **Xeon E-2388G**          | 8C / 16T        | [~20,500](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Xeon+E-2388G)                                 | 95      | 3.2 / 5.1 GHz     | 16 MB    | LGA1200 | **~$350 – $500**                                              |
+| **Xeon E-2378G**          | 8C / 16T        | [~18,500](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Xeon+E-2378G)                                 | 80      | 2.8 / 5.1 GHz     | 16 MB    | LGA1200 | **~$300 – $400**                                              |
+| **Xeon E-2488**           | 8C / 16T        | [~24,000](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Xeon+E-2488)                                  | 65      | 3.2 / 5.6 GHz     | 24 MB    | LGA1700 | **~$400 – $550**                                              |
+| **AMD EPYC 4344P**        | 8C / 16T        | [~26,000](https://www.cpubenchmark.net/cpu.php?cpu=AMD+EPYC+4344P)                                     | 65      | 3.8 / 5.3 GHz     | AM5      | 32 MB   | **~$350 – $500**                                              |
+| **AMD EPYC 4124P**        | 4C / 8T         | [~15,000](https://www.cpubenchmark.net/cpu.php?cpu=AMD+EPYC+4124P)                                     | 65      | 3.8 / 5.1 GHz     | AM5      | 16 MB   | **~$200 – $280**                                              |
 
 </details>
 
@@ -1891,6 +1990,17 @@ Enterprise drives are designed to handle much higher workloads and offer greater
 </details>
 
 <details>
+<summary><b>Ryzen 8000G Series (Phoenix) - AM5</b></summary>
+
+| Model                     | Cores / Threads | Passmark CPU Bench                                                                                     | TDP (W) | Base / Turbo      | iGPU             | Avg Used eBay.com Price (US)                                  |
+| ------------------------- | --------------- | ------------------------------------------------------------------------------------------------------ | ------- | ----------------- | ---------------- | ------------------------------------------------------------- |
+| **AMD Ryzen 7 8700G**     | 8C / 16T        | [~29,500](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+7+8700G&id=5946)                          | 65      | 4.2 / 5.1 GHz     | Radeon 780M      | **~$230 – $300**                                              |
+| **AMD Ryzen 5 8600G**     | 6C / 12T        | [~24,000](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+5+8600G&id=5947)                          | 65      | 4.3 / 5.0 GHz     | Radeon 760M      | **~$150 – $200**                                              |
+| **AMD Ryzen 5 8500G**     | 6C / 12T        | [~19,500](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+5+8500G&id=5948)                          | 65      | 3.5 / 5.0 GHz     | Radeon 740M      | **~$130 – $170**                                              |
+
+</details>
+
+<details>
 <summary><b>Ryzen 5000 Series (Vermeer) - AM4</b></summary>
 
 | Model                     | Cores / Threads | Passmark CPU Bench                                                                                     | TDP (W) | Base / Turbo      | iGPU             | Avg Used eBay.com Price (US)                                  |
@@ -1906,6 +2016,17 @@ Enterprise drives are designed to handle much higher workloads and offer greater
 | **AMD Ryzen 5 5600**      | 6C / 12T        | [~21,249](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+5+5600&id=4763)                           | 65      | 3.5 / 4.4 GHz     | None             | **~$90 – $130**                                               |
 | **AMD Ryzen 5 5500**      | 6C / 12T        | [~18,498](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+5+5500&id=5453)                           | 65      | 3.6 / 4.2 GHz     | None             | **~$70 – $100**                                               |
 | **AMD Ryzen 3 5300G**     | 4C / 8T         | [~12,931](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+3+5300G&id=5507)                          | 65      | 4.0 / 4.2 GHz     | Radeon Vega 6    | **~$60 – $85**                                                |
+
+</details>
+
+<details>
+<summary><b>Ryzen 4000G Series (Renoir) - AM4</b></summary>
+
+| Model                     | Cores / Threads | Passmark CPU Bench                                                                                     | TDP (W) | Base / Turbo      | iGPU             | Avg Used eBay.com Price (US)                                  |
+| ------------------------- | --------------- | ------------------------------------------------------------------------------------------------------ | ------- | ----------------- | ---------------- | ------------------------------------------------------------- |
+| **AMD Ryzen 7 4700G**     | 8C / 16T        | [~20,500](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+7+4700G&id=4327)                          | 65      | 3.6 / 4.4 GHz     | Radeon Vega 8    | **~$130 – $180**                                              |
+| **AMD Ryzen 5 4600G**     | 6C / 12T        | [~15,500](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+5+4600G&id=4328)                          | 65      | 3.7 / 4.2 GHz     | Radeon Vega 7    | **~$80 – $120**                                               |
+| **AMD Ryzen 3 4300G**     | 4C / 8T         | [~11,000](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+3+4300G&id=4329)                          | 65      | 3.8 / 4.0 GHz     | Radeon Vega 6    | **~$60 – $90**                                                |
 
 </details>
 
@@ -1957,6 +2078,7 @@ Enterprise drives are designed to handle much higher workloads and offer greater
 | **AMD Ryzen 5 1400**      | 4C / 8T         | [~7,413](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+5+1400&id=2958)                            | 65      | 3.2 / 3.4 GHz     | None             | **~$20 – $30**                                                |
 | **AMD Ryzen 3 1300X**     | 4C / 4T         | [~6,142](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+3+1300X&id=2960)                           | 65      | 3.5 / 3.7 GHz     | None             | **~$18 – $25**                                                |
 | **AMD Ryzen 3 1200**      | 4C / 4T         | [~5,466](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+3+1200&id=2961)                            | 65      | 3.1 / 3.4 GHz     | None             | **~$15 – $22**                                                |
+| **AMD Athlon 3000G**      | 2C / 4T         | [~3,500](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Athlon+3000G&id=3562)                            | 35      | 3.5 GHz           | Radeon Vega 3    | **~$40 – $60**                                                |
 
 </details>
 
@@ -2019,6 +2141,42 @@ Enterprise drives are designed to handle much higher workloads and offer greater
 </details>
 
 <details>
+<summary><b>EPYC 8004 Series (Siena) - SP6</b></summary>
+
+| Model                     | Cores / Threads | Passmark CPU Bench                                                                                     | TDP (W) | Base / Turbo      | Socket | L3 Cache | Avg Used eBay.com Price (US)                                  |
+| ------------------------- | --------------- | ------------------------------------------------------------------------------------------------------ | ------- | ----------------- | ------ | -------- | ------------------------------------------------------------- |
+| **AMD EPYC 8534P**        | 64C / 128T      | [~55,000](https://www.cpubenchmark.net/cpu.php?cpu=AMD+EPYC+8534P)                                     | 200     | 2.3 / 3.1 GHz     | SP6    | 128 MB   | **~$2,000 – $3,000**                                          |
+| **AMD EPYC 8434P**        | 48C / 96T       | [~42,000](https://www.cpubenchmark.net/cpu.php?cpu=AMD+EPYC+8434P)                                     | 175     | 2.5 / 3.1 GHz     | SP6    | 128 MB   | **~$1,500 – $2,200**                                          |
+| **AMD EPYC 8324P**        | 32C / 64T       | [~32,000](https://www.cpubenchmark.net/cpu.php?cpu=AMD+EPYC+8324P)                                     | 130     | 2.6 / 3.1 GHz     | SP6    | 128 MB   | **~$900 – $1,300**                                            |
+| **AMD EPYC 8024P**        | 8C / 16T        | [~12,000](https://www.cpubenchmark.net/cpu.php?cpu=AMD+EPYC+8024P)                                     | 70      | 2.4 / 3.0 GHz     | SP6    | 32 MB    | **~$350 – $500**                                              |
+
+</details>
+
+<details>
+<summary><b>EPYC 9005 Series (Turin) - SP5</b></summary>
+
+| Model                     | Cores / Threads | Passmark CPU Bench                                                                                     | TDP (W) | Base / Turbo      | Socket | L3 Cache | Avg Used eBay.com Price (US)                                  |
+| ------------------------- | --------------- | ------------------------------------------------------------------------------------------------------ | ------- | ----------------- | ------ | -------- | ------------------------------------------------------------- |
+| **AMD EPYC 9965**         | 192C / 384T     | [~150,000](https://www.cpubenchmark.net/cpu.php?cpu=AMD+EPYC+9965)                                     | 500     | 2.25 / 3.7 GHz    | SP5    | 384 MB   | **~$12,000 – $14,000**                                        |
+| **AMD EPYC 9655**         | 96C / 192T      | [~110,000](https://www.cpubenchmark.net/cpu.php?cpu=AMD+EPYC+9655)                                     | 400     | 2.6 / 4.5 GHz     | SP5    | 384 MB   | **~$6,000 – $8,000**                                          |
+| **AMD EPYC 9555**         | 64C / 128T      | [~85,000](https://www.cpubenchmark.net/cpu.php?cpu=AMD+EPYC+9555)                                      | 360     | 3.2 / 4.4 GHz     | SP5    | 256 MB   | **~$4,000 – $5,500**                                          |
+
+</details>
+
+<details>
+<summary><b>Threadripper / Threadripper Pro</b></summary>
+
+| Model                         | Cores / Threads | Passmark CPU Bench                                                                                     | TDP (W) | Base / Turbo      | Socket | L3 Cache | Avg Used eBay.com Price (US)                                  |
+| ----------------------------- | --------------- | ------------------------------------------------------------------------------------------------------ | ------- | ----------------- | ------ | -------- | ------------------------------------------------------------- |
+| **AMD Threadripper 7995WX**   | 96C / 192T      | [~140,000](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+Threadripper+7995WX)                     | 350     | 2.5 / 5.1 GHz     | sTR5   | 384 MB   | **~$8,000 – $10,000**                                         |
+| **AMD Threadripper 7975WX**   | 32C / 64T       | [~75,000](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+Threadripper+7975WX)                      | 350     | 4.0 / 5.3 GHz     | sTR5   | 128 MB   | **~$2,500 – $3,200**                                          |
+| **AMD Threadripper Pro 5975WX** | 32C / 64T     | [~55,000](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+Threadripper+PRO+5975WX)                  | 280     | 3.6 / 4.5 GHz     | sWRX8  | 128 MB   | **~$1,800 – $2,500**                                          |
+| **AMD Threadripper 3960X**    | 24C / 48T       | [~45,000](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+Threadripper+3960X)                       | 280     | 3.8 / 4.5 GHz     | sTRX4  | 128 MB   | **~$700 – $1,000**                                            |
+| **AMD Threadripper 2950X**    | 16C / 32T       | [~28,000](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+Threadripper+2950X)                       | 180     | 3.5 / 4.4 GHz     | sTR4   | 32 MB    | **~$350 – $500**                                              |
+
+</details>
+
+<details>
 <summary><b>EPYC 7003 Series (Milan) - SP3</b></summary>
 
 | Model                     | Cores / Threads | Passmark CPU Bench                                                                                     | TDP (W) | Base / Turbo      | Socket | L3 Cache | Avg Used eBay.com Price (US)                                  |
@@ -2066,7 +2224,7 @@ Enterprise drives are designed to handle much higher workloads and offer greater
 | **AMD EPYC 7551**         | 32C / 64T       | [~19,868](https://www.cpubenchmark.net/cpu.php?cpu=AMD+EPYC+7551&id=3127)                              | 180     | 2.0 / 2.55 GHz    | SP3    | 64 MB    | **~$200 – $280**                                              |
 | **Dual AMD EPYC 7501**    | 64C / 128T      | [~31,487](https://www.cpubenchmark.net/cpu.php?cpu=Dual+AMD+EPYC+7501&id=3133)                         | 340     | 2.0 / 2.6 GHz     | SP3    | 128 MB   | **~$350 – $500**                                              |
 | **AMD EPYC 7501**         | 32C / 64T       | [~19,313](https://www.cpubenchmark.net/cpu.php?cpu=AMD+EPYC+7501&id=3129)                              | 170     | 2.0 / 2.6 GHz     | SP3    | 64 MB    | **~$180 – $250**                                              |
-| **Dual AMD EPYC 7401**    | 48C / 96T       | [~55,293](https://www.cpubenchmark.net/cpu.php?cpu=Dual+AMD+EPYC+7401&id=3136)                         | 340     | 2.0 / 3.0 GHz     | SP3    | 128 MB   | **~$300 – $400**                                              |
+| **Dual AMD EPYC 7401**    | 48C / 96T       | [~32,500](https://www.cpubenchmark.net/cpu.php?cpu=Dual+AMD+EPYC+7401&id=3136)                         | 340     | 2.0 / 3.0 GHz     | SP3    | 128 MB   | **~$300 – $400**                                              |
 | **AMD EPYC 7401**         | 24C / 48T       | [~17,263](https://www.cpubenchmark.net/cpu.php?cpu=AMD+EPYC+7401&id=3130)                              | 170     | 2.0 / 3.0 GHz     | SP3    | 64 MB    | **~$150 – $200**                                              |
 | **AMD EPYC 7371**         | 16C / 32T       | [~28,345](https://www.cpubenchmark.net/cpu.php?cpu=AMD+EPYC+7371&id=3324)                              | 200     | 3.1 / 3.8 GHz     | SP3    | 64 MB    | **~$180 – $250** (High clock)                                 |
 | **AMD EPYC 7281**         | 16C / 32T       | [~14,439](https://www.cpubenchmark.net/cpu.php?cpu=AMD+EPYC+7281&id=3131)                              | 155     | 2.1 / 2.7 GHz     | SP3    | 32 MB    | **~$100 – $150**                                              |
@@ -2292,7 +2450,7 @@ Enterprise drives are designed to handle much higher workloads and offer greater
 | **AMD Phenom II X4 N950** | 4C / 4T         | [~2,100](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Phenom+II+X4+N950) (est.)                        | 35      | 2.1 GHz           | None             | **~$8 – $12**                                                 |
 | **AMD Phenom II X3 N870** | 3C / 3T         | [~1,700](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Phenom+II+X3+N870) (est.)                        | 35      | 2.3 GHz           | None             | **~$6 – $10**                                                 |
 | **AMD Phenom II X2 X640 BE**| 2C / 2T       | [~1,165](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Phenom+II+X640+BE)                               | 45      | 3.2 GHz           | None             | **~$5 – $8**                                                  |
-| **AMD Turion II Ultra 2.5GHz**| 2C / 2T     | [~1,000](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Turion+II+Ultra) (est.)                          | 35      | 2.5 GHz           | None             | **~$4 – $6**                                                  |
+| **AMD Turion II Ultra 2.5GHz**| 2C / 2T     | ~1,000 (est.)                          | 35      | 2.5 GHz           | None             | **~$4 – $6**                                                  |
 
 </details>
   
@@ -3043,10 +3201,10 @@ i often found myself looking up these details when comparing GPUs to try to find
 <details>
 <summary><b>Intel GPUs</b></summary>
 
-| **Model**                                                                        | **VRAM**   | **FP32**     | **FP16**     | **TDP** | **Est. Idle** | **Bandwidth** | **Virtualization** | **Avg Used eBay.com Price (≈)**                         |
+| **Model**                                                                        | **VRAM**   | **FP32**     | **FP16**     | **TDP** | **Est. Idle** | **Bandwidth** | **Virtualization** | **Avg Used eBay.com Price (USD)**                         |
 | -------------------------------------------------------------------------------- | ---------- | ------------ | ------------ | ------- | ------------- | ------------- | ------------------ | ------------------------------------------------------- |
-| [**Intel Arc A310**](https://www.techpowerup.com/gpu-specs/arc-a310.c3931)       | 4GB GDDR6  | 3.072 TFLOPS | 6.144 TFLOPS | 75W    | 8–15W        | 124 GB/s      | ❌ No SR-IOV        | **~$160 – $200** (used & some new listings)  |
-| [**Intel Arc A380**](https://www.techpowerup.com/gpu-specs/arc-a380.c3913)       | 6GB GDDR6  | 4.198 TFLOPS | 8.397 TFLOPS | 75W    | 8–15W        | 186 GB/s      | ❌ No SR-IOV        | **~$160 – $240** (common eBay US range)      |
+| [**Intel Arc A310**](https://www.techpowerup.com/gpu-specs/arc-a310.c3931)       | 4GB GDDR6  | 3.072 TFLOPS | 6.144 TFLOPS | 75W    | 8–15W        | 124 GB/s      | ❌ No SR-IOV        | **~$110 – $160** (best value 4-5x 4K-HDR Jellyfin, no session limit)  |
+| [**Intel Arc A380**](https://www.techpowerup.com/gpu-specs/arc-a380.c3913)       | 6GB GDDR6  | 4.198 TFLOPS | 8.397 TFLOPS | 75W    | 8–15W        | 186 GB/s      | ❌ No SR-IOV        | **~$129 – $180** (8-12x 4K Jellyfin, AV1 enc/dec, needs kernel 6.8+ `xe` driver)      |
 | [**Intel Arc A580**](https://www.techpowerup.com/gpu-specs/arc-a580.c3927)       | 8GB GDDR6  | 12.29 TFLOPS | 24.58 TFLOPS | 185W   | 15–25W       | 256 GB/s      | ❌ No SR-IOV        | **~$200 – $300** (used listings vary)        |
 | [**Intel Arc A750**](https://www.techpowerup.com/gpu-specs/arc-a750.c3922)       | 8GB GDDR6  | 17.20 TFLOPS | 34.41 TFLOPS | 225W   | 18–30W       | 512 GB/s      | ❌ No SR-IOV        | **~$160 – $220** (used average)              |
 | [**Intel Arc A770 16GB**](https://www.techpowerup.com/gpu-specs/arc-a770.c3914)  | 16GB GDDR6 | 19.66 TFLOPS | 39.32 TFLOPS | 225W   | 18–30W       | 512 GB/s      | ❌ No SR-IOV        | **~$250 – $350** (used & new)                |
@@ -3054,6 +3212,7 @@ i often found myself looking up these details when comparing GPUs to try to find
 | [**Intel Arc Pro A50**](https://www.techpowerup.com/gpu-specs/arc-pro-a50.c3926) | 6GB GDDR6  | 4.813 TFLOPS | 9.626 TFLOPS | 75W    | 8–15W        | 192 GB/s      | ✅ SR-IOV           | **~$250 – $320** (used listings)             |
 | [**Intel Arc Pro A60**](https://www.techpowerup.com/gpu-specs/arc-pro-a60.c4160) | 12GB GDDR6 | 8.397 TFLOPS | 16.79 TFLOPS | 130W   | 10–20W       | 384 GB/s      | ✅ SR-IOV           | **~$350 – $500** (scarcer on eBay)           |
 | [**Intel Arc B580**](https://www.techpowerup.com/gpu-specs/arc-b580.c4244)       | 12GB GDDR6 | 13.67 TFLOPS | 27.34 TFLOPS | 190W   | 15–25W       | 256 GB/s      | ❌ No SR-IOV        | **~$230 – $300** (used & some new pricing)   |
+| [**Intel Arc B570 10GB**](https://www.techpowerup.com/gpu-specs/arc-b570.c4245) | 10GB GDDR6 | ~11 TFLOPS | ~22 TFLOPS | 150W | 12–20W | 380 GB/s | ❌ No SR-IOV | **~$220 street** - Battlemage Xe2 media engine, AV1 enc/dec, Plex support beta 1.43.1+ |
 | [**Intel Arc Pro B50**](https://www.techpowerup.com/gpu-specs/arc-pro-b50.c4345) | 16GB GDDR6 | 10.65 TFLOPS | 21.30 TFLOPS | 70W    | 7–15W        | 224 GB/s      | ✅ SR-IOV           | **~$350 – $450** (limited used)              |
 | [**Intel Arc Pro B60**](https://www.techpowerup.com/gpu-specs/arc-pro-b60.c4350) | 24GB GDDR6 | 12.29 TFLOPS | 24.58 TFLOPS | 200W   | 15–30W       | 456 GB/s      | ✅ SR-IOV           | **~$500 – $800** (very limited)              |
 
@@ -3062,7 +3221,7 @@ i often found myself looking up these details when comparing GPUs to try to find
 <details>
 <summary><b>Nvidia GPUs:</b></summary>
 
-| **Older Nvidia Cards**                               | **CUDA** | **VRAM**        | **FP32**      | **TDP** | **Virtualization** | **Avg Used eBay US ≈** |
+| **Older Nvidia Cards**                               | **CUDA** | **VRAM**        | **FP32**      | **TDP** | **Virtualization** | **Avg Used eBay.com Price (USD)** |
 |-----------------------------------------------|---------:|----------------:|---------------:|--------:|-------------------:|------------------------:|
 | **GTX 710**                                   |   192    | 1–2 GB DDR3    | ~0.25 TF       | 19W   | ❌                 | ~$30–$50               |
 | **GT 720**                                    |   192    | 1–2 GB DDR3    | ~0.30 TF       | 23W   | ❌                 | ~$30–$60               |
@@ -3089,7 +3248,7 @@ i often found myself looking up these details when comparing GPUs to try to find
 
 ## Nvidia 900 Series (Maxwell) 
 
-| **GPU (Maxwell)** | **CUDA Cores** | **VRAM** | **FP32** | **TDP** | **Virtualization** | **Avg Used eBay US ≈** |
+| **GPU (Maxwell)** | **CUDA Cores** | **VRAM** | **FP32** | **TDP** | **Virtualization** | **Avg Used eBay.com Price (USD)** |
 |------------------|---------------:|----------:|----------:|--------:|-------------------:|------------------------:|
 | [**GTX 750**](https://www.techpowerup.com/gpu-specs/geforce-gtx-750.c2778) | 512 | 1–2 GB GDDR5 | ~1.0 TF | ~55W | ✅ | ~$30 – $60 |
 | [**GTX 750 Ti**](https://www.techpowerup.com/gpu-specs/geforce-gtx-750-ti.c2777) | 640 | 2 GB GDDR5 | ~1.3 TF | ~60W | ✅ | ~$40 – $70 |
@@ -3104,7 +3263,7 @@ i often found myself looking up these details when comparing GPUs to try to find
 
 ## NVIDIA GTX 10 Series (Pascal)
 
-| **Model**                                                                             | **VRAM** | **FP16**     | **FP32**     | **TDP** | **Idle Power** | **Bandwidth** | **Virtualization** | **Avg Used eBay.com Price (≈)**                                                  |
+| **Model**                                                                             | **VRAM** | **FP16**     | **FP32**     | **TDP** | **Idle Power** | **Bandwidth** | **Virtualization** | **Avg Used eBay.com Price (USD)**                                                  |
 | ------------------------------------------------------------------------------------- | -------- | ------------ | ------------ | ------- | -------------- | ------------- | ------------------ | -------------------------------------------------------------------------------- |
 | [**GTX 1050**](https://www.techpowerup.com/gpu-specs/geforce-gtx-1050.c2875)          | 2 GB     | 29.10 GFLOPS | 1.862 TFLOPS | 75W    | ~8–12W        | 112 GB/s      | ✅ Unlock           | **~$50 – $80** (many used ~75 USD listed)                             |
 | [**GTX 1050 Ti**](https://www.techpowerup.com/gpu-specs/geforce-gtx-1050-ti.c2885)    | 4 GB     | 33.41 GFLOPS | 2.138 TFLOPS | 75W    | ~8–12W        | 112 GB/s      | ✅ Unlock           | **~$60 – $95** (common used range)                                    |
@@ -3114,13 +3273,13 @@ i often found myself looking up these details when comparing GPUs to try to find
 | [**GTX 1070 Ti**](https://www.techpowerup.com/gpu-specs/geforce-gtx-1070-ti.c3010)    | 8 GB     | 127.9 GFLOPS | 8.186 TFLOPS | 180W   | ~15–25W       | 256 GB/s      | ✅ Unlock           | **~$110 – $180** (user report and typical used sale)                |
 | [**GTX 1080**](https://www.techpowerup.com/gpu-specs/geforce-gtx-1080.c2839)          | 8 GB     | 139 GFLOPS   | 8.873 TFLOPS | 180W   | ~15–25W       | 320.3 GB/s    | ✅ Unlock           | **~$110 – $160** (recent used prices seen)                          |
 | [**GTX 1080 Ti**](https://www.techpowerup.com/gpu-specs/geforce-gtx-1080-ti.c2877)    | 11 GB    | 177.2 GFLOPS | 11.34 TFLOPS | 250W   | ~18–30W       | 484.4 GB/s    | ✅ Unlock           | **~$140 – $220** (many used listings around $150-$200)                |
-| [**NVIDIA TITAN X (Pascal)**](https://www.techpowerup.com/gpu-specs/titan-x-pascal.c2863) | 3584 | 12 GB GDDR5X | ~11.0 TF | ~11.0 TF | 250W | ~10W | ✅ Unlock | **~$120 – $200** |
+| [**NVIDIA TITAN X (Pascal)**](https://www.techpowerup.com/gpu-specs/titan-x-pascal.c2863) | 12 GB GDDR5X | ~172 GFLOPS | ~11.0 TFLOPS | 250W | ~15–25W | 480 GB/s | ✅ Unlock | **~$120 – $200** |
 
 <br> Note: Pascal Series Cards are FP32 **ONLY** so AI performance is not great, this includes the p4, p40 and quadro gen pascal cards. 
 
 ## NVIDIA GTX 16 Series (Turing)
 
-| **GPU**                                                                                  | **CUDA** | **VRAM**    | **FP32**   | **FP16**   | **TDP** | **Idle**   | **Virtualization** | **Avg Used eBay.com Price (≈)** |
+| **GPU**                                                                                  | **CUDA** | **VRAM**    | **FP32**   | **FP16**   | **TDP** | **Idle**   | **Virtualization** | **Avg Used eBay.com Price (USD)** |
 | ---------------------------------------------------------------------------------------- | -------- | ----------- | ---------- | ---------- | ------- | ----------- | ------------------ | ------------------------------- |
 | [**GTX 1650**](https://www.techpowerup.com/gpu-specs/geforce-gtx-1650.c3366)             | 896      | 4 GB GDDR6  | ~3.0 TF    | ~6.0 TF    | 75 W    | ~8–10 W     | ✅                 | **~$75 – $130** |
 | [**GTX 1650 Super**](https://www.techpowerup.com/gpu-specs/geforce-gtx-1650-super.c3411)  | 1280     | 4 GB GDDR6  | ~4.4 TF    | ~8.8 TF    | 100 W   | ~9–12 W     | ✅                 | **~$90 – $140** |
@@ -3132,10 +3291,11 @@ i often found myself looking up these details when comparing GPUs to try to find
 
 ## NVIDIA RTX 20 Series (Turing)
 
-| **GPU**                                                                                  | **CUDA** | **VRAM**    | **FP32** | **FP16** | **TDP** | **Idle** | **Virtualization** | **Avg Used eBay.com Price (≈)**        |
+| **GPU**                                                                                  | **CUDA** | **VRAM**    | **FP32** | **FP16** | **TDP** | **Idle** | **Virtualization** | **Avg Used eBay.com Price (USD)**        |
 | ---------------------------------------------------------------------------------------- | -------- | ----------- | -------- | -------- | ------- | -------- | ------------------ | -------------------------------------- |
 | [**RTX 2060**](https://www.techpowerup.com/gpu-specs/geforce-rtx-2060.c3310)             | 1920     | 6 GB GDDR6  | 6.5 TF   | 6.5 TF   | 160W   | ~8W     | ✅ Unlock           | **~$170 – $200**  |
 | [**RTX 2060 Super**](https://www.techpowerup.com/gpu-specs/geforce-rtx-2060-super.c3441) | 2176     | 8 GB GDDR6  | 7.2 TF   | 7.2 TF   | 175W   | ~9W     | ✅ Unlock           | **~$180 – $230**  |
+| [**RTX 2060 12GB**](https://www.techpowerup.com/gpu-specs/geforce-rtx-2060-12-gb.c3717) | 2176 | 12GB GDDR6 | 7.2 TF | 7.2 TF | 185W | ~9W | ✅ Unlock | **~$180 – $240** |
 | [**RTX 2070**](https://www.techpowerup.com/gpu-specs/geforce-rtx-2070.c3252)             | 2304     | 8 GB GDDR6  | 7.5 TF   | 7.5 TF   | 175W   | ~9W     | ✅ Unlock           | **~$200 – $250**  |
 | [**RTX 2070 Super**](https://www.techpowerup.com/gpu-specs/geforce-rtx-2070-super.c3440) | 2560     | 8 GB GDDR6  | 9.1 TF   | 9.1 TF   | 215W   | ~9W     | ✅ Unlock           | **~$220 – $270**  |
 | [**RTX 2080**](https://www.techpowerup.com/gpu-specs/geforce-rtx-2080.c3224)             | 2944     | 8 GB GDDR6  | 10.1 TF  | 10.1 TF  | 215W   | ~10W    | ✅ Unlock           | **~$240 – $300**  |
@@ -3145,19 +3305,25 @@ i often found myself looking up these details when comparing GPUs to try to find
 
 
 ## NVIDIA RTX 30 Series (Ampere)
-| **Model**                                                                               | **VRAM** | **FP32**     | **FP16**     | **TDP** | **Est. Idle** | **Bandwidth** | **Virtualization** | **Avg Used eBay.com Price (≈)**                                             |
+| **Model**                                                                               | **VRAM** | **FP32**     | **FP16**     | **TDP** | **Est. Idle** | **Bandwidth** | **Virtualization** | **Avg Used eBay.com Price (USD)**                                             |
 | --------------------------------------------------------------------------------------- | -------- | ------------ | ------------ | ------- | ------------- | ------------- | ------------------ | --------------------------------------------------------------------------- |
+| [**RTX 3050 6GB**](https://www.techpowerup.com/gpu-specs/geforce-rtx-3050-6-gb.c4236) | 6GB GDDR6 | 7.2 TFLOPS | 7.2 TFLOPS | 70W (low-profile available) | ~6–10W | 168 GB/s | ❌ | **~$130 – $180** |
+| [**GT 1030 GDDR5**](https://www.techpowerup.com/gpu-specs/geforce-gt-1030.c2765) | 2GB GDDR5 | 1.1 TFLOPS | 1.1 TFLOPS | 30W | ~5W | 48 GB/s | ❌ | **~$40 – $60** - avoid DDR4 version (half bandwidth, same price) |
 | [**RTX 3060 12GB**](https://www.techpowerup.com/gpu-specs/geforce-rtx-3060-12-gb.c3682) | 12 GB    | 12.74 TFLOPS | 12.74 TFLOPS | 170W   | ~8–12W       | 360 GB/s      | ❌                  | **~$200 – $280** (eBay used listings around $220–$280)      |
+| [**RTX 3060 8GB**](https://www.techpowerup.com/gpu-specs/geforce-rtx-3060-8-gb.c3683) | 8GB GDDR6 | 12.74 TFLOPS | 12.74 TFLOPS | 170W | ~8–12W | 240 GB/s | ❌ | **~$180 – $250** |
 | [**RTX 3060 Ti**](https://www.techpowerup.com/gpu-specs/geforce-rtx-3060-ti.c3681)      | 8 GB     | 16.20 TFLOPS | 16.20 TFLOPS | 200W   | ~10–15W      | 448 GB/s      | ❌                  | **~$220 – $300** (pre-owned listings & reports ~$220–$290)  |
 | [**RTX 3070**](https://www.techpowerup.com/gpu-specs/geforce-rtx-3070.c3674)            | 8 GB     | 20.31 TFLOPS | 20.31 TFLOPS | 220W   | ~9–15W       | 448 GB/s      | ❌                  | **~$240 – $300** (community price reports for used)       |
+| [**RTX 3070 Ti**](https://www.techpowerup.com/gpu-specs/geforce-rtx-3070-ti.c3675) | 8GB GDDR6X | 21.75 TFLOPS | 21.75 TFLOPS | 290W | ~10–15W | 608 GB/s | ❌ | **~$280 – $380** |
 | [**RTX 3080**](https://www.techpowerup.com/gpu-specs/geforce-rtx-3080.c3621)            | 10 GB    | 29.77 TFLOPS | 29.77 TFLOPS | 320W   | ~9–15W       | 760 GB/s      | ❌                  | **~$320 – $500** (used prices reported ~$320–$500)        |
+| [**RTX 3080 12GB**](https://www.techpowerup.com/gpu-specs/geforce-rtx-3080-12-gb.c3736) | 12GB GDDR6X | 30.6 TFLOPS | 30.6 TFLOPS | 350W | ~12–16W | 912 GB/s | ❌ | **~$380 – $550** |
 | [**RTX 3080 Ti**](https://www.techpowerup.com/gpu-specs/geforce-rtx-3080-ti.c3735)      | 12 GB    | 34.10 TFLOPS | 34.10 TFLOPS | 350W   | ~12–16W      | 912 GB/s      | ❌                  | **~$450 – $650+** (reports ~$450+)                 |
 | [**RTX 3090**](https://www.techpowerup.com/gpu-specs/geforce-rtx-3090.c3622)            | 24 GB    | 35.58 TFLOPS | 35.58 TFLOPS | 350W   | ~15–20W      | 936 GB/s      | ❌                  | **~$600 – $800+** (pricing trend ~$600+)             |
+| [**RTX 3090 Ti**](https://www.techpowerup.com/gpu-specs/geforce-rtx-3090-ti.c3737) | 24GB GDDR6X | 40 TFLOPS | 40 TFLOPS | 450W | ~18–22W | 1008 GB/s | ❌ | **~$800 – $1100** |
 
 
 ## NVIDIA RTX 40 Series (Ada Lovelace)
 
-| **GPU**                                                                                       | **CUDA** | **VRAM**             | **FP32** | **FP16** | **TDP** | **Idle** | **Virtualization** | **Avg Used eBay.com Price (≈)**                                      |
+| **GPU**                                                                                       | **CUDA** | **VRAM**             | **FP32** | **FP16** | **TDP** | **Idle** | **Virtualization** | **Avg Used eBay.com Price (USD)**                                      |
 | --------------------------------------------------------------------------------------------- | -------- | -------------------- | -------- | -------- | ------- | -------- | ------------------ | -------------------------------------------------------------------- |
 | [**RTX 4060**](https://www.techpowerup.com/gpu-specs/geforce-rtx-4060.c4107)                  | 3072     | 8 GB GDDR6 128-bit   | 15.1 TF  | 15.1 TF  | 115W   | ~7W     | ❌                  | **~$220 – $300** (active used listings ~$230–$300)        |
 | [**RTX 4060 Ti 8GB**](https://www.techpowerup.com/gpu-specs/geforce-rtx-4060-ti-8-gb.c4106)   | 4352     | 8 GB GDDR6 128-bit   | 22.1 TF  | 22.1 TF  | 160W   | ~8W     | ❌                  | **~$250 – $350** (used/Refurb shows ~$250–$350)           |
@@ -3165,16 +3331,19 @@ i often found myself looking up these details when comparing GPUs to try to find
 | [**RTX 4070**](https://www.techpowerup.com/gpu-specs/geforce-rtx-4070.c3924)                  | 5888     | 12 GB GDDR6X 192-bit | 29.1 TF  | 29.1 TF  | 200W   | ~10W    | ❌                  | **~$350 – $500+** (used pricing broader range on eBay)    |
 | [**RTX 4070 Super**](https://www.techpowerup.com/gpu-specs/geforce-rtx-4070-super.c4165)      | 7168     | 12 GB GDDR6X 192-bit | 35.5 TF  | 35.5 TF  | 220W   | ~10W    | ❌                  | **~$400 – $550+** (used listings suggest ~$400+ typical)  |
 | [**RTX 4070 Ti**](https://www.techpowerup.com/gpu-specs/geforce-rtx-4070-ti.c3950)            | 7680     | 12 GB GDDR6X 192-bit | 40.1 TF  | 40.1 TF  | 285W   | ~11W    | ❌                  | **~$450 – $650+** (commonly listed used)                  |
+| [**RTX 4070 Ti SUPER 16GB**](https://www.techpowerup.com/gpu-specs/geforce-rtx-4070-ti-super.c4166) | 8448 | 16GB GDDR6X 256-bit | 44.1 TF | 44.1 TF | 285W | ~12W | ❌ | **~$600 – $800** |
 | [**RTX 4080**](https://www.techpowerup.com/gpu-specs/geforce-rtx-4080.c3888)                  | 9728     | 16 GB GDDR6X 256-bit | 48.7 TF  | 48.7 TF  | 320W   | ~13W    | ❌                  | **~$700 – $1,000+** (used listings vary widely)           |
+| [**RTX 4080 SUPER 16GB**](https://www.techpowerup.com/gpu-specs/geforce-rtx-4080-super.c4167) | 10240 | 16GB GDDR6X 256-bit | 52.2 TF | 52.2 TF | 320W | ~13W | ❌ | **~$800 – $1,100** |
 | [**RTX 4090**](https://www.techpowerup.com/gpu-specs/geforce-rtx-4090.c3889)                  | 16384    | 24 GB GDDR6X 384-bit | 82.6 TF  | 82.6 TF  | 450W   | ~16W    | ❌                  | **~$1,400 – $2,000+** (many used listings in this range)  |
 
 
 ## NVIDIA RTX 50 Series (Blackwell)
 
-| **GPU**                                                                      | **CUDA** | **VRAM**            | **FP32**     | **FP16**     | **TDP** | **Idle** | **Virtualization** | **Avg Used eBay.com Price (≈)**                                                                                               |
+| **GPU**                                                                      | **CUDA** | **VRAM**            | **FP32**     | **FP16**     | **TDP** | **Idle** | **Virtualization** | **Avg Used eBay.com Price (USD)**                                                                                               |
 | ---------------------------------------------------------------------------- | -------- | ------------------- | ------------ | ------------ | ------- | -------- | ------------------ | ----------------------------------------------------------------------------------------------------------------------------- |
 | [**RTX 5050**](https://www.techpowerup.com/gpu-specs/geforce-rtx-5050.c4220) | 2560     | 8 GB GDDR6 128-bit  | 13.17 TFLOPS | 13.17 TFLOPS | 130W   | ~12W    | ❌                  | **~$350 – $450** (used listings like MSI RTX 5050 ~$450)                                                           |
 | [**RTX 5060**](https://www.techpowerup.com/gpu-specs/geforce-rtx-5060.c4219) | 3840     | 8 GB GDDR7 128-bit  | 19.18 TFLOPS | 19.18 TFLOPS | 145W   | ~13W    | ❌                  | **~$250 – $350** (used eBay listings for RTX 5060 shown ~$274)                                                     |
+| [**RTX 5060 Ti 16GB**](https://www.techpowerup.com/gpu-specs/geforce-rtx-5060-ti-16-gb.c4292) | 4608 | 16GB GDDR7 128-bit | ~24 TFLOPS | ~24 TFLOPS | 180W | ~14W | ❌ (VFIO-PT works) | **$429 MSRP ~$549 street 04/2026** - 2026 budget AI king, 16GB 448GB/s, FP4 native, Qwen3-14B Q4 ~32.9 t/s, 20B MXFP4 92 t/s, dual=32GB for 32B-class |
 | [**RTX 5070**](https://www.techpowerup.com/gpu-specs/geforce-rtx-5070.c4218) | 6144     | 12 GB GDDR7 256-bit | 30.87 TFLOPS | 30.87 TFLOPS | 250W   | ~14W    | ❌                  | **~$500 – $600** (used eBay listings show ~$550 for RTX 5070)                                                      |
 | [**RTX 5080**](https://www.techpowerup.com/gpu-specs/geforce-rtx-5080.c4190) | 10752    | 16 GB GDDR7 256-bit | 56.28 TFLOPS | 56.28 TFLOPS | 360W   | ~15W    | ❌                  | **~$800 – $1,200+** (used availability limited; high pricing trends)                                               |
 | [**RTX 5090**](https://www.techpowerup.com/gpu-specs/geforce-rtx-5090.c4189) | 21760    | 32 GB GDDR7 512-bit | 104.8 TFLOPS | 104.8 TFLOPS | 575W   | ~20W    | ❌                  | **~$2,300 – $4,500+** (eBay listings show high priced flagship cards; scalpers reported significantly above MSRP)  |
@@ -3182,39 +3351,47 @@ i often found myself looking up these details when comparing GPUs to try to find
 
 ## NVIDIA Quadro / Professional GPUs
 
-| **GPU (Maxwell Quadro / Tesla)** | **CUDA Cores** | **VRAM** | **Approx FP32** | **TDP** | **Use Case** | **Avg Used eBay US ≈** |
+| **GPU (Maxwell Quadro / Tesla)** | **CUDA Cores** | **VRAM** | **Approx FP32** | **TDP** | **Use Case** | **Avg Used eBay.com Price (USD)** |
 |----------------------------------|---------------:|----------:|----------------:|--------:|--------------|------------------------:|
 | [**Quadro M4000**](https://www.techpowerup.com/gpu-specs/quadro-m4000.c3423) | 1664 | 8 GB GDDR5 | ~2.6 TF | ~108W | Workstation | **~$65 – $80**  |
 | [**Quadro M5000**](https://www.techpowerup.com/gpu-specs/quadro-m5000.c3457) | ~2048 | 8 GB GDDR5 | ~3.2 TF | ~180W+ | Workstation | **$80** |
 | [**Quadro M6000**](https://www.techpowerup.com/gpu-specs/quadro-m6000.c3231) | 3072 | 12 GB GDDR5 | ~4.5–5.0 TF | ~250W | High-end Workstation | **$500** |
 | **Tesla M4** | 1024 | 4 GB GDDR5 | ~1.8–2.2 TF | ~50–75W | Server / Compute | **$45-55** |
 | **Tesla M6** | 1536 | 8 GB GDDR5 | ~2.2–3.2 TF | ~75–100W | Server / Compute | **No active eBay listings found** |
-| [**Tesla M10**](https://www.techpowerup.com/gpu-specs/tesla-m40.c2771) | 2560 (4×640) | 32 GB GDDR5 | ~5.2 TF | ~225W | Multi-GPU Compute | **$75-100** |
+| [**Tesla M10**](https://www.techpowerup.com/gpu-specs/tesla-m10.c3035) | 2560 (4×640) | 32 GB GDDR5 | ~5.2 TF | ~225W | Multi-GPU Compute | **$75-100** |
 | [**Tesla M40**](https://www.techpowerup.com/gpu-specs/tesla-m40.c2771) | 3072 | 12 GB GDDR5 | ~5.8–6.8 TF | ~250W | Compute Accelerator | **~$84 – $108**  |
 | **Tesla M60** | 4096 (2×2048) | 16 GB GDDR5 | ~7.4–9.6 TF | ~225–300W | High-Density Compute | **$60-70** |
 
 
 
-| **Pascal based Quardo**                                                               | **VRAM**   | **FP16 (half)** | **FP32 (float)** | **TDP** | **Idle Power (typical)** | **Bandwidth**    | **Virtualization** | **Avg. eBay.com Used Price**                                           |
-| ------------------------------------------------------------------------------ | ---------- | --------------- | ---------------- | ------- | ------------------------ | ---------------- | ------------------ | ---------------------------------------------------------------------- |
-| [Quadro P5000](https://www.techpowerup.com/gpu-specs/quadro-p5000.c2864)       | 16GB       | 138.6 GFLOPS    | 8.873 TFLOPS     | 180W    | ~15–20W                  | (256-bit GDDR5X) | ✅                  | **~$300 – $450** (many listings around ~$250-$349)          |
-| [Quadro P6000](https://www.techpowerup.com/gpu-specs/quadro-p6000.c2865)       | 24GB       | 197 GFLOPS      | 12.63 TFLOPS     | 250W    | ~20–25W                  | 432.8 GB/s       | ✅                  | **~$550 – $700** (common used around ~$548-$694)            |
-| [Quadro GP100](https://www.techpowerup.com/gpu-specs/quadro-gp100.c2994)        | 16GB HBM2  | 20.69 TFLOPS    | 10.34 TFLOPS     | 235W    | ~25–30W                  | 732.2 GB/s       | ✅                  | **~$300-$330** (typical Quadro GP100 used price)            |
-| [Quadro GV100](https://www.techpowerup.com/gpu-specs/quadro-gv100.c3066)         | 32GB HBM2  | 33.32 TFLOPS    | 16.66 TFLOPS     | 250W    | ~25–30W                  | 868.4 GB/s       | ✅                  | **~$900+** (used GV100 listings often near or above ~$900)  |
-| [Quadro RTX 6000](https://www.techpowerup.com/gpu-specs/quadro-rtx-6000.c3307) | 24GB GDDR6 | 32.62 TFLOPS    | 16.31 TFLOPS     | 260W    | ~22–30W                  | 672.0 GB/s       | ✅                  | **~$1,000 – $1,399** (common used around ~$1,019-$1,390)    |
+| **Pascal based Quadro**                                                               | **VRAM**   | **FP32 (float)** | **FP16 (half)**    | **TDP** | **Idle Power (typical)** | **Bandwidth**    | **Virtualization** | **Avg Used eBay.com Price (USD)**                                           |
+| ------------------------------------------------------------------------------ | ---------- | ---------------- | --------------- | ------- | ------------------------ | ---------------- | ------------------ | ---------------------------------------------------------------------- |
+| [Quadro P5000](https://www.techpowerup.com/gpu-specs/quadro-p5000.c2864)       | 16GB       | 8.873 TFLOPS     | 138.6 GFLOPS    | 180W    | ~15–20W                  | (256-bit GDDR5X) | ✅                  | **~$300 – $450** (many listings around ~$250-$349)          |
+| [Quadro P6000](https://www.techpowerup.com/gpu-specs/quadro-p6000.c2865)       | 24GB       | 12.63 TFLOPS     | 197 GFLOPS      | 250W    | ~20–25W                  | 432.8 GB/s       | ✅                  | **~$550 – $700** (common used around ~$548-$694)            |
+| [Quadro GP100](https://www.techpowerup.com/gpu-specs/quadro-gp100.c2994)        | 16GB HBM2  | 10.34 TFLOPS     | 20.69 TFLOPS    | 235W    | ~25–30W                  | 732.2 GB/s       | ✅                  | **~$300-$330** (typical Quadro GP100 used price)            |
+| [Quadro GV100](https://www.techpowerup.com/gpu-specs/quadro-gv100.c3066)         | 32GB HBM2  | 16.66 TFLOPS     | 33.32 TFLOPS    | 250W    | ~25–30W                  | 868.4 GB/s       | ✅                  | **~$900+** (used GV100 listings often near or above ~$900) - Note: Volta (GV100/GP100) is the only pre-Turing arch with Tensor cores, unlike Pascal P5000/P6000. |
 
 
-| **Turing based Quardo**                                                                         | **VRAM**   | **FP16 (half)** | **FP32 (float)** | **TDP** | **Idle Power** | **Bandwidth** | **Virtualization** | **Avg Used eBay.com Price (USD)** |
-| ------------------------------------------------------------------------------- | ---------- | --------------- | ---------------- | ------- | -------------- | ------------- | ------------------ | --------------------------------- |
-| [Quadro RTX 8000](https://www.techpowerup.com/gpu-specs/quadro-rtx-8000.c3306)            | 48 GB GDDR6 | 32.62 TFLOPS | 16.3 TFLOPS    | 260W | ~20–30W (est.)         | 672 GB/s‡    | ✅                  | **~$1,975 – $2,875** |
-| [Quadro RTX 6000](https://www.techpowerup.com/gpu-specs/quadro-rtx-6000.c3307)            | 24 GB GDDR6 | 32.62 TFLOPS | 16.31 TFLOPS    | 260W | ~20–30W (est.)         | 672 GB/s‡    | ✅                  | **~$990 – $2,000** |
-| [Quadro RTX 5000](https://www.techpowerup.com/gpu-specs/quadro-rtx-5000.c3308)            | 16 GB GDDR6 | 22.30 TFLOPS | 11.15 TFLOPS   | 230W | ~15–20W (est.)         | 448 GB/s‡    | ✅                  | **~$449 - $600** |
-| [Quadro RTX 4000](https://www.techpowerup.com/gpu-specs/quadro-rtx-4000.c3336)            | 8 GB GDDR6  | 14.24 TFLOPS | 7.119 TFLOPS   | 160W | ~12–18W (est.)         | 448 GB/s‡    | ✅                  | **~$180 - $220** |
+| **Turing based Quadro**                                                                         | **VRAM**   | **FP32 (float)** | **FP16 (half)** | **TDP** | **Idle Power** | **Bandwidth** | **Virtualization** | **Avg Used eBay.com Price (USD)** |
+| ------------------------------------------------------------------------------- | ---------- | ---------------- | --------------- | ------- | -------------- | ------------- | ------------------ | --------------------------------- |
+| [Quadro RTX 8000](https://www.techpowerup.com/gpu-specs/quadro-rtx-8000.c3306)            | 48 GB GDDR6 | 16.3 TFLOPS    | 32.62 TFLOPS | 260W | ~20–30W (est.)         | 672 GB/s‡    | ✅                  | **~$1,975 – $2,875** |
+| [Quadro RTX 6000](https://www.techpowerup.com/gpu-specs/quadro-rtx-6000.c3307)            | 24 GB GDDR6 | 16.31 TFLOPS    | 32.62 TFLOPS | 260W | ~20–30W (est.)         | 672 GB/s‡    | ✅                  | **~$990 – $2,000** |
+| [Quadro RTX 5000](https://www.techpowerup.com/gpu-specs/quadro-rtx-5000.c3308)            | 16 GB GDDR6 | 11.15 TFLOPS   | 22.30 TFLOPS | 230W | ~15–20W (est.)         | 448 GB/s‡    | ✅                  | **~$449 - $600** |
+| [Quadro RTX 4000](https://www.techpowerup.com/gpu-specs/quadro-rtx-4000.c3336)            | 8 GB GDDR6  | 7.119 TFLOPS   | 14.24 TFLOPS | 160W | ~12–18W (est.)         | 448 GB/s‡    | ✅                  | **~$180 - $220** |
+| [Quadro P400](https://www.techpowerup.com/gpu-specs/quadro-p400.c2934) | 2GB GDDR5 | ~1.1 TFLOPS | ~1.1 TFLOPS | 30W (no 6-pin) | ~5–8W | 32 GB/s | ✅ | **~$50 – $80** - cheapest Jellyfin transcode, no NVENC session limit like GTX |
+| [Quadro P620](https://www.techpowerup.com/gpu-specs/quadro-p620.c2969) | 2GB GDDR5 | ~1.5 TFLOPS | ~1.5 TFLOPS | 40W (no 6-pin) | ~5–8W | 80 GB/s | ✅ | **~$70 – $110** |
+| [Quadro P1000](https://www.techpowerup.com/gpu-specs/quadro-p1000.c2869) | 4GB GDDR5 | ~1.9 TFLOPS | ~1.9 TFLOPS | 47W (no 6-pin) | ~6–10W | 80 GB/s | ✅ | **~$90 – $140** - recommended over GTX 1050/1650 for Plex (no patch needed) |
+| [Quadro P2000](https://www.techpowerup.com/gpu-specs/quadro-p2000.c2870) | 5GB GDDR5 | ~3.0 TFLOPS | ~3.0 TFLOPS | 75W (no 6-pin) | ~8–12W | 160 GB/s | ✅ | **~$150 – $220** |
+| [NVIDIA T400 4GB](https://www.techpowerup.com/gpu-specs/t400-4-gb.c3843) | 4GB GDDR6 | ~2.5 TFLOPS | ~2.5 TFLOPS | 30W (low-profile) | ~5–8W | 80 GB/s | ✅ | **~$100 – $160** - Turing NVENC (better HEVC), 30W Jellyfin king |
+| [NVIDIA T600 4GB](https://www.techpowerup.com/gpu-specs/t600.c3796) | 4GB GDDR6 | ~4.0 TFLOPS | ~4.0 TFLOPS | 40W (low-profile) | ~6–10W | 160 GB/s | ✅ | **~$150 – $220** |
+| [NVIDIA T1000 8GB](https://www.techpowerup.com/gpu-specs/t1000-8-gb.c3842) | 8GB GDDR6 | ~5.0 TFLOPS | ~2.5 TFLOPS | 50W (low-profile) | ~7–12W | 160 GB/s | ✅ | **~$200 – $280** |
+
+<br>⚠️ Virtualization key: ✅ = vGPU-Unlock (Maxwell/Pascal/Turing only) + VFIO passthrough both work. ❌ on 30/40/50-series = vGPU-Unlock does NOT work, but VFIO passthrough DOES work. SR-IOV only on Intel Arc Pro / AMD Pro MxGPU / Nvidia vGPU-licensed Tesla. Don't avoid 30-series for passthrough just because of ❌.
 
 
 ## NVIDIA RTX A-Series (Professional GPUs)
 
-| **GPU**                                                                         | **VRAM**   | **FP16 (half)** | **FP32 (float)** | **TDP** | **Idle Power** | **Bandwidth** | **Virtualization** | **Avg Used eBay.com Price (USD)** |
+| **GPU**                                                                         | **VRAM**   | **FP32 (float)** | **FP16 (half)** | **TDP** | **Idle Power** | **Bandwidth** | **Virtualization** | **Avg Used eBay.com Price (USD)** |
 | ------------------------------------------------------------------------------- | ---------- | --------------- | ---------------- | ------- | -------------- | ------------- | ------------------ | --------------------------------- |
 | [RTX A400](https://www.techpowerup.com/gpu-specs/rtx-a400.c4212)     | 4 GB GDDR6  | 2.706 TFLOPS      | 2.706 TFLOPS     | 50W    | ~6–10W*        | 96 GB/s       | ✅                  | **~$180 – $220** |
 | [RTX A2000](https://www.techpowerup.com/gpu-specs/rtx-a2000.c3820) 6GB          | 6GB GDDR6  | 7.987 TFLOPS    | 7.987 TFLOPS     | 70W     | ~7–10W         | 288 GB/s      | ✅                  | ~$300–$450             |
@@ -3222,29 +3399,64 @@ i often found myself looking up these details when comparing GPUs to try to find
 | [RTX A4500](https://www.techpowerup.com/gpu-specs/rtx-a4500.c3849)              | 20GB GDDR6 | 23.65 TFLOPS    | 23.65 TFLOPS     | 200W    | ~13–18W        | 640 GB/s      | ✅                  | ~$1,295–$1,450         |
 | [RTX A5000](https://www.techpowerup.com/gpu-specs/rtx-a5000.c3748)              | 24GB GDDR6 | 27.77 TFLOPS    | 27.77 TFLOPS     | 230W    | ~10–20W        | 768 GB/s      | ✅                  | ~$1,675–$1,900         |
 | [RTX A6000](https://www.techpowerup.com/gpu-specs/rtx-a6000.c3686)              | 48GB GDDR6 | 38.71 TFLOPS    | 38.71 TFLOPS     | 300W    | ~8–12W         | 768 GB/s      | ✅                  | ~$4,250–$5,000         |
+| [RTX 2000 Ada 16GB](https://www.techpowerup.com/gpu-specs/rtx-2000-ada-generation.c4199) | 16GB GDDR6 | 27.7 TFLOPS | 27.7 TFLOPS | 70W | ~8–12W | 224 GB/s | ✅ | **~$500 – $650** |
+| [RTX 4000 SFF Ada 20GB](https://www.techpowerup.com/gpu-specs/rtx-4000-sff-ada-generation.c4139) | 20GB GDDR6 | 42.3 TFLOPS | 42.3 TFLOPS | 70W | ~8–12W | 360 GB/s | ✅ | **~$900 – $1,200** |
+| [RTX 4500 Ada 24GB](https://www.techpowerup.com/gpu-specs/rtx-4500-ada-generation.c4172) | 24GB GDDR6 | 65.8 TFLOPS | 65.8 TFLOPS | 210W | ~15–20W | 768 GB/s | ✅ | **~$2,000 – $2,500** |
+| [RTX 5000 Ada 32GB](https://www.techpowerup.com/gpu-specs/rtx-5000-ada-generation.c4152) | 32GB GDDR6 | 91.1 TFLOPS | 91.1 TFLOPS | 250W | ~18–25W | 960 GB/s | ✅ | **~$3,500 – $4,500** |
+| [RTX 6000 Ada 48GB](https://www.techpowerup.com/gpu-specs/rtx-6000-ada-generation.c3933) | 48GB GDDR6 | 129.3 TFLOPS | 129.3 TFLOPS | 300W | ~20–30W | 960 GB/s | ✅ | **~$6,000 – $8,000** |
 
 <br>NOTE: Nvidia dropped the quadro name after turing now they are RTX A-series. 
 
 
 ## NVIDIA Tesla Series
 
-| **GPU**                                                                                       | **VRAM**   | **FP16 (half)**    | **FP32 (float)** | **TDP** | **Idle Power (typical)** | **Bandwidth** | **Virtualization** | **Avg Used eBay.com Price (≈)**                                                                                    |
-| --------------------------------------------------------------------------------------------- | ---------- | ------------------ | ---------------- | ------- | ------------------------ | ------------- | ------------------ | ------------------------------------------------------------------------------------------------------------------ |
-| [**Tesla P4**](https://www.techpowerup.com/gpu-specs/tesla-p4.c2879)                          | 8 GB       | 89.12 GFLOPS       | 5.704 TFLOPS     | 75W    | ~6–10W                  | 192.3 GB/s    | ✅                  | **~$65 – $100** – Tesla P4 listings often show used cards in the $65–$100 range.                        |
-| [**Tesla P40**](https://www.techpowerup.com/gpu-specs/tesla-p40.c2878)                        | 24 GB      | 183.7 GFLOPS       | 11.76 TFLOPS     | 250W   | ~9–12W                  | 384-bit GDDR5 | ✅                  | **~$190 – $300+** – Multiple used Tesla P40 listings available between about $180 and $300.             |
-| [**Tesla P100 PCIe 12GB**](https://www.techpowerup.com/gpu-specs/tesla-p100-pcie-12-gb.c2915) | 12 GB HBM2 | 19.05 TFLOPS       | 9.526 TFLOPS     | 250W   | ~25–27W                 | 549.1 GB/s    | ✅                  | **~$90 – $130** – Typical used cards around ~$100+ on eBay.                                             |
-| [**Tesla P100 SXM2 16GB**](https://www.techpowerup.com/gpu-specs/tesla-p100-sxm2.c3183)       | 16GB HBM2  | 21.22 TFLOPS       | 10.61 TFLOPS     | 300W   | ~25–30W                 | 732.2 GB/s    | ✅                  | **~$180 – $300+** – Listings vary based on adapter combos; typical range observed.                      |
-| [**Tesla V100 PCIe 16GB**](https://www.techpowerup.com/gpu-specs/tesla-v100-pcie-16-gb.c2957) | 16 GB HBM2 | 28.26 TFLOPS       | 14.13 TFLOPS     | 300W   | ~20–30W                 | 897.0 GB/s    | ✅                  | **~$300 – $500+** – Used listings frequently show V100 16GB cards around this range.                    |
-| [**Tesla V100 PCIe 32GB**](https://www.techpowerup.com/gpu-specs/tesla-v100-pcie-32-gb.c3184) | 32 GB HBM2 | ~28.26 TFLOPS      | ~14.13 TFLOPS    | 300W   | ~20–30W                 | 897.0 GB/s    | ✅                  | **~$700 – $1,000+** – Larger-memory units on eBay.com trend significantly higher.                       |
-| [**Tesla T4**](https://www.techpowerup.com/gpu-specs/tesla-t4.c3316)                          | 16 GB      | 65.13 TFLOPS (8:1) | 8.141 TFLOPS     | 70W    | ~8–12W                  | 320.0 GB/s    | ✅                  | **$750** – Used T4 cards often appear in this range on eBay.com.                                |
-| [**Tesla L4**](https://www.techpowerup.com/gpu-specs/l4.c4091)                                | 24 GB      | 30.29 TFLOPS (1:1) | 30.29 TFLOPS     | 72W    | ~8–12W                  | 192.3 GB/s    | ✅                  | **$3,000**  |
-| [Tesla H100 80GB (PCIe / SXM5)](https://www.techpowerup.com/gpu-specs/h100-pcie-80-gb.c3899) | 80 GB HBM3 | 204.9 TFLOPS | 51.22 TFLOPS | 350W | ~30–40W (typical) | ~2,000–3,350 GB/s | ✅ | **~$14,000 – $22,500+** |
-| [Tesla H100 NVL 94GB](https://www.techpowerup.com/gpu-specs/h100-nvl-94-gb.c4327) | 94 GB HBM3 | 241.3 TFLOPS | 60.32 TFLOPS  | 400W | ~30–40W (typical) | ~3,900 GB/s | ✅ | **~$25,000 – $33,000+** |
+| **GPU**                                                                                       | **VRAM**   | **FP32 (float)** | **FP16 (half)**    | **TDP** | **Idle Power (typical)** | **Bandwidth** | **Virtualization** | **Avg Used eBay.com Price (USD)**                                                                                    |
+| --------------------------------------------------------------------------------------------- | ---------- | ---------------- | ------------------ | ------- | ------------------------ | ------------- | ------------------ | ------------------------------------------------------------------------------------------------------------------ |
+| [**Tesla P4**](https://www.techpowerup.com/gpu-specs/tesla-p4.c2879)                          | 8 GB       | 5.704 TFLOPS     | 89.12 GFLOPS       | 75W    | ~6–10W                  | 192.3 GB/s    | ✅                  | **~$65 – $100** – Tesla P4 listings often show used cards in the $65–$100 range.                        |
+| [**Tesla P40**](https://www.techpowerup.com/gpu-specs/tesla-p40.c2878)                        | 24 GB      | 11.76 TFLOPS     | 183.7 GFLOPS       | 250W   | ~9–12W                  | 384-bit GDDR5 | ✅                  | **~$190 – $300+** – Multiple used Tesla P40 listings available between about $180 and $300.             |
+| [**Tesla P100 PCIe 12GB**](https://www.techpowerup.com/gpu-specs/tesla-p100-pcie-12-gb.c2915) | 12 GB HBM2 | 9.526 TFLOPS     | 19.05 TFLOPS       | 250W   | ~25–27W                 | 549.1 GB/s    | ✅                  | **~$90 – $130** – Typical used cards around ~$100+ on eBay.                                             |
+| [**Tesla P100 SXM2 16GB**](https://www.techpowerup.com/gpu-specs/tesla-p100-sxm2.c3183)       | 16GB HBM2  | 10.61 TFLOPS     | 21.22 TFLOPS       | 300W   | ~25–30W                 | 732.2 GB/s    | ✅                  | **~$180 – $300+** – Listings vary based on adapter combos; typical range observed.                      |
+| [**Tesla V100 PCIe 16GB**](https://www.techpowerup.com/gpu-specs/tesla-v100-pcie-16-gb.c2957) | 16 GB HBM2 | 14.13 TFLOPS     | 28.26 TFLOPS       | 300W   | ~20–30W                 | 897.0 GB/s    | ✅                  | **~$300 – $500+** – Used listings frequently show V100 16GB cards around this range.                    |
+| [**Tesla V100 PCIe 32GB**](https://www.techpowerup.com/gpu-specs/tesla-v100-pcie-32-gb.c3184) | 32 GB HBM2 | ~14.13 TFLOPS    | ~28.26 TFLOPS      | 300W   | ~20–30W                 | 897.0 GB/s    | ✅                  | **~$700 – $1,000+** – Larger-memory units on eBay.com trend significantly higher.                       |
+| [**Tesla T4**](https://www.techpowerup.com/gpu-specs/tesla-t4.c3316)                          | 16 GB      | 8.141 TFLOPS     | 65.13 TFLOPS (8:1) | 70W    | ~8–12W                  | 320.0 GB/s    | ✅                  | **~$300 – $500** – Used T4 street 2026.                                |
+| [**Tesla L4**](https://www.techpowerup.com/gpu-specs/l4.c4091)                                | 24 GB      | 30.29 TFLOPS     | 30.29 TFLOPS (1:1) | 72W    | ~8–12W                  | 192.3 GB/s    | ✅                  | **~$2000+ used**  |
+| [Tesla A10 24GB](https://www.techpowerup.com/gpu-specs/a10-pcie.c3793) | 24GB GDDR6 | 31.1 TFLOPS | 62.2 TFLOPS | 150W | ~15–20W | 600 GB/s | ✅ | **~$2,500 – $3,500** |
+| [Tesla L40S 48GB](https://www.techpowerup.com/gpu-specs/l40s.c4173) | 48GB GDDR6 | 91.6 TFLOPS | 183 TFLOPS | 350W | ~25–35W | 864 GB/s | ✅ | **~$6,000 – $8,000** |
+| [Tesla H100 80GB (PCIe / SXM5)](https://www.techpowerup.com/gpu-specs/h100-pcie-80-gb.c3899) | 80 GB HBM3 | 51.22 TFLOPS | 204.9 TFLOPS | 350W | ~30–40W (typical) | ~2,000–3,350 GB/s | ✅ | **~$14,000 – $22,500+** |
+| [Tesla H100 NVL 94GB](https://www.techpowerup.com/gpu-specs/h100-nvl-94-gb.c4327) | 94 GB HBM3 | 60.32 TFLOPS  | 241.3 TFLOPS | 400W | ~30–40W (typical) | ~3,900 GB/s | ✅ | **~$25,000 – $33,000+** |
 
-| **GPU**                                                                                       | **VRAM**   | **BF16**           | **BF16**           | **FP16 (half)**    | **FP32 (float)** | **TDP** | **Idle Power (typical)** | **Bandwidth** | **Virtualization** | **Avg Used eBay.com Price (≈)**                                                                                    |
+| **GPU**                                                                                       | **VRAM**   | **BF16 dense**     | **BF16 sparse**    | **FP16 (half)**    | **FP32 (float)** | **TDP** | **Idle Power (typical)** | **Bandwidth** | **Virtualization** | **Avg Used eBay.com Price (USD)**                                                                                    |
 | --------------------------------------------------------------------------------------------- | ---------- | ------------------ | ------------------ | ------------------ | ---------------- | ------- | ------------------------ | ------------- | ------------------ | ------------------------------------------------------------------------------------------------------------------ |
-| [Tesla A100 40GB](https://www.techpowerup.com/gpu-specs/a100-pcie-40-gb.c3623)    | 40 GB HBM2e | 311.84 TFLOPS | 155.92 TFLOPs | 77.97 TFLOPS | 19.49 TFLOPS  | 250W | ~25–30W | 1,555 GB/s | ✅ | **~$4,000 – $9,000** |
-| [Tesla A100 80GB](https://www.techpowerup.com/gpu-specs/a100-pcie-80-gb.c3821)    | 80 GB HBM2e | 311.84 TFLOPS | 155.92 TFLOPs | 77.97 TFLOPS | 19.49 TFLOPS | 300W | ~25–30W | 1,935 GB/s | ✅ | **~$8,500 – $18,500+** |
+| [Tesla A100 40GB](https://www.techpowerup.com/gpu-specs/a100-pcie-40-gb.c3623)    | 40 GB HBM2e | 311.84 TFLOPS | 155.92 TFLOPS | 77.97 TFLOPS | 19.49 TFLOPS  | 250W | ~25–30W | 1,555 GB/s | ✅ | **~$4,000 – $9,000** |
+| [Tesla A100 80GB](https://www.techpowerup.com/gpu-specs/a100-pcie-80-gb.c3821)    | 80 GB HBM2e | 311.84 TFLOPS | 155.92 TFLOPS | 77.97 TFLOPS | 19.49 TFLOPS | 300W | ~25–30W | 1,935 GB/s | ✅ | **~$8,500 – $18,500+** |
+</details>
+
+<details>
+<summary><b>Intel Flex Series (Datacenter)</b></summary>
+
+| **Model** | **VRAM** | **FP32** | **FP16** | **TDP** | **Idle** | **Bandwidth** | **Virtualization** | **Avg Used eBay.com Price (USD)** |
+| --------- | -------- | -------- | -------- | ------- | -------- | ------------- | ------------------ | ------------------------------- |
+| [Intel Flex 140 12GB](https://www.techpowerup.com/gpu-specs/intel-flex-140.c3856) | 12GB GDDR6 | 11 TFLOPS | 22 TFLOPS | 75W | ~10–15W | 336 GB/s | ✅ SR-IOV | **~$400 – $600** |
+| [Intel Flex 170 16GB](https://www.techpowerup.com/gpu-specs/intel-flex-170.c3855) | 16GB GDDR6 | 16 TFLOPS | 32 TFLOPS | 110W | ~12–18W | 448 GB/s | ✅ SR-IOV | **~$600 – $900** |
+</details>
+
+<details>
+<summary><b>GPU Tuning (NVENC / Tone-mapping / vGPU / Ollama):</b></summary>
+
+- NVENC: consumer Nvidia capped at 3 concurrent (now 8 on newer drivers), patch with `nvidia-patch` or use Quadro/Tesla unlimited. Check with `nvidia-smi encodersessions`.
+- Jellyfin tone-mapping: OpenCL (Intel QSV/Arc) vs CUDA (Nvidia), HDR-to-SDR washout fixed by enabling tone-mapping + OpenCL runtime. Test with 4K HDR sample.
+- vGPU vs VFIO: vGPU-Unlock (Maxwell-Pascal-Turing only) needs GRID + license server, VFIO passthrough works on all including 30/40/50 + Looking Glass for low-latency VM display.
+- Intel: GVT-g dead on 12th+ Gen, use Arc Pro SR-IOV instead. Ollama: tune `num_ctx 4096 + num_batch 512 + num_gpu 999` + offload layers, default context spills to RAM at 5 tok/s.
+
+</details>
+
+<details>
+<summary><b>Selfhosted + VPN/SSO + ECC Test Notes:</b></summary>
+
+- Tailscale: subnet routes + exit nodes + Headscale self-host, Authelia + lldap LDAP SSO in front of *arr/Immich/Paperless. Never expose raw ports, use VPN or authelia-backed proxy.
+- Immich: needs Postgres pgvectors + Redis + ML container, breaks without vectors extension. Paperless-ngx: needs Tika/Gotenberg for OCR, consumes RAM on large PDFs.
+- ECC test: `memtester 4G 3` + `edac-util -v` to verify side-band ECC actually corrects. DDR5 on-die ECC alone does not report via edac, need true ECC UDIMM/RDIMM + board support or silent rot.
+
 </details>
 
 <details>
@@ -3252,7 +3464,7 @@ i often found myself looking up these details when comparing GPUs to try to find
 
 ## AMD Radeon RX 5000 Series (RDNA1)
 
-| **GPU**                                                                                         | **VRAM**          | **FP32**    | **FP16**     | **TDP** | **Idle (Typical)** | **Bandwidth** | **Virtualization** | **Avg Used eBay.com Price (≈)**                                                                                                                   |
+| **GPU**                                                                                         | **VRAM**          | **FP32**    | **FP16**     | **TDP** | **Idle (Typical)** | **Bandwidth** | **Virtualization** | **Avg Used eBay.com Price (USD)**                                                                                                                   |
 | ----------------------------------------------------------------------------------------------- | ----------------- | ----------- | ------------ | ------- | ------------------ | ------------- | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [**Radeon RX 5500**](https://www.techpowerup.com/gpu-specs/radeon-rx-5500.c3455)                | 4GB GDDR6 128-bit | 5.20 TFLOPS | 10.40 TFLOPS | 110W    | ~5–8W              | 224 GB/s      | ❌                  | **~$60 – $90** – early used listings for RX 5500 variants appear around ~$60-$90 on eBay.com (e.g., pre-owned RX 5500 XT/5500 cards).  |
 | [**Radeon RX 5500 XT 4GB**](https://www.techpowerup.com/gpu-specs/radeon-rx-5500-xt.c3468)      | 4GB GDDR6 128-bit | 5.20 TFLOPS | 10.40 TFLOPS | 130W    | ~6–10W             | 224 GB/s      | ❌                  | **~$70 – $110** – eBay.com used RX 5500 XT 4GB listings often range ~$60-$110+.                                                        |
@@ -3264,7 +3476,9 @@ i often found myself looking up these details when comparing GPUs to try to find
 
 ## AMD Radeon RX 6000 Series (RDNA2)
 
-| **GPU**                                                                            | **VRAM**           | **FP32**     | **FP16**     | **TDP** | **Idle (Typical)** | **Bandwidth** | **Virtualization** | **Avg Used eBay.com Price (≈)**                                                                                                                                         |
+> ⚠️ RX 6400 / RX 6500 XT HAVE NO HARDWARE ENCODER - do NOT buy for Jellyfin/Plex transcoding. Decode-only. Same trap as Arc A310 vs others - check encoders before buying.
+
+| **GPU**                                                                            | **VRAM**           | **FP32**     | **FP16**     | **TDP** | **Idle (Typical)** | **Bandwidth** | **Virtualization** | **Avg Used eBay.com Price (USD)**                                                                                                                                         |
 | ---------------------------------------------------------------------------------- | ------------------ | ------------ | ------------ | ------- | ------------------ | ------------- | ------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [Radeon RX 6500 XT](https://www.techpowerup.com/gpu-specs/radeon-rx-6500-xt.c3850) | 4GB GDDR6 64-bit   | 5.77 TFLOPS  | 11.54 TFLOPS | 107W    | ~5–8W              | 144 GB/s      | ❌                  | **~$70 – $160** – multiple eBay.com used listings show 4GB RX 6500 XT cards commonly **~$60–$150+ USD** (e.g., $63.99–$150+).                                |
 | [Radeon RX 6600](https://www.techpowerup.com/gpu-specs/radeon-rx-6600.c3696)       | 8GB GDDR6 128-bit  | 8.93 TFLOPS  | 17.86 TFLOPS | 132W    | ~6–10W             | 224 GB/s      | ❌                  | **~$140 – $200** – used RX 6600 listings typically around **$150–$180+ USD** on eBay.com (e.g., $155, $180).                                                 |
@@ -3272,16 +3486,16 @@ i often found myself looking up these details when comparing GPUs to try to find
 | [Radeon RX 6650 XT](https://www.techpowerup.com/gpu-specs/radeon-rx-6650-xt.c3898) | 8GB GDDR6 128-bit  | 10.79 TFLOPS | 21.58 TFLOPS | 176W    | ~7–12W             | 280 GB/s      | ❌                  | **~$200 – $300** – limited direct data, but common used RX 6650 XT listings appear around ~$200–$300 USD on eBay.com.                                        |
 | [Radeon RX 6700](https://www.techpowerup.com/gpu-specs/radeon-rx-6700.c3716)       | 10GB GDDR6 160-bit | 10.37 TFLOPS | 20.74 TFLOPS | 175W    | ~10–15W            | 320 GB/s      | ❌                  | **~$200 – $300+** – representative used RX 6700 XT (similar generation) listings often around **$270–$340** (RX 6700 used may trend similar).                |
 | [Radeon RX 6700 XT](https://www.techpowerup.com/gpu-specs/radeon-rx-6700-xt.c3695) | 12GB GDDR6 192-bit | 13.21 TFLOPS | 26.42 TFLOPS | 230W    | ~12–18W            | 384 GB/s      | ❌                  | **~$250 – $350+** – used RX 6700 XT listings frequently show prices roughly **~$249–$340+ USD** on eBay.com.                                                 |
-| [Radeon RX 6750 XT](https://www.techpowerup.com/gpu-specs/radeon-rx-6750-xt.c3899) | 12GB GDDR6 192-bit | 13.31 TFLOPS | 26.62 TFLOPS | 250W    | ~12–18W            | 432 GB/s      | ❌                  | **~$250 – $350+** – some used listings for RX 6750 XT show ~**$270+**, suggesting similar mid-upper RDNA2 pricing.                                           |
+| [Radeon RX 6750 XT](https://www.techpowerup.com/gpu-specs/radeon-rx-6750-xt.c3879) | 12GB GDDR6 192-bit | 13.31 TFLOPS | 26.62 TFLOPS | 250W    | ~12–18W            | 432 GB/s      | ❌                  | **~$250 – $350+** – some used listings for RX 6750 XT show ~**$270+**, suggesting similar mid-upper RDNA2 pricing.                                           |
 | [Radeon RX 6800](https://www.techpowerup.com/gpu-specs/radeon-rx-6800.c3713)       | 16GB GDDR6 256-bit | 16.17 TFLOPS | 32.34 TFLOPS | 250W    | ~15–22W            | 512 GB/s      | ❌                  | **~$280 – $380** – used cards from the same generation often list **~$285–$380+ USD** on eBay.com (approximate from 6800 XT comparables and 6800 listings).  |
 | [Radeon RX 6800 XT](https://www.techpowerup.com/gpu-specs/radeon-rx-6800-xt.c3694) | 16GB GDDR6 256-bit | 20.74 TFLOPS | 41.48 TFLOPS | 300W    | ~15–25W            | 512 GB/s      | ❌                  | **~$350 – $450** – common used RX 6800 XT listings around **$379–$450+ USD** on eBay.com.                                                                    |
 | [Radeon RX 6900 XT](https://www.techpowerup.com/gpu-specs/radeon-rx-6900-xt.c3693) | 16GB GDDR6 256-bit | 23.04 TFLOPS | 46.08 TFLOPS | 300W    | ~18–28W            | 512 GB/s      | ❌                  | **~$400 – $600+** – used listings for RX 6900 XT often show **~$400–$600+ USD** on eBay.com.                                                                 |
-| [Radeon RX 6950 XT](https://www.techpowerup.com/gpu-specs/radeon-rx-6950-xt.c3897) | 16GB GDDR6 256-bit | 23.65 TFLOPS | 47.30 TFLOPS | 335W    | ~18–30W            | 576 GB/s      | ❌                  | **~$450 – $650+** – used RX 6950 XT listings commonly around **$450–$650 USD** on eBay.com.                                                                  |
+| [Radeon RX 6950 XT](https://www.techpowerup.com/gpu-specs/radeon-rx-6950-xt.c3875) | 16GB GDDR6 256-bit | 23.65 TFLOPS | 47.30 TFLOPS | 335W    | ~18–30W            | 576 GB/s      | ❌                  | **~$450 – $650+** – used RX 6950 XT listings commonly around **$450–$650 USD** on eBay.com.                                                                  |
 
 
 ## AMD Radeon RX 7000 Series (RDNA3)
 
-| **GPU**                                                                              | **VRAM**           | **FP32**     | **FP16**      | **TDP** | **Idle (Typical)** | **Bandwidth** | **Virtualization** | **Avg Used eBay.com Price (≈)**                                                                                                               |
+| **GPU**                                                                              | **VRAM**           | **FP32**     | **FP16**      | **TDP** | **Idle (Typical)** | **Bandwidth** | **Virtualization** | **Avg Used eBay.com Price (USD)**                                                                                                               |
 | ------------------------------------------------------------------------------------ | ------------------ | ------------ | ------------- | ------- | ------------------ | ------------- | ------------------ | --------------------------------------------------------------------------------------------------------------------------------------------- |
 | [Radeon RX 7600](https://www.techpowerup.com/gpu-specs/radeon-rx-7600.c4153)         | 8GB GDDR6 128-bit  | 21.75 TFLOPS | 43.50 TFLOPS  | 165W    | ~7–12W             | 288 GB/s      | ❌                  | **~$160 – $230** – Used RX 7600 ended around **$170 USD** in recent eBay sold listings.                                            |
 | [Radeon RX 7600 XT](https://www.techpowerup.com/gpu-specs/radeon-rx-7600-xt.c4198)   | 16GB GDDR6 128-bit | 22.57 TFLOPS | 45.14 TFLOPS  | 190W    | ~8–14W             | 288 GB/s      | ❌                  | **~$250 – $320+** – Used RX 7600 XT listings like one at **$289.99 USD** show typical current ranges.                              |
@@ -3294,20 +3508,25 @@ i often found myself looking up these details when comparing GPUs to try to find
 
 ## AMD Radeon RX 9000 Series (RDNA4)
 
-| **GPU**                                                                                           | **VRAM**   | **FP16 (half)** | **FP32 (float)** | **TDP**  | **Idle Power (typical)** | **Bandwidth** | **Virtualization** | **Avg Used eBay.com Price (≈)**                                                                                                                                                                 |
-| ------------------------------------------------------------------------------------------------- | ---------- | --------------- | ---------------- | -------- | ------------------------ | ------------- | ------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [AMD Radeon RX 9600](https://www.techpowerup.com/gpu-specs/radeon-rx-9060.c4326)                  | 8GB GDDR6  | ~42.9 TFLOPS    | ~21.4 TFLOPS     | ~132W    | ~10–15W                  | 288 GB/s      | ❌                  | **~$250 – $350** – while direct used listings are sparse, similar RX 9000-series boards suggest this rough range on eBay.com based on market pricing trends and adjacent model data. |
-| [AMD Radeon RX 9060 XT 8GB](https://www.techpowerup.com/gpu-specs/radeon-rx-9060-xt-8-gb.c4251)   | 8GB GDDR6  | 51.3 TFLOPS     | 25.6 TFLOPS      | 150W     | ~12–18W                  | 320 GB/s      | ❌                  | **~$280 – $380** – eBay.com shows various used/near-new RX 9060 XT 8GB listings (e.g., Gigabyte ~**$299.99 USD** for used) suggesting a ~low-$300s range.                            |
-| [AMD Radeon RX 9060 XT 16GB](https://www.techpowerup.com/gpu-specs/radeon-rx-9060-xt-16-gb.c4293) | 16GB GDDR6 | 51.3 TFLOPS     | 25.6 TFLOPS      | 160W     | ~12–18W                  | 320 GB/s      | ❌                  | **~$360 – $550** – eBay.com used listings for 9060 XT 16GB show examples around **~$425–$480 USD** (pre-owned); higher end reflects condition/brand.                                 |
-| [AMD Radeon RX 9070](https://www.techpowerup.com/gpu-specs/radeon-rx-9070.c4250)                  | 16GB GDDR6 | 72.25 TFLOPS    | 36.13 TFLOPS     | 220W     | ~18–28W                  | ~640–896 GB/s | ❌                  | **~$450 – $650+** – similar RX 9070 eBay.com used listings and comparative search results suggest typical used prices around **$500+ USD**.                                          |
-| [AMD Radeon RX 9070 XT](https://www.techpowerup.com/gpu-specs/radeon-rx-9070-xt.c4229)            | 16GB GDDR6 | 97.32 TFLOPS    | 48.66 TFLOPS     | 260–304W | ~20–30W                  | 640 GB/s+     | ❌                  | **~$600 – $800+** – eBay.com has *used/pre-owned* RX 9070 XT listings (e.g., PowerColor ~**$699 USD**) with a broad range depending on condition.                                    |
+| **GPU**                                                                                           | **VRAM**   | **FP32 (float)** | **FP16 (half)**    | **TDP**  | **Idle Power (typical)** | **Bandwidth** | **Virtualization** | **Avg Used eBay.com Price (USD)**                                                                                                                                                                 |
+| ------------------------------------------------------------------------------------------------- | ---------- | ---------------- | ---------------- | -------- | ------------------------ | ------------- | ------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [AMD Radeon RX 9060](https://www.techpowerup.com/gpu-specs/radeon-rx-9060.c4326)                  | 8GB GDDR6  | ~21.4 TFLOPS     | ~42.9 TFLOPS     | ~132W    | ~10–15W                  | 288 GB/s      | ❌                  | **~$250 – $350** – while direct used listings are sparse, similar RX 9000-series boards suggest this rough range on eBay.com based on market pricing trends and adjacent model data. |
+| [AMD Radeon RX 9060 XT 8GB](https://www.techpowerup.com/gpu-specs/radeon-rx-9060-xt-8-gb.c4251)   | 8GB GDDR6  | 25.6 TFLOPS      | 51.3 TFLOPS      | 150W     | ~12–18W                  | 320 GB/s      | ❌                  | **~$280 – $380** – eBay.com shows various used/near-new RX 9060 XT 8GB listings (e.g., Gigabyte ~**$299.99 USD** for used) suggesting a ~low-$300s range.                            |
+| [AMD Radeon RX 9060 XT 16GB](https://www.techpowerup.com/gpu-specs/radeon-rx-9060-xt-16-gb.c4293) | 16GB GDDR6 | 25.6 TFLOPS      | 51.3 TFLOPS      | 160W     | ~12–18W                  | 320 GB/s      | ❌                  | **~$360 – $550** – eBay.com used listings for 9060 XT 16GB show examples around **~$425–$480 USD** (pre-owned); higher end reflects condition/brand.                                 |
+| [AMD Radeon RX 9070](https://www.techpowerup.com/gpu-specs/radeon-rx-9070.c4250)                  | 16GB GDDR6 | 36.13 TFLOPS     | 72.25 TFLOPS     | 220W     | ~18–28W                  | ~640–896 GB/s | ❌                  | **~$450 – $650+** – similar RX 9070 eBay.com used listings and comparative search results suggest typical used prices around **$500+ USD**.                                          |
+| [AMD Radeon RX 9070 XT](https://www.techpowerup.com/gpu-specs/radeon-rx-9070-xt.c4229)            | 16GB GDDR6 | 48.66 TFLOPS     | 97.32 TFLOPS     | 260–304W | ~20–30W                  | 640 GB/s+     | ❌                  | **~$600 – $800+** – eBay.com has *used/pre-owned* RX 9070 XT listings (e.g., PowerColor ~**$699 USD**) with a broad range depending on condition.                                    |
 
 
 ## AMD Pro/Compute GPUs
 
-| **GPU**         | **VRAM**  | **FP16 (half)** | **FP32 (float)** | **TDP** | **Idle Power (typical)** | **Bandwidth** | **Virtualization** | **Avg Used eBay.com Price (≈)**            |
-| ----------------------------- | --------- | --------------- | ---------------- | ------- | ------------------------ | ------------- | ------------------ | ----------------------------------------- |
-| [Radeon Instinct MI25](https://www.techpowerup.com/gpu-specs/radeon-instinct-mi25.c2983) | 16GB HBM2 | 24.58 TFLOPS | 12.29 TFLOPS | 300W | ~30–40W | 436.2 GB/s | 🟡 | **~$90 – $180**  |
+| **GPU**         | **VRAM**  | **FP32 (float)** | **FP16 (half)** | **TDP** | **Idle Power (typical)** | **Bandwidth** | **Virtualization** | **Avg Used eBay.com Price (USD)**            |
+| ----------------------------- | --------- | ---------------- | --------------- | ------- | ------------------------ | ------------- | ------------------ | ----------------------------------------- |
+| [Radeon Instinct MI25](https://www.techpowerup.com/gpu-specs/radeon-instinct-mi25.c2983) | 16GB HBM2 | 12.29 TFLOPS | 24.58 TFLOPS | 300W | ~30–40W | 436.2 GB/s | 🟡 MxGPU (SR-IOV, host-dependent) | **~$90 – $180**  |
+| [Radeon Pro W6600](https://www.techpowerup.com/gpu-specs/radeon-pro-w6600.c3818) | 8GB GDDR6 | ~10 TFLOPS | ~10 TFLOPS | 100W (single-slot) | ~8–12W | 224 GB/s | ✅ VFIO-PT (no license) | **~$250 – $400** - single-slot low-power, direct T4 competitor |
+| [Radeon Pro W7500](https://www.techpowerup.com/gpu-specs/radeon-pro-w7500.c4170) | 8GB GDDR6 | ~12 TFLOPS | ~24 TFLOPS | 70W (single-slot) | ~8–12W | 256 GB/s | ✅ VFIO-PT | **~$300 – $450** |
+| [Radeon Pro V620 32GB](https://www.techpowerup.com/gpu-specs/radeon-pro-v620.c3846) | 32GB GDDR6 | ~11 TFLOPS | ~11 TFLOPS | 300W | ~25–35W | 512 GB/s | ✅ MxGPU/SR-IOV cloud-gaming | **~$800 – $1200** - 32GB cloud-gaming, L4 alternative |
+
+> ⚠️ Pre-RDNA AMD (RX 400/500 Polaris 470/480/570/580/590 4/8GB $60-150, Vega 56/64/VII 16GB HBM2) - cheap VFIO cards but have infamous AMD reset bug (needs `vendor-reset` patch), no AV1, GCN VCE/VCN encode only. Fine for passthrough gaming, NOT for Jellyfin AV1. Tables start at 5000 RDNA1 intentionally - add Polaris/Vega only if you document reset bug.
 
 </details>
 
@@ -3320,13 +3539,13 @@ i often found myself looking up these details when comparing GPUs to try to find
 ### Suggested OS:
 #1 [Proxmox](https://www.proxmox.com/en/) - For virtualization, self-hosting and all around general usage. it can even be used for gaming and other high performance tasks such as AI within VMs/Containers. 
 <br>
-<br>[QubesOS](https://www.qubes-os.org/) - For heightened Security / Pirvacy and a compartmented OS on a single PC via the Xen hypervisor base. features some very interesting methods for security and is worth checking out if you value security / privacy as your top priority. 
+<br>[QubesOS](https://www.qubes-os.org/) - For heightened Security / Privacy and a compartmented OS on a single PC via the Xen hypervisor base. features some very interesting methods for security and is worth checking out if you value security / privacy as your top priority. 
 
 ### Proxmox related content:
 [Proxmox Forums](https://forum.proxmox.com/)
 ## Additional Resources:
 [Proxmox VE Helper scripts](https://community-scripts.github.io/ProxmoxVE/) - Hundreds of scripts to quickly setup a wide range of projects on proxmox.
-<br> [ProxMenux](https://github.com/MacRimi/ProxMenux) - Seperate Dashboard / CLI menu with more information & management options handy for proxmox management.
+<br> [ProxMenux](https://github.com/MacRimi/ProxMenux) - Separate Dashboard / CLI menu with more information & management options handy for proxmox management.
 
 ## VMs:
 [OSX-KVM](https://github.com/kholia/OSX-KVM)
@@ -3347,6 +3566,27 @@ i often found myself looking up these details when comparing GPUs to try to find
 [XDA - I tried gaming on a VM hosted on a Proxmox server – here’s how it went](https://www.xda-developers.com/gaming-on-a-proxmox-vm/)
 <br> [XDA - Running Proxmox VMs with GPU passthrough is much easier than it used to be](https://www.xda-developers.com/running-proxmox-vms-with-gpu-passthrough-is-much-easier/)
 <br> [Windows Gaming VM on Proxmox: Performance Optimization in MSFS 2020](https://forum.level1techs.com/t/windows-gaming-vm-on-proxmox-performance-optimization-in-msfs-2020/187683)
+
+<details>
+<summary><b>Docker vs LXC vs VM + Reverse-Proxy / Remote Access:</b></summary>
+
+- LXC (system container, shared kernel, 10-30MB overhead, native I/O, Proxmox backup/snapshot) for trusted Linux services. Unprivileged by default. Use for Jellyfin QSV, Pi-hole, Caddy.
+- Docker in VM (KVM, own kernel, Compose/Portainer, PBS dirty-bitmap) for untrusted 3rd-party images / 10-30 container stacks. Never Docker on PVE host (iptables/cgroup clash). Docker-in-LXC (nesting=1,keyctl=1) works but weaker isolation, avoid prod. Proxmox 9.1+ native OCI for single stateless images.
+- Remote access: Caddy / Nginx / Traefik + Authelia/Authentik, Pi-hole/AdGuard + Unbound split-DNS, WireGuard / Tailscale / Headscale, Cloudflare Tunnel, Let's Encrypt. Expose only via VPN or authelia-backed proxy, never raw ports.
+- First boot: disable enterprise repo + enable no-subscription, `pve-enterprise.list` to `pve-no-subscription`. IOMMU: `intel_iommu=on iommu=pt` or `amd_iommu=on`, `vfio-pci.ids=10de:xxxx`, blacklist nouveau, ROM-BAR fix for passthrough BAR errors.
+- LXC details: unprivileged UID 100000 mapping, `lxc.apparmor.profile: unconfined` only if needed, `features: nesting=1,keyctl=1` for Docker, virtio-scsi single + iothread + discard for TRIM, static RAM for ZFS ARC VMs (ballooning OOMs).
+- Cluster: 2-node needs qdevice or loses quorum and fences. Bridge VLAN filtering on Proxmox, LACP hash L3+4 for Ceph (L2 hash cripples to 1-link).
+
+</details>
+
+<details>
+<summary><b>10GbE SFP + Cooling / Power Notes:</b></summary>
+
+- SFP: DAC (short, cheap) vs AOC (long) vs BiDi (single-fiber). Intel X520 needs unlocked firmware or coded SFP = no-link. MikroTik CRS305/309 runs hot, 40mm fan mod recommended.
+- OPNsense Realtek `re` driver drops under load, tune `hw.re.msi_disable=1` or use Intel. Avoid USB NICs for router.
+- Cooling: Tiny/HBA needs active 40mm Noctua (HBAs throttle at 90C+), PicoPSU vs brick efficiency matters at 10W idle. UPS USB HID: APC uses standard cable, Eaton needs specific cable or NUT `usbhid-ups` never connects.
+
+</details>
 
 ### Qubes Related content: 
 Additional Resources:
@@ -3449,6 +3689,27 @@ ZFS:
 <br> [OpenZFS Summit highlights Fast Dedup and RAIDZ Expansion](https://www.truenas.com/community/threads/openzfs-summit-highlights-fast-dedup-and-raidz-expansion.113468/)
 <br> [Fast Dedup, tested and reviewed](https://discourse.practicalzfs.com/t/fast-dedup-tested-and-reviewed/1907)
 <br> [Fast Dedup Review Guide](https://github.com/openzfs/zfs/discussions/15896)
+<hr>
+
+<details>
+<summary><b>ZFS Tuning (ashift / recordsize / special / scrub):</b></summary>
+
+- ashift: `ashift=12` (4K) standard, `ashift=13` (8K) for 4Kn NVMe. Immutable at pool creation, wrong ashift halves throughput, verify with `zdb -C | grep ashift`.
+- recordsize per dataset: `1M` media, `16K` databases, `8K` MySQL/Postgres, `128K` default. Set with `zfs set recordsize=1M pool/media`.
+- special vdev / SLOG / L2ARC: mirrored special vdev only (lose it = lose pool), SLOG for sync writes (mirrored Optane), L2ARC for hot reads (NVMe). Docker needs `xattr=sa + dnodesize=auto` or overlay2 crawls.
+- scrub/resilver: tune `zfs_scrub_delay=0 + zfs_resilver_delay=0` for faster rebuilds, never fill pool >80% (COW fragmentation stalls to KB/s). `zpool list -v` to monitor.
+
+</details>
+<hr>
+
+<details>
+<summary><b>Backup (3-2-1) + Health Monitoring (SMART / Scrutiny / Scrubs):</b></summary>
+
+- 3-2-1: 3 copies, 2 media, 1 offsite. Proxmox Backup Server + `zfs snapshot -r pool@daily` + `zfs send | zfs recv` replication, `zpool scrub` monthly + `zpool status`, Borg / Restic / Kopia + rclone to friend/offsite, test restores.
+- SMART: `smartctl -a /dev/sdX`, `smartd` alerts, Scrutiny (WebUI + history + Backblaze thresholds, `--device --cap-add SYS_RAWIO --cap-add SYS_ADMIN for NVMe + /run/udev`, hub-spoke for NAS VM, gotify/ntfy via shoutrrr). Hardware RAID hides SMART without IT-mode/passthrough. NVMe wear `%`, HDD temp tracking. Scrutiny is dashboard only, still need scrubs + backups.
+- RAID: RAID is uptime not backup. mirror / RAIDZ1/2/3 vs RAID0/1/5/6/10, dRAID / RAIDZ expansion / Fast Dedup on modern ZFS, offline backup for ransomware.
+
+</details>
 <hr>
 
 ## Useful Software:
